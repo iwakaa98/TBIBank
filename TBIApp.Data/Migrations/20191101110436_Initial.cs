@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TBIBankApp.Data.Migrations
+namespace TBIApp.Data.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,30 @@ namespace TBIBankApp.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EmailStatuses",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    StatusName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EmailStatuses", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LoanApplicationStatuses",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LoanApplicationStatuses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -153,6 +177,71 @@ namespace TBIBankApp.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Emails",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Date = table.Column<string>(nullable: true),
+                    Sender = table.Column<string>(nullable: true),
+                    Subject = table.Column<string>(nullable: true),
+                    StatusId = table.Column<string>(nullable: true),
+                    Body = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Emails", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Emails_EmailStatuses_StatusId",
+                        column: x => x.StatusId,
+                        principalTable: "EmailStatuses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LoanApplications",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    EGN = table.Column<string>(nullable: true),
+                    Body = table.Column<string>(nullable: true),
+                    LoanApplicationStatusId = table.Column<string>(nullable: true),
+                    CardId = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LoanApplications", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_LoanApplications_LoanApplicationStatuses_LoanApplicationStatusId",
+                        column: x => x.LoanApplicationStatusId,
+                        principalTable: "LoanApplicationStatuses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Attachments",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    SizeMb = table.Column<double>(nullable: false),
+                    EmailId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Attachments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Attachments_Emails_EmailId",
+                        column: x => x.EmailId,
+                        principalTable: "Emails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -191,6 +280,21 @@ namespace TBIBankApp.Data.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Attachments_EmailId",
+                table: "Attachments",
+                column: "EmailId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Emails_StatusId",
+                table: "Emails",
+                column: "StatusId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LoanApplications_LoanApplicationStatusId",
+                table: "LoanApplications",
+                column: "LoanApplicationStatusId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -211,10 +315,25 @@ namespace TBIBankApp.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Attachments");
+
+            migrationBuilder.DropTable(
+                name: "LoanApplications");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Emails");
+
+            migrationBuilder.DropTable(
+                name: "LoanApplicationStatuses");
+
+            migrationBuilder.DropTable(
+                name: "EmailStatuses");
         }
     }
 }
