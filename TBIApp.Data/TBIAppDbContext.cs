@@ -1,8 +1,23 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System;
+using TBIApp.Data.Models;
 
 namespace TBIApp.Data
 {
-    public class Class1
+    public class TBIAppDbContext : IdentityDbContext<User>
     {
+        public TBIAppDbContext(DbContextOptions<TBIAppDbContext> options)
+          : base(options)
+        {
+        }
+
+        public DbSet<Email> Emails { get; set; }
+        public DbSet<EmailStatus> EmailStatuses { get; set; }
+        public DbSet<LoanApplication> LoanApplications { get; set; }
+        public DbSet<LoanApplicationStatus> LoanApplicationStatuses { get; set; }
+        public DbSet<Attachment> Attachments { get; set; }
+
+        
     }
 }
