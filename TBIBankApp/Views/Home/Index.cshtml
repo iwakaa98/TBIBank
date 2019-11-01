@@ -1,8 +1,18 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+﻿
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" media="screen" href="~/css/loginButton.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+    <div id="box">
+        <span id="button">Login</span>
+        <form action="" id="form">
+            <p><input type="text" placeholder="email" /></p>
+            <p><input type="password" placeholder="password" /></p>
+            <p><input type="submit" value="Sign in" /></p>
+        </form>
+    </div>
+</body>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/loginButton.js" asp-append-version="true"></script>
