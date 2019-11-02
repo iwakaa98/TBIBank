@@ -60,7 +60,6 @@ namespace TBIBankApp
                 .AddEntityFrameworkStores<TBIAppDbContext>();
 
             //We register servcies here
-            services.AddScoped<IGmailAPIService, GmailAPIService>();
             services.AddScoped<IAttachmentService, AttachmentService>();
             services.AddScoped<IEmailService, EmailService>();
 

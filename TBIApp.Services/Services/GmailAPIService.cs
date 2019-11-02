@@ -12,7 +12,7 @@ using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.Services.Services
 {
-    public class GmailAPIService : IGmailAPIService
+    public class GmailAPIService 
     {
         private readonly IEmailService emailService;
 
@@ -25,7 +25,7 @@ namespace TBIApp.Services.Services
         static string[] Scopes = { GmailService.Scope.GmailReadonly };
         static string ApplicationName = "Gmail API .NET Quickstart";
 
-        public void GmailHope()
+        public static void GmailHope()
         {
             UserCredential credential;
 
@@ -44,8 +44,6 @@ namespace TBIApp.Services.Services
                     new FileDataStore(credPath, true)).Result;
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
-
-
 
             // Create Gmail API service.
             var service = new GmailService(new BaseClientService.Initializer()
@@ -147,16 +145,11 @@ namespace TBIApp.Services.Services
                         double sizeInMb = sizeInKb / 1024;
 
 
-
-                        var attachmentName = "TestName";
-
                         //this.emailService.CreateAsync(dateRecieved, sender, subject,  attachmentName, size);
 
                     }
                 }
             }
-
-
         }
     }
 }
