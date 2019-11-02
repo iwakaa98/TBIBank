@@ -18,6 +18,9 @@ namespace TBIApp.Data
         public DbSet<LoanApplicationStatus> LoanApplicationStatuses { get; set; }
         public DbSet<Attachment> Attachments { get; set; }
 
-        
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }

@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TBIApp.Data;
+using TBIApp.Services.Services;
+using TBIApp.Services.Services.Contracts;
 
 namespace TBIBankApp
 {
@@ -44,7 +46,7 @@ namespace TBIBankApp
                 .AddEntityFrameworkStores<TBIAppDbContext>();
 
             //We register servcies here
-
+            services.AddScoped<IGmailAPIService, GmailAPIService>();
 
 
             //We registerMappers here
@@ -58,6 +60,7 @@ namespace TBIBankApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -75,6 +78,8 @@ namespace TBIBankApp
             app.UseCookiePolicy();
 
             app.UseAuthentication();
+
+
 
             app.UseMvc(routes =>
             {

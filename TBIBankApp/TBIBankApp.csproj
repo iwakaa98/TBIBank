@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TBIApp.Data\TBIApp.Data.csproj" />
+    <ProjectReference Include="..\TBIApp.Services\TBIApp.Services.csproj" />
   </ItemGroup>
 
 </Project>
