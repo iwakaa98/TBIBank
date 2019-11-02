@@ -1,38 +1,47 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using TBIApp.Data;
+using TBIApp.Data.Models;
+using TBIApp.Services.Mappers.Contracts;
+using TBIApp.Services.Models;
+using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.Services.Services
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         private readonly TBIAppDbContext dbcontext;
+        private readonly IEmailDTOMapper emailDTOMapper;
 
-        public EmailService(TBIAppDbContext dbcontext)
+        public EmailService(TBIAppDbContext dbcontext, IEmailDTOMapper emailDTOMapper)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
+            this.emailDTOMapper = emailDTOMapper ?? throw new ArgumentNullException(nameof(dbcontext));
         }
 
-        //public async Task<EmailDTO> CreateAsync(EmailDTO emailDTO)
-        //{
-        //    var email = this.emailMapper.MapFrom(emailDTO);
+        public async Task<EmailDTO> CreateAsync(EmailDTO emailDTO)
+        {
+            var email = this.emailDTOMapper.MapFrom(emailDTO);
 
-        //    //TODO 
-        //    email.Status = new EmailStatus { StatusName = "Not reviwed" };
+            //TODO 
+            email.Status = new EmailStatus { StatusName = "Not reviwed" };
 
-        //    this.dbcontext.Emails.Add(email);
-        //    await this.dbcontext.SaveChangesAsync();
+            this.dbcontext.Emails.Add(email);
+            await this.dbcontext.SaveChangesAsync();
 
-        //    return this.emailMapper.MapFrom(email);
-        //}
+            return this.emailDTOMapper.MapFrom(email);
+        }
 
-        //public async Task<ICollection<EmailDTO>> GetAllAsync()
-        //{
-        //    var emails = await this.dbcontext.Emails.Select(x => x).ToListAsync();
+        public async Task<ICollection<EmailDTO>> GetAllAsync()
+        {
+            var emails = await this.dbcontext.Emails.Select(x => x).ToListAsync();
 
-        //    return this.emailMapper.MapFrom(emails);
-        //}
+            return this.emailDTOMapper.MapFrom(emails);
+        }
 
     }
 }

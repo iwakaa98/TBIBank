@@ -44,11 +44,11 @@ namespace TBIBankApp.Infrastructure.Extensions
                     {
                         managerUser = new User
                         {
-                            UserName = "managername",
+                            UserName = "misho123",
                             Email = "manager@manager.com"
                         };
 
-                        await userManager.CreateAsync(managerUser, "admin12");
+                        await userManager.CreateAsync(managerUser, "misho123");
                         await userManager.AddToRoleAsync(managerUser, managerRole);
                     }
 

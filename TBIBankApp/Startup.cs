@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using TBIBankApp.Infrastructure.Extensions;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,9 @@ using Microsoft.Extensions.DependencyInjection;
 using TBIApp.Data;
 using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
+using TBIApp.Services.Mappers.Contracts;
+using TBIApp.Services.Mappers;
+using TBIApp.Data.Models;
 
 namespace TBIBankApp
 {
@@ -41,15 +45,34 @@ namespace TBIBankApp
             services.AddDbContext<TBIAppDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<User>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 5;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Lockout.DefaultLockoutTimeSpan = new TimeSpan(1, 0, 0);
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.User.RequireUniqueEmail = true;
+            })
                 .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<TBIAppDbContext>();
 
             //We register servcies here
             services.AddScoped<IGmailAPIService, GmailAPIService>();
-
+            services.AddScoped<IAttachmentService, AttachmentService>();
+            services.AddScoped<IEmailService, EmailService>();
 
             //We registerMappers here
+
+
+
+            //ServiceMapper
+            services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
+            services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
+
+
 
 
 
@@ -60,6 +83,7 @@ namespace TBIBankApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UpdateDatabase();
 
             if (env.IsDevelopment())
             {
@@ -72,6 +96,7 @@ namespace TBIBankApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

@@ -18,8 +18,8 @@ namespace TBIBankApp
 
         public static void Main(string[] args)
         {
-            var gmail = new GmailAPIService();
-            gmail.GmailHope();
+
+            //GmailAPIService.GmailHope();
 
 
             CreateWebHostBuilder(args).Build().Run();

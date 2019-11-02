@@ -14,13 +14,16 @@ namespace TBIApp.Services.Services
 {
     public class GmailAPIService : IGmailAPIService
     {
-        //private readonly IEmailService emailService;
+        private readonly IEmailService emailService;
 
+        public GmailAPIService(IEmailService emailService)
+        {
+            this.emailService = emailService;
+        }
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/gmail-dotnet-quickstart.json
         static string[] Scopes = { GmailService.Scope.GmailReadonly };
         static string ApplicationName = "Gmail API .NET Quickstart";
-
 
         public void GmailHope()
         {
@@ -69,6 +72,7 @@ namespace TBIApp.Services.Services
                 foreach (var email in emailListResponse.Messages)
                 {
                     var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", email.Id);
+
                     // Make another request for that email id...
                     var emailInfoResponse = emailInfoRequest.ExecuteAsync().Result;
 
@@ -144,9 +148,9 @@ namespace TBIApp.Services.Services
 
 
 
-                        //var attachmentName = "TestName";
+                        var attachmentName = "TestName";
 
-                        //this.emailService.CreateEmail(dateRecieved, sender, subject, body, attachmentName, size);
+                        //this.emailService.CreateAsync(dateRecieved, sender, subject,  attachmentName, size);
 
                     }
                 }
