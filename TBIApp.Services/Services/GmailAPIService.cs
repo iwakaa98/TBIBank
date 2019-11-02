@@ -59,6 +59,9 @@ namespace TBIApp.Services.Services
 
             emailListRequest.LabelIds = "INBOX";
             emailListRequest.IncludeSpamTrash = false;
+            //emailListRequest.OauthToken
+            //emailListRequest.Q
+            //emailListRequest.PageToken
             //emailListRequest.Q = "is:unread"; // This was added because I only wanted unread emails...
 
             // Get our emails
