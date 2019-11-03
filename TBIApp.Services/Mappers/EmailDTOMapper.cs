@@ -14,34 +14,43 @@ namespace TBIApp.Services.Mappers
 
         public EmailDTOMapper(IAttachmentDTOMapper attachmentDTOMapper)
         {
-            this.attachmentDTOMapper = attachmentDTOMapper;
+            this.attachmentDTOMapper = attachmentDTOMapper ?? throw new ArgumentNullException(nameof(attachmentDTOMapper));
         }
 
         public Email MapFrom(EmailDTO entity)
         {
             return new Email()
             {
-                RecievingDateAtMailServer = entity.Date,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 StatusId = entity.StatusId,
                 Status = entity.Status,
-                Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
-                Body = entity.Body
-
+                //Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
+                LoanApplication = entity.LoanApplication,
+                UserId = entity.UserId,
+                User = entity.User,
+                Body = entity.Body,
+                RecievingDateAtMailServer = entity.RecievingDateAtMailServer,
+                RegisteredInDataBase = entity.RegisteredInDataBase,
+                LastStatusUpdate = entity.LastStatusUpdate
             };
         }
         public EmailDTO MapFrom(Email entity)
         {
             return new EmailDTO()
             {
-                Date = entity.RecievingDateAtMailServer,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 StatusId = entity.StatusId,
                 Status = entity.Status,
-                Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
-                Body = entity.Body
+                //Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
+                LoanApplication = entity.LoanApplication,
+                UserId = entity.UserId,
+                User = entity.User,
+                Body = entity.Body,
+                RecievingDateAtMailServer = entity.RecievingDateAtMailServer,
+                RegisteredInDataBase = entity.RegisteredInDataBase,
+                LastStatusUpdate = entity.LastStatusUpdate
             };
         }
         public IList<Email> MapFrom(ICollection<EmailDTO> entities)

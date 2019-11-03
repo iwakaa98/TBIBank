@@ -1,7 +1,9 @@
-﻿namespace TBIApp.Services.Services.Contracts
+﻿using System.Threading.Tasks;
+
+namespace TBIApp.Services.Services.Contracts
 {
     public interface IGmailAPIService
     {
-        void SyncEmails();
+        Task SyncEmails();
     }
 }

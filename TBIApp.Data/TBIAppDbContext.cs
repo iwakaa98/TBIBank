@@ -27,6 +27,7 @@ namespace TBIApp.Data
             builder.ApplyConfiguration(new AttachmentConfiguration());
             builder.ApplyConfiguration(new EmailConfiguration());
             builder.ApplyConfiguration(new UserConfiguration());
+            //builder.ApplyConfiguration(new LoanApplication());
 
         }
     }

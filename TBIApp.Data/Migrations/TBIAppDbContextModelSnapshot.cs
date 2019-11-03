@@ -160,8 +160,6 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<DateTime>("LastStatusUpdate");
 
-                    b.Property<string>("LoanApplicationId");
-
                     b.Property<string>("RecievingDateAtMailServer");
 
                     b.Property<DateTime>("RegisteredInDataBase");
@@ -175,8 +173,6 @@ namespace TBIApp.Data.Migrations
                     b.Property<string>("UserId");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LoanApplicationId");
 
                     b.HasIndex("StatusId");
 
@@ -217,6 +213,10 @@ namespace TBIApp.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EmailId")
+                        .IsUnique()
+                        .HasFilter("[EmailId] IS NOT NULL");
+
                     b.HasIndex("LoanApplicationStatusId");
 
                     b.ToTable("LoanApplications");
@@ -228,6 +228,8 @@ namespace TBIApp.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
+
+                    b.Property<DateTime>("SetToTerminalStatus");
 
                     b.HasKey("Id");
 
@@ -250,6 +252,8 @@ namespace TBIApp.Data.Migrations
                     b.Property<bool>("EmailConfirmed");
 
                     b.Property<string>("FirstName");
+
+                    b.Property<DateTime>("LastLogIn");
 
                     b.Property<string>("LastName");
 
@@ -343,10 +347,6 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("TBIApp.Data.Models.Email", b =>
                 {
-                    b.HasOne("TBIApp.Data.Models.LoanApplication", "LoanApplication")
-                        .WithMany()
-                        .HasForeignKey("LoanApplicationId");
-
                     b.HasOne("TBIApp.Data.Models.EmailStatus", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId");
@@ -358,6 +358,10 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("TBIApp.Data.Models.LoanApplication", b =>
                 {
+                    b.HasOne("TBIApp.Data.Models.Email")
+                        .WithOne("LoanApplication")
+                        .HasForeignKey("TBIApp.Data.Models.LoanApplication", "EmailId");
+
                     b.HasOne("TBIApp.Data.Models.Email", "Email")
                         .WithOne()
                         .HasForeignKey("TBIApp.Data.Models.LoanApplication", "Id")

@@ -24,6 +24,7 @@ namespace TBIBankApp
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -71,8 +72,6 @@ namespace TBIBankApp
             //ServiceMapper
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
-
-
 
 
 

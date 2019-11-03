@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TBIApp.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Initial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -42,7 +42,8 @@ namespace TBIApp.Data.Migrations
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true)
+                    LastName = table.Column<string>(nullable: true),
+                    LastLogIn = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -66,7 +67,8 @@ namespace TBIApp.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    SetToTerminalStatus = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -187,7 +189,6 @@ namespace TBIApp.Data.Migrations
                     Sender = table.Column<string>(nullable: true),
                     Subject = table.Column<string>(nullable: true),
                     StatusId = table.Column<string>(nullable: true),
-                    LoanApplicationId = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
                     RecievingDateAtMailServer = table.Column<string>(nullable: true),
@@ -248,6 +249,12 @@ namespace TBIApp.Data.Migrations
                 {
                     table.PrimaryKey("PK_LoanApplications", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_LoanApplications_Emails_EmailId",
+                        column: x => x.EmailId,
+                        principalTable: "Emails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
                         name: "FK_LoanApplications_Emails_Id",
                         column: x => x.Id,
                         principalTable: "Emails",
@@ -306,11 +313,6 @@ namespace TBIApp.Data.Migrations
                 column: "EmailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Emails_LoanApplicationId",
-                table: "Emails",
-                column: "LoanApplicationId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Emails_StatusId",
                 table: "Emails",
                 column: "StatusId");
@@ -321,29 +323,20 @@ namespace TBIApp.Data.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_LoanApplications_EmailId",
+                table: "LoanApplications",
+                column: "EmailId",
+                unique: true,
+                filter: "[EmailId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_LoanApplications_LoanApplicationStatusId",
                 table: "LoanApplications",
                 column: "LoanApplicationStatusId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Emails_LoanApplications_LoanApplicationId",
-                table: "Emails",
-                column: "LoanApplicationId",
-                principalTable: "LoanApplications",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Emails_AspNetUsers_UserId",
-                table: "Emails");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_LoanApplications_Emails_Id",
-                table: "LoanApplications");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -363,22 +356,22 @@ namespace TBIApp.Data.Migrations
                 name: "Attachments");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "LoanApplications");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Emails");
 
             migrationBuilder.DropTable(
-                name: "LoanApplications");
+                name: "LoanApplicationStatuses");
 
             migrationBuilder.DropTable(
                 name: "EmailStatuses");
 
             migrationBuilder.DropTable(
-                name: "LoanApplicationStatuses");
+                name: "AspNetUsers");
         }
     }
 }

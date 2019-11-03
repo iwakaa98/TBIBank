@@ -4,14 +4,26 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Models;
 
 namespace TBIBankApp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IGmailAPIService gmailAPIService;
+
+        public HomeController(IGmailAPIService gmailAPIService)
         {
+            this.gmailAPIService = gmailAPIService;
+        }
+
+
+        public async Task<IActionResult> Index()
+        {
+            //AddAwaitHere
+            await this.gmailAPIService.SyncEmails();
+
             return View();
         }
 

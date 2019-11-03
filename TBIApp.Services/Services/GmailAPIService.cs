@@ -1,5 +1,6 @@
 ﻿using Google.Apis.Auth.OAuth2;
 using Google.Apis.Gmail.v1;
+using Google.Apis.Gmail.v1.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System;
@@ -8,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
@@ -19,21 +21,17 @@ namespace TBIApp.Services.Services
 
         public GmailAPIService(IEmailService emailService)
         {
-            this.emailService = emailService;
+            this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
         }
-        // If modifying these scopes, delete your previously saved credentials
-        // at ~/.credentials/gmail-dotnet-quickstart.json
         static string[] Scopes = { GmailService.Scope.GmailReadonly };
         static string ApplicationName = "Gmail API .NET Quickstart";
 
-        public void SyncEmails()
+        public async Task SyncEmails()
         {
             UserCredential credential;
 
             using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
-                // The file token.json stores the user's access and refresh tokens, and is created
-                // automatically when the authorization flow completes for the first time.
                 string credPath = "token.json";
                 credential =
                     GoogleWebAuthorizationBroker.AuthorizeAsync(
@@ -45,7 +43,6 @@ namespace TBIApp.Services.Services
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
 
-            // Create Gmail API service.
             var service = new GmailService(new BaseClientService.Initializer()
             {
 
@@ -54,18 +51,8 @@ namespace TBIApp.Services.Services
             });
 
 
-            // var test = service.Serializer;
-            var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
-
-            emailListRequest.LabelIds = "INBOX";
-            emailListRequest.IncludeSpamTrash = false;
-            //emailListRequest.OauthToken
-            //emailListRequest.Q
-            //emailListRequest.PageToken
-            //emailListRequest.Q = "is:unread"; // This was added because I only wanted unread emails...
-
-            // Get our emails
-            var emailListResponse = emailListRequest.ExecuteAsync().Result;
+            //MakeThisMethod await! not resutl TODO//
+            var emailListResponse = await GetNewEmails(service);
 
             if (emailListResponse != null && emailListResponse.Messages != null)
             {
@@ -74,11 +61,8 @@ namespace TBIApp.Services.Services
                 {
                     var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", email.Id);
 
-                    // Make another request for that email id...
-                    var emailInfoResponse = emailInfoRequest.ExecuteAsync().Result;
+                    var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
 
-                    var test123 = email.Snippet;
-                    var test1234 = emailInfoResponse.Snippet;
 
                     if (emailInfoResponse != null)
                     {
@@ -94,52 +78,27 @@ namespace TBIApp.Services.Services
                         string subject = emailInfoResponse.Payload.Headers
                             .FirstOrDefault(x => x.Name == "Subject")
                             .Value;
-
-
+                        
                         //Body
                         var str = new StringBuilder();
-                        int index = emailInfoResponse.Payload.Parts.Count - 1;
 
                         var itemToResolve = emailInfoResponse.Payload.Parts[0];
 
 
                         if (itemToResolve.MimeType == "text/plain")
                         {
-                            String codedBody = itemToResolve.Body.Data.Replace("-", "+");
-                            codedBody = codedBody.Replace("_", "/");
-                            byte[] data = Convert.FromBase64String(codedBody);
-                            var result = Encoding.UTF8.GetString(data);
-
-                            //attachmentsDictionaryParams.Add(
-                            var attachmentLists = emailInfoResponse.Payload.Parts.Skip(1).ToList();
-                            //    )
-
-                            str.Append(result);
+                            str.Append(GetBody(itemToResolve));
                         }
                         else
                         {
-                            String codedBody = itemToResolve.Parts[0].Body.Data.Replace("-", "+");
-                            codedBody = codedBody.Replace("_", "/");
-                            byte[] data = Convert.FromBase64String(codedBody);
-                            var result = Encoding.UTF8.GetString(data);
-
-                            str.Append(result);
-
-                            var attachmentLists = emailInfoResponse.Payload.Parts.Skip(1).ToList();
+                            str.Append(GetBody(itemToResolve.Parts[0]));
 
                         }
-                        //}
 
-                        string body = str.ToString();
                         //Body
+                        string body = str.ToString();
 
-
-
-
-                        //Mb
-                        var attachmentMbs = emailInfoResponse.Payload.Parts.Skip(1).Sum(x => x.Body.Size);
-
-
+                        //Bytes
                         var size = double.Parse(emailInfoResponse.Payload.Parts[1].Body.Size.ToString());
 
                         double sizeInKb = size / 1024;
@@ -150,19 +109,53 @@ namespace TBIApp.Services.Services
 
                         var emailDTO = new EmailDTO
                         {
-                            Date = dateRecieved,
+                            RecievingDateAtMailServer = dateRecieved,
                             Sender = sender,
-                            Subject = subject
-
+                            Subject = subject,
+                            Body = body
                         };
 
-
-
-                        emailService.CreateAsync(emailDTO);
+                        await emailService.CreateAsync(emailDTO);
 
                     }
                 }
             }
+        }
+        public  string GetBody(MessagePart message)
+        {
+            String codedBody = message.Body.Data.Replace("-", "+");
+            codedBody = codedBody.Replace("_", "/");
+            byte[] data = Convert.FromBase64String(codedBody);
+            var result = Encoding.UTF8.GetString(data);
+
+            return result;
+        }
+        public async Task<ListMessagesResponse> GetNewEmails(GmailService service)
+        {
+            var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
+
+            emailListRequest.LabelIds = "INBOX";
+            emailListRequest.IncludeSpamTrash = false;
+
+            return await emailListRequest.ExecuteAsync();
+
+            //IMPORTANT DONT DELETE !!!!!!!!!!!
+            ////Can we replace email with smth else
+            //var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
+
+            //emailListRequest.LabelIds = "INBOX";
+            //emailListRequest.IncludeSpamTrash = false;
+            ////emailListRequest.OauthToken
+            ////emailListRequest.Q
+            ////emailListRequest.PageToken
+            ////emailListRequest.Q = "is:unread"; // This was added because I only wanted unread emails...
+
+            //// Get our emails
+            //var emailListResponse = emailListRequest.ExecuteAsync().Result;
+            //IMPORTANT DONT DELETE!!!
+
+
+
         }
     }
 }
