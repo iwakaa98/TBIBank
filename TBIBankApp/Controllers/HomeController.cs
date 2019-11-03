@@ -3,18 +3,52 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TBIApp.Data.Models;
 using TBIBankApp.Models;
 
 namespace TBIBankApp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly SignInManager<User> signInManager;
+
+        public HomeController(SignInManager<User> signInManager)
         {
-            return View();
+            this.signInManager = signInManager;
         }
 
+        public IActionResult Index()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                return View("Privacy");
+            }
+            return View();
+        }
+        public async Task<IActionResult> Login(LoginViewModel Input)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: true);
+
+                if (result.Succeeded)
+                {
+                    //_logger.LogInformation("User logged in.");
+                    return Redirect("Privacy");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return RedirectToAction("Index");
+                }
+            }
+
+
+            // If we got this far, something failed, redisplay form
+            return RedirectToAction("Index");
+        }
         public IActionResult Privacy()
         {
             return View();
