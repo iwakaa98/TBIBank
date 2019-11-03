@@ -14,7 +14,7 @@ namespace TBIApp.Services.Mappers
         {
             return new AttachmentDTO()
             {
-                Name = entity.Name,
+                FileName = entity.FileName,
                 SizeMb = entity.SizeMb
 
             };
@@ -23,7 +23,7 @@ namespace TBIApp.Services.Mappers
         {
             return new Attachment()
             {
-                Name = entity.Name,
+                FileName = entity.FileName,
                 SizeMb = entity.SizeMb
 
             };

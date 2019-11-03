@@ -8,11 +8,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.Services.Services
 {
-    public class GmailAPIService 
+    public class GmailAPIService : IGmailAPIService
     {
         private readonly IEmailService emailService;
 
@@ -25,12 +26,11 @@ namespace TBIApp.Services.Services
         static string[] Scopes = { GmailService.Scope.GmailReadonly };
         static string ApplicationName = "Gmail API .NET Quickstart";
 
-        public static void GmailHope()
+        public void SyncEmails()
         {
             UserCredential credential;
 
-            using (var stream =
-                new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
                 // The file token.json stores the user's access and refresh tokens, and is created
                 // automatically when the authorization flow completes for the first time.
@@ -102,12 +102,7 @@ namespace TBIApp.Services.Services
 
                         var itemToResolve = emailInfoResponse.Payload.Parts[0];
 
-                        //AttachmentsParams
-                        var attachmentsDictionaryParams = new Dictionary<string, string>();
 
-
-                        //foreach (var item in emailInfoResponse.Payload.Parts)
-                        //{
                         if (itemToResolve.MimeType == "text/plain")
                         {
                             String codedBody = itemToResolve.Body.Data.Replace("-", "+");
@@ -138,6 +133,9 @@ namespace TBIApp.Services.Services
                         string body = str.ToString();
                         //Body
 
+
+
+
                         //Mb
                         var attachmentMbs = emailInfoResponse.Payload.Parts.Skip(1).Sum(x => x.Body.Size);
 
@@ -148,7 +146,19 @@ namespace TBIApp.Services.Services
                         double sizeInMb = sizeInKb / 1024;
 
 
-                        //this.emailService.CreateAsync(dateRecieved, sender, subject,  attachmentName, size);
+
+
+                        var emailDTO = new EmailDTO
+                        {
+                            Date = dateRecieved,
+                            Sender = sender,
+                            Subject = subject
+
+                        };
+
+
+
+                        emailService.CreateAsync(emailDTO);
 
                     }
                 }
