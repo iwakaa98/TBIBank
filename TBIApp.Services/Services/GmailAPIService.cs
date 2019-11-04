@@ -51,7 +51,6 @@ namespace TBIApp.Services.Services
             });
 
 
-            //MakeThisMethod await! not resutl TODO//
             var emailListResponse = await GetNewEmails(service);
 
             if (emailListResponse != null && emailListResponse.Messages != null)
