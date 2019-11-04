@@ -25,10 +25,12 @@ namespace TBIBankApp.Controllers
         public async Task<IActionResult> Index()
         {
             await this.gmailAPIService.SyncEmails();
+
             if (User.Identity.IsAuthenticated)
             {
                 return View("Privacy");
             }
+
             return View();
         }
         public async Task<IActionResult> Login(LoginViewModel Input)

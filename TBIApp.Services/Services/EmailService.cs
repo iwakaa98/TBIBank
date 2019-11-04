@@ -42,10 +42,45 @@ namespace TBIApp.Services.Services
         {
             var emails = await this.dbcontext.Emails.Select(x => x).ToListAsync();
 
-            if(emails == null) throw new ArgumentNullException("No emails found!");
+            if (emails == null) throw new ArgumentNullException("No emails found!");
 
             return this.emailDTOMapper.MapFrom(emails);
         }
 
+        //TODO not registered int Interface; Think abuot better implementation;
+        public async Task<ICollection<EmailDTO>> GetNotReviwedEmailsAsync(int page, string typeOfEmail)
+        {
+            //TODO can we make it within one if statement
+
+
+            var emails = await this.dbcontext.Emails
+                .Where(e => e.Status.StatusName == typeOfEmail)
+                .Skip((page - 1) * 6)
+                .Take(6)
+                .ToListAsync();
+
+            if (emails == null) throw new ArgumentNullException("No emails found!");
+
+            return this.emailDTOMapper.MapFrom(emails);
+
+
+        }
+
+        public int GetEmailsPagesByType(string statusOfEmail)
+        {
+            //This method get pages of emails!
+
+            var result = this.dbcontext.Emails
+                .Where(e => e.Status.StatusName == statusOfEmail)
+                .Count();
+
+            if (result % 6 == 0)
+                return result % 6;
+            else
+                return result % 6 + 1;
+
+
+
+        }
     }
 }

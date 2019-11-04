@@ -13,9 +13,9 @@ namespace TBIApp.Data.Configuration
         {
             builder.HasKey(la => la.Id);
 
-            builder.HasOne<Email>()
-               .WithOne(la => la.LoanApplication)
-               .HasForeignKey<Email>(e => e.Id);
+            //builder.HasOne<Email>()
+            //   .WithOne(la => la.LoanApplication)
+            //   .HasForeignKey<Email>(e => e.Id);
 
         }
     }

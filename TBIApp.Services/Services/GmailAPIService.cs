@@ -138,6 +138,7 @@ namespace TBIApp.Services.Services
                 }
             }
         }
+        //cgange namee
         public  string GetBody(MessagePart message)
         {
             String codedBody = message.Body.Data.Replace("-", "+");
