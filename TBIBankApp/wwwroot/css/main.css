@@ -469,6 +469,7 @@ iframe {
     color: orange;
     font-weight: bold;
     font-family: arial;
+    font-size: -webkit-xxx-large;
 }
 /*------------------------------------------------------------------
 [ Responsive ]*/
