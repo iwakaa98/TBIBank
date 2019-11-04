@@ -15,6 +15,8 @@ using TBIApp.Services.Services.Contracts;
 using TBIApp.Services.Mappers.Contracts;
 using TBIApp.Services.Mappers;
 using TBIApp.Data.Models;
+using TBIBankApp.Mappers.Contracts;
+using TBIBankApp.Mappers;
 
 namespace TBIBankApp
 {
@@ -57,12 +59,18 @@ namespace TBIBankApp
             services.AddScoped<IGmailAPIService, GmailAPIService>();
 
             //We registerMappers here
-
+            //ViewModelMappers
+            services.AddScoped<IEmailViewModelMapper, EmailViewModelMapper>();
 
 
             //ServiceMapper
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
+
+
+
+
+
 
             services.ConfigureApplicationCookie(opt =>
             {

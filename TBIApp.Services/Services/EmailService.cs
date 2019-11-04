@@ -40,7 +40,8 @@ namespace TBIApp.Services.Services
 
         public async Task<ICollection<EmailDTO>> GetAllAsync()
         {
-            var emails = await this.dbcontext.Emails.Select(x => x).ToListAsync();
+            //var emails = await this.dbcontext.Emails.Select(x => x).ToListAsync();
+            var emails = await this.dbcontext.Emails.Take(6).ToListAsync();
 
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
