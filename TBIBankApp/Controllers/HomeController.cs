@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TBIApp.Data.Models;
@@ -22,6 +20,7 @@ namespace TBIBankApp.Controllers
             this.signInManager = signInManager;
         }
 
+        
         public async Task<IActionResult> Index()
         {
             await this.gmailAPIService.SyncEmails();
@@ -50,11 +49,9 @@ namespace TBIBankApp.Controllers
                     return RedirectToAction("Index");
                 }
             }
-
-
-            // If we got this far, something failed, redisplay form
             return RedirectToAction("Index");
         }
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

@@ -29,13 +29,13 @@
                     </span>
                     <div asp-validation-summary="ModelOnly"> </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter username">
-                        <input asp-for="UserName" class="input100" type="text" name="username" placeholder="Username">
-                        <span asp-validation-for="UserName" class="focus-input100" data-placeholder="&#xf207;"></span>
+                        <input asp-for="UserName" class="input100" id="inputUserName" type="text" name="username" placeholder="Username">
+                        <p asp-validation-for="UserName" class="focus-input100" id="focus-UserName" data-placeholder="&#xf207;"></p>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter password">
-                        <input asp-for="Password" class="input100" type="password" name="password" placeholder="Password">
-                        <span asp-validation-for="Password" class="focus-input100" data-placeholder="&#xf191;"></span>
+                        <input asp-for="Password" class="input100" id="inputPassword" type="password" name="password" placeholder="Password">
+                        <span asp-validation-for="Password" class="focus-input100" id="focus-Password" data-placeholder="&#xf191;"></span>
                     </div>
 
                     <div class="contact100-form-checkbox">
@@ -55,5 +55,35 @@
         </div>
     </div>
     <div id="dropDownSelect1"></div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <script>
+        $('.login100-form-btn').click(
+            function (e) {
+                let username = $('#inputUserName').val();
+                let password = $('#inputPassword').val();
+                console.log(15);
+
+                if (!username) {
+                    $('#inputUserName').addClass('border', 'solid red 2px');
+                    $('#focus-UserName').text('Please enter username');
+                }
+                if (username) {
+                    $('#inputUserName').removeClass('border', 'solid red 2px');
+                }
+                if (!username) {
+                    e.preventDefault();
+                }
+                if (!password) {
+                    $('#inputPassword').addClass('border', 'solid red 2px');
+                    $('#focus-Password').text('Please enter password');
+                }
+                if (!password) {
+                    e.preventDefault();
+                }
+            })
+
+    </script>
 </body>
 
