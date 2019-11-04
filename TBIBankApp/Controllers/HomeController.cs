@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Models;
 
@@ -12,21 +14,45 @@ namespace TBIBankApp.Controllers
     public class HomeController : Controller
     {
         private readonly IGmailAPIService gmailAPIService;
+        private readonly SignInManager<User> signInManager;
 
-        public HomeController(IGmailAPIService gmailAPIService)
+        public HomeController(IGmailAPIService gmailAPIService, SignInManager<User> signInManager)
         {
             this.gmailAPIService = gmailAPIService;
+            this.signInManager = signInManager;
         }
-
 
         public async Task<IActionResult> Index()
         {
-            //AddAwaitHere
             await this.gmailAPIService.SyncEmails();
-
+            if (User.Identity.IsAuthenticated)
+            {
+                return View("Privacy");
+            }
             return View();
         }
+        public async Task<IActionResult> Login(LoginViewModel Input)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: true);
 
+                if (result.Succeeded)
+                {
+                    //_logger.LogInformation("User logged in.");
+                    return Redirect("Privacy");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return RedirectToAction("Index");
+                }
+            }
+
+
+            // If we got this far, something failed, redisplay form
+            return RedirectToAction("Index");
+        }
         public IActionResult Privacy()
         {
             return View();

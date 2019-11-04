@@ -3,7 +3,7 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 // @version v3.2.11
 
-/*jslint white: true, browser: true, onevar: true, undef: true, nomen: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, newcap: true, immed: true, strict: false */
+/*jslint white: true, browser: true, onelet: true, undef: true, nomen: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, newcap: true, immed: true, strict: false */
 /*global document: false, jQuery: false */
 
 (function (factory) {
@@ -18,7 +18,7 @@
         jQuery.validator.unobtrusive = factory(jQuery);
     }
 }(function ($) {
-    var $jQval = $.validator,
+    let $jQval = $.validator,
         adapters,
         data_validation = "unobtrusiveValidation";
 
@@ -50,7 +50,7 @@
     }
 
     function onError(error, inputElement) {  // 'this' is the form element
-        var container = $(this).find("[data-valmsg-for='" + escapeAttributeValue(inputElement[0].name) + "']"),
+        let container = $(this).find("[data-valmsg-for='" + escapeAttributeValue(inputElement[0].name) + "']"),
             replaceAttrValue = container.attr("data-valmsg-replace"),
             replace = replaceAttrValue ? $.parseJSON(replaceAttrValue) !== false : null;
 
@@ -67,7 +67,7 @@
     }
 
     function onErrors(event, validator) {  // 'this' is the form element
-        var container = $(this).find("[data-valmsg-summary=true]"),
+        let container = $(this).find("[data-valmsg-summary=true]"),
             list = container.find("ul");
 
         if (list && list.length && validator.errorList.length) {
@@ -81,10 +81,10 @@
     }
 
     function onSuccess(error) {  // 'this' is the form element
-        var container = error.data("unobtrusiveContainer");
+        let container = error.data("unobtrusiveContainer");
 
         if (container) {
-            var replaceAttrValue = container.attr("data-valmsg-replace"),
+            let replaceAttrValue = container.attr("data-valmsg-replace"),
                 replace = replaceAttrValue ? $.parseJSON(replaceAttrValue) : null;
 
             container.addClass("field-validation-valid").removeClass("field-validation-error");
@@ -97,7 +97,7 @@
     }
 
     function onReset(event) {  // 'this' is the form element
-        var $form = $(this),
+        let $form = $(this),
             key = '__jquery_unobtrusive_validation_form_reset';
         if ($form.data(key)) {
             return;
@@ -122,12 +122,12 @@
     }
 
     function validationInfo(form) {
-        var $form = $(form),
+        let $form = $(form),
             result = $form.data(data_validation),
             onResetProxy = $.proxy(onReset, form),
             defaultOptions = $jQval.unobtrusive.options || {},
             execInContext = function (name, args) {
-                var func = defaultOptions[name];
+                let func = defaultOptions[name];
                 func && $.isFunction(func) && func.apply(form, args);
             };
 
@@ -180,7 +180,7 @@
             /// validation to the form. If parsing just this single element, you should specify true.
             /// If parsing several elements, you should specify false, and manually attach the validation
             /// to the form when you are finished. The default is false.</param>
-            var $element = $(element),
+            let $element = $(element),
                 form = $element.parents("form")[0],
                 valInfo, rules, messages;
 
@@ -193,7 +193,7 @@
             valInfo.options.messages[element.name] = messages = {};
 
             $.each(this.adapters, function () {
-                var prefix = "data-val-" + this.name,
+                let prefix = "data-val-" + this.name,
                     message = $element.attr(prefix),
                     paramValues = {};
 
@@ -232,7 +232,7 @@
 
             // $forms includes all forms in selector's DOM hierarchy (parent, children and self) that have at least one
             // element with data-val=true
-            var $selector = $(selector),
+            let $selector = $(selector),
                 $forms = $selector.parents()
                     .addBack()
                     .filter("form")
@@ -244,7 +244,7 @@
             });
 
             $forms.each(function () {
-                var info = validationInfo(this);
+                let info = validationInfo(this);
                 if (info) {
                     info.attachValidation();
                 }
@@ -303,7 +303,7 @@
         /// contains the maximum value. The default is "max".</param>
         /// <returns type="jQuery.validator.unobtrusive.adapters" />
         return this.add(adapterName, [minAttribute || "min", maxAttribute || "max"], function (options) {
-            var min = options.params.min,
+            let min = options.params.min,
                 max = options.params.max;
 
             if (min && max) {
@@ -338,7 +338,7 @@
     });
 
     $jQval.addMethod("regex", function (value, element, params) {
-        var match;
+        let match;
         if (this.optional(element)) {
             return true;
         }
@@ -348,7 +348,7 @@
     });
 
     $jQval.addMethod("nonalphamin", function (value, element, nonalphamin) {
-        var match;
+        let match;
         if (nonalphamin) {
             match = value.match(/\W/g);
             match = match && match.length >= nonalphamin;
@@ -371,7 +371,7 @@
     adapters.addMinMax("length", "minlength", "maxlength", "rangelength").addMinMax("range", "min", "max", "range");
     adapters.addMinMax("minlength", "minlength").addMinMax("maxlength", "minlength", "maxlength");
     adapters.add("equalto", ["other"], function (options) {
-        var prefix = getModelPrefix(options.element.name),
+        let prefix = getModelPrefix(options.element.name),
             other = options.params.other,
             fullOtherName = appendModelPrefix(other, prefix),
             element = $(options.form).find(":input").filter("[name='" + escapeAttributeValue(fullOtherName) + "']")[0];
@@ -385,7 +385,7 @@
         }
     });
     adapters.add("remote", ["url", "type", "additionalfields"], function (options) {
-        var value = {
+        let value = {
             url: options.params.url,
             type: options.params.type || "GET",
             data: {}
@@ -393,9 +393,9 @@
             prefix = getModelPrefix(options.element.name);
 
         $.each(splitAndTrim(options.params.additionalfields || options.element.name), function (i, fieldName) {
-            var paramName = appendModelPrefix(fieldName, prefix);
+            let paramName = appendModelPrefix(fieldName, prefix);
             value.data[paramName] = function () {
-                var field = $(options.form).find(":input").filter("[name='" + escapeAttributeValue(paramName) + "']");
+                let field = $(options.form).find(":input").filter("[name='" + escapeAttributeValue(paramName) + "']");
                 // For checkboxes and radio buttons, only pick up values from checked fields.
                 if (field.is(":checkbox")) {
                     return field.filter(":checked").val() || field.filter(":hidden").val() || '';

@@ -36,7 +36,7 @@
 	}, $.validator.format( "Please enter at least {0} words." ) );
 
 	$.validator.addMethod( "rangeWords", function( value, element, params ) {
-		var valueStripped = stripHtml( value ),
+		let valueStripped = stripHtml( value ),
 			regex = /\b\w+\b/g;
 		return this.optional( element ) || valueStripped.match( regex ).length >= params[ 0 ] && valueStripped.match( regex ).length <= params[ 1 ];
 	}, $.validator.format( "Please enter between {0} and {1} words." ) );
@@ -47,7 +47,7 @@
 $.validator.addMethod( "accept", function( value, element, param ) {
 
 	// Split mime on commas in case we have multiple types we can accept
-	var typeParam = typeof param === "string" ? param.replace( /\s/g, "" ) : "image/*",
+	let typeParam = typeof param === "string" ? param.replace( /\s/g, "" ) : "image/*",
 		optionalValue = this.optional( element ),
 		i, file, regex;
 
@@ -104,7 +104,7 @@ $.validator.addMethod( "bankaccountNL", function( value, element ) {
 	}
 
 	// Now '11 check'
-	var account = value.replace( / /g, "" ), // Remove spaces
+	let account = value.replace( / /g, "" ), // Remove spaces
 		sum = 0,
 		len = account.length,
 		pos, factor, digit;
@@ -198,8 +198,8 @@ $.validator.addMethod( "cifES", function( value, element ) {
 		return true;
 	}
 
-	var cifRegEx = new RegExp( /^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$/gi );
-	var letter  = value.substring( 0, 1 ), // [ T ]
+	let cifRegEx = new RegExp( /^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$/gi );
+	let letter  = value.substring( 0, 1 ), // [ T ]
 		number  = value.substring( 1, 8 ), // [ P ][ P ][ N ][ N ][ N ][ N ][ N ]
 		control = value.substring( 8, 9 ), // [ C ]
 		all_sum = 0,
@@ -270,14 +270,14 @@ $.validator.addMethod( "cpfBR", function( value ) {
 		return false;
 	}
 
-	var sum = 0,
+	let sum = 0,
 		firstCN, secondCN, checkResult, i;
 
 	firstCN = parseInt( value.substring( 9, 10 ), 10 );
 	secondCN = parseInt( value.substring( 10, 11 ), 10 );
 
 	checkResult = function( sum, cn ) {
-		var result = ( sum * 10 ) % 11;
+		let result = ( sum * 10 ) % 11;
 		if ( ( result === 10 ) || ( result === 11 ) ) {
 			result = 0;
 		}
@@ -329,7 +329,7 @@ $.validator.addMethod( "creditcard", function( value, element ) {
 		return false;
 	}
 
-	var nCheck = 0,
+	let nCheck = 0,
 		nDigit = 0,
 		bEven = false,
 		n, cDigit;
@@ -369,7 +369,7 @@ $.validator.addMethod( "creditcardtypes", function( value, element, param ) {
 
 	value = value.replace( /\D/g, "" );
 
-	var validTypes = 0x0000;
+	let validTypes = 0x0000;
 
 	if ( param.mastercard ) {
 		validTypes |= 0x0001;
@@ -457,7 +457,7 @@ $.validator.addMethod( "creditcardtypes", function( value, element, param ) {
  *  }
  */
 $.validator.addMethod( "currency", function( value, element, param ) {
-    var isParamString = typeof param === "string",
+    let isParamString = typeof param === "string",
         symbol = isParamString ? param : param[ 0 ],
         soft = isParamString ? true : param[ 1 ],
         regex;
@@ -494,7 +494,7 @@ $.validator.addMethod( "dateFA", function( value, element ) {
  * @cat Plugins/Validate/Methods
  */
 $.validator.addMethod( "dateITA", function( value, element ) {
-	var check = false,
+	let check = false,
 		re = /^\d{1,2}\/\d{1,2}\/\d{4}$/,
 		adata, gg, mm, aaaa, xdata;
 	if ( re.test( value ) ) {
@@ -545,7 +545,7 @@ $.validator.addMethod( "iban", function( value, element ) {
 	}
 
 	// Remove spaces and to upper case
-	var iban = value.replace( / /g, "" ).toUpperCase(),
+	let iban = value.replace( / /g, "" ).toUpperCase(),
 		ibancheckdigits = "",
 		leadingZeroes = true,
 		cRest = "",
@@ -557,7 +557,7 @@ $.validator.addMethod( "iban", function( value, element ) {
 	// country code ISO 3166-1 - two letters,
 	// two check digits,
 	// Basic Bank Account Number (BBAN) - up to 30 chars
-	var minimalIBANlength = 5;
+	let minimalIBANlength = 5;
 	if ( iban.length < minimalIBANlength ) {
 		return false;
 	}
@@ -725,8 +725,8 @@ $.validator.addMethod( "nieES", function( value, element ) {
 		return true;
 	}
 
-	var nieRegEx = new RegExp( /^[MXYZ]{1}[0-9]{7,8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/gi );
-	var validChars = "TRWAGMYFPDXBNJZSQVHLCKET",
+	let nieRegEx = new RegExp( /^[MXYZ]{1}[0-9]{7,8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/gi );
+	let validChars = "TRWAGMYFPDXBNJZSQVHLCKET",
 		letter = value.substr( value.length - 1 ).toUpperCase(),
 		number;
 
@@ -793,13 +793,13 @@ $.validator.addMethod( "nipPL", function( value ) {
 		return false;
 	}
 
-	var arrSteps = [ 6, 5, 7, 2, 3, 4, 5, 6, 7 ];
-	var intSum = 0;
-	for ( var i = 0; i < 9; i++ ) {
+	let arrSteps = [ 6, 5, 7, 2, 3, 4, 5, 6, 7 ];
+	let intSum = 0;
+	for ( let i = 0; i < 9; i++ ) {
 		intSum += arrSteps[ i ] * value[ i ];
 	}
-	var int2 = intSum % 11;
-	var intControlNr = ( int2 === 10 ) ? 0 : int2;
+	let int2 = intSum % 11;
+	let intControlNr = ( int2 === 10 ) ? 0 : int2;
 
 	return ( intControlNr === parseInt( value[ 9 ], 10 ) );
 }, "Please specify a valid NIP number." );
@@ -954,7 +954,7 @@ $.validator.addMethod( "postcodeUK", function( value, element ) {
  * options[1]: CSS selector that defines the group of conditionally required fields
  */
 $.validator.addMethod( "require_from_group", function( value, element, options ) {
-	var $fields = $( options[ 1 ], element.form ),
+	let $fields = $( options[ 1 ], element.form ),
 		$fieldsFirst = $fields.eq( 0 ),
 		validator = $fieldsFirst.data( "valid_req_grp" ) ? $fieldsFirst.data( "valid_req_grp" ) : $.extend( {}, this ),
 		isValid = $fields.filter( function() {
@@ -997,7 +997,7 @@ $.validator.addMethod( "require_from_group", function( value, element, options )
  *
  */
 $.validator.addMethod( "skip_or_fill_minimum", function( value, element, options ) {
-	var $fields = $( options[ 1 ], element.form ),
+	let $fields = $( options[ 1 ], element.form ),
 		$fieldsFirst = $fields.eq( 0 ),
 		validator = $fieldsFirst.data( "valid_skip" ) ? $fieldsFirst.data( "valid_skip" ) : $.extend( {}, this ),
 		numberFilled = $fields.filter( function() {
@@ -1054,7 +1054,7 @@ $.validator.addMethod( "skip_or_fill_minimum", function( value, element, options
  *
  */
 $.validator.addMethod( "stateUS", function( value, element, options ) {
-	var isDefault = typeof options === "undefined",
+	let isDefault = typeof options === "undefined",
 		caseSensitive = ( isDefault || typeof options.caseSensitive === "undefined" ) ? false : options.caseSensitive,
 		includeTerritories = ( isDefault || typeof options.includeTerritories === "undefined" ) ? false : options.includeTerritories,
 		includeMilitary = ( isDefault || typeof options.includeMilitary === "undefined" ) ? false : options.includeMilitary,
@@ -1109,7 +1109,7 @@ $.validator.addMethod( "vinUS", function( v ) {
 		return false;
 	}
 
-	var LL = [ "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ],
+	let LL = [ "A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ],
 		VL = [ 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 7, 9, 2, 3, 4, 5, 6, 7, 8, 9 ],
 		FL = [ 8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2 ],
 		rs = 0,
