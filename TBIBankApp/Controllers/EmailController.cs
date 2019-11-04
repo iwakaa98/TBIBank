@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Mappers.Contracts;
+using TBIBankApp.Models.Emails;
 
 namespace TBIBankApp.Controllers
 {
@@ -33,7 +34,7 @@ namespace TBIBankApp.Controllers
 
             var listEmailViewModel = this.emailMapper.MapFrom(listEmailDTOS);
 
-            return View(listEmailViewModel);
+            return View(new EmailListModel(listEmailViewModel.ToList()));
 
         }
     }

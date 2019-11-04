@@ -21,6 +21,7 @@ namespace TBIApp.Services.Mappers
         {
             return new Email()
             {
+                Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 StatusId = entity.StatusId,
@@ -39,6 +40,7 @@ namespace TBIApp.Services.Mappers
         {
             return new EmailDTO()
             {
+                Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 StatusId = entity.StatusId,

@@ -1,0 +1,47 @@
+﻿@model TBIBankApp.Models.Emails.EmailListModel;
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<div class="cm-md-12">
+    <row>
+        <div class="cm-md-2">
+            <button type="submit">Butt</button>
+        </div>
+        <div class="cm-md-10">
+            <table>
+                @foreach (var item in Model.emailViewModels)
+                {
+                    <tr>
+                        <th>@item.Id</th>
+                        <th>@item.RegisteredInDataBase</th>
+                        <th>@item.Sender</th>
+                        <th>@item.Subject</th>
+                        <th>@item.Status</th>
+                        <th>#Attachmants</th>
+                        <th>Button</th>
+                    </tr>
+                }
+            </table>
+        </div>
+    </row>
+</div>
+
