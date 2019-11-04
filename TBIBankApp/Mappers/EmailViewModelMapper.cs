@@ -15,6 +15,7 @@ namespace TBIBankApp.Mappers
         {
             return new EmailViewModel()
             {
+                Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 StatusId = entity.StatusId,
@@ -28,6 +29,7 @@ namespace TBIBankApp.Mappers
         {
             return new EmailDTO()
             {
+                Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 StatusId = entity.StatusId,
