@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TBIApp.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Initial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,7 +40,10 @@ namespace TBIApp.Data.Migrations
                     TwoFactorEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
-                    AccessFailedCount = table.Column<int>(nullable: false)
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    LastLogIn = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,7 +67,8 @@ namespace TBIApp.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    SetToTerminalStatus = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -182,11 +186,14 @@ namespace TBIApp.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Date = table.Column<string>(nullable: true),
                     Sender = table.Column<string>(nullable: true),
                     Subject = table.Column<string>(nullable: true),
                     StatusId = table.Column<string>(nullable: true),
-                    Body = table.Column<string>(nullable: true)
+                    UserId = table.Column<string>(nullable: true),
+                    Body = table.Column<string>(nullable: true),
+                    RecievingDateAtMailServer = table.Column<string>(nullable: true),
+                    RegisteredInDataBase = table.Column<DateTime>(nullable: false),
+                    LastStatusUpdate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -195,6 +202,32 @@ namespace TBIApp.Data.Migrations
                         name: "FK_Emails_EmailStatuses_StatusId",
                         column: x => x.StatusId,
                         principalTable: "EmailStatuses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Emails_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Attachments",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    FileName = table.Column<string>(nullable: true),
+                    SizeMb = table.Column<double>(nullable: true),
+                    EmailId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Attachments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Attachments_Emails_EmailId",
+                        column: x => x.EmailId,
+                        principalTable: "Emails",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -209,35 +242,28 @@ namespace TBIApp.Data.Migrations
                     Body = table.Column<string>(nullable: true),
                     LoanApplicationStatusId = table.Column<string>(nullable: true),
                     CardId = table.Column<string>(nullable: true),
-                    PhoneNumber = table.Column<string>(nullable: true)
+                    PhoneNumber = table.Column<string>(nullable: true),
+                    EmailId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_LoanApplications", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_LoanApplications_Emails_EmailId",
+                        column: x => x.EmailId,
+                        principalTable: "Emails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_LoanApplications_Emails_Id",
+                        column: x => x.Id,
+                        principalTable: "Emails",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_LoanApplications_LoanApplicationStatuses_LoanApplicationStatusId",
                         column: x => x.LoanApplicationStatusId,
                         principalTable: "LoanApplicationStatuses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Attachments",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    SizeMb = table.Column<double>(nullable: false),
-                    EmailId = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Attachments", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Attachments_Emails_EmailId",
-                        column: x => x.EmailId,
-                        principalTable: "Emails",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -292,6 +318,18 @@ namespace TBIApp.Data.Migrations
                 column: "StatusId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Emails_UserId",
+                table: "Emails",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LoanApplications_EmailId",
+                table: "LoanApplications",
+                column: "EmailId",
+                unique: true,
+                filter: "[EmailId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_LoanApplications_LoanApplicationStatusId",
                 table: "LoanApplications",
                 column: "LoanApplicationStatusId");
@@ -324,9 +362,6 @@ namespace TBIApp.Data.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
                 name: "Emails");
 
             migrationBuilder.DropTable(
@@ -334,6 +369,9 @@ namespace TBIApp.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "EmailStatuses");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
         }
     }
 }

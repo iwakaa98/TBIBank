@@ -8,5 +8,6 @@ namespace TBIApp.Data.Models
     {
         public string Id { get; set; }
         public string Name { get; set; }
+        public DateTime SetToTerminalStatus { get; set; }
     }
 }

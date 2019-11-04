@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TBIApp.Data;
 using TBIApp.Data.Models;
+using TBIApp.Services.Services.Contracts;
 
 namespace TBIBankApp.Infrastructure.Extensions
 {

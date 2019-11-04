@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
+using TBIApp.Data.Configuration;
 using TBIApp.Data.Models;
 
 namespace TBIApp.Data
@@ -21,6 +22,13 @@ namespace TBIApp.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+
+            builder.ApplyConfiguration(new AttachmentConfiguration());
+            builder.ApplyConfiguration(new EmailConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
+            //builder.ApplyConfiguration(new LoanApplication());
+
         }
     }
 }

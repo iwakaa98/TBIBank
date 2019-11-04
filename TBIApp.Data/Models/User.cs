@@ -7,6 +7,9 @@ namespace TBIApp.Data.Models
 {
     public class User : IdentityUser
     {
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime LastLogIn { get; set; }  
+        public ICollection<Email> UserEmails { get; set; }
     }
 }
