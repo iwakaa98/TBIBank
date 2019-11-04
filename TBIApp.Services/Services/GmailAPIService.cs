@@ -74,6 +74,24 @@ namespace TBIApp.Services.Services
                            .FirstOrDefault(x => x.Name == "From")
                            .Value;
 
+                        var index = 0;
+                        var lastIndex = 0;
+                        for (int i = 0; i < sender.Length; i++)
+                        {
+                            if (sender[i] == '<')
+                            {
+                                index = i+1;
+                            }
+                            if (sender[i] == '>')
+                            {
+                                lastIndex = i;
+                            }
+                        }
+
+                        var length = sender.Length;
+
+                        var result = sender.Substring(index, lastIndex - index);
+
                         string subject = emailInfoResponse.Payload.Headers
                             .FirstOrDefault(x => x.Name == "Subject")
                             .Value;
@@ -109,7 +127,7 @@ namespace TBIApp.Services.Services
                         var emailDTO = new EmailDTO
                         {
                             RecievingDateAtMailServer = dateRecieved,
-                            Sender = sender,
+                            Sender = result,
                             Subject = subject,
                             Body = body
                         };
@@ -137,7 +155,7 @@ namespace TBIApp.Services.Services
             emailListRequest.IncludeSpamTrash = false;
 
             return await emailListRequest.ExecuteAsync();
-
+                
             //IMPORTANT DONT DELETE !!!!!!!!!!!
             ////Can we replace email with smth else
             //var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
