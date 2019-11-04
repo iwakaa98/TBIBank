@@ -7,13 +7,17 @@ namespace TBIApp.Services.Models
 {
     public class EmailDTO
     {
-        public string Date { get; set; }
         public string Sender { get; set; }
         public string Subject { get; set; }
         public string StatusId { get; set; }
         public EmailStatus Status { get; set; }
         public ICollection<AttachmentDTO> Attachments { get; set; }
-        //TODO 
+        public LoanApplication LoanApplication { get; set; }
+        public string UserId { get; set; }
+        public User User { get; set; }
         public string Body { get; set; }
+        public string RecievingDateAtMailServer { get; set; }
+        public DateTime RegisteredInDataBase { get; set; }
+        public DateTime LastStatusUpdate { get; set; }
     }
 }

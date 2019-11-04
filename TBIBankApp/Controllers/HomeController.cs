@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TBIApp.Data.Models;
+using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Models;
 
 namespace TBIBankApp.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IGmailAPIService gmailAPIService;
         private readonly SignInManager<User> signInManager;
 
-        public HomeController(SignInManager<User> signInManager)
+        public HomeController(IGmailAPIService gmailAPIService, SignInManager<User> signInManager)
         {
+            this.gmailAPIService = gmailAPIService;
             this.signInManager = signInManager;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            await this.gmailAPIService.SyncEmails();
             if (User.Identity.IsAuthenticated)
             {
                 return View("Privacy");

@@ -17,7 +17,7 @@ namespace TBIApp.Services.Services
         public AttachmentService(TBIAppDbContext dbcontext, IAttachmentDTOMapper attachmentDTOMapper)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
-            this.attachmentDTOMapper = attachmentDTOMapper ?? throw new ArgumentNullException(nameof(dbcontext));
+            this.attachmentDTOMapper = attachmentDTOMapper ?? throw new ArgumentNullException(nameof(attachmentDTOMapper));
         }
 
         public async Task<AttachmentDTO> CreateAsync(AttachmentDTO attachmentDTO)

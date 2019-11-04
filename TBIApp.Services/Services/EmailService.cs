@@ -20,25 +20,29 @@ namespace TBIApp.Services.Services
         public EmailService(TBIAppDbContext dbcontext, IEmailDTOMapper emailDTOMapper)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
-            this.emailDTOMapper = emailDTOMapper ?? throw new ArgumentNullException(nameof(dbcontext));
+            this.emailDTOMapper = emailDTOMapper ?? throw new ArgumentNullException(nameof(emailDTOMapper));
         }
 
         public async Task<EmailDTO> CreateAsync(EmailDTO emailDTO)
         {
             var email = this.emailDTOMapper.MapFrom(emailDTO);
 
-            //TODO 
+            email.RegisteredInDataBase = DateTime.Now;
+
+            //TODO remove from here
             email.Status = new EmailStatus { StatusName = "Not reviwed" };
 
             this.dbcontext.Emails.Add(email);
             await this.dbcontext.SaveChangesAsync();
 
-            return this.emailDTOMapper.MapFrom(email);
+            return emailDTO;
         }
 
         public async Task<ICollection<EmailDTO>> GetAllAsync()
         {
             var emails = await this.dbcontext.Emails.Select(x => x).ToListAsync();
+
+            if(emails == null) throw new ArgumentNullException("No emails found!");
 
             return this.emailDTOMapper.MapFrom(emails);
         }
