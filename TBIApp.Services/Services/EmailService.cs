@@ -49,15 +49,15 @@ namespace TBIApp.Services.Services
         }
 
         //TODO not registered int Interface; Think abuot better implementation;
-        public async Task<ICollection<EmailDTO>> GetNotReviwedEmailsAsync(int page, string typeOfEmail)
+        public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, string typeOfEmail)
         {
             //TODO can we make it within one if statement
 
 
             var emails = await this.dbcontext.Emails
                 .Where(e => e.Status.StatusName == typeOfEmail)
-                .Skip((page - 1) * 6)
-                .Take(6)
+                .Skip((page - 1) * 10)
+                .Take(10)
                 .ToListAsync();
 
             if (emails == null) throw new ArgumentNullException("No emails found!");
@@ -76,9 +76,9 @@ namespace TBIApp.Services.Services
                 .Count();
 
             if (result % 6 == 0)
-                return result % 6;
+                return result / 6;
             else
-                return result % 6 + 1;
+                return result / 6 + 1;
 
 
 

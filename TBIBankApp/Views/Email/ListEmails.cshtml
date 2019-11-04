@@ -37,7 +37,7 @@
                     <th>Attachments</th>
                     <th>Button</th>
                 </tr>
-                @foreach (var item in Model.emailViewModels)
+                @foreach (var item in Model.EmailViewModels)
                 {
                     <tr>
                         <th>@item.Id</th>
@@ -53,4 +53,15 @@
         </div>
     </row>
 </div>
+<br />
+<br />
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
 
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage" button type="submit" class="btn btn-primary">
+            Previous </a>
+
+        <li class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></li>
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage" button type="submit" class="btn btn-primary">Next</a>
+    </ul>
+</nav>
