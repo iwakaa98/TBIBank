@@ -14,10 +14,10 @@ namespace TBIApp.Services.Services
 
         public UserService(TBIAppDbContext tBIAppDbContext)
         {
-            this.tBIAppDbContext = tBIAppDbContext;
+            this.tBIAppDbContext = tBIAppDbContext ?? throw new ArgumentNullException(nameof(tBIAppDbContext));
         }
 
-        public async Task changeLastLogin(User user)
+        public async Task ChangeLastLogin(User user)
         {
             user.LastLogIn = DateTime.Now;
             await tBIAppDbContext.SaveChangesAsync();

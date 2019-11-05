@@ -53,7 +53,7 @@ namespace TBIBankApp.Controllers
                     //{
                     //    return Redirect("ChangePassword");
                     //}
-                    //await userService.changeLastLogin(user);
+                    //await userService.ChangeLastLogin(user);
                     return Redirect("Privacy");
                 }
                 else

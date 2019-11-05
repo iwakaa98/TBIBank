@@ -8,6 +8,6 @@ namespace TBIApp.Services.Services.Contracts
 {
     public interface IUserService
     {
-        Task changeLastLogin(User user);
+        Task ChangeLastLogin(User user);
     }
 }
