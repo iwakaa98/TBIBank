@@ -8,5 +8,6 @@ namespace TBIApp.Services.Models
     {
         public string FileName { get; set; }
         public double? SizeMb { get; set; }
+        public double? SizeKb { get; set; }
     }
 }

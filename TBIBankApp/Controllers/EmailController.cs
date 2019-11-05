@@ -28,12 +28,14 @@ namespace TBIBankApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> ListEmails(int Id)
+        public async Task<IActionResult> ListEmails(int Id, string emailStatus)
         {
             //Get type of Email! If its nulls set to "Not reviwed!"
             if (Id == 0) { Id = 1; }
-            
-            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, "Not reviwed");
+
+            if (emailStatus == null) emailStatus = "Not reviewed";
+
+            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, emailStatus);
 
             var result = new EmailListModel()
             {
@@ -41,7 +43,7 @@ namespace TBIBankApp.Controllers
                 PreviousPage = Id == 1 ? 1 : Id - 1,
                 CurrentPage = Id,
                 NextPage = Id + 1,
-                LastPage = this.emailService.GetEmailsPagesByType("Not reviwed")
+                LastPage = this.emailService.GetEmailsPagesByType("Not reviewed")
             };
 
             if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;

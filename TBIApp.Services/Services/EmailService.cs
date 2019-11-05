@@ -30,7 +30,7 @@ namespace TBIApp.Services.Services
             email.RegisteredInDataBase = DateTime.Now;
 
             //TODO remove from here
-            email.Status = new EmailStatus { StatusName = "Not reviwed" };
+            email.Status = new EmailStatus { StatusName = "Not reviewed" };
 
             this.dbcontext.Emails.Add(email);
             await this.dbcontext.SaveChangesAsync();
@@ -40,24 +40,24 @@ namespace TBIApp.Services.Services
 
         public async Task<ICollection<EmailDTO>> GetAllAsync()
         {
-            //var emails = await this.dbcontext.Emails.Select(x => x).ToListAsync();
-            var emails = await this.dbcontext.Emails.Take(6).ToListAsync();
+            var emails = await this.dbcontext.Emails
+                .Take(6)
+                .Include(a => a.Attachments)
+                .ToListAsync();
 
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
             return this.emailDTOMapper.MapFrom(emails);
         }
 
-        //TODO not registered int Interface; Think abuot better implementation;
         public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, string typeOfEmail)
         {
-            //TODO can we make it within one if statement
-
 
             var emails = await this.dbcontext.Emails
                 .Where(e => e.Status.StatusName == typeOfEmail)
                 .Skip((page - 1) * 10)
                 .Take(10)
+                .Include(a=> a.Attachments)
                 .ToListAsync();
 
             if (emails == null) throw new ArgumentNullException("No emails found!");
