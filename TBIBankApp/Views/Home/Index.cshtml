@@ -57,33 +57,7 @@
     <div id="dropDownSelect1"></div>
 
     <script src="~/lib/jquery/dist/jquery.js"></script>
-
-    <script>
-        $('.login100-form-btn').click(
-            function (e) {
-                let username = $('#inputUserName').val();
-                let password = $('#inputPassword').val();
-                console.log(15);
-
-                if (!username) {
-                    $('#inputUserName').addClass('border', 'solid red 2px');
-                    $('#focus-UserName').text('Please enter username');
-                }
-                if (username) {
-                    $('#inputUserName').removeClass('border', 'solid red 2px');
-                }
-                if (!username) {
-                    e.preventDefault();
-                }
-                if (!password) {
-                    $('#inputPassword').addClass('border', 'solid red 2px');
-                    $('#focus-Password').text('Please enter password');
-                }
-                if (!password) {
-                    e.preventDefault();
-                }
-            })
-
-    </script>
+    <script src="~/js/login.js"></script>
+    
 </body>
 
