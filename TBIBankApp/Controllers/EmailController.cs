@@ -28,14 +28,25 @@ namespace TBIBankApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> ListEmails()
+        public async Task<IActionResult> ListEmails(int Id)
         {
-            var listEmailDTOS = await this.emailService.GetAllAsync();
+            //Get type of Email! If its nulls set to "Not reviwed!"
+            if (Id == 0) { Id = 1; }
+            
+            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, "Not reviwed");
 
-            var listEmailViewModel = this.emailMapper.MapFrom(listEmailDTOS);
+            var result = new EmailListModel()
+            {
+                EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
+                PreviousPage = Id == 1 ? 1 : Id - 1,
+                CurrentPage = Id,
+                NextPage = Id + 1,
+                LastPage = this.emailService.GetEmailsPagesByType("Not reviwed")
+            };
 
-            return View(new EmailListModel(listEmailViewModel.ToList()));
+            if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
 
+            return View(result);
         }
     }
 }
