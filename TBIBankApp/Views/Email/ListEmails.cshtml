@@ -22,36 +22,30 @@
 </style>
 
 <div class="cm-md-12">
-    <row>
-        <div class="cm-md-2">
-            <button type="submit">Butt</button>
-        </div>
-        <div class="cm-md-10">
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Recieved</th>
-                    <th>Sender</th>
-                    <th>Subjext</th>
-                    <th>Status</th>
-                    <th>Attachments</th>
-                    <th>Button</th>
-                </tr>
-                @foreach (var item in Model.EmailViewModels)
-                {
-                    <tr>
-                        <th>@item.Id</th>
-                        <th>@item.RegisteredInDataBase</th>
-                        <th>@item.Sender</th>
-                        <th>@item.Subject</th>
-                        <th>@item.Status</th>
-                        <th>#Attachmants</th>
-                        <th>Button</th>
-                    </tr>
-                }
-            </table>
-        </div>
-    </row>
+
+    <table>
+        <tr>
+            <th>Email ID</th>
+            <th>Recieved</th>
+            <th>Sender</th>
+            <th>Subjext</th>
+            <th>Status</th>
+            <th>Attachments</th>
+            <th>Button</th>
+        </tr>
+        @foreach (var item in Model.EmailViewModels)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <th>@item.RegisteredInDataBase</th>
+                <th>@item.Sender</th>
+                <th>@item.Subject</th>
+                <th>@item.Status</th>
+                <th>#Attachmants</th>
+                <th>Button</th>
+            </tr>
+        }
+    </table>
 </div>
 <br />
 <br />
@@ -59,7 +53,8 @@
     <ul class="pagination">
 
         <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage" button type="submit" class="btn btn-primary">
-            Previous </a>
+            Previous
+        </a>
 
         <li class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></li>
         <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage" button type="submit" class="btn btn-primary">Next</a>
