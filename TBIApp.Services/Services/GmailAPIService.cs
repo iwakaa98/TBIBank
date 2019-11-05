@@ -10,8 +10,24 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using TBIApp.Data.Models;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
+
+//IMPORTANT DONT DELETE !!!!!!!!!!!
+////Can we replace email with smth else
+//var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
+
+//emailListRequest.LabelIds = "INBOX";
+//emailListRequest.IncludeSpamTrash = false;
+////emailListRequest.OauthToken
+////emailListRequest.Q
+////emailListRequest.PageToken
+////emailListRequest.Q = "is:unread"; // This was added because I only wanted unread emails...
+
+//// Get our emails
+//var emailListResponse = emailListRequest.ExecuteAsync().Result;
+//IMPORTANT DONT DELETE!!!
 
 namespace TBIApp.Services.Services
 {
@@ -55,7 +71,7 @@ namespace TBIApp.Services.Services
 
             if (emailListResponse != null && emailListResponse.Messages != null)
             {
-                // Loop through each email and get what fields you want...
+
                 foreach (var email in emailListResponse.Messages)
                 {
                     var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", email.Id);
@@ -74,62 +90,43 @@ namespace TBIApp.Services.Services
                            .FirstOrDefault(x => x.Name == "From")
                            .Value;
 
-                        var index = 0;
-                        var lastIndex = 0;
-                        for (int i = 0; i < sender.Length; i++)
-                        {
-                            if (sender[i] == '<')
-                            {
-                                index = i+1;
-                            }
-                            if (sender[i] == '>')
-                            {
-                                lastIndex = i;
-                            }
-                        }
-
-                        var length = sender.Length;
-
-                        var result = sender.Substring(index, lastIndex - index);
+                        sender = ParseSender(sender);
 
                         string subject = emailInfoResponse.Payload.Headers
                             .FirstOrDefault(x => x.Name == "Subject")
                             .Value;
-                        
+
                         //Body
                         var str = new StringBuilder();
-
                         var itemToResolve = emailInfoResponse.Payload.Parts[0];
-
 
                         if (itemToResolve.MimeType == "text/plain")
                         {
-                            str.Append(GetBody(itemToResolve));
+                            str.Append(DecodeBody(itemToResolve));
                         }
                         else
                         {
-                            str.Append(GetBody(itemToResolve.Parts[0]));
+                            str.Append(DecodeBody(itemToResolve.Parts[0]));
 
                         }
 
                         //Body
                         string body = str.ToString();
 
-                        //Bytes
-                        var size = double.Parse(emailInfoResponse.Payload.Parts[1].Body.Size.ToString());
+                        ICollection<AttachmentDTO> attachmentsOfEmail = new List<AttachmentDTO>();
 
-                        double sizeInKb = size / 1024;
-                        double sizeInMb = sizeInKb / 1024;
-
-
-
+                        if (!(itemToResolve.MimeType == "text/plain"))
+                        {
+                            attachmentsOfEmail = ParseAttachments(emailInfoResponse);
+                        }
 
                         var emailDTO = new EmailDTO
                         {
                             RecievingDateAtMailServer = dateRecieved,
-                            Sender = result,
+                            Sender = sender,
                             Subject = subject,
-                            Body = body
+                            Body = body,
+                            Attachments = attachmentsOfEmail
                         };
 
                         await emailService.CreateAsync(emailDTO);
@@ -138,8 +135,31 @@ namespace TBIApp.Services.Services
                 }
             }
         }
-        //cgange namee
-        public  string GetBody(MessagePart message)
+
+        public ICollection<AttachmentDTO> ParseAttachments(Message emailInfoResponse)
+        {
+            IList<AttachmentDTO> result = new List<AttachmentDTO>();
+
+            foreach (var attachment in emailInfoResponse.Payload.Parts.Skip(1))
+            {
+                var attachmentName = attachment.Filename;
+                var attachmentSize = double.Parse(attachment.Body.Size.Value.ToString());
+
+                var attachmentDTO = new AttachmentDTO
+                {
+                    FileName = attachmentName,
+                    SizeKb = Math.Round(attachmentSize / 1024, 2),
+                    SizeMb = Math.Round(attachmentSize / 1024 / 1024, 2)
+                };
+
+                result.Add(attachmentDTO);
+            }
+
+            return result;
+
+        }
+
+        public string DecodeBody(MessagePart message)
         {
             String codedBody = message.Body.Data.Replace("-", "+");
             codedBody = codedBody.Replace("_", "/");
@@ -148,6 +168,7 @@ namespace TBIApp.Services.Services
 
             return result;
         }
+
         public async Task<ListMessagesResponse> GetNewEmails(GmailService service)
         {
             var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
@@ -156,23 +177,27 @@ namespace TBIApp.Services.Services
             emailListRequest.IncludeSpamTrash = false;
 
             return await emailListRequest.ExecuteAsync();
-                
-            //IMPORTANT DONT DELETE !!!!!!!!!!!
-            ////Can we replace email with smth else
-            //var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
+        }
 
-            //emailListRequest.LabelIds = "INBOX";
-            //emailListRequest.IncludeSpamTrash = false;
-            ////emailListRequest.OauthToken
-            ////emailListRequest.Q
-            ////emailListRequest.PageToken
-            ////emailListRequest.Q = "is:unread"; // This was added because I only wanted unread emails...
+        public string ParseSender(string sender)
+        {
+            var index = 0;
+            var lastIndex = 0;
+            for (int i = 0; i < sender.Length; i++)
+            {
+                if (sender[i] == '<')
+                {
+                    index = i + 1;
+                }
+                if (sender[i] == '>')
+                {
+                    lastIndex = i;
+                }
+            }
 
-            //// Get our emails
-            //var emailListResponse = emailListRequest.ExecuteAsync().Result;
-            //IMPORTANT DONT DELETE!!!
+            var result = sender.Substring(index, lastIndex - index);
 
-
+            return result;
 
         }
     }

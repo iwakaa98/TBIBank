@@ -9,6 +9,7 @@ namespace TBIApp.Data.Models
         public string Id { get; set; }
         public string FileName { get; set; }
         public double? SizeMb { get; set; }
+        public double? SizeKb { get; set; }
         public string EmailId { get; set; }
         public Email Email { get; set; }
 
