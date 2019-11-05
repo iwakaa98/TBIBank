@@ -6,3 +6,10 @@
     flex-wrap: wrap;
     margin-left: 210px;
 }
+.custom-validation {
+    font-family: Poppins-Regular;
+    font-size: 20px;
+    line-height: 1.7;
+    color: red;
+    margin-left: 15px;
+}

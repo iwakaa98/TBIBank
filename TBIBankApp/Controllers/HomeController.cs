@@ -49,11 +49,11 @@ namespace TBIBankApp.Controllers
                 {
                     
                     var user = userManager.FindByNameAsync(Input.UserName).Result;
-                    if(user.LastLogIn.Year==1)
-                    {
-                        //
-                    }
-                    await userService.changeLastLogin(user);
+                    //if(user.LastLogIn.Year==1)
+                    //{
+                    //    return Redirect("ChangePassword");
+                    //}
+                    //await userService.changeLastLogin(user);
                     return Redirect("Privacy");
                 }
                 else
