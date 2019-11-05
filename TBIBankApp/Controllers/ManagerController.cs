@@ -24,7 +24,7 @@ namespace TBIBankApp.Controllers
             this.userService = userService;
         }
 
-        [Authorize(Roles="Manager")]
+        [Authorize(Roles = "Manager")]
         public IActionResult Register()
         {
             return View();
@@ -39,6 +39,18 @@ namespace TBIBankApp.Controllers
             }
             // If we got this far, something failed, redisplay form
             return RedirectToAction("Register");
+        }
+        public async Task<IActionResult> CheckForUserAndEmail(User user)
+        {
+            if (userService.CheckForEmail(user.Email))
+            {
+                return new JsonResult("true email");
+            }
+            if (userService.CheckForUserName(user.UserName))
+            {
+                return new JsonResult("true user");
+            }
+            return new JsonResult("false");
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TBIApp.Data;
@@ -21,6 +22,24 @@ namespace TBIApp.Services.Services
         {
             user.LastLogIn = DateTime.Now;
             await tBIAppDbContext.SaveChangesAsync();
+        }
+
+        public bool CheckForEmail(string email)
+        {
+            if(this.tBIAppDbContext.Users.Any(x=>x.Email==email))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool CheckForUserName(string userName)
+        {
+            if (this.tBIAppDbContext.Users.Any(x => x.UserName==userName))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -75,5 +75,14 @@ namespace TBIBankApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public async Task<IActionResult> CheckForUserNameAndPassowrd(User user)
+        {
+            //var hasher = new PasswordHasher();
+            if (userService.CheckForUserName(user.UserName))
+            {
+                
+            }
+            return new JsonResult("true");
+        }
     }
 }
