@@ -75,8 +75,7 @@ namespace TBIBankApp
             services.ConfigureApplicationCookie(opt =>
             {
                 opt.LoginPath = new PathString("/");
-                //opt.AccessDeniedPath = new PathString("/");
-
+                opt.AccessDeniedPath = new PathString("/Identity/Account/AccessDenied");
             });
 
 

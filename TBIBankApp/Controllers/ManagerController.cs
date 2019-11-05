@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TBIBankApp.Controllers
 {
     public class ManagerController : Controller
     {
-        public IActionResult Index()
+        [Authorize(Roles="Manager")]
+        public IActionResult Register()
         {
             return View();
         }
