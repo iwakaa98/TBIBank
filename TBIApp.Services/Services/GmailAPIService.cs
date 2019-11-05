@@ -100,8 +100,6 @@ namespace TBIApp.Services.Services
                         var str = new StringBuilder();
                         var itemToResolve = emailInfoResponse.Payload.Parts[0];
 
-
-
                         if (itemToResolve.MimeType == "text/plain")
                         {
                             str.Append(DecodeBody(itemToResolve));
@@ -150,8 +148,8 @@ namespace TBIApp.Services.Services
                 var attachmentDTO = new AttachmentDTO
                 {
                     FileName = attachmentName,
-                    SizeKb = attachmentSize / 1024,
-                    SizeMb = attachmentSize / 1024 / 1024
+                    SizeKb = Math.Round(attachmentSize / 1024, 2),
+                    SizeMb = Math.Round(attachmentSize / 1024 / 1024, 2)
                 };
 
                 result.Add(attachmentDTO);

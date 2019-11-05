@@ -47,7 +47,7 @@ namespace TBIApp.Services.Services
 
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
-            return this.emailDTOMapper.MapFrom(emails);
+            return this.emailDTOMapper.MapFrom(emails); 
         }
 
         public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, string typeOfEmail)
@@ -55,8 +55,8 @@ namespace TBIApp.Services.Services
 
             var emails = await this.dbcontext.Emails
                 .Where(e => e.Status.StatusName == typeOfEmail)
-                .Skip((page - 1) * 10)
-                .Take(10)
+                .Skip((page - 1) * 15)
+                .Take(15)
                 .Include(a=> a.Attachments)
                 .ToListAsync();
 
@@ -69,8 +69,6 @@ namespace TBIApp.Services.Services
 
         public int GetEmailsPagesByType(string statusOfEmail)
         {
-            //This method get pages of emails!
-
             var result = this.dbcontext.Emails
                 .Where(e => e.Status.StatusName == statusOfEmail)
                 .Count();
