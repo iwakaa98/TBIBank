@@ -57,6 +57,7 @@ namespace TBIBankApp
             services.AddScoped<IAttachmentService, AttachmentService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IGmailAPIService, GmailAPIService>();
+            services.AddScoped<IUserService, UserService>();
 
             //We registerMappers here
             //ViewModelMappers

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -13,14 +14,20 @@ namespace TBIBankApp.Controllers
     {
         private readonly IGmailAPIService gmailAPIService;
         private readonly SignInManager<User> signInManager;
+        private readonly UserManager<User> userManager;
+        private readonly IUserService userService;
 
-        public HomeController(IGmailAPIService gmailAPIService, SignInManager<User> signInManager)
+        public HomeController(IGmailAPIService gmailAPIService,
+            SignInManager<User> signInManager, 
+            UserManager<User> userManager,
+            IUserService userService)
         {
             this.gmailAPIService = gmailAPIService;
             this.signInManager = signInManager;
+            this.userManager = userManager;
+            this.userService = userService;
         }
 
-        
         public async Task<IActionResult> Index()
         {
             await this.gmailAPIService.SyncEmails();
@@ -40,7 +47,13 @@ namespace TBIBankApp.Controllers
 
                 if (result.Succeeded)
                 {
-                    //_logger.LogInformation("User logged in.");
+                    
+                    var user = userManager.FindByNameAsync(Input.UserName).Result;
+                    if(user.LastLogIn.Year==1)
+                    {
+                        //
+                    }
+                    await userService.changeLastLogin(user);
                     return Redirect("Privacy");
                 }
                 else

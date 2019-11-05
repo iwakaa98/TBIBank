@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
         <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
         <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-
+        <link rel="stylesheet" type="text/css" href="~/css/nunito-font.css">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" type="text/css" href="~/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/style.css" />
 </head>
 <body>
     @if (User.Identity.IsAuthenticated)
@@ -45,18 +46,12 @@
                         <partial name="_LoginPartial" />
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Email" asp-action="ListEmails">Emails</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Manager" asp-action="Register">Register Operator</a>
                             </li>
-
+                            
                         </ul>
                     </div>
                 </div>
@@ -69,17 +64,9 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - TBIBankApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        @*<script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>*@
         <script src="~/vendor/animsition/js/animsition.min.js"></script>
         <script src="~/vendor/bootstrap/js/popper.js"></script>
         <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -103,6 +90,13 @@
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @*<script>
+        $("#registerOperator").click(function () {
+            console.log(15);
+            $('#form-register').show();
+            return false;
+        });
+    </script>*@
 
     @RenderSection("Scripts", required: false)
 </body>
