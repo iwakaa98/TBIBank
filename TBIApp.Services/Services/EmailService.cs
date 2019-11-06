@@ -67,10 +67,10 @@ namespace TBIApp.Services.Services
 
         }
 
-        public int GetEmailsPagesByType(string statusOfEmail)
+        public int GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
         {
             var result = this.dbcontext.Emails
-                .Where(e => e.Status.ToString() == statusOfEmail)
+                .Where(e => e.Status == statusOfEmail)
                 .Count();
 
             if (result % 6 == 0)

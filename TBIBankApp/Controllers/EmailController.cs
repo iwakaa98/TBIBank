@@ -44,7 +44,7 @@ namespace TBIBankApp.Controllers
                 PreviousPage = Id == 1 ? 1 : Id - 1,
                 CurrentPage = Id,
                 NextPage = Id + 1,
-                LastPage = this.emailService.GetEmailsPagesByType("Not reviewed")
+                LastPage = this.emailService.GetEmailsPagesByType(emailStatus)
             };
 
             if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
