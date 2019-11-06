@@ -1,5 +1,6 @@
 ﻿@model TBIBankApp.Models.Emails.EmailListModel;
 
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -82,30 +83,27 @@
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
                 <td>
-
                     <button type="submit" class="btn btn-primary">Email preview</button>
-                    @*<button id="myBtn">Open Modal</button>
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>@item.Body</p>
-                            </div>
-
-                        </div>*@
                 </td>
-
                 <td>Not reviewed</td>
                 <td>
-                    <button type="submit" class="btn btn-primary">New</button>
-                    <button type="submit" class="btn btn-primary">Closed</button>
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Change Status
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
+                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
+                                
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus">Open application</a>
+
+                            </div>
+                        </div>
+                    </div>
                 </td>
-
             </tr>
-
         }
     </table>
 </div>
@@ -113,42 +111,17 @@
 <br />
 
 <nav aria-label="Page navigation example">
-    <ul class="pagination">
+    <div class="pagination">
 
         <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage">
-            <button type="submit" class="btn btn-primary">Previous</button></a>
+            <button type="submit" class="btn btn-primary">Previous</button>
+        </a>
 
-        <li class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></li>
+        <div class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></div>
 
-            <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage">
-                <button type="submit" class="btn btn-primary">Next</button></a>
-    </ul>
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </a>
+    </div>
 </nav>
 
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>

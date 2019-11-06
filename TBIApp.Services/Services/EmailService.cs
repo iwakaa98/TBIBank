@@ -63,23 +63,28 @@ namespace TBIApp.Services.Services
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
             return this.emailDTOMapper.MapFrom(emails);
+        }
 
+        //Replace string/int with ChangeStatusDTO model// Add User
+        public async Task ChangeStatus(string emailId, int emailEnumStatusId)
+        {
+            var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);
+
+            if (email == null) throw new ArgumentNullException("Email not found!");
+
+            //TODO parseEnum or change input!!?!!!!!
+            email.Status = EmailStatusesEnum.New;
+
+            this.dbcontext.Emails.Update(email);
+            await this.dbcontext.SaveChangesAsync();
 
         }
 
         public int GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
         {
-            var result = this.dbcontext.Emails
-                .Where(e => e.Status == statusOfEmail)
-                .Count();
+            var totalEmails = this.dbcontext.Emails.Where(e => e.Status == statusOfEmail).Count();
 
-            if (result % 6 == 0)
-                return result / 6;
-            else
-                return result / 6 + 1;
-
-
-
+            return totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1;
         }
     }
 }

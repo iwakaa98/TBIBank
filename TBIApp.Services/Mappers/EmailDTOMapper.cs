@@ -43,7 +43,8 @@ namespace TBIApp.Services.Mappers
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 Status = entity.Status,
-                Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
+                Attachments = this.attachmentDTOMapper
+                                  .MapFrom(entity.Attachments) ?? new List<AttachmentDTO>(),
                 LoanApplication = entity.LoanApplication,
                 UserId = entity.UserId,
                 User = entity.User,

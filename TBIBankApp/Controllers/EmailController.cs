@@ -18,8 +18,8 @@ namespace TBIBankApp.Controllers
 
         public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper)
         {
-            this.emailService = emailService;
-            this.emailMapper = emailMapper;
+            this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
+            this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
         }
 
 
@@ -29,6 +29,7 @@ namespace TBIBankApp.Controllers
             return View();
         }
 
+        [Authorize]
         public async Task<IActionResult> ListEmails(int Id, EmailStatusesEnum emailStatus)
         {
             //Get type of Email! If its nulls set to "Not reviwed!"
@@ -52,12 +53,18 @@ namespace TBIBankApp.Controllers
             return View(result);
         }
 
-        //public async Task<IActionResult> ChangeStatus(string emailId, string emailStatus)
-        //{
+        //Should we use VM or we can take two params?!
+        //Try to pass ViewModel to this method with AJax
+        [Authorize]
+        public async Task<IActionResult> ChangeStatus(string id)
+        {
+            if (!ModelState.IsValid) return BadRequest();
 
+            await this.emailService.ChangeStatus(id, 5);
 
+            //Should we redirect to somewhere!? update email list ! Remove changed email from list!
+            return Ok();
 
-
-        //}
+        }
     }
 }
