@@ -10,8 +10,7 @@ namespace TBIApp.Services.Models
         public string Id { get; set; }
         public string Sender { get; set; }
         public string Subject { get; set; }
-        public string StatusId { get; set; }
-        public EmailStatus Status { get; set; }
+        public EmailStatusesEnum Status { get; set; }
         public ICollection<AttachmentDTO> Attachments { get; set; }
         public LoanApplication LoanApplication { get; set; }
         public string UserId { get; set; }

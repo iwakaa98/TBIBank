@@ -164,7 +164,7 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("Sender");
 
-                    b.Property<string>("StatusId");
+                    b.Property<int>("Status");
 
                     b.Property<string>("Subject");
 
@@ -172,23 +172,9 @@ namespace TBIApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StatusId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("Emails");
-                });
-
-            modelBuilder.Entity("TBIApp.Data.Models.EmailStatus", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("StatusName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmailStatuses");
                 });
 
             modelBuilder.Entity("TBIApp.Data.Models.LoanApplication", b =>
@@ -345,10 +331,6 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("TBIApp.Data.Models.Email", b =>
                 {
-                    b.HasOne("TBIApp.Data.Models.EmailStatus", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId");
-
                     b.HasOne("TBIApp.Data.Models.User", "User")
                         .WithMany("UserEmails")
                         .HasForeignKey("UserId");

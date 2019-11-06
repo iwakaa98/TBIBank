@@ -131,6 +131,8 @@ namespace TBIApp.Services.Services
 
                         await emailService.CreateAsync(emailDTO);
 
+
+
                     }
                 }
             }
@@ -161,7 +163,7 @@ namespace TBIApp.Services.Services
 
         public string DecodeBody(MessagePart message)
         {
-            String codedBody = message.Body.Data.Replace("-", "+");
+            string codedBody = message.Body.Data.Replace("-", "+");
             codedBody = codedBody.Replace("_", "/");
             byte[] data = Convert.FromBase64String(codedBody);
             var result = Encoding.UTF8.GetString(data);

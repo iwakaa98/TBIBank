@@ -30,7 +30,7 @@ namespace TBIApp.Services.Services
             email.RegisteredInDataBase = DateTime.Now;
 
             //TODO remove from here
-            email.Status = new EmailStatus { StatusName = "Not reviewed" };
+            email.Status = EmailStatusesEnum.NotReviewed;
 
             this.dbcontext.Emails.Add(email);
             await this.dbcontext.SaveChangesAsync();
@@ -50,11 +50,11 @@ namespace TBIApp.Services.Services
             return this.emailDTOMapper.MapFrom(emails); 
         }
 
-        public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, string typeOfEmail)
+        public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, EmailStatusesEnum typeOfEmail)
         {
-
+            
             var emails = await this.dbcontext.Emails
-                .Where(e => e.Status.StatusName == typeOfEmail)
+                .Where(e => e.Status == typeOfEmail)
                 .Skip((page - 1) * 15)
                 .Take(15)
                 .Include(a=> a.Attachments)
@@ -70,7 +70,7 @@ namespace TBIApp.Services.Services
         public int GetEmailsPagesByType(string statusOfEmail)
         {
             var result = this.dbcontext.Emails
-                .Where(e => e.Status.StatusName == statusOfEmail)
+                .Where(e => e.Status.ToString() == statusOfEmail)
                 .Count();
 
             if (result % 6 == 0)

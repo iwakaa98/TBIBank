@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models.Emails;
@@ -28,12 +29,12 @@ namespace TBIBankApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> ListEmails(int Id, string emailStatus)
+        public async Task<IActionResult> ListEmails(int Id, EmailStatusesEnum emailStatus)
         {
             //Get type of Email! If its nulls set to "Not reviwed!"
             if (Id == 0) { Id = 1; }
 
-            if (emailStatus == null) emailStatus = "Not reviewed";
+            if (emailStatus == 0) emailStatus = EmailStatusesEnum.NotReviewed;
 
             var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, emailStatus);
 
@@ -50,5 +51,13 @@ namespace TBIBankApp.Controllers
 
             return View(result);
         }
+
+        //public async Task<IActionResult> ChangeStatus(string emailId, string emailStatus)
+        //{
+
+
+
+
+        //}
     }
 }
