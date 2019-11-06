@@ -3,63 +3,63 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
         }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
-
-
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            padding-top: 100px; /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
-
-        /* Modal Content */
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        /* The Close Button */
-        .close {
-            color: #aaaaaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-            .close:hover,
-            .close:focus {
-                color: #000;
-                text-decoration: none;
-                cursor: pointer;
-            }
-    </style>
+</style>
 
 <div class="cm-md-12">
 
@@ -70,7 +70,7 @@
             <th>Sender</th>
             <th>Subject</th>
             <th>Body</th>
-            <th>Attachments</th>
+            @*<th>Attachments</th>*@
             <th>Status</th>
             <th>Change status</th>
         </tr>
@@ -85,29 +85,23 @@
 
                     <button type="submit" class="btn btn-primary">Email preview</button>
                     @*<button id="myBtn">Open Modal</button>
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
 
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <p>@item.Body</p>
-                        </div>
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>@item.Body</p>
+                            </div>
 
-                    </div>*@
+                        </div>*@
                 </td>
-                <td>
-                @*@foreach (var att in item.Attachments)
-                {
-                <td>@att.FileName</td>
-                }*@
 
-                </td>
                 <td>Not reviewed</td>
                 <td>
                     <button type="submit" class="btn btn-primary">New</button>
                     <button type="submit" class="btn btn-primary">Closed</button>
-                    
+
                 </td>
 
             </tr>
@@ -121,15 +115,16 @@
 <nav aria-label="Page navigation example">
     <ul class="pagination">
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage" button type="submit" class="btn btn-primary">
-            Previous
-        </a>
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage">
+            <button type="submit" class="btn btn-primary">Previous</button></a>
 
         <li class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></li>
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage" button type="submit" class="btn btn-primary">Next</a>
+            <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage">
+                <button type="submit" class="btn btn-primary">Next</button></a>
     </ul>
 </nav>
+
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");
