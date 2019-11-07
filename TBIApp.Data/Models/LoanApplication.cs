@@ -10,7 +10,6 @@ namespace TBIApp.Data.Models
         public string Name { get; set; }
         public string EGN { get; set; }
         public string Body { get; set; }
-        public string LoanApplicationStatusId { get; set; }
         public LoanApplicationStatus Status { get; set; }
         public string CardId { get; set; }
         public string PhoneNumber { get; set; }

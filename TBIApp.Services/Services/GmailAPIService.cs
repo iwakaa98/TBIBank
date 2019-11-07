@@ -126,10 +126,13 @@ namespace TBIApp.Services.Services
                             Sender = sender,
                             Subject = subject,
                             Body = body,
-                            Attachments = attachmentsOfEmail
+                            Attachments = attachmentsOfEmail,
+                            Status = EmailStatusesEnum.NotReviewed
                         };
 
                         await emailService.CreateAsync(emailDTO);
+
+
 
                     }
                 }
@@ -161,7 +164,7 @@ namespace TBIApp.Services.Services
 
         public string DecodeBody(MessagePart message)
         {
-            String codedBody = message.Body.Data.Replace("-", "+");
+            string codedBody = message.Body.Data.Replace("-", "+");
             codedBody = codedBody.Replace("_", "/");
             byte[] data = Convert.FromBase64String(codedBody);
             var result = Encoding.UTF8.GetString(data);

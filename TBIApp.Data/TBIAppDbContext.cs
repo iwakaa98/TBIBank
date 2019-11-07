@@ -14,9 +14,9 @@ namespace TBIApp.Data
         }
 
         public DbSet<Email> Emails { get; set; }
-        public DbSet<EmailStatus> EmailStatuses { get; set; }
+        //public DbSet<EmailStatus> EmailStatuses { get; set; }
         public DbSet<LoanApplication> LoanApplications { get; set; }
-        public DbSet<LoanApplicationStatus> LoanApplicationStatuses { get; set; }
+        //public DbSet<LoanApplicationStatus> LoanApplicationStatusesEnum { get; set; }
         public DbSet<Attachment> Attachments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

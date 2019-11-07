@@ -29,19 +29,18 @@ namespace TBIApp.Services.Services
 
             email.RegisteredInDataBase = DateTime.Now;
 
-            //TODO remove from here
-            email.Status = new EmailStatus { StatusName = "Not reviewed" };
-
             this.dbcontext.Emails.Add(email);
+
             await this.dbcontext.SaveChangesAsync();
 
             return emailDTO;
         }
 
-        public async Task<ICollection<EmailDTO>> GetAllAsync()
+        public async Task<ICollection<EmailDTO>> GetAllAsync(int page)
         {
             var emails = await this.dbcontext.Emails
-                .Take(6)
+                .Skip((page - 1) * 15)
+                .Take(15)
                 .Include(a => a.Attachments)
                 .ToListAsync();
 
@@ -50,11 +49,11 @@ namespace TBIApp.Services.Services
             return this.emailDTOMapper.MapFrom(emails); 
         }
 
-        public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, string typeOfEmail)
+        public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, EmailStatusesEnum typeOfEmail)
         {
-
+            
             var emails = await this.dbcontext.Emails
-                .Where(e => e.Status.StatusName == typeOfEmail)
+                .Where(e => e.Status == typeOfEmail)
                 .Skip((page - 1) * 15)
                 .Take(15)
                 .Include(a=> a.Attachments)
@@ -63,23 +62,31 @@ namespace TBIApp.Services.Services
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
             return this.emailDTOMapper.MapFrom(emails);
+        }
 
+        //Replace string/int with ChangeStatusDTO model// Add User if user != Manager || Operator is diff!?
+        public async Task ChangeStatus(string emailId, int emailEnumStatusId)
+        {
+            var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);
+
+            if (email == null) throw new ArgumentNullException("Email not found!");
+
+            //TODO parseEnum or change input!!?!!!!!
+            email.Status = EmailStatusesEnum.New;
+
+            email.LastStatusUpdate = DateTime.Now;
+
+            this.dbcontext.Emails.Update(email);
+
+            await this.dbcontext.SaveChangesAsync();
 
         }
 
-        public int GetEmailsPagesByType(string statusOfEmail)
+        public Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
         {
-            var result = this.dbcontext.Emails
-                .Where(e => e.Status.StatusName == statusOfEmail)
-                .Count();
+            var totalEmails = this.dbcontext.Emails.Where(e => e.Status == statusOfEmail).Count();
 
-            if (result % 6 == 0)
-                return result / 6;
-            else
-                return result / 6 + 1;
-
-
-
+            return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
         }
     }
 }

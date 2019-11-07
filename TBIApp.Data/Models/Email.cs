@@ -9,8 +9,7 @@ namespace TBIApp.Data.Models
         public string Id { get; set; }
         public string Sender { get; set; }
         public string Subject { get; set; }
-        public string StatusId { get; set; }
-        public EmailStatus Status { get; set; } //Enum!?
+        public EmailStatusesEnum Status { get; set; }
         public ICollection<Attachment> Attachments { get; set; }
         public LoanApplication LoanApplication { get; set; }
         public string UserId { get; set; }

@@ -11,8 +11,8 @@ namespace TBIBankApp.Models.Emails
         public string Id { get; set; }
         public string Sender { get; set; }
         public string Subject { get; set; }
-        public string StatusId { get; set; }
-        public EmailStatus Status { get; set; }
+        public string Body { get; set; }
+        public EmailStatusesEnum Status { get; set; }
         public ICollection<Attachment> Attachments { get; set; }
         public DateTime RegisteredInDataBase { get; set; }
         public DateTime LastStatusUpdate { get; set; }

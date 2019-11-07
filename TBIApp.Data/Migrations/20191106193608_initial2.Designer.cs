@@ -10,8 +10,8 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191103224449_Initial2")]
-    partial class Initial2
+    [Migration("20191106193608_initial2")]
+    partial class initial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -87,11 +87,9 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -122,11 +120,9 @@ namespace TBIApp.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
@@ -143,6 +139,8 @@ namespace TBIApp.Data.Migrations
                     b.Property<string>("EmailId");
 
                     b.Property<string>("FileName");
+
+                    b.Property<double?>("SizeKb");
 
                     b.Property<double?>("SizeMb");
 
@@ -168,7 +166,7 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("Sender");
 
-                    b.Property<string>("StatusId");
+                    b.Property<int>("Status");
 
                     b.Property<string>("Subject");
 
@@ -176,23 +174,9 @@ namespace TBIApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StatusId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("Emails");
-                });
-
-            modelBuilder.Entity("TBIApp.Data.Models.EmailStatus", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("StatusName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmailStatuses");
                 });
 
             modelBuilder.Entity("TBIApp.Data.Models.LoanApplication", b =>
@@ -349,10 +333,6 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("TBIApp.Data.Models.Email", b =>
                 {
-                    b.HasOne("TBIApp.Data.Models.EmailStatus", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId");
-
                     b.HasOne("TBIApp.Data.Models.User", "User")
                         .WithMany("UserEmails")
                         .HasForeignKey("UserId");

@@ -1,5 +1,6 @@
 ﻿@model TBIBankApp.Models.Emails.EmailListModel
 
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -19,6 +20,46 @@
     tr:nth-child(even) {
         background-color: #dddddd;
     }
+
+
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
 </style>
 
 <div class="cm-md-12">
@@ -30,7 +71,7 @@
             <th>Sender</th>
             <th>Subject</th>
             <th>Body</th>
-            <th>Attachments</th>
+            @*<th>Attachments</th>*@
             <th>Status</th>
             <th>Change status</th>
         </tr>
@@ -42,30 +83,45 @@
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
                 <td>
-                    <button type="submit" class="btn btn-primary">View Body</button>
+                    <button type="submit" class="btn btn-primary">Email preview</button>
                 </td>
-                <td><img src="data:image/jpeg;base64,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" height="42" width="42">#Attachmants</td>
                 <td>Not reviewed</td>
                 <td>
-                    <button type="submit" class="btn btn-primary">New</button>
-                    <button type="submit" class="btn btn-primary">Close</button>
-                </tD>
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Change Status
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
+                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
+                                
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus">Open application</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </td>
             </tr>
-           
         }
     </table>
 </div>
 <br />
 <br />
-<nav aria-label="Page navigation example">
-    <ul class="pagination">
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage" button type="submit" class="btn btn-primary">
-            Previous
+<nav aria-label="Page navigation example">
+    <div class="pagination">
+
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage">
+            <button type="submit" class="btn btn-primary">Previous</button>
         </a>
 
-        <li class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></li>
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage" button type="submit" class="btn btn-primary">Next</a>
-    </ul>
+        <div class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></div>
+
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </a>
+    </div>
 </nav>
+

@@ -10,8 +10,8 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191104170137_emailUpdatedToApp")]
-    partial class emailUpdatedToApp
+    [Migration("20191106204425_AppUpdated")]
+    partial class AppUpdated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -87,11 +87,9 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -122,11 +120,9 @@ namespace TBIApp.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
@@ -143,6 +139,8 @@ namespace TBIApp.Data.Migrations
                     b.Property<string>("EmailId");
 
                     b.Property<string>("FileName");
+
+                    b.Property<double?>("SizeKb");
 
                     b.Property<double?>("SizeMb");
 
@@ -168,7 +166,7 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("Sender");
 
-                    b.Property<string>("StatusId");
+                    b.Property<int>("Status");
 
                     b.Property<string>("Subject");
 
@@ -176,23 +174,9 @@ namespace TBIApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StatusId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("Emails");
-                });
-
-            modelBuilder.Entity("TBIApp.Data.Models.EmailStatus", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("StatusName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmailStatuses");
                 });
 
             modelBuilder.Entity("TBIApp.Data.Models.LoanApplication", b =>
@@ -207,11 +191,11 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("EmailId");
 
-                    b.Property<string>("LoanApplicationStatusId");
-
                     b.Property<string>("Name");
 
                     b.Property<string>("PhoneNumber");
+
+                    b.Property<int>("Status");
 
                     b.HasKey("Id");
 
@@ -219,23 +203,7 @@ namespace TBIApp.Data.Migrations
                         .IsUnique()
                         .HasFilter("[EmailId] IS NOT NULL");
 
-                    b.HasIndex("LoanApplicationStatusId");
-
                     b.ToTable("LoanApplications");
-                });
-
-            modelBuilder.Entity("TBIApp.Data.Models.LoanApplicationStatus", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
-
-                    b.Property<DateTime>("SetToTerminalStatus");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("LoanApplicationStatuses");
                 });
 
             modelBuilder.Entity("TBIApp.Data.Models.User", b =>
@@ -349,10 +317,6 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("TBIApp.Data.Models.Email", b =>
                 {
-                    b.HasOne("TBIApp.Data.Models.EmailStatus", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId");
-
                     b.HasOne("TBIApp.Data.Models.User", "User")
                         .WithMany("UserEmails")
                         .HasForeignKey("UserId");
@@ -368,10 +332,6 @@ namespace TBIApp.Data.Migrations
                         .WithOne()
                         .HasForeignKey("TBIApp.Data.Models.LoanApplication", "Id")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("TBIApp.Data.Models.LoanApplicationStatus", "Status")
-                        .WithMany()
-                        .HasForeignKey("LoanApplicationStatusId");
                 });
 #pragma warning restore 612, 618
         }

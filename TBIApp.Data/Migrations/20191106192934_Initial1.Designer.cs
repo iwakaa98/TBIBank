@@ -10,8 +10,8 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191105132528_attachmentUpdated")]
-    partial class attachmentUpdated
+    [Migration("20191106192934_Initial1")]
+    partial class Initial1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -166,6 +166,8 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("Sender");
 
+                    b.Property<int>("Status");
+
                     b.Property<string>("StatusId");
 
                     b.Property<string>("Subject");
@@ -174,23 +176,9 @@ namespace TBIApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StatusId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("Emails");
-                });
-
-            modelBuilder.Entity("TBIApp.Data.Models.EmailStatus", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("StatusName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EmailStatuses");
                 });
 
             modelBuilder.Entity("TBIApp.Data.Models.LoanApplication", b =>
@@ -347,10 +335,6 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("TBIApp.Data.Models.Email", b =>
                 {
-                    b.HasOne("TBIApp.Data.Models.EmailStatus", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId");
-
                     b.HasOne("TBIApp.Data.Models.User", "User")
                         .WithMany("UserEmails")
                         .HasForeignKey("UserId");

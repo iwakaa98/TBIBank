@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TBIApp.Data.Migrations
 {
-    public partial class Initial2 : Migration
+    public partial class Initial1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,18 +48,6 @@ namespace TBIApp.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "EmailStatuses",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    StatusName = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EmailStatuses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -121,8 +109,8 @@ namespace TBIApp.Data.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: false)
                 },
@@ -166,8 +154,8 @@ namespace TBIApp.Data.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    Name = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -189,6 +177,7 @@ namespace TBIApp.Data.Migrations
                     Sender = table.Column<string>(nullable: true),
                     Subject = table.Column<string>(nullable: true),
                     StatusId = table.Column<string>(nullable: true),
+                    Status = table.Column<int>(nullable: false),
                     UserId = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
                     RecievingDateAtMailServer = table.Column<string>(nullable: true),
@@ -198,12 +187,6 @@ namespace TBIApp.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Emails", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Emails_EmailStatuses_StatusId",
-                        column: x => x.StatusId,
-                        principalTable: "EmailStatuses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Emails_AspNetUsers_UserId",
                         column: x => x.UserId,
@@ -219,6 +202,7 @@ namespace TBIApp.Data.Migrations
                     Id = table.Column<string>(nullable: false),
                     FileName = table.Column<string>(nullable: true),
                     SizeMb = table.Column<double>(nullable: true),
+                    SizeKb = table.Column<double>(nullable: true),
                     EmailId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -313,11 +297,6 @@ namespace TBIApp.Data.Migrations
                 column: "EmailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Emails_StatusId",
-                table: "Emails",
-                column: "StatusId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Emails_UserId",
                 table: "Emails",
                 column: "UserId");
@@ -366,9 +345,6 @@ namespace TBIApp.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "LoanApplicationStatuses");
-
-            migrationBuilder.DropTable(
-                name: "EmailStatuses");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

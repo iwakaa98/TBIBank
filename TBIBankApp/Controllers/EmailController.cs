@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models.Emails;
@@ -17,23 +18,19 @@ namespace TBIBankApp.Controllers
 
         public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper)
         {
-            this.emailService = emailService;
-            this.emailMapper = emailMapper;
+            this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
+            this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
         }
 
 
         [Authorize]
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> ListEmails(int Id, string emailStatus)
+        public async Task<IActionResult> ListEmails(int Id, EmailStatusesEnum emailStatus)
         {
             //Get type of Email! If its nulls set to "Not reviwed!"
             if (Id == 0) { Id = 1; }
 
-            if (emailStatus == null) emailStatus = "Not reviewed";
+            //Check enum parser from VM
+            if (emailStatus == 0) emailStatus = EmailStatusesEnum.NotReviewed;
 
             var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, emailStatus);
 
@@ -43,12 +40,35 @@ namespace TBIBankApp.Controllers
                 PreviousPage = Id == 1 ? 1 : Id - 1,
                 CurrentPage = Id,
                 NextPage = Id + 1,
-                LastPage = this.emailService.GetEmailsPagesByType("Not reviewed")
+                LastPage = await this.emailService.GetEmailsPagesByType(emailStatus)
             };
 
             if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
 
             return View(result);
+        }
+
+        //Should we use VM or we can take two params?!
+        //Try to pass ViewModel to this method with AJax
+        [Authorize]
+        public async Task<IActionResult> ChangeStatus(string id)
+        {
+            if (!ModelState.IsValid) return BadRequest();
+
+            try
+            {
+                await this.emailService.ChangeStatus(id, 5);
+
+            }
+            catch (Exception)
+            {
+
+                //log.Error("My exception, ex);
+            }
+
+            //Should we redirect to somewhere!? update email list ! Remove changed email from list!
+            return Ok();
+
         }
     }
 }
