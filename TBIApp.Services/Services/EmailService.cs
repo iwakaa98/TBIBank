@@ -29,19 +29,17 @@ namespace TBIApp.Services.Services
 
             email.RegisteredInDataBase = DateTime.Now;
 
-            //TODO remove from here
-            email.Status = EmailStatusesEnum.NotReviewed;
-
             this.dbcontext.Emails.Add(email);
             await this.dbcontext.SaveChangesAsync();
 
             return emailDTO;
         }
 
-        public async Task<ICollection<EmailDTO>> GetAllAsync()
+        public async Task<ICollection<EmailDTO>> GetAllAsync(int page)
         {
             var emails = await this.dbcontext.Emails
-                .Take(6)
+                .Skip((page - 1) * 15)
+                .Take(15)
                 .Include(a => a.Attachments)
                 .ToListAsync();
 
@@ -74,17 +72,18 @@ namespace TBIApp.Services.Services
 
             //TODO parseEnum or change input!!?!!!!!
             email.Status = EmailStatusesEnum.New;
+            email.LastStatusUpdate = DateTime.Now;
 
             this.dbcontext.Emails.Update(email);
             await this.dbcontext.SaveChangesAsync();
 
         }
 
-        public int GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
+        public Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
         {
             var totalEmails = this.dbcontext.Emails.Where(e => e.Status == statusOfEmail).Count();
 
-            return totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1;
+            return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
         }
     }
 }

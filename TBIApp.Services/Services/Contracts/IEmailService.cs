@@ -8,9 +8,9 @@ namespace TBIApp.Services.Services.Contracts
     public interface IEmailService
     {
         Task<EmailDTO> CreateAsync(EmailDTO emailDTO);
-        Task<ICollection<EmailDTO>> GetAllAsync();
+        Task<ICollection<EmailDTO>> GetAllAsync(int page);
         Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, EmailStatusesEnum typeOfEmail);
-        int GetEmailsPagesByType(EmailStatusesEnum statusOfEmail);
         Task ChangeStatus(string emailId, int emailEnumStatusId);
+        Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
     }
 }

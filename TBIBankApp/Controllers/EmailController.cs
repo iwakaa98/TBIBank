@@ -24,17 +24,12 @@ namespace TBIBankApp.Controllers
 
 
         [Authorize]
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [Authorize]
         public async Task<IActionResult> ListEmails(int Id, EmailStatusesEnum emailStatus)
         {
             //Get type of Email! If its nulls set to "Not reviwed!"
             if (Id == 0) { Id = 1; }
 
+            //Check enum parser from VM
             if (emailStatus == 0) emailStatus = EmailStatusesEnum.NotReviewed;
 
             var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, emailStatus);
@@ -45,7 +40,7 @@ namespace TBIBankApp.Controllers
                 PreviousPage = Id == 1 ? 1 : Id - 1,
                 CurrentPage = Id,
                 NextPage = Id + 1,
-                LastPage = this.emailService.GetEmailsPagesByType(emailStatus)
+                LastPage = await this.emailService.GetEmailsPagesByType(emailStatus)
             };
 
             if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
@@ -60,7 +55,16 @@ namespace TBIBankApp.Controllers
         {
             if (!ModelState.IsValid) return BadRequest();
 
-            await this.emailService.ChangeStatus(id, 5);
+            try
+            {
+                await this.emailService.ChangeStatus(id, 5);
+
+            }
+            catch (Exception)
+            {
+
+                //log.Error("My exception, ex);
+            }
 
             //Should we redirect to somewhere!? update email list ! Remove changed email from list!
             return Ok();

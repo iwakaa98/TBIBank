@@ -126,7 +126,8 @@ namespace TBIApp.Services.Services
                             Sender = sender,
                             Subject = subject,
                             Body = body,
-                            Attachments = attachmentsOfEmail
+                            Attachments = attachmentsOfEmail,
+                            Status = EmailStatusesEnum.NotReviewed
                         };
 
                         await emailService.CreateAsync(emailDTO);
