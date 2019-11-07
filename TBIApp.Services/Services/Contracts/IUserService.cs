@@ -11,5 +11,6 @@ namespace TBIApp.Services.Services.Contracts
         Task ChangeLastLogin(User user);
         bool CheckForEmail(string email);
         bool CheckForUserName(string userName);
+        bool CheckForPassword(string password);
     }
 }

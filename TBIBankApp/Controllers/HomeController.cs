@@ -43,7 +43,7 @@ namespace TBIBankApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: true);
+                var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
 
                 if (result.Succeeded)
                 {
@@ -75,14 +75,14 @@ namespace TBIBankApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public async Task<IActionResult> CheckForUserNameAndPassowrd(User user)
+        public async Task<IActionResult> CheckForUserNameAndPassowrd(LoginViewModel Input)
         {
-            //var hasher = new PasswordHasher();
-            if (userService.CheckForUserName(user.UserName))
+            var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+            if (result.Succeeded)
             {
-                
+                return new JsonResult("true");
             }
-            return new JsonResult("true");
+            return new JsonResult("false");
         }
     }
 }

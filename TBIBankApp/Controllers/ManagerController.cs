@@ -40,7 +40,7 @@ namespace TBIBankApp.Controllers
             // If we got this far, something failed, redisplay form
             return RedirectToAction("Register");
         }
-        public async Task<IActionResult> CheckForUserAndEmail(User user)
+        public async Task<IActionResult> CheckForUserAndEmail(UserViewModel user)
         {
             if (userService.CheckForEmail(user.Email))
             {
