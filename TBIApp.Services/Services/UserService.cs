@@ -34,6 +34,15 @@ namespace TBIApp.Services.Services
             return false;
         }
 
+        public bool CheckForPassword(string password)
+        {
+            if(this.tBIAppDbContext.Users.Any(x=>x.PasswordHash==password))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public bool CheckForUserName(string userName)
         {
             if (this.dbcontext.Users.Any(x => x.UserName==userName))

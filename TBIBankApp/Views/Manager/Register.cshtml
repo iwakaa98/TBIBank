@@ -22,7 +22,7 @@
             <div class="form-row-total">
                 <div class="form-row">
                     <input asp-for="Password" type="password" name="password" id="password" class="input-text" placeholder="Password" required>
-                     
+                     <p asp-validation-for="Password" id="validate-password" class="custom-validation" data-placeholder="&#xf207;"></p>
                 </div>
             </div>
             <div class="form-row-total">
