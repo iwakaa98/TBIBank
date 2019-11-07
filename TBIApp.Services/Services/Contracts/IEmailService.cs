@@ -11,6 +11,6 @@ namespace TBIApp.Services.Services.Contracts
         Task<ICollection<EmailDTO>> GetAllAsync(int page);
         Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, EmailStatusesEnum typeOfEmail);
         Task ChangeStatus(string emailId, int emailEnumStatusId);
-        Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
+        Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail);
     }
 }

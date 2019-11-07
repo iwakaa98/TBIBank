@@ -30,6 +30,7 @@ namespace TBIApp.Services.Services
             email.RegisteredInDataBase = DateTime.Now;
 
             this.dbcontext.Emails.Add(email);
+
             await this.dbcontext.SaveChangesAsync();
 
             return emailDTO;
@@ -63,7 +64,7 @@ namespace TBIApp.Services.Services
             return this.emailDTOMapper.MapFrom(emails);
         }
 
-        //Replace string/int with ChangeStatusDTO model// Add User
+        //Replace string/int with ChangeStatusDTO model// Add User if user != Manager || Operator is diff!?
         public async Task ChangeStatus(string emailId, int emailEnumStatusId)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);
@@ -72,9 +73,11 @@ namespace TBIApp.Services.Services
 
             //TODO parseEnum or change input!!?!!!!!
             email.Status = EmailStatusesEnum.New;
+
             email.LastStatusUpdate = DateTime.Now;
 
             this.dbcontext.Emails.Update(email);
+
             await this.dbcontext.SaveChangesAsync();
 
         }

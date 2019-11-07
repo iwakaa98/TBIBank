@@ -10,17 +10,18 @@ namespace TBIApp.Services.Services
 {
     public class UserService : IUserService
     {
-        private readonly TBIAppDbContext tBIAppDbContext;
+        private readonly TBIAppDbContext dbcontext;
 
         public UserService(TBIAppDbContext tBIAppDbContext)
         {
-            this.tBIAppDbContext = tBIAppDbContext ?? throw new ArgumentNullException(nameof(tBIAppDbContext));
+            this.dbcontext = tBIAppDbContext ?? throw new ArgumentNullException(nameof(dbcontext));
         }
 
         public async Task ChangeLastLogin(User user)
         {
             user.LastLogIn = DateTime.Now;
-            await tBIAppDbContext.SaveChangesAsync();
+
+            await dbcontext.SaveChangesAsync();
         }
     }
 }
