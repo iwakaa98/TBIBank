@@ -19,9 +19,9 @@ namespace TBIBankApp.Controllers
 
         public ManagerController(UserManager<User> userManager, SignInManager<User> signInManager, IUserService userService)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
-            this.userService = userService;
+            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
+            this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
         [Authorize(Roles = "Manager")]

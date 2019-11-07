@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TBIApp.Data.Migrations
 {
-    public partial class Initial1 : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,19 +48,6 @@ namespace TBIApp.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "LoanApplicationStatuses",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    SetToTerminalStatus = table.Column<DateTime>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_LoanApplicationStatuses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -176,7 +163,6 @@ namespace TBIApp.Data.Migrations
                     Id = table.Column<string>(nullable: false),
                     Sender = table.Column<string>(nullable: true),
                     Subject = table.Column<string>(nullable: true),
-                    StatusId = table.Column<string>(nullable: true),
                     Status = table.Column<int>(nullable: false),
                     UserId = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
@@ -224,7 +210,7 @@ namespace TBIApp.Data.Migrations
                     Name = table.Column<string>(nullable: true),
                     EGN = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
-                    LoanApplicationStatusId = table.Column<string>(nullable: true),
+                    Status = table.Column<int>(nullable: false),
                     CardId = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true),
                     EmailId = table.Column<string>(nullable: true)
@@ -244,12 +230,6 @@ namespace TBIApp.Data.Migrations
                         principalTable: "Emails",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_LoanApplications_LoanApplicationStatuses_LoanApplicationStatusId",
-                        column: x => x.LoanApplicationStatusId,
-                        principalTable: "LoanApplicationStatuses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -307,11 +287,6 @@ namespace TBIApp.Data.Migrations
                 column: "EmailId",
                 unique: true,
                 filter: "[EmailId] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_LoanApplications_LoanApplicationStatusId",
-                table: "LoanApplications",
-                column: "LoanApplicationStatusId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -342,9 +317,6 @@ namespace TBIApp.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Emails");
-
-            migrationBuilder.DropTable(
-                name: "LoanApplicationStatuses");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

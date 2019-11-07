@@ -22,10 +22,10 @@ namespace TBIBankApp.Controllers
             UserManager<User> userManager,
             IUserService userService)
         {
-            this.gmailAPIService = gmailAPIService;
-            this.signInManager = signInManager;
-            this.userManager = userManager;
-            this.userService = userService;
+            this.gmailAPIService = gmailAPIService ?? throw new ArgumentNullException(nameof(gmailAPIService));
+            this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
+            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
         public async Task<IActionResult> Index()

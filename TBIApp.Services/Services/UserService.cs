@@ -27,7 +27,7 @@ namespace TBIApp.Services.Services
 
         public bool CheckForEmail(string email)
         {
-            if(this.tBIAppDbContext.Users.Any(x=>x.Email==email))
+            if(this.dbcontext.Users.Any(x=>x.Email==email))
             {
                 return true;
             }
@@ -36,7 +36,7 @@ namespace TBIApp.Services.Services
 
         public bool CheckForUserName(string userName)
         {
-            if (this.tBIAppDbContext.Users.Any(x => x.UserName==userName))
+            if (this.dbcontext.Users.Any(x => x.UserName==userName))
             {
                 return true;
             }

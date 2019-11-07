@@ -14,20 +14,7 @@ using TBIApp.Data.Models;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
-//IMPORTANT DONT DELETE !!!!!!!!!!!
-////Can we replace email with smth else
-//var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
 
-//emailListRequest.LabelIds = "INBOX";
-//emailListRequest.IncludeSpamTrash = false;
-////emailListRequest.OauthToken
-////emailListRequest.Q
-////emailListRequest.PageToken
-////emailListRequest.Q = "is:unread"; // This was added because I only wanted unread emails...
-
-//// Get our emails
-//var emailListResponse = emailListRequest.ExecuteAsync().Result;
-//IMPORTANT DONT DELETE!!!
 
 namespace TBIApp.Services.Services
 {
