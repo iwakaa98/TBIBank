@@ -63,7 +63,7 @@ namespace TBIBankApp.Controllers
                 }
             }
             return RedirectToAction("Index");
-        }
+            }
         [Authorize]
         public IActionResult Privacy()
         {
@@ -75,14 +75,15 @@ namespace TBIBankApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        [HttpPost]
         public async Task<IActionResult> CheckForUserNameAndPassowrd(LoginViewModel Input)
         {
             var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return new JsonResult("true");
+                return new JsonResult(true);
             }
-            return new JsonResult("false");
+            return new JsonResult(false);
         }
     }
 }

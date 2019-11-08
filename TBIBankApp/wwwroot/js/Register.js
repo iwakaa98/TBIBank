@@ -4,46 +4,49 @@
         let confirmpassword = $('#confirm-password').val();
         let username = $('#your-name').val();
         let email = $('#your-email').val();
+        let flag = 0;
         let data =
         {
             'Email': email,
             'UserName': username
         }
         if (!(password === confirmpassword)) {
-            //$('#ConfirmPassword').addClass('border', 'solid red 5px')
             $('#ConfirmPassword').text('Password does not match!');
-            e.preventDefault();
+            flag = 1;
         }
         else {
             $('#ConfirmPassword').text('');
         }
         if (!email) {
             $('#validate-email').text('Please enter email');
-            e.preventDefault();
+            flag = 1;
         }
         else {
             $('#validate-email').text('');
         }
         if (!username) {
             $('#validate-name').text('Please enter Username');
-            e.preventDefault();
+            flag = 1;
         }
         else {
             $('#validate-name').text('');
         }
         if (!password) {
             $('#validate-password').text('Please enter password');
-            e.preventDefault();
+            flag = 1;
         }
         else {
             $('#validate-password').text('');
         }
         if (!confirmpassword) {
             $('#ConfirmPassword').text('Please enter password');
-            e.preventDefault();
+            flag=1;
         }
-        else {
+        else if (password === confirmpassword){
             $('#ConfirmPassword').text('');
+        }
+        if (flag === 1) {
+            e.preventDefault();
         }
         $.ajax(
             {
@@ -53,7 +56,6 @@
                 dataType: 'json',
                 success: function (returndata) {
                     if (returndata === "true email") {
-                        $('#validate-email').addClass('border', 'solid red 2px');
                         $('#validate-email').text('There is already registered user with this email!');
                         e.preventDefault();
                     }
@@ -73,9 +75,5 @@
                     //    e.preventDefault();
                     //}
                 },
-                error: function (e) {
-                    e.preventDefault();
-                }
-
             })
     });

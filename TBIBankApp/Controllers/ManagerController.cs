@@ -29,6 +29,7 @@ namespace TBIBankApp.Controllers
         {
             return View();
         }
+        
         public async Task<IActionResult> RegisterUser(RegisterViewModel Input)
         {
             if (ModelState.IsValid)

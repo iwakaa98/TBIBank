@@ -7,6 +7,7 @@ namespace TBIBankApp.Models.Emails
 {
     public class EmailListModel
     {
+        public string Status { get; set; }
         public int PreviousPage { get; set; }
         public int CurrentPage { get; set; }
         public int NextPage { get; set; }

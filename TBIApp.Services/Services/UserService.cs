@@ -36,7 +36,7 @@ namespace TBIApp.Services.Services
 
         public bool CheckForPassword(string password)
         {
-            if(this.tBIAppDbContext.Users.Any(x=>x.PasswordHash==password))
+            if(this.dbcontext.Users.Any(x=>x.PasswordHash==password))
             {
                 return true;
             }

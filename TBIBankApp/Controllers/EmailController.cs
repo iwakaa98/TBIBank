@@ -21,26 +21,26 @@ namespace TBIBankApp.Controllers
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
             this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
         }
-
-
-        [Authorize]
-        public async Task<IActionResult> ListEmails(int Id, EmailStatusesEnum emailStatus)
+        [HttpGet]
+        public async Task<IActionResult> ListEmails(int Id, string emailStatus)
         {
-            //Get type of Email! If its nulls set to "Not reviwed!"
+            ////emailStatus = "notreviewed";
+            ////Get type of Email! If its nulls set to "Not reviwed!"
             if (Id == 0) { Id = 1; }
+            EmailStatusesEnum status = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
+            ////Check enum parser from VM
+            if (status == 0) status = EmailStatusesEnum.NotReviewed;
 
-            //Check enum parser from VM
-            if (emailStatus == 0) emailStatus = EmailStatusesEnum.NotReviewed;
-
-            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, emailStatus);
+            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
 
             var result = new EmailListModel()
             {
+                Status = emailStatus,
                 EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
                 PreviousPage = Id == 1 ? 1 : Id - 1,
                 CurrentPage = Id,
                 NextPage = Id + 1,
-                LastPage = await this.emailService.GetEmailsPagesByType(emailStatus)
+                LastPage = await this.emailService.GetEmailsPagesByType(status)
             };
 
             if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
@@ -48,6 +48,10 @@ namespace TBIBankApp.Controllers
             return View(result);
         }
 
+        public IActionResult TestView()
+        {
+            return View();
+        }
         //Should we use VM or we can take two params?!
         //Try to pass ViewModel to this method with AJax
         [Authorize]
@@ -68,7 +72,6 @@ namespace TBIBankApp.Controllers
 
             //Should we redirect to somewhere!? update email list ! Remove changed email from list!
             return Ok();
-
         }
     }
 }

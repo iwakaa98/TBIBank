@@ -1,9 +1,5 @@
 ﻿@model TBIBankApp.Models.Emails.EmailListModel
 
-
-@{
-    ViewData["Title"] = "Index";
-}
 <style>
     table {
         font-family: arial, sans-serif;
@@ -60,6 +56,42 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+    #box {
+        padding: 5px;
+        width: 200px;
+        z-index: 10;
+        position: relative;
+    }
+
+        .nzdiw {
+            /*padding: 5px;
+            width: 200px;*/
+            
+            background: #006699;
+            padding: 5px;
+            display: none;
+            position: absolute;
+            top: 27px;
+        }
+
+    /*#button {
+        width: 75px;
+        background: #006699;
+        color: #fff;
+        padding: 3px 10px;
+        border: 1px solid #006699;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }*/
+
+    /*input[type="submit"] {
+        background: none;
+        color: #fff;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+    }*/
 </style>
 
 <div class="cm-md-12">
@@ -73,6 +105,7 @@
             <th>Body</th>
             @*<th>Attachments</th>*@
             <th>Status</th>
+
             <th>Change status</th>
         </tr>
         @foreach (var item in Model.EmailViewModels)
@@ -83,7 +116,14 @@
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
                 <td>
-                    <button type="submit" class="btn btn-primary">Email preview</button>
+                    <div id="box">
+                        <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
+                        <form action=""  id="@item.Id" class="nzdiw">
+                            <label>@item.Body</label>
+                            <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
+                            <button type="submit" id="newButton" class="btn btn-primary">New</button>
+                        </form>
+                    </div>
                 </td>
                 <td>Not reviewed</td>
                 <td>
@@ -94,8 +134,8 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
-                                
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
+
 
                                 <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus">Open application</a>
 
@@ -113,15 +153,19 @@
 <nav aria-label="Page navigation example">
     <div class="pagination">
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage">
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage" asp-route-emailStatus="@Model.Status">
             <button type="submit" class="btn btn-primary">Previous</button>
         </a>
 
-        <div class="page-item"><a class="page-link" href="#">@Model.CurrentPage</a></div>
+        <div class="page-item"><a class="page-link" id="currPage" href="#">@Model.CurrentPage</a></div>
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage">
+        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage" asp-route-emailStatus="@Model.Status">
             <button type="submit" class="btn btn-primary">Next</button>
         </a>
     </div>
 </nav>
 
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/listEmails.js"></script>

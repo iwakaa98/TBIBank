@@ -1,4 +1,8 @@
-﻿@model LoginViewModel
+﻿@{
+    Layout = null;
+}
+
+@model LoginViewModel
 
 <head>
     <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
@@ -15,49 +19,47 @@
 </head>
 
 
-<body>
-    <div class="limiter">
-        <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-            <div class="wrap-login100">
-                <form asp-action="Login" class="login100-form validate-form">
-                    <span class="login100-form-logo">
-                        <p class="logo">TBI</p>
-                    </span>
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+        <div class="wrap-login100">
+            <form asp-action="Login" class="login100-form validate-form">
+                <span class="login100-form-logo">
+                    <p class="logo">TBI</p>
+                </span>
 
-                    <span class="login100-form-title p-b-34 p-t-27">
+                <span class="login100-form-title p-b-34 p-t-27">
 
-                    </span>
-                    <div asp-validation-summary="ModelOnly"> </div>
-                    <div class="wrap-input100 validate-input" data-validate="Enter username">
-                        <input asp-for="UserName" class="input100" id="inputUserName" type="text" name="username" placeholder="Username">
-                        <span asp-validation-for="UserName" class="focus-input100" id="focus-UserName" data-placeholder="&#xf207;"></span>
-                    </div>
+                </span>
+                <div asp-validation-summary="ModelOnly"> </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter username">
+                    <input asp-for="UserName" class="input100" id="inputUserName" type="text" name="username" placeholder="Username">
+                    <span asp-validation-for="UserName" class="focus-input100" id="focus-UserName" data-placeholder="&#xf207;"></span>
+                </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
-                        <input asp-for="Password" class="input100" id="inputPassword" type="password" name="password" placeholder="Password">
-                        <span asp-validation-for="Password" class="focus-input100" id="focus-Password" data-placeholder="&#xf191;"></span>
-                    </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <input asp-for="Password" class="input100" id="inputPassword" type="password" name="password" placeholder="Password">
+                    <span asp-validation-for="Password" class="focus-input100" id="focus-Password" data-placeholder="&#xf207;"></span>
+                </div>
 
-                    @*<div class="contact100-form-checkbox">
+                @*<div class="contact100-form-checkbox">
                         <input asp-for="RememberMe" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb1">
                             Remember me
                         </label>
                     </div>*@
 
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn" type="submit" asp-controller="Home" asp-action="Login">
-                            Login
-                        </button>
-                    </div>
-                </form>
-            </div>
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit" asp-controller="Home" asp-action="Login">
+                        Login
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
-    <div id="dropDownSelect1"></div>
+</div>
+<div id="dropDownSelect1"></div>
 
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/js/login.js"></script>
-    
-</body>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/login.js"></script>
+@*<script src="~/js/main.js"></script>*@
 
