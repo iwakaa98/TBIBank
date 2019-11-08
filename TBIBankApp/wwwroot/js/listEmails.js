@@ -17,7 +17,7 @@
 //        })
 //}
 //)
-function GFG_click(clicked) {
+$('document').ready(function GFG_click(clicked) {
     //console.log(clicked);
     //let button = document.getElementById(clicked);
     //button.toggle();
@@ -27,4 +27,4 @@ function GFG_click(clicked) {
     //    $("#box form").toggle();
     //    return false;
     //})
-}
+});

@@ -12,12 +12,15 @@ using TBIBankApp.Models.Emails;
 
 namespace TBIBankApp.Controllers
 {
+    [Authorize]
+    [AutoValidateAntiforgeryToken]
     public class EmailController : Controller
     {
         private readonly IEmailService emailService;
         private readonly IEmailViewModelMapper emailMapper;
         private readonly UserManager<User> userManager;
 
+        
         public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager)
         {
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
@@ -25,33 +28,25 @@ namespace TBIBankApp.Controllers
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         }
 
-
-        [Authorize]
-        //[Route("EmailController/ListEmails/{id}/{status}")]
-        public async Task<IActionResult> ListEmails(int Id, EmailStatusesEnum emailStatus)
+        public async Task<IActionResult> ListEmails(int Id, string emailStatus)
         {
-            ////emailStatus = "notreviewed";
-            ////Get type of Email! If its nulls set to "Not reviwed!"
-            if (Id == 0) { Id = 1; }
-            EmailStatusesEnum status = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
-            ////Check enum parser from VM
-            if (status == 0) status = EmailStatusesEnum.NotReviewed;
-            
+
             try
             {
                 if (Id == 0) { Id = 1; }
+                EmailStatusesEnum status = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
 
-            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
+                var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
 
-            var result = new EmailListModel()
-            {
-                Status = emailStatus,
-                EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
-                PreviousPage = Id == 1 ? 1 : Id - 1,
-                CurrentPage = Id,
-                NextPage = Id + 1,
-                LastPage = await this.emailService.GetEmailsPagesByType(status)
-            };
+                var result = new EmailListModel()
+                {
+                    Status = emailStatus,
+                    EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
+                    PreviousPage = Id == 1 ? 1 : Id - 1,
+                    CurrentPage = Id,
+                    NextPage = Id + 1,
+                    LastPage = await this.emailService.GetEmailsPagesByType(status)
+                };
 
                 if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
 
@@ -64,10 +59,9 @@ namespace TBIBankApp.Controllers
             }
 
             return BadRequest();
-           
+
         }
-        
-        [Authorize]
+
         public async Task<IActionResult> ListAllEmails(int Id)
         {
             //Get type of Email! If its nulls set to "Not reviwed!"
@@ -90,8 +84,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ChangeStatus(string id, string status)
         {
             if (!ModelState.IsValid) return BadRequest();

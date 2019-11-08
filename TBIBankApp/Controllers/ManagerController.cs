@@ -43,11 +43,11 @@ namespace TBIBankApp.Controllers
         }
         public async Task<IActionResult> CheckForUserAndEmail(UserViewModel user)
         {
-            if (userService.CheckForEmail(user.Email))
+            if (await userService.CheckForEmail(user.Email))
             {
                 return new JsonResult("true email");
             }
-            if (userService.CheckForUserName(user.UserName))
+            if (await userService.CheckForUserName(user.UserName))
             {
                 return new JsonResult("true user");
             }

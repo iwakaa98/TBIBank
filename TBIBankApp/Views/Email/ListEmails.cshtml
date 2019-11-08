@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="~/css/ListEmails.css" />
 
 
-
+<style>
     .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -93,7 +93,6 @@
             <th>Subject</th>
             <th>Body</th>
             <th>Status</th>
-
             <th>Change status</th>
         </tr>
         @foreach (var item in Model.EmailViewModels)
@@ -123,9 +122,6 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
                                 <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
-
-
-
                             </div>
                         </div>
                     </div>
