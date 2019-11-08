@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TBIBankApp", "TBIBankApp\TB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TBIApp.Data", "TBIApp.Data\TBIApp.Data.csproj", "{37C510B2-31EA-42C6-9031-33AA05877A68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBIApp.Services", "TBIApp.Services\TBIApp.Services.csproj", "{A0E7C18E-83E9-4DBB-8E82-0101D9AE528C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TBIApp.Services", "TBIApp.Services\TBIApp.Services.csproj", "{A0E7C18E-83E9-4DBB-8E82-0101D9AE528C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

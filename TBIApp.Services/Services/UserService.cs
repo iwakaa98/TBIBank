@@ -13,9 +13,9 @@ namespace TBIApp.Services.Services
     {
         private readonly TBIAppDbContext dbcontext;
 
-        public UserService(TBIAppDbContext tBIAppDbContext)
+        public UserService(TBIAppDbContext dbcontext)
         {
-            this.dbcontext = tBIAppDbContext ?? throw new ArgumentNullException(nameof(dbcontext));
+            this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
         }
 
         public async Task ChangeLastLogin(User user)

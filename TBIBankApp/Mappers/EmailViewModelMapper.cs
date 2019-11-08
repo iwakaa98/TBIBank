@@ -18,7 +18,7 @@ namespace TBIBankApp.Mappers
                 Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
-                Status = entity.Status,
+                Status = entity.Status.ToString(),
                 //Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate
@@ -31,7 +31,7 @@ namespace TBIBankApp.Mappers
                 Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
-                Status =  entity.Status,
+                //Status =  entity.Status,
                 //Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate

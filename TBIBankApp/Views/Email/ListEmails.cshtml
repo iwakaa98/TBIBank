@@ -1,21 +1,10 @@
 ﻿@model TBIBankApp.Models.Emails.EmailListModel
 
-<style>
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
 
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    tr:nth-child(even) {
-        background-color: #dddddd;
-    }
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" type="text/css" href="~/css/ListEmails.css" />
 
 
 
@@ -103,7 +92,6 @@
             <th>Sender</th>
             <th>Subject</th>
             <th>Body</th>
-            @*<th>Attachments</th>*@
             <th>Status</th>
 
             <th>Change status</th>
@@ -125,7 +113,7 @@
                         </form>
                     </div>
                 </td>
-                <td>Not reviewed</td>
+                <td>@item.Status</td>
                 <td>
                     <div class="nav-item">
                         <div class="dropdown">
@@ -137,7 +125,6 @@
                                 <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
 
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus">Open application</a>
 
                             </div>
                         </div>

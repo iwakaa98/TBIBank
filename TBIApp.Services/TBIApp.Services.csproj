@@ -12,4 +12,8 @@
     <ProjectReference Include="..\TBIApp.Data\TBIApp.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\JsonModels\" />
+  </ItemGroup>
+
 </Project>
