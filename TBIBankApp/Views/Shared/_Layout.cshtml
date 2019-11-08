@@ -46,12 +46,26 @@
                         <partial name="_LoginPartial" />
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ListEmails">Emails</a>
+                                <div class="nav-item">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Emails
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+
+                                            <a href="/Email/ListEmails/?id=0&status=InvalidApplication" title="ListInvalidEmails"> Invalid application </a>
+                                            <br />
+                                            <a href="/Email/ListEmails/?id=0&status=New" title="ListNewEmails"> New application </a>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Manager" asp-action="Register">Register Operator</a>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -91,12 +105,12 @@
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @*<script>
-        $("#registerOperator").click(function () {
-            console.log(15);
-            $('#form-register').show();
-            return false;
-        });
-    </script>*@
+            $("#registerOperator").click(function () {
+                console.log(15);
+                $('#form-register').show();
+                return false;
+            });
+        </script>*@
 
     @RenderSection("Scripts", required: false)
 </body>

@@ -37,10 +37,10 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                                <a href="/Email/ChangeStatus/?id=@item.Id&status=InvalidApplication" title="Change Status"> Invalid application </a>
-                                <br />
-                                <a href="/Email/ChangeStatus/?id=@item.Id&status=New" title="Change Status"> New application </a>
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
 
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Open application</a>
 
                             </div>
                         </div>

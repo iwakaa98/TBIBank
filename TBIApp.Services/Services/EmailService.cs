@@ -65,16 +65,17 @@ namespace TBIApp.Services.Services
         }
 
         //Replace string/int with ChangeStatusDTO model// Add User if user != Manager || Operator is diff!?
-        public async Task ChangeStatus(string emailId, int emailEnumStatusId)
+        public async Task ChangeStatus(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);
 
             if (email == null) throw new ArgumentNullException("Email not found!");
 
-            //TODO parseEnum or change input!!?!!!!!
-            email.Status = EmailStatusesEnum.New;
+            email.Status = newEmaiLStatus;
 
             email.LastStatusUpdate = DateTime.Now;
+
+            //log.info(log updated)....
 
             this.dbcontext.Emails.Update(email);
 
@@ -85,6 +86,13 @@ namespace TBIApp.Services.Services
         public Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
         {
             var totalEmails = this.dbcontext.Emails.Where(e => e.Status == statusOfEmail).Count();
+
+            return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
+        }
+
+        public Task<int> GetAllEmailsPages()
+        {
+            var totalEmails = this.dbcontext.Emails.Count();
 
             return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
         }
