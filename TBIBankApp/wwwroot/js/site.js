@@ -4,11 +4,6 @@
 // Write your JavaScript code.
 document.onkeyup = function (e) {
     if (e.ctrlKey && e.which === 66) {
-        $.ajax(
-            {
-                type: "Post",
-                url: "Manager/RegisterUser"
-            }
-        )
+        alert(15);
     }
 }

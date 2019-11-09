@@ -28,30 +28,30 @@ namespace TBIBankApp.Controllers
 
         [Authorize]
         //[Route("EmailController/ListEmails/{id}/{status}")]
-        public async Task<IActionResult> ListEmails(int Id, EmailStatusesEnum emailStatus)
+        public async Task<IActionResult> ListEmails(int Id, string emailStatus)
         {
             ////emailStatus = "notreviewed";
             ////Get type of Email! If its nulls set to "Not reviwed!"
-            if (Id == 0) { Id = 1; }
-            EmailStatusesEnum status = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
-            ////Check enum parser from VM
-            if (status == 0) status = EmailStatusesEnum.NotReviewed;
-            
+
             try
             {
+                EmailStatusesEnum status = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
+                ////Check enum parser from VM
+                if (status == 0) status = EmailStatusesEnum.NotReviewed;
+
                 if (Id == 0) { Id = 1; }
 
-            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
+                var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
 
-            var result = new EmailListModel()
-            {
-                Status = emailStatus,
-                EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
-                PreviousPage = Id == 1 ? 1 : Id - 1,
-                CurrentPage = Id,
-                NextPage = Id + 1,
-                LastPage = await this.emailService.GetEmailsPagesByType(status)
-            };
+                var result = new EmailListModel()
+                {
+                    Status = emailStatus,
+                    EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
+                    PreviousPage = Id == 1 ? 1 : Id - 1,
+                    CurrentPage = Id,
+                    NextPage = Id + 1,
+                    LastPage = await this.emailService.GetEmailsPagesByType(status)
+                };
 
                 if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
 
@@ -64,9 +64,9 @@ namespace TBIBankApp.Controllers
             }
 
             return BadRequest();
-           
+
         }
-        
+
         [Authorize]
         public async Task<IActionResult> ListAllEmails(int Id)
         {

@@ -17,14 +17,15 @@
 //        })
 //}
 //)
-function GFG_click(clicked) {
-    //console.log(clicked);
-    //let button = document.getElementById(clicked);
-    //button.toggle();
-    console.log(clicked);
-    $(`#box #${clicked}`).toggle()
-    //$("#00539b02-8eab-4c4f-a5ad-fe0eff5794d5").click(function () {
-    //    $("#box form").toggle();
-    //    return false;
-    //})
+
+
+function GFG_click(a)
+{
+    console.log($(`#${a} #${a}`).toggle());
 }
+
+
+ 
+
+
+

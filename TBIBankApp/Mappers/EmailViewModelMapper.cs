@@ -18,6 +18,7 @@ namespace TBIBankApp.Mappers
                 Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
+                Body = entity.Body,   
                 Status = entity.Status.ToString(),
                 //Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
                 RegisteredInDataBase = entity.RegisteredInDataBase,

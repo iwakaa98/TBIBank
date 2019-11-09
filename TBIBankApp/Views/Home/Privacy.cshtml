@@ -1,42 +1,23 @@
-﻿@*<!DOCTYPE HTML>
-<html>
-<head>
-    <title>
-        Get the ID of the clicked button
-        using JavaScript
-    </title>
-<style>
-    .nzdiw {
-            /*padding: 5px;
-            width: 200px;*/
-            
-            background: #006699;
-            padding: 5px;
-            display: none;
-            position: absolute;
-            top: 27px;
-        }
-</style>
-</head>
+﻿@*<div id="add-here" class="form-group">
+</div>
+    <button id="test" >Click me</button>
 
-<body style="text-align:center;">
-
-
-
-    <div id="box">
-        <button type="submit" id="form" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
-        <form action="" href="#" id="form" class="nzdiw">
-            <p>асдасдy</p>
-            <button typy="submit" id="invalidButton" class="btn btn-primary">адасд</button>
-            <button type="submit" id="newButton" class="btn btn-primary">New</button>
-        </form>
-    </div>
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script>
-        function GFG_click(clicked) {
-            console.log(clicked);
-            $('#box clicked').toggle("slow");
-        }
-    </script>
-</body>
-</html>*@   
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $(function () {
+        let current = 0;
+        $('#test').click(function () {
+            const inputs = `<div>Ingredient ${current + 1}</div>
+                            <option name="specificIngredients[${current}].ingredient" placeholder="Name..." type="text"  id="testing" class="form-control">Select Ingredient</option>
+                            <input name="specificIngredients[${current}].quantity" placeholder="Quantity..." type="text" class="form-control" />
+                            <input name="specificIngredients[${current}].unit" placeholder="Item..." type="text" class="form-control" />
+                            <hr>`
+            current++;
+            $('#add-here').append(inputs);
+        })
+    })
+    $('#testing').click()
+    {
+        console.log(15);
+    }
+</script>*@

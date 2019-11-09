@@ -7,83 +7,7 @@
 <link rel="stylesheet" type="text/css" href="~/css/ListEmails.css" />
 
 
-
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-    #box {
-        padding: 5px;
-        width: 200px;
-        z-index: 10;
-        position: relative;
-    }
-
-        .nzdiw {
-            /*padding: 5px;
-            width: 200px;*/
-            
-            background: #006699;
-            padding: 5px;
-            display: none;
-            position: absolute;
-            top: 27px;
-        }
-
-    /*#button {
-        width: 75px;
-        background: #006699;
-        color: #fff;
-        padding: 3px 10px;
-        border: 1px solid #006699;
-        margin-bottom: 15px;
-        cursor: pointer;
-    }*/
-
-    /*input[type="submit"] {
-        background: none;
-        color: #fff;
-        border: none;
-        text-align: left;
-        cursor: pointer;
-    }*/
-</style>
-
-<div class="cm-md-12">
+<div class="cm-md-12" id="customDIV">
 
     <table>
         <tr>
@@ -96,6 +20,7 @@
 
             <th>Change status</th>
         </tr>
+
         @foreach (var item in Model.EmailViewModels)
         {
             <tr>
@@ -104,11 +29,12 @@
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
                 <td>
-                    <div id="box">
-                        <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
-                        <form action=""  id="@item.Id" class="nzdiw">
+                    <div id="@item.Id" class="box">
+                    <button type="button" id="@item.Id" onClick="GFG_click(this.id)" class="btn btn-primary custombuttonclass">Email preview</button>
+
+                        <form id="@item.Id" class="nzdiw">
                             <label>@item.Body</label>
-                            <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
+                            <button typy="submit" id="invalidButton" class="btn btn-primary">Invalid</button>
                             <button type="submit" id="newButton" class="btn btn-primary">New</button>
                         </form>
                     </div>
@@ -121,11 +47,7 @@
                                 Change Status
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
                                 <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
-
-
-
                             </div>
                         </div>
                     </div>
