@@ -12,12 +12,15 @@ using TBIBankApp.Models.Emails;
 
 namespace TBIBankApp.Controllers
 {
+    [Authorize]
+    [AutoValidateAntiforgeryToken]
     public class EmailController : Controller
     {
         private readonly IEmailService emailService;
         private readonly IEmailViewModelMapper emailMapper;
         private readonly UserManager<User> userManager;
 
+        
         public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager)
         {
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
@@ -40,6 +43,7 @@ namespace TBIBankApp.Controllers
                 if (status == 0) status = EmailStatusesEnum.NotReviewed;
 
                 if (Id == 0) { Id = 1; }
+                EmailStatusesEnum status = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
 
                 var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
 
@@ -90,8 +94,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ChangeStatus(string id, string status)
         {
             if (!ModelState.IsValid) return BadRequest();

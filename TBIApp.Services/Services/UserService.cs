@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,31 +26,22 @@ namespace TBIApp.Services.Services
             await dbcontext.SaveChangesAsync();
         }
 
-        public bool CheckForEmail(string email)
+        public Task<bool> CheckForEmail(string email)
         {
-            if(this.dbcontext.Users.Any(x=>x.Email==email))
-            {
-                return true;
-            }
-            return false;
+            return  this.dbcontext.Users.AnyAsync(x => x.Email == email);
+        
         }
 
-        public bool CheckForPassword(string password)
+        public Task<bool> CheckForPassword(string password)
         {
-            if(this.dbcontext.Users.Any(x=>x.PasswordHash==password))
-            {
-                return true;
-            }
-            return false;
+            return  this.dbcontext.Users.AnyAsync(x => x.PasswordHash == password);
+            
         }
 
-        public bool CheckForUserName(string userName)
+        public Task<bool> CheckForUserName(string userName)
         {
-            if (this.dbcontext.Users.Any(x => x.UserName==userName))
-            {
-                return true;
-            }
-            return false;
+            return this.dbcontext.Users.AnyAsync(x => x.UserName == userName);
+          
         }
     }
 }

@@ -9,8 +9,8 @@ namespace TBIApp.Services.Services.Contracts
     public interface IUserService
     {
         Task ChangeLastLogin(User user);
-        bool CheckForEmail(string email);
-        bool CheckForUserName(string userName);
-        bool CheckForPassword(string password);
+        Task<bool> CheckForEmail(string email);
+        Task<bool> CheckForUserName(string userName);
+        Task<bool> CheckForPassword(string password);
     }
 }
