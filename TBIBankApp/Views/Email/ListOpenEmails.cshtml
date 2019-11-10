@@ -74,9 +74,13 @@
             <th>Recieved</th>
             <th>Sender</th>
             <th>Subject</th>
+            <th>Open since</th>
             <th>Body</th>
             <th>Status</th>
+            <th>UserSetCrStatus</th>
             <th>Change status</th>
+
+
         </tr>
         @foreach (var item in Model.EmailViewModels)
         {
@@ -85,6 +89,7 @@
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
+                <td>@item.LastStatusUpdate</td>
                 <td>
                     <div id="box">
                         <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
@@ -95,7 +100,12 @@
                         </form>
                     </div>
                 </td>
-                <td>@item.Status</td>
+                <td>
+                    @item.Status
+                </td>
+                <td>
+                    @item.User.UserName
+                </td>
                 <td>
                     <div class="nav-item">
                         <div class="dropdown">
@@ -103,16 +113,23 @@
                                 Change Status
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @if (this.User.IsInRole("Manager") || (Model.CurrentUser == item.User))
+                                {
+                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Approve/Close</a>
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Reject/Close</a>
+                                }
+                                @if (this.User.IsInRole("Manager"))
+                                {
+                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">Set to New</a>
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
-
+                                }
 
                             </div>
                         </div>
                     </div>
                 </td>
+
             </tr>
         }
     </table>

@@ -58,6 +58,7 @@ namespace TBIApp.Services.Services
                 .Skip((page - 1) * 15)
                 .Take(15)
                 .Include(a=> a.Attachments)
+                .Include(e => e.User)
                 .ToListAsync();
 
             if (emails == null) throw new ArgumentNullException("No emails found!");

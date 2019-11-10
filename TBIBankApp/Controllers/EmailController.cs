@@ -168,10 +168,13 @@ namespace TBIBankApp.Controllers
 
             var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
 
+            var currentUser = await userManager.GetUserAsync(User);
+
             var result = new EmailListModel()
             {
                 Status = status.ToString(),
                 EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
+                CurrentUser = currentUser,
                 PreviousPage = Id == 1 ? 1 : Id - 1,
                 CurrentPage = Id,
                 NextPage = Id + 1,

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TBIApp.Data.Models;
 
 namespace TBIBankApp.Models.Emails
 {
@@ -13,6 +14,7 @@ namespace TBIBankApp.Models.Emails
         public int NextPage { get; set; }
         public int LastPage { get; set; }
         public bool ContainAttachment { get; set; }
+        public User CurrentUser { get; set; }
         public ICollection<EmailViewModel> EmailViewModels { get; set; }
     }
 }
