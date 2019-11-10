@@ -1,6 +1,5 @@
-﻿$('.login100-form-btn').on('submit',
+﻿$('.login100-form-btn').click(
     function (e) {
-        e.preventDefault();
         let username = $('#inputUserName').val();
         let password = $('#inputPassword').val();
         var a = false;

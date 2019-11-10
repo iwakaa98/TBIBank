@@ -28,112 +28,23 @@ namespace TBIBankApp.Controllers
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         }
 
-        public async Task<IActionResult> ListNotReviewedEmails(int Id)
+        public async Task<IActionResult> ListEmails(int id, string emailStatus)
         {
-
+            
             try
             {
-                EmailStatusesEnum status = EmailStatusesEnum.NotReviewed;
-
-                var result = await GetEmails(Id, status);
-
-                return View(result);
+                var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
+                var result = await GetEmails(id,newEmailStatus);
+                string status = "List" + newEmailStatus.ToString() + "Emails";
+                return View($"{status}",result);
             }
-            catch (Exception)
+            catch
             {
+                // log...error
 
-                //log.Error("xxxxx , ex);
             }
-
-            return BadRequest();
-
-        }
-
-        public async Task<IActionResult> ListOpenEmails(int Id)
-        {
-
-            try
-            {
-                EmailStatusesEnum status = EmailStatusesEnum.Open;
-
-                var result = await GetEmails(Id, status);
-
-                return View(result);
-            }
-            catch (Exception)
-            {
-
-                //log.Error("xxxxx , ex);
-            }
-
-            return BadRequest();
-
-        }
-
-        
-
-        public async Task<IActionResult> ListNewEmails(int Id)
-        {
-            try
-            {
-                EmailStatusesEnum status = EmailStatusesEnum.New;
-
-                var result = await GetEmails(Id, status);
-
-                //Remove this from here => move it to service
-                result.EmailViewModels = result.EmailViewModels.OrderBy(e => e.LastStatusUpdate).ToList();
-
-                return View(result);
-            }
-            catch (Exception)
-            {
-
-                //log.Error("xxxxx , ex);
-            }
-
             return BadRequest();
         }
-
-        public async Task<IActionResult> ListClosedEmails(int Id)
-        {
-            try
-            {
-                EmailStatusesEnum status = EmailStatusesEnum.Closed;
-
-                var result = await GetEmails(Id, status);
-
-                return View(result);
-            }
-            catch (Exception)
-            {
-
-                //log.Error("xxxxx , ex);
-            }
-
-            return BadRequest();
-
-        }
-
-        public async Task<IActionResult> ListInvalidEmails(int Id)
-        {
-            try
-            {
-                EmailStatusesEnum status = EmailStatusesEnum.Closed;
-
-                var result = await GetEmails(Id, status);
-
-                return View(result);
-            }
-            catch (Exception)
-            {
-
-                //log.Error("xxxxx , ex);
-            }
-
-            return BadRequest();
-
-        }
-
         [HttpGet]
         public async Task<IActionResult> ChangeStatus(string id, string status)
         {

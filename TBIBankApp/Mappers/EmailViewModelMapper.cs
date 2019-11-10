@@ -26,6 +26,7 @@ namespace TBIBankApp.Mappers
                 Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
+                Body = entity.Body,   
                 Status = entity.Status.ToString(),
                 Attachments = this.attachmentMapper.MapFrom(entity.Attachments),
                 AttachmentCount = entity.Attachments.Count(),
