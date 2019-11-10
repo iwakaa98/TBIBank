@@ -50,6 +50,10 @@ namespace TBIBankApp.Controllers
                 {
                     
                     var user = userManager.FindByNameAsync(Input.UserName).Result;
+                    if(user.LastLogIn.Year==1)
+                    {
+
+                    }
                     //if (user.LastLogIn.Year == 1)
                     //{
                     //    return Redirect("ChangePassword");

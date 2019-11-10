@@ -13,7 +13,7 @@
             <th>Body</th>
             <th>Attachments</th>
             <th>Status</th>
-            <th>Change status</th>
+            @*<th>Change status</th>*@
         </tr>
     </thead>
     <tbody>
@@ -25,16 +25,6 @@
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
-                <td>
-                    <div id="box">
-                        <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
-                        @*<form action="" id="@item.Id" class="nzdiw">
-                            <label>@item.Body</label>
-                            <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
-                            <button type="submit" id="newButton" class="btn btn-primary">New</button>
-                        </form>*@
-                    </div>
-                </td>
                 <td>
                     @if (item.AttachmentCount == 0)
                     {
@@ -49,22 +39,52 @@
                 </td>
                 <td>@item.Status</td>
                 <td>
-                    <div class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Change Status
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="exampleModal" onclick="ModalTest(this.id)">
+                        Email Preview
+                    </button>
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
-
-
+                    <!-- Modal -->
+                    <div class="modal fade" id="@item.Id"  tabindex="-1" role="dialog" aria-labelledby="ExampleModalTest.Id" aria-hidden="true">
+                       
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ExampleModalTest">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        @item.Id
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </td>
+                @*<td>
+                        <div class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Change Status
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+
+                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </td>*@
             </tr>
         }
     <tfoot>
@@ -76,7 +96,7 @@
             <th>Body</th>
             <th>Attachments</th>
             <th>Status</th>
-            <th>Change status</th>
+            @*<th>Change status</th>*@
         </tr>
     </tfoot>
 </table>
@@ -88,5 +108,11 @@
         $(document).ready(function () {
             $('#example').DataTable();
         });
+
+
+        function ModalTest(id) {
+            console.log(id);
+            $(`#${id}`).modal().show();
+        }
     </script>
 }
