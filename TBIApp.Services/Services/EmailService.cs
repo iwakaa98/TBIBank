@@ -77,7 +77,7 @@ namespace TBIApp.Services.Services
 
             email.LastStatusUpdate = DateTime.Now;
 
-            email.User = currentUser;
+            email.UserId = currentUser.Id;
 
             this.dbcontext.Emails.Update(email);
 
