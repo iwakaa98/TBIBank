@@ -1,0 +1,92 @@
+﻿@model TBIBankApp.Models.Emails.EmailListModel
+
+<link rel="stylesheet" type="text/css" href="~/css/customTable.css" />
+
+
+<table id="example" class="display1" style="width:100%">
+    <thead>
+        <tr>
+            <th>Email ID</th>
+            <th>Recieved</th>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Body</th>
+            <th>Attachments</th>
+            <th>Status</th>
+            <th>Change status</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.EmailViewModels)
+        {
+            <tr>
+                <th style="width:10%">@item.Id</th>
+                <td>@item.RegisteredInDataBase</td>
+                <td>@item.Sender</td>
+                <td>@item.Subject</td>
+                <td>
+                    <div id="box">
+                        <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
+                        @*<form action="" id="@item.Id" class="nzdiw">
+                            <label>@item.Body</label>
+                            <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
+                            <button type="submit" id="newButton" class="btn btn-primary">New</button>
+                        </form>*@
+                    </div>
+                </td>
+                <td>
+                    @if (item.AttachmentCount == 0)
+                    {
+                        <p>No Attachments</p>
+                    }
+                    else
+                    {
+                        <p>
+                            @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
+                        </p>
+                    }
+                </td>
+                <td>@item.Status</td>
+                <td>
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Change Status
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    <tfoot>
+        <tr>
+            <th>Email ID</th>
+            <th>Recieved</th>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Body</th>
+            <th>Attachments</th>
+            <th>Status</th>
+            <th>Change status</th>
+        </tr>
+    </tfoot>
+</table>
+@section Scripts
+{
+
+    <script type="text/javascript" src="~/js/customTable.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+}

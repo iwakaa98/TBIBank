@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Serilog;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +18,8 @@ using TBIApp.Services.Mappers;
 using TBIApp.Data.Models;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Mappers;
+using TBIApp.MailClient.Client;
+using TBIApp.MailClient.Contracts;
 
 namespace TBIBankApp
 {
@@ -62,16 +65,10 @@ namespace TBIBankApp
             //We registerMappers here
             //ViewModelMappers
             services.AddScoped<IEmailViewModelMapper, EmailViewModelMapper>();
-
-
+            services.AddScoped<IAttachmentViewModelMapper, AttachmentViewModelMapper>();
             //ServiceMapper
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
-
-
-
-
-
 
             services.ConfigureApplicationCookie(opt =>
             {

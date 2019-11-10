@@ -8,16 +8,20 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Google.Apis.Gmail.v1" Version="1.41.1.1635" />
+    <PackageReference Include="datatables.net" Version="1.10.18" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
   </ItemGroup>
 
 
   <ItemGroup>
     <ProjectReference Include="..\TBIApp.Data\TBIApp.Data.csproj" />
+    <ProjectReference Include="..\TBIApp.MailClient\TBIApp.MailClient.csproj" />
     <ProjectReference Include="..\TBIApp.Services\TBIApp.Services.csproj" />
   </ItemGroup>
 

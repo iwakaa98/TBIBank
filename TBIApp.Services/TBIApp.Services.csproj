@@ -5,15 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Apis.Gmail.v1" Version="1.41.1.1635" />
+    <Compile Remove="Services\GmailAPIService.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TBIApp.Data\TBIApp.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\JsonModels\" />
   </ItemGroup>
 
 </Project>
