@@ -5,18 +5,18 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TBIApp.Data.Models;
+using TBIApp.MailClient.Contracts;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
-
-
-namespace TBIApp.Services.Services
+namespace TBIApp.MailClient.Client
 {
     public class GmailAPIService : IGmailAPIService
     {
@@ -73,6 +73,8 @@ namespace TBIApp.Services.Services
                             .FirstOrDefault(x => x.Name == "Date")
                             .Value;
 
+                        var dtString = dateRecieved.Replace("(GMT)", "").Trim();
+
                         string sender = emailInfoResponse.Payload.Headers
                            .FirstOrDefault(x => x.Name == "From")
                            .Value;
@@ -112,7 +114,7 @@ namespace TBIApp.Services.Services
                         var emailDTO = new EmailDTO
                         {
                             RecievingDateAtMailServer = dateRecieved,
-                            Sender = sender,
+                            Sender = ParseSender(sender),
                             Subject = subject,
                             Body = body,
                             Attachments = attachmentsOfEmail,

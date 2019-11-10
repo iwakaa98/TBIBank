@@ -12,6 +12,7 @@ namespace TBIBankApp.Models.Emails
         public int CurrentPage { get; set; }
         public int NextPage { get; set; }
         public int LastPage { get; set; }
+        public bool ContainAttachment { get; set; }
         public ICollection<EmailViewModel> EmailViewModels { get; set; }
     }
 }

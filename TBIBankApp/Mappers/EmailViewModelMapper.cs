@@ -10,6 +10,14 @@ namespace TBIBankApp.Mappers
 {
     public class EmailViewModelMapper : IEmailViewModelMapper
     {
+        private readonly IAttachmentViewModelMapper attachmentMapper;
+
+        public EmailViewModelMapper(IAttachmentViewModelMapper attachmentMapper)
+        {
+            this.attachmentMapper = attachmentMapper;
+        }
+
+
 
         public EmailViewModel MapFrom(EmailDTO entity)
         {
@@ -19,7 +27,8 @@ namespace TBIBankApp.Mappers
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 Status = entity.Status.ToString(),
-                //Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
+                Attachments = this.attachmentMapper.MapFrom(entity.Attachments),
+                AttachmentCount = entity.Attachments.Count(),
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate
             };
@@ -32,7 +41,7 @@ namespace TBIBankApp.Mappers
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 //Status =  entity.Status,
-                //Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
+                Attachments = this.attachmentMapper.MapFrom(entity.Attachments),
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate
             };

@@ -28,27 +28,14 @@ namespace TBIBankApp.Controllers
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         }
 
-        public async Task<IActionResult> ListEmails(int Id, string emailStatus)
+        public async Task<IActionResult> ListNotReviewedEmails(int Id)
         {
 
             try
             {
-                if (Id == 0) { Id = 1; }
-                EmailStatusesEnum status = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
+                EmailStatusesEnum status = EmailStatusesEnum.NotReviewed;
 
-                var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
-
-                var result = new EmailListModel()
-                {
-                    Status = emailStatus,
-                    EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
-                    PreviousPage = Id == 1 ? 1 : Id - 1,
-                    CurrentPage = Id,
-                    NextPage = Id + 1,
-                    LastPage = await this.emailService.GetEmailsPagesByType(status)
-                };
-
-                if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
+                var result = await GetEmails(Id, status);
 
                 return View(result);
             }
@@ -62,35 +49,102 @@ namespace TBIBankApp.Controllers
 
         }
 
-        public async Task<IActionResult> ListAllEmails(int Id)
+        public async Task<IActionResult> ListOpenEmails(int Id)
         {
-            //Get type of Email! If its nulls set to "Not reviwed!"
-            if (Id == 0) { Id = 1; }
 
-            var listEmailDTOS = await this.emailService.GetAllAsync(Id);
-
-            var result = new EmailListModel()
+            try
             {
-                EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
-                PreviousPage = Id == 1 ? 1 : Id - 1,
-                CurrentPage = Id,
-                NextPage = Id + 1,
-                LastPage = await this.emailService.GetAllEmailsPages()
-            };
+                EmailStatusesEnum status = EmailStatusesEnum.Open;
 
-            if (result.NextPage > result.LastPage) result.NextPage = result.LastPage;
+                var result = await GetEmails(Id, status);
 
-            return View(result);
+                return View(result);
+            }
+            catch (Exception)
+            {
+
+                //log.Error("xxxxx , ex);
+            }
+
+            return BadRequest();
+
+        }
+
+        
+
+        public async Task<IActionResult> ListNewEmails(int Id)
+        {
+            try
+            {
+                EmailStatusesEnum status = EmailStatusesEnum.New;
+
+                var result = await GetEmails(Id, status);
+
+                //Remove this from here => move it to service
+                result.EmailViewModels = result.EmailViewModels.OrderBy(e => e.LastStatusUpdate).ToList();
+
+                return View(result);
+            }
+            catch (Exception)
+            {
+
+                //log.Error("xxxxx , ex);
+            }
+
+            return BadRequest();
+        }
+
+        public async Task<IActionResult> ListClosedEmails(int Id)
+        {
+            try
+            {
+                EmailStatusesEnum status = EmailStatusesEnum.Closed;
+
+                var result = await GetEmails(Id, status);
+
+                return View(result);
+            }
+            catch (Exception)
+            {
+
+                //log.Error("xxxxx , ex);
+            }
+
+            return BadRequest();
+
+        }
+
+        public async Task<IActionResult> ListInvalidEmails(int Id)
+        {
+            try
+            {
+                EmailStatusesEnum status = EmailStatusesEnum.Closed;
+
+                var result = await GetEmails(Id, status);
+
+                return View(result);
+            }
+            catch (Exception)
+            {
+
+                //log.Error("xxxxx , ex);
+            }
+
+            return BadRequest();
+
         }
 
         [HttpGet]
         public async Task<IActionResult> ChangeStatus(string id, string status)
         {
+
+            //Can we replace id&status with ViewModel
             if (!ModelState.IsValid) return BadRequest();
 
             try
             {
-                var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), status, true);
+                //Ca we use ChangeStatusViewModel and map it to DTO => Entity
+                var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), status, true);                   
 
                 var currentUser = await this.userManager.GetUserAsync(User);
 
@@ -106,6 +160,26 @@ namespace TBIBankApp.Controllers
             //We should remove current email from listed, cuz status is changed!
             //return RedirectToAction("ListAllEmails");
             return Ok();
+        }
+
+        public async Task<EmailListModel> GetEmails(int Id, EmailStatusesEnum status)
+        {
+            if (Id == 0) { Id = 1; }
+
+            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
+
+            var result = new EmailListModel()
+            {
+                Status = status.ToString(),
+                EmailViewModels = this.emailMapper.MapFrom(listEmailDTOS),
+                PreviousPage = Id == 1 ? 1 : Id - 1,
+                CurrentPage = Id,
+                NextPage = Id + 1,
+                LastPage = await this.emailService.GetEmailsPagesByType(status)
+            };
+
+            return result;
+
         }
     }
 }

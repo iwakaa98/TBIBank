@@ -54,6 +54,7 @@ namespace TBIApp.Services.Services
             
             var emails = await this.dbcontext.Emails
                 .Where(e => e.Status == typeOfEmail)
+                .OrderByDescending(e => e.RegisteredInDataBase)
                 .Skip((page - 1) * 15)
                 .Take(15)
                 .Include(a=> a.Attachments)
@@ -75,11 +76,13 @@ namespace TBIApp.Services.Services
 
             email.LastStatusUpdate = DateTime.Now;
 
-            //log.info(log updated)....
+            email.User = currentUser;
 
             this.dbcontext.Emails.Update(email);
 
             await this.dbcontext.SaveChangesAsync();
+
+            //log.info(log updated)...
 
         }
 

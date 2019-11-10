@@ -4,7 +4,12 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 <link rel="stylesheet" type="text/css" href="~/css/ListEmails.css" />
+@*//Added by Misho*@
+@*<meta name="viewport" content="width=device-width, initial-scale=1">*@
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">*@
+
 
 
 <style>
@@ -53,16 +58,15 @@
         position: relative;
     }
 
-        .nzdiw {
-            /*padding: 5px;
+    .nzdiw {
+        /*padding: 5px;
             width: 200px;*/
-            
-            background: #006699;
-            padding: 5px;
-            display: none;
-            position: absolute;
-            top: 27px;
-        }
+        background: #006699;
+        padding: 5px;
+        display: none;
+        position: absolute;
+        top: 27px;
+    }
 
     /*#button {
         width: 75px;
@@ -92,25 +96,38 @@
             <th>Sender</th>
             <th>Subject</th>
             <th>Body</th>
+            <th>Attachments</th>
             <th>Status</th>
             <th>Change status</th>
         </tr>
         @foreach (var item in Model.EmailViewModels)
         {
             <tr>
-                <td>@item.Id</td>
+                <th style="width:10%">@item.Id</th>
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
                 <td>
                     <div id="box">
                         <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
-                        <form action=""  id="@item.Id" class="nzdiw">
+                        <form action="" id="@item.Id" class="nzdiw">
                             <label>@item.Body</label>
                             <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
                             <button type="submit" id="newButton" class="btn btn-primary">New</button>
                         </form>
                     </div>
+                </td>
+                <td>
+                    @if (item.AttachmentCount == 0)
+                    {
+                        <p>No Attachments</p>
+                    }
+                    else
+                    {
+                        <p>
+                            @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
+                        </p>
+                    }
                 </td>
                 <td>@item.Status</td>
                 <td>
@@ -121,7 +138,11 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
+
+
                             </div>
                         </div>
                     </div>
@@ -136,15 +157,12 @@
 <nav aria-label="Page navigation example">
     <div class="pagination">
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage" asp-route-emailStatus="@Model.Status">
-            <button type="submit" class="btn btn-primary">Previous</button>
-        </a>
+        <a class="btn btn-primary" type="submit" asp-controller="Email" asp-action="ListNotReviewedEmails" asp-route-Id="@Model.PreviousPage">Previous</a>
 
         <div class="page-item"><a class="page-link" id="currPage" href="#">@Model.CurrentPage</a></div>
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage" asp-route-emailStatus="@Model.Status">
-            <button type="submit" class="btn btn-primary">Next</button>
-        </a>
+        <a class="btn btn-primary" type="submit" asp-controller="Email" asp-action="ListNotReviewedEmails" asp-route-Id="@Model.NextPage">Next</a>
+
     </div>
 </nav>
 
@@ -152,3 +170,6 @@
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/js/listEmails.js"></script>
+@*AddedBy Misho*@
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>*@

@@ -1,0 +1,138 @@
+﻿@model TBIBankApp.Models.Emails.EmailListModel
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" type="text/css" href="~/css/ListEmails.css" />
+
+
+<style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    #box {
+        padding: 5px;
+        width: 200px;
+        z-index: 10;
+        position: relative;
+    }
+
+    .nzdiw {
+        /*padding: 5px;
+            width: 200px;*/
+        background: #006699;
+        padding: 5px;
+        display: none;
+        position: absolute;
+        top: 27px;
+    }
+</style>
+
+<div>This is open List!</div>
+
+<div class="cm-md-12">
+
+    <table>
+        <tr>
+            <th>Email ID</th>
+            <th>Recieved</th>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Body</th>
+            <th>Status</th>
+            <th>Change status</th>
+        </tr>
+        @foreach (var item in Model.EmailViewModels)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.RegisteredInDataBase</td>
+                <td>@item.Sender</td>
+                <td>@item.Subject</td>
+                <td>
+                    <div id="box">
+                        <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
+                        <form action="" id="@item.Id" class="nzdiw">
+                            <label>@item.Body</label>
+                            <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
+                            <button type="submit" id="newButton" class="btn btn-primary">New</button>
+                        </form>
+                    </div>
+                </td>
+                <td>@item.Status</td>
+                <td>
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Change Status
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<br />
+<br />
+
+<nav aria-label="Page navigation example">
+    <div class="pagination">
+
+        <a class="btn btn-primary" type="submit" asp-controller="Email" asp-action="ListOpenEmails" asp-route-Id="@Model.PreviousPage">Previous</a>
+
+        <div class="page-item"><a class="page-link" id="currPage" href="#">@Model.CurrentPage</a></div>
+
+        <a class="btn btn-primary" type="submit" asp-controller="Email" asp-action="ListOpenEmails" asp-route-Id="@Model.NextPage">Next</a>
+
+    </div>
+</nav>
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/listEmails.js"></script>
