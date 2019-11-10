@@ -167,7 +167,8 @@ namespace TBIApp.MailClient.Client
         {
             var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
 
-            emailListRequest.LabelIds = "INBOX";
+            emailListRequest.LabelIds = "UNREAD";
+            
             emailListRequest.IncludeSpamTrash = false;
 
             return await emailListRequest.ExecuteAsync();

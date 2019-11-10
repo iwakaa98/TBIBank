@@ -16,6 +16,7 @@ namespace TBIBankApp.Models.Emails
         public string Status { get; set; }
         public ICollection<AttachmentViewModel> Attachments { get; set; }
         public int AttachmentCount { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
         public DateTime RegisteredInDataBase { get; set; }
         public DateTime LastStatusUpdate { get; set; }

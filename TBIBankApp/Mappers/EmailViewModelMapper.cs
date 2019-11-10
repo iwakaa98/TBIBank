@@ -30,6 +30,7 @@ namespace TBIBankApp.Mappers
                 Status = entity.Status.ToString(),
                 Attachments = this.attachmentMapper.MapFrom(entity.Attachments),
                 AttachmentCount = entity.Attachments.Count(),
+                UserId = entity.UserId,
                 User = entity.User,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate
@@ -44,6 +45,7 @@ namespace TBIBankApp.Mappers
                 Subject = entity.Subject,
                 //Status =  entity.Status,
                 Attachments = this.attachmentMapper.MapFrom(entity.Attachments),
+                UserId = entity.UserId,
                 User = entity.User,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate

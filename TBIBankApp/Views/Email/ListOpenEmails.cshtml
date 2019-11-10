@@ -54,7 +54,7 @@
                                 Change Status
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                @if (this.User.IsInRole("Manager") || (Model.CurrentUser == item.User))
+                                @if (this.User.IsInRole("Manager") || (Model.CurrentUser.Id == item.UserId))
                                 {
                                     <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Approve/Close</a>
 
