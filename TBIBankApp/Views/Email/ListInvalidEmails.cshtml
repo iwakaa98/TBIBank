@@ -4,12 +4,12 @@
 @{
     ViewData["Title"] = "Index";
 }
-<link rel="stylesheet" type="text/css" href="~/css/ListEmails.css" />
+
+<link rel="stylesheet" type="text/css" href="~/css/customTable.css" />
 
 
-<div class="cm-md-12" id="customDIV">
-
-    <table>
+<table id="example" class="display1" style="width:100%">
+    <thead>
         <tr>
             <th>Email ID</th>
             <th>Recieved</th>
@@ -17,9 +17,10 @@
             <th>Subject</th>
             <th>Body</th>
             <th>Status</th>
-
             <th>Change status</th>
         </tr>
+    </thead>
+    <tbody>
 
         @foreach (var item in Model.EmailViewModels)
         {
@@ -29,12 +30,11 @@
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
                 <td>
-                    <div id="@item.Id" class="box">
-                    <button type="button" id="@item.Id" onClick="GFG_click(this.id)" class="btn btn-primary custombuttonclass">Email preview</button>
-
-                        <form id="@item.Id" class="nzdiw">
+                    <div id="box">
+                        <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
+                        <form action="" id="@item.Id" class="nzdiw">
                             <label>@item.Body</label>
-                            <button typy="submit" id="invalidButton" class="btn btn-primary">Invalid</button>
+                            <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
                             <button type="submit" id="newButton" class="btn btn-primary">New</button>
                         </form>
                     </div>
@@ -47,34 +47,38 @@
                                 Change Status
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id">Invalid application</a>
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+
+                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
+
+
                             </div>
                         </div>
                     </div>
                 </td>
             </tr>
         }
-    </table>
-</div>
-<br />
-<br />
+    <tfoot>
+        <tr>
+            <th>Email ID</th>
+            <th>Recieved</th>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Body</th>
+            <th>Status</th>
+            <th>Change status</th>
+        </tr>
+    </tfoot>
+</table>
 
-<nav aria-label="Page navigation example">
-    <div class="pagination">
+@section Scripts
+{
 
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.PreviousPage" asp-route-emailStatus="@Model.Status">
-            <button type="submit" class="btn btn-primary">Previous</button>
-        </a>
-
-        <div class="page-item"><a class="page-link" id="currPage" href="#">@Model.CurrentPage</a></div>
-
-        <a asp-controller="Email" asp-action="ListEmails" asp-route-Id="@Model.NextPage" asp-route-emailStatus="@Model.Status">
-            <button type="submit" class="btn btn-primary">Next</button>
-        </a>
-    </div>
-</nav>
-
-
-
-<script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/listEmails.js"></script>
+    <script type="text/javascript" src="~/js/customTable.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+}

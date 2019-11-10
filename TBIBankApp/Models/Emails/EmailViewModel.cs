@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TBIApp.Data.Models;
+using TBIBankApp.Models.Attachments;
 
 namespace TBIBankApp.Models.Emails
 {
@@ -13,7 +14,9 @@ namespace TBIBankApp.Models.Emails
         public string Subject { get; set; }
         public string Body { get; set; }
         public string Status { get; set; }
-        public ICollection<Attachment> Attachments { get; set; }
+        public ICollection<AttachmentViewModel> Attachments { get; set; }
+        public int AttachmentCount { get; set; }
+        public User User { get; set; }
         public DateTime RegisteredInDataBase { get; set; }
         public DateTime LastStatusUpdate { get; set; }
     }
