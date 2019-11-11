@@ -444,6 +444,12 @@
 .buttonsTest2 {
     margin-right: 180px;
 }
+.buttonsTest3 {
+    margin-right:312px;
+}
+.buttonsTest4{
+    margin-right:298px;
+}
 .modal-footer > :not(:first-child)
 {
     margin-left: 145px
