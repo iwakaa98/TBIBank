@@ -78,6 +78,7 @@ namespace TBIApp.Services.Services
             email.LastStatusUpdate = DateTime.Now;
 
             email.UserId = currentUser.Id;
+            email.IsOpne = false;
 
             this.dbcontext.Emails.Update(email);
 
@@ -99,6 +100,28 @@ namespace TBIApp.Services.Services
             var totalEmails = this.dbcontext.Emails.Count();
 
             return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
+        }
+
+        public async Task<bool> IsOpen(string id)
+        {
+            var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
+            return email.IsOpne;
+        }
+        public async Task LockButton(string id)
+        {
+            var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
+            email.IsOpne = true;
+
+            //dbcontext.Emails.Update(email);
+            await this.dbcontext.SaveChangesAsync();
+        }
+        public async Task UnLockButton(string id)
+        {
+            var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
+            email.IsOpne = false;
+
+            //dbcontext.Emails.Update(email);
+            await this.dbcontext.SaveChangesAsync();
         }
     }
 }

@@ -156,6 +156,10 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("Body");
 
+                    b.Property<bool>("IsOpne");
+
+                    b.Property<DateTime>("LastOpen");
+
                     b.Property<DateTime>("LastStatusUpdate");
 
                     b.Property<string>("RecievingDateAtMailServer");
@@ -222,6 +226,8 @@ namespace TBIApp.Data.Migrations
                     b.Property<bool>("EmailConfirmed");
 
                     b.Property<string>("FirstName");
+
+                    b.Property<bool>("IsChangedPassword");
 
                     b.Property<DateTime>("LastLogIn");
 

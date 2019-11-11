@@ -122,9 +122,6 @@ namespace TBIApp.MailClient.Client
                         };
 
                         await emailService.CreateAsync(emailDTO);
-
-
-
                     }
                 }
             }

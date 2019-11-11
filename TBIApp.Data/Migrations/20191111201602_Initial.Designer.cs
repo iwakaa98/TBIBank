@@ -10,7 +10,7 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191110204820_Initial")]
+    [Migration("20191111201602_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -158,6 +158,10 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("Body");
 
+                    b.Property<bool>("IsOpne");
+
+                    b.Property<DateTime>("LastOpen");
+
                     b.Property<DateTime>("LastStatusUpdate");
 
                     b.Property<string>("RecievingDateAtMailServer");
@@ -224,6 +228,8 @@ namespace TBIApp.Data.Migrations
                     b.Property<bool>("EmailConfirmed");
 
                     b.Property<string>("FirstName");
+
+                    b.Property<bool>("IsChangedPassword");
 
                     b.Property<DateTime>("LastLogIn");
 

@@ -43,6 +43,7 @@ namespace TBIApp.Data.Migrations
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
+                    IsChangedPassword = table.Column<bool>(nullable: false),
                     LastLogIn = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -168,7 +169,9 @@ namespace TBIApp.Data.Migrations
                     Body = table.Column<string>(nullable: true),
                     RecievingDateAtMailServer = table.Column<string>(nullable: true),
                     RegisteredInDataBase = table.Column<DateTime>(nullable: false),
-                    LastStatusUpdate = table.Column<DateTime>(nullable: false)
+                    LastStatusUpdate = table.Column<DateTime>(nullable: false),
+                    IsOpne = table.Column<bool>(nullable: false),
+                    LastOpen = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
