@@ -20,7 +20,7 @@
 
         @foreach (var item in Model.EmailViewModels)
         {
-            <tr>
+            <tr id="@item.Id+classID">
                 <th style="width:10%">@item.Id</th>
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
@@ -40,51 +40,33 @@
                 <td>@item.Status</td>
                 <td>
 
-                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="exampleModal" onclick="ModalTest(this.id)">
-                        Email Preview
+                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ModalTest(this.id)">
+                        Body Preview
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="@item.Id"  tabindex="-1" role="dialog" aria-labelledby="ExampleModalTest.Id" aria-hidden="true">
-                       
+                    <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="ExampleModalTest">Modal title</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <p>
-                                        @item.Id
+                                        @item.Body
                                     </p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:red" onclick="SetInvalid(this.value)">Set to Invalid</button>
+                                    <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:green" onclick="SetNew(this.value)">Set to New</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </td>
-                @*<td>
-                        <div class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Change Status
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
-
-                                    <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </td>*@
             </tr>
         }
     <tfoot>
@@ -96,23 +78,11 @@
             <th>Body</th>
             <th>Attachments</th>
             <th>Status</th>
-            @*<th>Change status</th>*@
         </tr>
     </tfoot>
 </table>
 @section Scripts
 {
-
     <script type="text/javascript" src="~/js/customTable.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#example').DataTable();
-        });
-
-
-        function ModalTest(id) {
-            console.log(id);
-            $(`#${id}`).modal().show();
-        }
-    </script>
+    <script type="text/javascript" src="~/js/modalButtons.js"></script>
 }

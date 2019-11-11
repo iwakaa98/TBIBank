@@ -24,34 +24,48 @@
         @foreach (var item in Model.EmailViewModels)
         {
             <tr>
-                <td>@item.Id</td>
+                <th style="width:10%">@item.Id</th>
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
                 <td>
-                    <div id="box">
-                        <button type="submit" id="@item.Id" href="#" onClick="GFG_click(this.id)" class="btn btn-primary">Email preview</button>
-                        <form action="" id="@item.Id" class="nzdiw">
-                            <label>@item.Body</label>
-                            <button typy="submit" id="invalidButton" class="btn btn-primary"></button>
-                            <button type="submit" id="newButton" class="btn btn-primary">New</button>
-                        </form>
-                    </div>
+                    @if (item.AttachmentCount == 0)
+                    {
+                        <p>No Attachments</p>
+                    }
+                    else
+                    {
+                        <p>
+                            @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
+                        </p>
+                    }
                 </td>
                 <td>@item.Status</td>
                 <td>
-                    <div class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Change Status
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="InvalidApplication">Invalid application</a>
+                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ModalTest(this.id)">
+                        Body Preview
+                    </button>
 
-                                <a class="nav-link text-dark" asp-controller="Email" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status="New">New application</a>
-
-
+                    <!-- Modal -->
+                    <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        @item.Body
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary buttonsTest2" data-dismiss="modal" style="background-color:red">Set to Invalid</button>
+                                    <button type="button" class="btn btn-primary buttonsTest2" data-dismiss="modal" style="background-color:green">Set to New</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -65,8 +79,8 @@
             <th>Sender</th>
             <th>Subject</th>
             <th>Body</th>
+            <th>Attachments</th>
             <th>Status</th>
-            <th>Change status</th>
         </tr>
     </tfoot>
 </table>
@@ -75,9 +89,5 @@
 {
 
     <script type="text/javascript" src="~/js/customTable.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#example').DataTable();
-        });
-    </script>
+    <script type="text/javascript" src="~/js/modalButtons.js"></script>
 }

@@ -440,3 +440,21 @@
         margin-top: 0.5em
     }
 }
+
+.buttonsTest2 {
+    margin-right: 180px;
+}
+.modal-footer > :not(:first-child)
+{
+    margin-left: 145px
+}
+.modal-dialog {
+    min-width:50%;
+    height: 50%;
+    padding: 0;
+    /*margin: 0;*/
+}
+
+    .modal-dialog .modal-content {
+        min-height: 50vh;
+    }
