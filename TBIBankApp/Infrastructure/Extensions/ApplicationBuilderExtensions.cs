@@ -37,7 +37,7 @@ namespace TBIBankApp.Infrastructure.Extensions
 
 
 
-                    var managerName = "manager@manager.com";
+                    var managerName = "admin@admin.com";
 
                     var managerUser = await userManager.FindByEmailAsync(managerName);
 
@@ -45,11 +45,11 @@ namespace TBIBankApp.Infrastructure.Extensions
                     {
                         managerUser = new User
                         {
-                            UserName = "misho123",
-                            Email = "manager@manager.com"
+                            UserName = "admin",
+                            Email = "admin@admin.com"
                         };
 
-                        await userManager.CreateAsync(managerUser, "misho123");
+                        await userManager.CreateAsync(managerUser, "admin");
                         await userManager.AddToRoleAsync(managerUser, managerRole);
                     }
 
