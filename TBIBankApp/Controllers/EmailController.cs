@@ -43,8 +43,11 @@ namespace TBIBankApp.Controllers
                 // log...error
 
             }
+
             return BadRequest();
+
         }
+
         [HttpGet]
         public async Task<IActionResult> ChangeStatus(string id, string status)
         {

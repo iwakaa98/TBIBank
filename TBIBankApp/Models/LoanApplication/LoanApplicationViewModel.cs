@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using TBIApp.Data.Models;
 
-namespace TBIApp.Data.Models
+namespace TBIBankApp.Models.LoanApplication
 {
-    public class LoanApplication
+    public class LoanApplicationViewModel
     {
         public string Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EGN { get; set; }
-        //TODO remove Body
-        public string Body { get; set; }
         public LoanApplicationStatus Status { get; set; }
         public string CardId { get; set; }
         public string PhoneNumber { get; set; }

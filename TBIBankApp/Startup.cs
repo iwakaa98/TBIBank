@@ -61,14 +61,20 @@ namespace TBIBankApp
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IGmailAPIService, GmailAPIService>();
             services.AddScoped<IUserService, UserService>();
-
+            services.AddScoped<IApplicationService, ApplicationService>();
             //We registerMappers here
+
+
             //ViewModelMappers
             services.AddScoped<IEmailViewModelMapper, EmailViewModelMapper>();
             services.AddScoped<IAttachmentViewModelMapper, AttachmentViewModelMapper>();
+            services.AddScoped<IApplicationViewModelMapper, ApplicationViewModelMapper>();
+
             //ServiceMapper
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
+            services.AddScoped<ILoanApplicationDTOMapper, LoanApplicationDTOMapper>();
+
 
             services.ConfigureApplicationCookie(opt =>
             {
