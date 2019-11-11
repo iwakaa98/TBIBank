@@ -440,7 +440,19 @@
         margin-top: 0.5em
     }
 }
-
+.display1{
+    width:100%;
+    border-collapse:collapse;
+}
+.dispay1 td{
+    padding:7px;border:#4e95f4 1px solid;
+}
+.display1 tr{
+    background: #b8d1f3;
+}
+.display1 tr:hover{
+    background-color:gray;
+}
 .buttonsTest2 {
     margin-right: 180px;
 }
@@ -448,11 +460,14 @@
     margin-right:312px;
 }
 .buttonsTest4{
-    margin-right:298px;
+    margin-right:255px;
 }
 .modal-footer > :not(:first-child)
 {
     margin-left: 145px
+}
+.divWrapper {
+    overflow-wrap: break-word;
 }
 .modal-dialog {
     min-width:50%;

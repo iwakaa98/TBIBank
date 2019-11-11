@@ -23,8 +23,9 @@
 
         @foreach (var item in Model.EmailViewModels)
         {
+            
             <tr id="@item.Id+classID">
-                <th style="width:10%">@item.Id</th>
+                <th style="width:10%">@Model.Co</th>
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
@@ -52,15 +53,15 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Full Email Body</h5>
+                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>
+                                    <p class="divWrapper">
                                         @item.Body
-                                    </p>
+                                    </p class="divWrapper">
                                 </div>
                                 <div class="modal-footer">
                                     @if (User.IsInRole("Manager"))
