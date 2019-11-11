@@ -18,6 +18,8 @@ namespace TBIApp.Data.Models
         public string RecievingDateAtMailServer { get; set; }
         public DateTime RegisteredInDataBase { get; set; }
         public DateTime LastStatusUpdate { get; set; }
+        public bool IsOpne { get; set; }
+        public DateTime LastOpen { get; set; }
 
     }
 }
