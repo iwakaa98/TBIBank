@@ -10,8 +10,8 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191111150907_Initial")]
-    partial class Initial
+    [Migration("20191111160823_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -157,6 +157,10 @@ namespace TBIApp.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Body");
+
+                    b.Property<bool>("IsOpne");
+
+                    b.Property<DateTime>("LastOpen");
 
                     b.Property<DateTime>("LastStatusUpdate");
 

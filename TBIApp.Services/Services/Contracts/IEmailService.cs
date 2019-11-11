@@ -13,5 +13,8 @@ namespace TBIApp.Services.Services.Contracts
         Task ChangeStatus(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser);
         Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail);
         Task<int> GetAllEmailsPages();
+        Task<bool> IsOpen(string id);
+        Task LockButton(string id);
+        Task UnLockButton(string id);
     }
 }

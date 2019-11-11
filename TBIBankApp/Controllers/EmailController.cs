@@ -61,6 +61,7 @@ namespace TBIBankApp.Controllers
 
                 await this.emailService.ChangeStatus(id, newEmailStatus, currentUser);
 
+                
             }
             catch (Exception)
             {
@@ -95,5 +96,23 @@ namespace TBIBankApp.Controllers
             return result;
 
         }
+
+        [HttpGet]
+        public async Task<IActionResult> IsItOpen(string id)
+        {
+            if(await emailService.IsOpen(id))
+            {
+                return new JsonResult("true");
+            }
+            await this.emailService.LockButton(id);
+            return new JsonResult("false");
+        }
+        [HttpGet]
+        public async Task SetToEnable(string id)
+        {
+            await this.emailService.UnLockButton(id);
+        }
+
+
     }
 }

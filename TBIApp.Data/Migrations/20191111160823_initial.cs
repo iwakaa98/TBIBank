@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TBIApp.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -169,7 +169,9 @@ namespace TBIApp.Data.Migrations
                     Body = table.Column<string>(nullable: true),
                     RecievingDateAtMailServer = table.Column<string>(nullable: true),
                     RegisteredInDataBase = table.Column<DateTime>(nullable: false),
-                    LastStatusUpdate = table.Column<DateTime>(nullable: false)
+                    LastStatusUpdate = table.Column<DateTime>(nullable: false),
+                    IsOpne = table.Column<bool>(nullable: false),
+                    LastOpen = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
