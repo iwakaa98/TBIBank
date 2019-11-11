@@ -43,6 +43,7 @@ namespace TBIApp.Data.Migrations
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
+                    IsChangedPassword = table.Column<bool>(nullable: false),
                     LastLogIn = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

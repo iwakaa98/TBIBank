@@ -223,6 +223,8 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("FirstName");
 
+                    b.Property<bool>("IsChangedPassword");
+
                     b.Property<DateTime>("LastLogIn");
 
                     b.Property<string>("LastName");
