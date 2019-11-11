@@ -46,7 +46,9 @@ namespace TBIBankApp.Infrastructure.Extensions
                         managerUser = new User
                         {
                             UserName = "admin",
-                            Email = "admin@admin.com"
+                            Email = "admin@admin.com",
+                            IsChangedPassword = true
+
                         };
 
                         await userManager.CreateAsync(managerUser, "admin");
