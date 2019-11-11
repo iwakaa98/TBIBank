@@ -156,6 +156,10 @@ namespace TBIApp.Data.Migrations
 
                     b.Property<string>("Body");
 
+                    b.Property<bool>("IsOpne");
+
+                    b.Property<DateTime>("LastOpen");
+
                     b.Property<DateTime>("LastStatusUpdate");
 
                     b.Property<string>("RecievingDateAtMailServer");
