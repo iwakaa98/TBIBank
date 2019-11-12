@@ -19,7 +19,7 @@ namespace TBIBankApp.Controllers
         private readonly IUserService userService;
 
         public HomeController(IGmailAPIService gmailAPIService,
-            SignInManager<User> signInManager, 
+            SignInManager<User> signInManager,
             UserManager<User> userManager,
             IUserService userService)
         {
@@ -44,51 +44,66 @@ namespace TBIBankApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                var user = await userManager.FindByNameAsync(Input.UserName);
 
-                if (result.Succeeded)
+                if (user != null)
                 {
-                    
-                    var user = userManager.FindByNameAsync(Input.UserName).Result;
-                    if(user.LastLogIn.Year==1)
-                    {
 
-                    }
-                    //if (user.LastLogIn.Year == 1)
-                    //{
-                    //    return Redirect("ChangePassword");
-                    //}
-                    //await userService.ChangeLastLogin(user);
-                    return Redirect("Privacy");
+                    var passValidation = await this.userService.ValidateCredential(Input.UserName, Input.Password);
+
+                    if (passValidation && user.IsChangedPassword) return Redirect("Privacy");
+
+                    if (passValidation && !user.IsChangedPassword) return RedirectToAction("ChangePassword", Input);
+
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return RedirectToAction("Index");
-                }
+                //var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
             }
+
             return RedirectToAction("Index");
-            }
+
+        }
+
         [Authorize]
         public IActionResult Privacy()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+      
         [HttpPost]
         public async Task<IActionResult> CheckForUserNameAndPassowrd(LoginViewModel Input)
         {
-            var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-            if (result.Succeeded)
+            var user = await userManager.FindByNameAsync(Input.UserName);
+
+            if (user.IsChangedPassword)
             {
-                return new JsonResult(true);
+                var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+                if (result.Succeeded)
+                {
+                    return new JsonResult(true);
+                }
             }
             return new JsonResult(false);
+        }
+        public async Task<IActionResult> ChangePassword(LoginViewModel Input)
+        {
+            await Task.Delay(0);
+            return View(Input);
+        }
+
+        [HttpPost]
+        public async Task SetNewPassword(string UserName, string currPassword, string newPassword)
+        {
+            var user = await userManager.FindByNameAsync(UserName);
+
+            user.IsChangedPassword = true;
+
+            await userManager.ChangePasswordAsync(user, currPassword, newPassword);
+
+            await signInManager.PasswordSignInAsync(UserName, newPassword, false, lockoutOnFailure: false);
+
         }
     }
 }

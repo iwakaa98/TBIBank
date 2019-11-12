@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,23 @@ namespace TBIApp.Services.Services
 
             await dbcontext.SaveChangesAsync();
         }
+
+        //Test methdod!!! remember to update it
+        public async Task<bool> ValidateCredential(string username, string password)
+        {
+            var user = await this.dbcontext.Users.FirstOrDefaultAsync(u => u.UserName == username);
+
+            if (user == null) return false;
+
+            var hasher = new PasswordHasher<User>();
+
+            var result = hasher.VerifyHashedPassword(user, user.PasswordHash, password);
+
+            if (result == Microsoft.AspNetCore.Identity.PasswordVerificationResult.Success) return true;
+
+            return false;
+        }
+
 
         public Task<bool> CheckForEmail(string email)
         {

@@ -12,5 +12,6 @@ namespace TBIApp.Services.Services.Contracts
         Task<bool> CheckForEmail(string email);
         Task<bool> CheckForUserName(string userName);
         Task<bool> CheckForPassword(string password);
+        Task<bool> ValidateCredential(string username, string password);
     }
 }

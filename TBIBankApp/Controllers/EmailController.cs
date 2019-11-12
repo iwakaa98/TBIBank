@@ -60,8 +60,6 @@ namespace TBIBankApp.Controllers
                 var currentUser = await this.userManager.GetUserAsync(User);
 
                 await this.emailService.ChangeStatus(id, newEmailStatus, currentUser);
-
-                
             }
             catch (Exception)
             {

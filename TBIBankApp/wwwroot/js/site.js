@@ -3,7 +3,22 @@
 
 // Write your JavaScript code.
 document.onkeyup = function (e) {
-    if (e.ctrlKey && e.which === 66) {
-        alert(15);
+    if (e.shiftKey && e.which === 66) {
+        window.location.replace("http://localhost:54266/Manager/Register");
+    }
+    if (e.shiftKey && e.which == 73) {
+        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=InvalidApplication")
+    }
+    if (e.shiftKey && e.which == 82) {
+        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=NotReviewed");
+    }
+    if (e.shiftKey && e.which == 79) {
+        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=Open");
+    }
+    if (e.shiftKey && e.which == 67) {
+        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=Closed");
+    }
+    if (e.shiftKey && e.which == 78) {
+        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=New");
     }
 }

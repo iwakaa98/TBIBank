@@ -31,10 +31,8 @@
                     dataType: 'JSON',
                     success: function (returndata) {
                         if (!returndata) {
-                            console.log('wlizam');
                             $('#focus-Password').text('Invalid username or password!');
                             a = true;
-                            console.log(a);
                             check(a);
                         }
                         else {
