@@ -46,6 +46,8 @@ namespace TBIBankApp.Controllers
             {
                 var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
 
+
+
                 if (result.Succeeded)
                 {
                     
