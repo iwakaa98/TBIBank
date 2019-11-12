@@ -34,6 +34,7 @@ namespace TBIBankApp.Controllers
         public async Task<IActionResult> Create(LoanApplicationViewModel vm)
         {
             if (!ModelState.IsValid) throw new ArgumentException("Invalid application VM!");
+            //logger logsmth
 
             var application = this.applicationViewModelMapper.MapFrom(vm);
 

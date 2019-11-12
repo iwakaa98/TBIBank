@@ -61,6 +61,7 @@ namespace TBIApp.MailClient.Client
 
                 foreach (var email in emailListResponse.Messages)
                 {
+                    //Call ex method
                     var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", email.Id);
 
                     var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
@@ -97,7 +98,7 @@ namespace TBIApp.MailClient.Client
                         else
                         {
                             //str.Append(DecodeBody(itemToResolve.Parts[0]));
-                            str.Append(itemToResolve.Parts[0].Body.Data);
+                            str.Append(itemToResolve.Parts[1].Body.Data);
 
                         }
 
@@ -150,15 +151,7 @@ namespace TBIApp.MailClient.Client
 
         }
 
-        public string DecodeBody(MessagePart message)
-        {
-            string codedBody = message.Body.Data.Replace("-", "+");
-            codedBody = codedBody.Replace("_", "/");
-            byte[] data = Convert.FromBase64String(codedBody);
-            var result = Encoding.UTF8.GetString(data);
-
-            return result;
-        }
+       
 
         public async Task<ListMessagesResponse> GetNewEmails(GmailService service)
         {

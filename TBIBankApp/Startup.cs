@@ -62,6 +62,7 @@ namespace TBIBankApp
             services.AddScoped<IGmailAPIService, GmailAPIService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IApplicationService, ApplicationService>();
+            services.AddScoped<IDecodeService, DecodeService>();
             //We registerMappers here
 
 
@@ -108,17 +109,11 @@ namespace TBIBankApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseAuthentication();
-
-
          
 
             app.UseMvc(routes =>
             {
-                
-
-
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

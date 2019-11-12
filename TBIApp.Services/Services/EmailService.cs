@@ -16,11 +16,13 @@ namespace TBIApp.Services.Services
     {
         private readonly TBIAppDbContext dbcontext;
         private readonly IEmailDTOMapper emailDTOMapper;
+        private readonly IDecodeService decodeService;
 
-        public EmailService(TBIAppDbContext dbcontext, IEmailDTOMapper emailDTOMapper)
+        public EmailService(TBIAppDbContext dbcontext, IEmailDTOMapper emailDTOMapper, IDecodeService decodeService)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.emailDTOMapper = emailDTOMapper ?? throw new ArgumentNullException(nameof(emailDTOMapper));
+            this.decodeService = decodeService ?? throw new ArgumentNullException(nameof(decodeService));
         }
 
         public async Task<EmailDTO> CreateAsync(EmailDTO emailDTO)
@@ -61,6 +63,16 @@ namespace TBIApp.Services.Services
                 .Include(e => e.User)
                 .ToListAsync();
 
+            //Just for test
+
+            var decodeEmails = emails;
+
+            for (int i = 0; i < decodeEmails.Count; i++)
+            {
+                emails[i].Body = await this.decodeService.DecodeAsync(decodeEmails[i].Body);
+            }
+
+            //Just for test
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
             return this.emailDTOMapper.MapFrom(emails);
@@ -78,13 +90,17 @@ namespace TBIApp.Services.Services
             email.LastStatusUpdate = DateTime.Now;
 
             email.UserId = currentUser.Id;
+
             email.IsOpne = false;
 
             this.dbcontext.Emails.Update(email);
 
             await this.dbcontext.SaveChangesAsync();
 
-            //log.info(log updated)...
+            //log.Info($"User {currentUser} changed status from {lastStatus} to {newStatus} at {DateTime.Now}")
+
+            //log.Warning("ArgumentNullEx)
+            //log.Fatal("")
 
         }
 

@@ -15,9 +15,11 @@
             <th>Recieved</th>
             <th>Sender</th>
             <th>Subject</th>
-            <th>Attachments</th>
             <th>Status</th>
+            <th>Open since</th>
+            <th>Updated by</th>
             <th>Body</th>
+
         </tr>
     </thead>
     <tbody>
@@ -25,23 +27,13 @@
         @foreach (var item in Model.EmailViewModels)
         {
             <tr id="@item.Id+classID" class="hoverCustom">
-                <th style="width:10%">@item.Id</th>
+                <th>@item.Id</th>
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
-                <td>
-                    @if (item.AttachmentCount == 0)
-                    {
-                        <p>No Attachments</p>
-                    }
-                    else
-                    {
-                        <p>
-                            @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
-                        </p>
-                    }
-                </td>
                 <td>@item.Status</td>
+                <td>@item.LastStatusUpdate</td>
+                <td>@item.User.UserName</td>
                 <td>
 
                     <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
@@ -77,13 +69,16 @@
         }
     <tfoot>
         <tr>
+
             <th>Email ID</th>
             <th>Recieved</th>
             <th>Sender</th>
             <th>Subject</th>
-            <th>Attachments</th>
             <th>Status</th>
+            <th>Open since</th>
+            <th>Updated by</th>
             <th>Body</th>
+
         </tr>
     </tfoot>
 </table>

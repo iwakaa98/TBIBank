@@ -18,6 +18,7 @@ function ChekForDisable(id) {
                 'id': id,
             },
             success: function (response) {
+                //check 
                 if (response==="true") {
                     butTestDisable.setAttribute("disabled", true);
                     $(butTestDisable).css('background-color', 'red');
@@ -25,6 +26,7 @@ function ChekForDisable(id) {
                 }
                 else {
                     $(`.${id}`).modal('show');
+                    
                     starttimer(thirtyminutes,id);
                 }
             }
