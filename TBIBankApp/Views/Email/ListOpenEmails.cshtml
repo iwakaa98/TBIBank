@@ -10,77 +10,71 @@
 <table id="example" class="display1" style="width:100%">
     <thead>
         <tr>
+
             <th>Email ID</th>
             <th>Recieved</th>
             <th>Sender</th>
             <th>Subject</th>
-            <th>Open since</th>
-            <th>Body</th>
             <th>Status</th>
-            <th>UpdatedBy</th>
-            <th>Change status</th>
+            <th>Open since</th>
+            <th>Updated by</th>
+            <th>Body</th>
+
         </tr>
     </thead>
     <tbody>
 
         @foreach (var item in Model.EmailViewModels)
         {
-            <tr id="@item.Id+classID">
-                <th style="width:10%">@item.Id</th>
-                <td>@item.RegisteredInDataBase</td>
-                <td>@item.Sender</td>
-                <td>@item.Subject</td>
-                <td>
-                    @if (item.AttachmentCount == 0)
-                    {
-                        <p>No Attachments</p>
-                    }
-                    else
-                    {
-                        <p>
-                            @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
-                        </p>
-                    }
-                </td>
-                <td>@item.Status</td>
-                <td>
+        <tr id="@item.Id+classID">
+            <th>@item.Id</th>
+            <td>@item.RegisteredInDataBase</td>
+            <td>@item.Sender</td>
+            <td>@item.Subject</td>
+            <td>@item.Status</td>
+            <td>@item.LastStatusUpdate</td>
+            <td>@item.User.UserName</td>
+            <td>
 
-                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
-                        Body Preview
-                    </button>
+                <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
+                    Body Preview
+                </button>
 
-                    <!-- Modal -->
-                    <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
-                                    <div id="@item.Id+timerId"></div>
+                <!-- Modal -->
+                <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
+                                <div id="@item.Id+timerId"></div>
 
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="divWrapper">@item.Body</div>
-                                </div>
-                                <div class="modal-footer">
-                                    @if (User.IsInRole("Manager"))
-                                    {
-                                        <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" onclick="SetClosed(this.value)" data-dismiss="modal" style="background-color:red">Set to Closed</button>
-                                        <button type="button" class="btn btn-primary buttonsTest2" data-dismiss="modal" value="@item.Id" onclick="SetNew(this.value)" style="background-color:green">Set to New</button>
-                                    }
-                                    else
-                                    {
-                                        <button type="button" class="btn btn-secondary buttonsTest3" value="@item.Id" onclick="SetClosed(this.value)" data-dismiss="modal" style="background-color:red">Set to Closed</button>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="divWrapper">@item.Body</div>
+                            </div>
+                            <div class="modal-footer">
+                                @if (User.IsInRole("Manager"))
+                                {
+                                    <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" onclick="SetClosed(this.value)" data-dismiss="modal" style="background-color:red">Set to Closed</button>
+                                    <button type="button" class="btn btn-primary buttonsTest2" data-dismiss="modal" value="@item.Id" onclick="SetNew(this.value)" style="background-color:green">Set to New</button>
+                                }
+                                else
+                                {
+                                    <button type="button" class="btn btn-secondary buttonsTest3" value="@item.Id" onclick="SetClosed(this.value)" data-dismiss="modal" style="background-color:red">Set to Closed</button>
 
-                                    }
-                                </div>
+                                }
                             </div>
                         </div>
                     </div>
-                </td>
-            </tr>
+                </div>
+            </td>
+
+
+
+        </tr>
         }
     <tfoot>
         <tr>
@@ -89,16 +83,17 @@
             <th>Sender</th>
             <th>Subject</th>
             <th>Body</th>
-            <th>Attachments</th>
             <th>Status</th>
-            <th>Updated By</th>
-            <th>Changed Status</th>
+            <th>Updated by</th>
+            <th>Open since</th>
+            
         </tr>
     </tfoot>
 </table>
 @section Scripts
 {
-
+    @*just for teset*@
+    @*<script> import session from `./js/ххх.js`</script>*@
     <script type="text/javascript" src="~/js/customTable.js"></script>
     <script type="text/javascript" src="~/js/modalButtons.js"></script>
 }

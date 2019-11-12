@@ -11,7 +11,6 @@ namespace TBIApp.MailClient.Contracts
     public interface IGmailAPIService
     {
         Task SyncEmails();
-        string DecodeBody(MessagePart message);
         string ParseSender(string sender);
         Task<ListMessagesResponse> GetNewEmails(GmailService service);
         ICollection<AttachmentDTO> ParseAttachments(Message emailInfoResponse);

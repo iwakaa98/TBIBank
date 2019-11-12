@@ -34,8 +34,11 @@ namespace TBIBankApp.Controllers
             try
             {
                 var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
+
                 var result = await GetEmails(id,newEmailStatus);
+
                 string status = "List" + newEmailStatus.ToString() + "Emails";
+
                 return View($"{status}",result);
             }
             catch
@@ -43,8 +46,11 @@ namespace TBIBankApp.Controllers
                 // log...error
 
             }
+
             return BadRequest();
+
         }
+
         [HttpGet]
         public async Task<IActionResult> ChangeStatus(string id, string status)
         {
@@ -102,9 +108,12 @@ namespace TBIBankApp.Controllers
             {
                 return new JsonResult("true");
             }
+
             await this.emailService.LockButton(id);
+
             return new JsonResult("false");
         }
+
         [HttpGet]
         public async Task SetToEnable(string id)
         {

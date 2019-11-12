@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TBIApp.Data.Models;
 
-namespace TBIApp.Data.Models
+namespace TBIApp.Services.Models
 {
-    public class LoanApplication
+    public class LoanApplicationDTO
     {
         public string Id { get; set; }
         public string FirstName { get; set; }
@@ -17,6 +18,5 @@ namespace TBIApp.Data.Models
         public string PhoneNumber { get; set; }
         public string EmailId { get; set; }
         public Email Email { get; set; }
-
     }
 }

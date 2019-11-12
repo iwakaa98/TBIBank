@@ -10,61 +10,64 @@
             <th>Recieved</th>
             <th>Sender</th>
             <th>Subject</th>
+            <th>Status</th>
             <th>Body</th>
             <th>Attachments</th>
-            <th>Status</th>
-            @*<th>Change status</th>*@
+
+
         </tr>
     </thead>
     <tbody>
 
         @foreach (var item in Model.EmailViewModels)
         {
-            <tr id="@item.Id+classID">
-                <th style="width:10%">@item.Id</th>
-                <td>@item.RegisteredInDataBase</td>
-                <td>@item.Sender</td>
-                <td>@item.Subject</td>
-                <td>
-                    @if (item.AttachmentCount == 0)
-                    {
-                        <p>No Attachments</p>
-                    }
-                    else
-                    {
-                        <p>
-                            @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
-                        </p>
-                    }
-                </td>
-                <td>@item.Status</td>
-                <td>
+        <tr id="@item.Id+classID">
+            <th>@item.Id</th>
+            <td>@item.RegisteredInDataBase</td>
+            <td>@item.Sender</td>
+            <td>@item.Subject</td>
+            <td>@item.Status</td>
+            <td>
 
-                    <button type="button" class="btn btn-primary"  id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
-                        Body Preview
-                    </button>
-                    <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
-                                    <h5 id="@item.Id+timerId"></h5>
-                                    <button type="button" value="@item.Id" class="close" data-dismiss="modal"  onclick="SetButtonToEnable(this.value)" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="divWrapper">@item.Body</div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:red" onclick="SetInvalid(this.value)">Set to Invalid</button>
-                                    <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:green" onclick="SetNew(this.value)">Set to New</button>
-                                </div>
+                <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
+                    Body Preview
+                </button>
+                <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
+                                <div id="@item.Id+timerId"></div>
+                                <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="divWrapper">@item.Body</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:red" onclick="SetInvalid(this.value)">Set to Invalid</button>
+                                <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:green" onclick="SetNew(this.value)">Set to New</button>
                             </div>
                         </div>
                     </div>
-                </td>
-            </tr>
+                </div>
+            </td>
+            <td>
+                @if (item.AttachmentCount == 0)
+                {
+                    <p>No attachments</p>
+                }
+                else
+                {
+                    <p>
+                        @item.AttachmentCount attachments <span class="glyphicon glyphicon-tags"></span>
+                    </p>
+                }
+            </td>
+
+
+        </tr>
         }
     <tfoot>
         <tr>
@@ -72,9 +75,10 @@
             <th>Recieved</th>
             <th>Sender</th>
             <th>Subject</th>
+            <th>Status</th>
             <th>Body</th>
             <th>Attachments</th>
-            <th>Status</th>
+
         </tr>
     </tfoot>
 </table>

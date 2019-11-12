@@ -17,8 +17,6 @@ namespace TBIBankApp.Mappers
             this.attachmentMapper = attachmentMapper;
         }
 
-
-
         public EmailViewModel MapFrom(EmailDTO entity)
         {
             return new EmailViewModel()
@@ -36,6 +34,7 @@ namespace TBIBankApp.Mappers
                 LastStatusUpdate = entity.LastStatusUpdate
             };
         }
+
         public EmailDTO MapFrom(EmailViewModel entity)
         {
             return new EmailDTO()
