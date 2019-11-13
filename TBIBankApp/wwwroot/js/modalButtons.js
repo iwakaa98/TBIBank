@@ -58,9 +58,7 @@ function starttimer(duration, id) {
         }, 1000);
     }
 }
-stoptimer(function () {
 
-}, 1000);
 function SetButtonToEnable(id) {
     butTestDisable = document.getElementById(id);
     $.ajax(
