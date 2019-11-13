@@ -56,8 +56,6 @@ namespace TBIBankApp.Controllers
                     if (passValidation && !user.IsChangedPassword) return RedirectToAction("ChangePassword", Input);
 
                 }
-                //var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-
             }
 
             return RedirectToAction("Index");

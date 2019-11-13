@@ -50,7 +50,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div class="divWrapper">@item.Body</div>
+                                <div class="divWrapper">@Html.Raw(item.Body)</div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary buttonsTest3" value="@item.Id" data-dismiss="modal" onclick="SetOpen(this.value)" style="background-color:green">Set to Open</button>

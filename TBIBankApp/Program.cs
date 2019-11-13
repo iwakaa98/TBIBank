@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
+using Serilog;
 
 namespace TBIBankApp
 {
@@ -11,6 +12,8 @@ namespace TBIBankApp
 
         public static void Main(string[] args)
         {
+
+
 
             CreateWebHostBuilder(args).Build().Run();
         }

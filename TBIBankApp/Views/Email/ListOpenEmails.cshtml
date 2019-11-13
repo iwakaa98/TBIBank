@@ -11,7 +11,7 @@
     <thead>
         <tr>
 
-            <th>Email ID</th>
+            <th >Email ID</th>
             <th>Recieved</th>
             <th>Sender</th>
             <th>Subject</th>
@@ -53,7 +53,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div class="divWrapper">@item.Body</div>
+                                <div class="divWrapper">@Html.Raw(item.Body)</div>
                             </div>
                             <div class="modal-footer">
                                 @if (User.IsInRole("Manager"))

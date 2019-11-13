@@ -60,9 +60,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p class="divWrapper">
-                                        @item.Body
-                                    </p class="divWrapper">
+                                    <div class="divWrapper">@Html.Raw(item.Body)</div>
                                 </div>
                                 <div class="modal-footer">
                                     @if (User.IsInRole("Manager"))
