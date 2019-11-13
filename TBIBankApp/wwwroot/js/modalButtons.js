@@ -1,4 +1,5 @@
 ﻿let butTestDisable;
+let timercheto;
 $(document).ready(function () {
     $('#example').DataTable();
 });
@@ -7,7 +8,7 @@ function ModalTest(id) {
 }
 
 function ChekForDisable(id) {
-    let thirtyminutes = 20;
+    let thirtyminutes = 10;
     butTestDisable = document.getElementById(id);
     $.ajax(
         {
@@ -38,31 +39,31 @@ function starttimer(duration, id) {
     console.log(idName);
     let timer = duration, minutes, seconds;
     if (duration != 0) {
-
-        setInterval(function () {
+       
+       timercheto =  setInterval(function() {
             if (timer == -1) {
                 $(butTestDisable).removeAttr("disabled");
-                return;
+                clearTimeout(timercheto);
             }
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
 
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-            console.log(timer);
+           if (document.getElementById(idName) === null) {
+               clearTimeout(timercheto);
+           }
             document.getElementById(idName).innerHTML = "You have " + minutes + "m " + seconds + "s " + "before clsoing automaticly"
             if (--timer < 0) {
                 SetButtonToEnable(id);
                 $(`.${id}`).modal('hide');
-                //return starttimer(0, id);
             }
         }, 1000);
     }
 }
-stoptimer(function () {
 
-}, 1000);
 function SetButtonToEnable(id) {
+    clearTimeout(timercheto);
     butTestDisable = document.getElementById(id);
     $.ajax(
         {
@@ -82,6 +83,8 @@ function SetButtonToEnable(id) {
 
         })
 }
+
+
 function SetInvalid(value) {
     let but = document.getElementById(value + '+classID');
     console.log(but);
@@ -154,7 +157,13 @@ function SetNotReviewed(value) {
         })
 }
 function SetOpen(value) {
-    console.log(value)
+
+    let firstName = value + '+customFirstName';
+    let lastName = value + '+customLastName';
+    let Egn = value + '+customEgn';
+    let firstname = document.getElementById(firstName).value;
+    let lastname = document.getElementById(lastName).value;
+    let egn = document.getElementById(Egn).value;
     let but = document.getElementById(value + '+classID');
     but.remove();
     data = {
@@ -169,4 +178,15 @@ function SetOpen(value) {
             success: function () {
             }
         })
+    $.ajax(
+        {
+            type: "Post",
+            url: "Application/Create",
+            data: {
+                'EmailId': value,
+                'FirstName': firstname,
+                'LastName': lastname,
+                'EGN':egn
+            }
+    })
 }
