@@ -107,7 +107,7 @@ namespace TBIBankApp.Controllers
             if(await emailService.IsOpen(id))
             {
                 return new JsonResult("true");
-            }
+            }   
 
             await this.emailService.LockButton(id);
 
