@@ -131,6 +131,8 @@ namespace TBIApp.Services.Services
             //dbcontext.Emails.Update(email);
             await this.dbcontext.SaveChangesAsync();
         }
+
+        //TODO Async all
         public async Task UnLockButton(string id)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
@@ -139,5 +141,9 @@ namespace TBIApp.Services.Services
             //dbcontext.Emails.Update(email);
             await this.dbcontext.SaveChangesAsync();
         }
+
+        //public async Task<>
+
+
     }
 }

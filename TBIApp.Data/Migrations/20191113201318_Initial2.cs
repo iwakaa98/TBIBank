@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TBIApp.Data.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -213,7 +213,6 @@ namespace TBIApp.Data.Migrations
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     EGN = table.Column<string>(nullable: true),
-                    Body = table.Column<string>(nullable: true),
                     Status = table.Column<int>(nullable: false),
                     CardId = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true),
@@ -228,12 +227,6 @@ namespace TBIApp.Data.Migrations
                         principalTable: "Emails",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_LoanApplications_Emails_Id",
-                        column: x => x.Id,
-                        principalTable: "Emails",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

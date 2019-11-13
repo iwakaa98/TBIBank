@@ -12,7 +12,6 @@ using TBIBankApp.Models.LoanApplication;
 
 namespace TBIBankApp.Controllers
 {
-    [Authorize]
     [AutoValidateAntiforgeryToken]
     public class ApplicationController : Controller
     {
@@ -30,8 +29,8 @@ namespace TBIBankApp.Controllers
         {
             return View();
         }
-
-        public async Task<IActionResult> Create(LoanApplicationViewModel vm)
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] LoanApplicationViewModel vm)
         {
             if (!ModelState.IsValid) throw new ArgumentException("Invalid application VM!");
             //logger logsmth
@@ -42,7 +41,7 @@ namespace TBIBankApp.Controllers
 
 
             //Redirect to smth
-            return Ok();
+            return View();
         }
     }
 }

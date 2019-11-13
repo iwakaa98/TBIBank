@@ -8,7 +8,7 @@ function ModalTest(id) {
 }
 
 function ChekForDisable(id) {
-    let thirtyminutes = 10;
+    let thirtyminutes = 1800;
     butTestDisable = document.getElementById(id);
     $.ajax(
         {
@@ -25,10 +25,10 @@ function ChekForDisable(id) {
                     $(butTestDisable).text('Denied');
                 }
                 else {
-                   
+
                     $(`.${id}`).modal('show');
                     starttimer(thirtyminutes, id);
-                    
+
                 }
             }
         })
@@ -39,8 +39,8 @@ function starttimer(duration, id) {
     console.log(idName);
     let timer = duration, minutes, seconds;
     if (duration != 0) {
-       
-       timercheto =  setInterval(function() {
+
+        timercheto = setInterval(function () {
             if (timer == -1) {
                 $(butTestDisable).removeAttr("disabled");
                 clearTimeout(timercheto);
@@ -50,10 +50,14 @@ function starttimer(duration, id) {
 
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-           if (document.getElementById(idName) === null) {
-               clearTimeout(timercheto);
-           }
-            document.getElementById(idName).innerHTML = "You have " + minutes + "m " + seconds + "s " + "before clsoing automaticly"
+            if (document.getElementById(idName) === null) {
+                clearTimeout(timercheto);
+                console.log(15);
+            }
+            else {
+
+                document.getElementById(idName).innerHTML = "You have " + minutes + "m " + seconds + "s " + "before clsoing automaticly"
+            }
             if (--timer < 0) {
                 SetButtonToEnable(id);
                 $(`.${id}`).modal('hide');
@@ -86,6 +90,7 @@ function SetButtonToEnable(id) {
 
 
 function SetInvalid(value) {
+    clearTimeout(timercheto);
     let but = document.getElementById(value + '+classID');
     console.log(but);
     but.remove();
@@ -105,6 +110,7 @@ function SetInvalid(value) {
 
 
 function SetNew(value) {
+    clearTimeout(timercheto);
     console.log(value)
     let but = document.getElementById(value + '+classID');
     but.remove();
@@ -123,6 +129,7 @@ function SetNew(value) {
 }
 
 function SetClosed(value) {
+    clearTimeout(timercheto);
     console.log(value)
     let but = document.getElementById(value + '+classID');
     but.remove();
@@ -166,27 +173,46 @@ function SetOpen(value) {
     let egn = document.getElementById(Egn).value;
     let but = document.getElementById(value + '+classID');
     but.remove();
+    //data = {
+    //    id: value,
+    //    status: 'Open'
+
+
+    //};
     data = {
-        id: value,
-        status: 'Open'
-    };
-    $.ajax(
-        {
-            type: "Get",
-            url: "ChangeStatus",
-            data: data,
-            success: function () {
-            }
-        })
+        'EmailId': value,
+        'FirstName': firstname,
+        'LastName': lastname,
+        'EGN': egn
+    }
     $.ajax(
         {
             type: "Post",
-            url: "Application/Create",
-            data: {
-                'EmailId': value,
-                'FirstName': firstname,
-                'LastName': lastname,
-                'EGN':egn
+            url: "http://localhost:54266/Application/Create",
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify(data),
+            dataType: 'text',
+            success: function () {
+                console.log(222);
+                $.ajax(
+                    {
+                       
+                        type: "Get",
+                        url: 'ChangeStatus',
+                        data: {
+                            'id': value,
+                            'status': 'Open'
+                        },
+                        success: function () {
+                        }
+                    })
             }
-    })
+        })
+    
+
 }
