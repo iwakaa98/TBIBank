@@ -37,6 +37,7 @@
                         }
                         else {
                             $('#focus-Password').text('');
+                            window.location.replace("http://localhost:54266/Home/Privacy");
                         }
                     }
                 })

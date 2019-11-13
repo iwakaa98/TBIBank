@@ -78,6 +78,7 @@ namespace TBIBankApp.Controllers
 
             if (user.IsChangedPassword)
             {
+
                 var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
 
                 if (result.Succeeded)

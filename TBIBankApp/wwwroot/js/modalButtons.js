@@ -24,6 +24,7 @@ function ChekForDisable(id) {
                     $(butTestDisable).text('Denied');
                 }
                 else {
+                   
                     $(`.${id}`).modal('show');
                     starttimer(thirtyminutes, id);
                     
