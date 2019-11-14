@@ -185,9 +185,8 @@ namespace TBIApp.Data.Migrations
 
             modelBuilder.Entity("TBIApp.Data.Models.LoanApplication", b =>
                 {
-                    b.Property<string>("Id");
-
-                    b.Property<string>("Body");
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("CardId");
 
@@ -335,11 +334,6 @@ namespace TBIApp.Data.Migrations
                     b.HasOne("TBIApp.Data.Models.Email")
                         .WithOne("LoanApplication")
                         .HasForeignKey("TBIApp.Data.Models.LoanApplication", "EmailId");
-
-                    b.HasOne("TBIApp.Data.Models.Email", "Email")
-                        .WithOne()
-                        .HasForeignKey("TBIApp.Data.Models.LoanApplication", "Id")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

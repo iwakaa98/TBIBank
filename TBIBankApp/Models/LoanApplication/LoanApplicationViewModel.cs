@@ -16,7 +16,7 @@ namespace TBIBankApp.Models.LoanApplication
         public string CardId { get; set; }
         public string PhoneNumber { get; set; }
         public string EmailId { get; set; }
-        public Email Email { get; set; }
+       // public Email Email { get; set; }
 
     }
 }

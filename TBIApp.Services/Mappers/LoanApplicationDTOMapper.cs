@@ -14,32 +14,30 @@ namespace TBIApp.Services.Mappers
         {
             return new LoanApplicationDTO()
             {
-                Id = entity.Id,
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
                 EGN = entity.EGN,
-                Body = entity.Body,
+                //Body = entity.Body,
                 Status = entity.Status,
                 CardId = entity.Id,
                 PhoneNumber = entity.PhoneNumber,
                 EmailId = entity.EmailId,
-                Email = entity.Email
+                //Email = entity.Email
             };
         }
         public LoanApplication MapFrom(LoanApplicationDTO entity)
         {
             return new LoanApplication()
             {
-                Id = entity.Id,
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
                 EGN = entity.EGN,
-                Body = entity.Body,
+                //Body = entity.Body,
                 Status = entity.Status,
                 CardId = entity.Id,
                 PhoneNumber = entity.PhoneNumber,
                 EmailId = entity.EmailId,
-                Email = entity.Email
+                //Email = entity.Email
 
             };
         }

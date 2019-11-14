@@ -19,6 +19,7 @@
             <th>Open since</th>
             <th>Updated by</th>
             <th>Body</th>
+            <th>Approve/Reject</th>
 
         </tr>
     </thead>
@@ -48,7 +49,7 @@
                                 <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
                                 <div id="@item.Id+timerId"></div>
 
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -71,7 +72,7 @@
                     </div>
                 </div>
             </td>
-
+            <td>Approve/Reject</td>
 
 
         </tr>
@@ -87,6 +88,7 @@
             <th>Open since</th>
             <th>Updated by</th>
             <th>Body</th>
+            <th>Approve/Reject</th>
 
         </tr>
     </tfoot>

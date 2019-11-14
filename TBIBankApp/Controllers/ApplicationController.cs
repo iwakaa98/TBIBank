@@ -12,32 +12,40 @@ using TBIBankApp.Models.LoanApplication;
 
 namespace TBIBankApp.Controllers
 {
-    [Authorize]
     [AutoValidateAntiforgeryToken]
     public class ApplicationController : Controller
     {
         private readonly IApplicationService applicationService;
         private readonly IApplicationViewModelMapper applicationViewModelMapper;
+        private readonly ICheckEgnService checkEgnService;
+        private readonly IEncryptService encryptService;
 
-        public ApplicationController(IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper)
+        public ApplicationController(IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IEncryptService encryptService)
         {
-
-            this.applicationService = applicationService ?? throw new ArgumentNullException(nameof(applicationService));
-            this.applicationViewModelMapper = applicationViewModelMapper ?? throw new ArgumentNullException(nameof(applicationViewModelMapper));
+            this.applicationService = applicationService;
+            this.applicationViewModelMapper = applicationViewModelMapper;
+            this.checkEgnService = checkEgnService;
+            this.encryptService = encryptService;
         }
 
         public IActionResult Index()
         {
             return View();
         }
-
-        public async Task<IActionResult> Create(LoanApplicationViewModel vm)
+        [HttpPost]
+        public async Task<IActionResult> CreateAsync([FromBody] LoanApplicationViewModel vm)
         {
             if (!ModelState.IsValid) throw new ArgumentException("Invalid application VM!");
             //logger logsmth
 
+            var isRealEgn = await checkEgnService.IsRealAsync(vm.EGN);
+            if(!isRealEgn)
+            {
+                //return new JsonResult(false);
+                return Ok();
+            }
+            vm.EGN = encryptService.EncryptString(vm.EGN);
             var application = this.applicationViewModelMapper.MapFrom(vm);
-
             await this.applicationService.CreateAsync(application);
 
 

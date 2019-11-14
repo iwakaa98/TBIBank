@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using TBIApp.Data;
 using TBIApp.Data.Models;
 using TBIApp.Services.Mappers;
+using TBIApp.Services.Mappers.Contracts;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
@@ -13,9 +14,9 @@ namespace TBIApp.Services.Services
     public class ApplicationService : IApplicationService
     {
         private readonly TBIAppDbContext dbcontext;
-        private readonly LoanApplicationDTOMapper loanApplicatioDTOMapper;
+        private readonly ILoanApplicationDTOMapper loanApplicatioDTOMapper;
 
-        public ApplicationService(TBIAppDbContext dbcontext, LoanApplicationDTOMapper loanApplicatioDTOMapper)
+        public ApplicationService(TBIAppDbContext dbcontext, ILoanApplicationDTOMapper loanApplicatioDTOMapper)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.loanApplicatioDTOMapper = loanApplicatioDTOMapper ?? throw new ArgumentNullException(nameof(loanApplicatioDTOMapper));
@@ -26,6 +27,8 @@ namespace TBIApp.Services.Services
             var loanApplication = this.loanApplicatioDTOMapper.MapFrom(newLoan);
 
             if (loanApplication == null) throw new ArgumentNullException();
+
+            loanApplication.Status = LoanApplicationStatus.NotReviewed;
 
             this.dbcontext.LoanApplications.Add(loanApplication);
 
