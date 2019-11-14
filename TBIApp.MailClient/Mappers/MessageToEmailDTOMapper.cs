@@ -1,9 +1,5 @@
-﻿using Google.Apis.Gmail.v1;
+﻿using System;
 using Google.Apis.Gmail.v1.Data;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using TBIApp.Data.Models;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIApp.MailClient.ParseManagers.Contracts;
@@ -15,12 +11,10 @@ namespace TBIApp.MailClient.Mappers
     public class MessageToEmailDTOMapper : IMessageToEmailDTOMapper
     {
         private readonly IGmailParseManager gmailParseManager;
-        private readonly IEmailService emailService;
 
         public MessageToEmailDTOMapper(IGmailParseManager gmailParseManager, IEmailService emailService)
         {
             this.gmailParseManager = gmailParseManager ?? throw new ArgumentNullException(nameof(gmailParseManager));
-            this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
         }
 
         public EmailDTO MapToDTO(Message email)
@@ -33,6 +27,7 @@ namespace TBIApp.MailClient.Mappers
 
             var emailDTO = new EmailDTO
             {
+                //TODO check which date is assigned
                 RecievingDateAtMailServer = headers["dateRecieved"],
                 GmailEmailId = headers["gmailEmailId"],
                 Sender = headers["sender"],

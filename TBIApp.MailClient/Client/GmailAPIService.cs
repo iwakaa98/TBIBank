@@ -1,19 +1,16 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Gmail.v1;
 using Google.Apis.Gmail.v1.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using TBIApp.Data.Models;
 using TBIApp.MailClient.Client.Contracts;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIApp.MailClient.ParseManagers.Contracts;
-using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.MailClient.Client
@@ -22,14 +19,14 @@ namespace TBIApp.MailClient.Client
     {
         static string[] Scopes = { GmailService.Scope.GmailModify };
         static string ApplicationName = "Gmail API .NET Quickstart";
+        static string gmailAccountName = "ivomishotelerik@gmail.com";
+
         private readonly IEmailService emailService;
-        private readonly IGmailParseManager gmailParseManager;
         private readonly IMessageToEmailDTOMapper messageToEmailDTOPmapper;
 
         public GmailAPIService(IEmailService emailService, IGmailParseManager gmailParseManager, IMessageToEmailDTOMapper messageToEmailDTOPmapper)
         {
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
-            this.gmailParseManager = gmailParseManager ?? throw new ArgumentNullException(nameof(gmailParseManager));
             this.messageToEmailDTOPmapper = messageToEmailDTOPmapper ?? throw new ArgumentNullException(nameof(messageToEmailDTOPmapper));
         }
 
@@ -45,7 +42,7 @@ namespace TBIApp.MailClient.Client
             {
                 foreach (var email in emailListResponse.Messages)
                 {
-                    var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", email.Id);
+                    var emailInfoRequest = service.Users.Messages.Get(gmailAccountName, email.Id);
 
                     var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
 
@@ -90,7 +87,7 @@ namespace TBIApp.MailClient.Client
 
         public async Task<ListMessagesResponse> GetNewEmails(GmailService service)
         {
-            var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
+            var emailListRequest = service.Users.Messages.List(gmailAccountName);
 
             emailListRequest.LabelIds = "UNREAD";
             
@@ -103,7 +100,7 @@ namespace TBIApp.MailClient.Client
         {
             var markAsReadEmail = new ModifyMessageRequest { RemoveLabelIds = new List<string> { "UNREAD" } };
 
-            await service.Users.Messages.Modify(markAsReadEmail, "ivomishotelerik@gmail.com", emailId).ExecuteAsync();
+            await service.Users.Messages.Modify(markAsReadEmail, gmailAccountName, emailId).ExecuteAsync();
 
         }
     }

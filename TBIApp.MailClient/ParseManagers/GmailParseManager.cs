@@ -1,9 +1,7 @@
-﻿using Google.Apis.Gmail.v1.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Google.Apis.Gmail.v1.Data;
 using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.Services.Models;
 

@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-using Google.Apis.Gmail.v1;
-using Google.Apis.Gmail.v1.Data;
+﻿using Google.Apis.Gmail.v1.Data;
 using TBIApp.Services.Models;
 
 namespace TBIApp.MailClient.Mappers.Contracts
