@@ -82,6 +82,9 @@ namespace TBIApp.MailClient.Client
 
                         //sender = ParseSender(sender);
 
+
+                        var gmailEmailId = emailInfoResponse.Id;
+
                         string subject = emailInfoResponse.Payload.Headers
                             .FirstOrDefault(x => x.Name == "Subject")
                             .Value;
@@ -115,6 +118,7 @@ namespace TBIApp.MailClient.Client
                         var emailDTO = new EmailDTO
                         {
                             RecievingDateAtMailServer = dateRecieved,
+                            GmailEmailId = gmailEmailId,
                             Sender = ParseSender(sender),
                             Subject = subject,
                             Body = body,
