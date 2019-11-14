@@ -40,27 +40,7 @@ namespace TBIBankApp.Controllers
 
             return View();
         }
-        public async Task<IActionResult> Login(LoginViewModel Input)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = await userManager.FindByNameAsync(Input.UserName);
-
-                if (user != null)
-                {
-
-                    var passValidation = await this.userService.ValidateCredential(Input.UserName, Input.Password);
-
-                    if (passValidation && user.IsChangedPassword) return Redirect("Privacy");
-
-                    if (passValidation && !user.IsChangedPassword) return RedirectToAction("ChangePassword", Input);
-
-                }
-            }
-
-            return RedirectToAction("Index");
-
-        }
+        
 
         [Authorize]
         public IActionResult Privacy()
@@ -70,30 +50,29 @@ namespace TBIBankApp.Controllers
 
       
         [HttpPost]
-        public async Task<IActionResult> CheckForUserNameAndPassowrd(LoginViewModel Input)
+        public async Task<IActionResult> CheckForUserNameAndPassowrdAsync(LoginViewModel Input)
         {
-            var user = await userManager.FindByNameAsync(Input.UserName);
-
-            if (user.IsChangedPassword)
+            var passValidation = await this.userService.ValidateCredentialAsync(Input.UserName, Input.Password);
+            if(!passValidation)
             {
-
-                var result = await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-
-                if (result.Succeeded)
-                {
-                    return new JsonResult(true);
-                }
+                return new JsonResult("false");
             }
-            return new JsonResult(false);
+            var user = await userManager.FindByNameAsync(Input.UserName);
+            if (user.IsChangedPassword && passValidation)
+            {
+                await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                return new JsonResult("true");
+            }
+            return View("ChangePassword", Input);
         }
-        public async Task<IActionResult> ChangePassword(LoginViewModel Input)
+        public async Task<IActionResult> ChangePasswordAsync(LoginViewModel Input)
         {
             await Task.Delay(0);
             return View(Input);
         }
 
         [HttpPost]
-        public async Task SetNewPassword(string UserName, string currPassword, string newPassword)
+        public async Task SetNewPasswordAsync(string UserName, string currPassword, string newPassword)
         {
             var user = await userManager.FindByNameAsync(UserName);
 

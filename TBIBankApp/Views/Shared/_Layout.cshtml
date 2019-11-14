@@ -48,16 +48,16 @@
                             <p>Email</p>
                         </button>
                         <div class="dropdown-menu">
-                            <a class="nav-link text-dark" id="listnotreviewd" asp-controller="Email" asp-action="ListEmails" asp-route-emailStatus="NotReviewed">List Not Reviewed</a>
+                            <a class="nav-link text-dark" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">List Not Reviewed</a>
 
-                            <a class="nav-link text-dark" id="listnew" asp-controller="Email" asp-action="ListEmails" asp-route-emailStatus="InvalidApplication">List Invalid</a>
+                            <a class="nav-link text-dark" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">List Invalid</a>
 
 
-                            <a class="nav-link text-dark" id="listopen" asp-controller="Email" asp-action="ListEmails" asp-route-emailStatus="Open">List Open</a>
+                            <a class="nav-link text-dark" id="listopen" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Open">List Open</a>
 
-                            <a class="nav-link text-dark" id="listinvalid" asp-controller="Email" asp-action="ListEmails" asp-route-emailStatus="New">List New</a>
+                            <a class="nav-link text-dark" id="listinvalid" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="New">List New</a>
 
-                            <a class="nav-link text-dark" id="listclosed" asp-controller="Email" asp-action="ListEmails" asp-route-emailStatus="Closed">List Closed</a>
+                            <a class="nav-link text-dark" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">List Closed</a>
                         </div>
                     </div>
                     <ul class="navbar-nav flex-grow-1">

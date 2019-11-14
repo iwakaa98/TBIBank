@@ -13,7 +13,7 @@ function ChekForDisable(id) {
     $.ajax(
         {
             type: "GET",
-            url: "IsItOpen",
+            url: "IsItOpenAsync",
             data:
             {
                 'id': id,
@@ -72,7 +72,7 @@ function SetButtonToEnable(id) {
     $.ajax(
         {
             type: "Get",
-            url: "SetToEnable",
+            url: "SetToEnableAsync",
             data:
             {
                 'id': id,
@@ -101,9 +101,10 @@ function SetInvalid(value) {
     $.ajax(
         {
             type: "Get",
-            url: "ChangeStatus",
+            url: "ChangeStatusAsync",
             data: data,
             success: function () {
+                window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=InvalidApplication");
             }
         })
 };
@@ -121,7 +122,7 @@ function SetNew(value) {
     $.ajax(
         {
             type: "Get",
-            url: "ChangeStatus",
+            url: "ChangeStatusAsync",
             data: data,
             success: function () {
             }
@@ -140,7 +141,7 @@ function SetClosed(value) {
     $.ajax(
         {
             type: "Get",
-            url: "ChangeStatus",
+            url: "ChangeStatusAsync",
             data: data,
             success: function () {
             }
@@ -157,7 +158,7 @@ function SetNotReviewed(value) {
     $.ajax(
         {
             type: "Get",
-            url: "ChangeStatus",
+            url: "ChangeStatusAsync",
             data: data,
             success: function () {
             }
@@ -172,13 +173,7 @@ function SetOpen(value) {
     let lastname = document.getElementById(lastName).value;
     let egn = document.getElementById(Egn).value;
     let but = document.getElementById(value + '+classID');
-    but.remove();
-    //data = {
-    //    id: value,
-    //    status: 'Open'
 
-
-    //};
     data = {
         'EmailId': value,
         'FirstName': firstname,
@@ -188,7 +183,7 @@ function SetOpen(value) {
     $.ajax(
         {
             type: "Post",
-            url: "http://localhost:54266/Application/Create",
+            url: "http://localhost:54266/Application/CreateAsync",
             headers: {
                 RequestVerificationToken:
                     $('input:hidden[name="__RequestVerificationToken"]').val(),
@@ -197,22 +192,31 @@ function SetOpen(value) {
             },
             data: JSON.stringify(data),
             dataType: 'text',
-            success: function () {
-                console.log(222);
+            success: function (response) {
+                //if (!response) {
+                //    $('#checkEgn').text('This Egn is invalid!');
+                //    event.preventDefault();
+                //}
+                //if (response) {
+                //    console.log('wlizammmmmm');
+                but.remove();
                 $.ajax(
                     {
-                       
                         type: "Get",
-                        url: 'ChangeStatus',
+                        url: 'ChangeStatusAsync',
                         data: {
                             'id': value,
                             'status': 'Open'
                         },
                         success: function () {
+                            console.log(221323);
+                            $(`.${value}`).modal('hide');
+                        },
+                        error: function () {
+                            $(`.${value}`).modal('hide');
                         }
                     })
             }
-        })
-    
 
+        })
 }

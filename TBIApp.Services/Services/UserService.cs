@@ -21,7 +21,7 @@ namespace TBIApp.Services.Services
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
         }
 
-        public async Task ChangeLastLogin(User user)
+        public async Task ChangeLastLoginAsync(User user)
         {
             user.LastLogIn = DateTime.Now;
 
@@ -29,7 +29,7 @@ namespace TBIApp.Services.Services
         }
 
         //Test methdod!!! remember to update it
-        public async Task<bool> ValidateCredential(string username, string password)
+        public async Task<bool> ValidateCredentialAsync(string username, string password)
         {
             var user = await this.dbcontext.Users.FirstOrDefaultAsync(u => u.UserName == username);
 
@@ -45,19 +45,19 @@ namespace TBIApp.Services.Services
         }
 
 
-        public Task<bool> CheckForEmail(string email)
+        public Task<bool> CheckForEmailAsync(string email)
         {
             return  this.dbcontext.Users.AnyAsync(x => x.Email == email);
         
         }
 
-        public Task<bool> CheckForPassword(string password)
+        public Task<bool> CheckForPasswordAsync(string password)
         {
             return  this.dbcontext.Users.AnyAsync(x => x.PasswordHash == password);
             
         }
 
-        public Task<bool> CheckForUserName(string userName)
+        public Task<bool> CheckForUserNameAsync(string userName)
         {
             return this.dbcontext.Users.AnyAsync(x => x.UserName == userName);
           

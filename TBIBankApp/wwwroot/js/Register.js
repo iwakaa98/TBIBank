@@ -51,7 +51,7 @@
         $.ajax(
             {
                 type: "POST",
-                url: "/Manager/CheckForUserAndEmail",
+                url: "/Manager/CheckForUserAndEmailAsync",
                 data: data,
                 dataType: 'json',
                 success: function (returndata) {

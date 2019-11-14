@@ -30,7 +30,7 @@ namespace TBIBankApp.Controllers
             return View();
         }
         
-        public async Task<IActionResult> RegisterUser(RegisterViewModel Input)
+        public async Task<IActionResult> RegisterUserAsync(RegisterViewModel Input)
         {
             if (ModelState.IsValid)
             {
@@ -41,13 +41,13 @@ namespace TBIBankApp.Controllers
             // If we got this far, something failed, redisplay form
             return RedirectToAction("Register");
         }
-        public async Task<IActionResult> CheckForUserAndEmail(UserViewModel user)
+        public async Task<IActionResult> CheckForUserAndEmailAsync(UserViewModel user)
         {
-            if (await userService.CheckForEmail(user.Email))
+            if (await userService.CheckForEmailAsync(user.Email))
             {
                 return new JsonResult("true email");
             }
-            if (await userService.CheckForUserName(user.UserName))
+            if (await userService.CheckForUserNameAsync(user.UserName))
             {
                 return new JsonResult("true user");
             }

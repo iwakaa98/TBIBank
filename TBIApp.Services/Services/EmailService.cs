@@ -51,7 +51,7 @@ namespace TBIApp.Services.Services
             return this.emailDTOMapper.MapFrom(emails); 
         }
 
-        public async Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, EmailStatusesEnum typeOfEmail)
+        public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail)
         {
             
             var emails = await this.dbcontext.Emails
@@ -79,7 +79,7 @@ namespace TBIApp.Services.Services
         }
 
         //Replace string/int with ChangeStatusDTO model// Add User if user != Manager || Operator is diff!?
-        public async Task ChangeStatus(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser)
+        public async Task ChangeStatusAsync(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);
 
@@ -104,26 +104,26 @@ namespace TBIApp.Services.Services
 
         }
 
-        public Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail)
+        public Task<int> GetEmailsPagesByTypeAsync(EmailStatusesEnum statusOfEmail)
         {
             var totalEmails = this.dbcontext.Emails.Where(e => e.Status == statusOfEmail).Count();
 
             return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
         }
 
-        public Task<int> GetAllEmailsPages()
+        public Task<int> GetAllEmailsPagesAsync()
         {
             var totalEmails = this.dbcontext.Emails.Count();
 
             return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
         }
 
-        public async Task<bool> IsOpen(string id)
+        public async Task<bool> IsOpenAsync(string id)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
             return email.IsOpne;
         }
-        public async Task LockButton(string id)
+        public async Task LockButtonAsync(string id)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
             email.IsOpne = true;
@@ -133,7 +133,7 @@ namespace TBIApp.Services.Services
         }
 
         //TODO Async all
-        public async Task UnLockButton(string id)
+        public async Task UnLockButtonAsync(string id)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
             email.IsOpne = false;
