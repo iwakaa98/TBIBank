@@ -20,6 +20,8 @@ using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Mappers;
 using TBIApp.MailClient.Client;
 using TBIApp.MailClient.Contracts;
+using TBIApp.MailClient.ParseManagers;
+using TBIApp.MailClient.ParseManagers.Contracts;
 
 namespace TBIBankApp
 {
@@ -77,6 +79,9 @@ namespace TBIBankApp
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
             services.AddScoped<ILoanApplicationDTOMapper, LoanApplicationDTOMapper>();
+
+            //MailClient 
+            services.AddScoped<IGmailParseManager, GmailParseManager>();
 
 
             services.ConfigureApplicationCookie(opt =>

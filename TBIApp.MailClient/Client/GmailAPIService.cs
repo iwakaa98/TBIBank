@@ -5,14 +5,12 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TBIApp.Data.Models;
 using TBIApp.MailClient.Contracts;
+using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
@@ -20,19 +18,23 @@ namespace TBIApp.MailClient.Client
 {
     public class GmailAPIService : IGmailAPIService
     {
+        static string[] Scopes = { GmailService.Scope.GmailModify };
+        static string ApplicationName = "Gmail API .NET Quickstart";
         private readonly IEmailService emailService;
+        private readonly IGmailParseManager gmailParseManager;
 
-        public GmailAPIService(IEmailService emailService)
+        public GmailAPIService(IEmailService emailService, IGmailParseManager gmailParseManager)
         {
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
+            this.gmailParseManager = gmailParseManager ?? throw new ArgumentNullException(nameof(gmailParseManager));
         }
-        static string[] Scopes = { GmailService.Scope.GmailReadonly };
-        static string ApplicationName = "Gmail API .NET Quickstart";
+
+
 
         public async Task SyncEmails()
         {
             UserCredential credential;
-
+        
             using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
                 string credPath = "token.json";
@@ -53,74 +55,42 @@ namespace TBIApp.MailClient.Client
                 ApplicationName = ApplicationName,
             });
 
+           
 
             var emailListResponse = await GetNewEmails(service);
+
 
             if (emailListResponse != null && emailListResponse.Messages != null)
             {
 
                 foreach (var email in emailListResponse.Messages)
                 {
-                    //Call ex method
                     var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", email.Id);
 
                     var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
 
 
+                    var markAsReadEmail = new ModifyMessageRequest { RemoveLabelIds = new List<string> { "UNREAD" } };
+
+                    await service.Users.Messages.Modify(markAsReadEmail, "ivomishotelerik@gmail.com", emailInfoResponse.Id).ExecuteAsync();
+
+
                     if (emailInfoResponse != null)
                     {
-
-                        string dateRecieved = emailInfoResponse.Payload.Headers
-                            .FirstOrDefault(x => x.Name == "Date")
-                            .Value;
-
-                        var dtString = dateRecieved.Replace("(GMT)", "").Trim();
-
-                        string sender = emailInfoResponse.Payload.Headers
-                           .FirstOrDefault(x => x.Name == "From")
-                           .Value;
-
-                        //sender = ParseSender(sender);
-
-
-                        var gmailEmailId = emailInfoResponse.Id;
-
-                        string subject = emailInfoResponse.Payload.Headers
-                            .FirstOrDefault(x => x.Name == "Subject")
-                            .Value;
-
-                        //Body
-                        var str = new StringBuilder();
                         var itemToResolve = emailInfoResponse.Payload.Parts[0];
 
-                        if (itemToResolve.MimeType == "text/plain")
-                        {
-                            //str.Append(DecodeBody(itemToResolve));
-                            str.Append(itemToResolve.Body.Data);
-                        }
-                        else
-                        {
-                            //str.Append(DecodeBody(itemToResolve.Parts[0]));
-                            str.Append(itemToResolve.Parts[1].Body.Data);
+                        var headers = this.gmailParseManager.GetHeaders(emailInfoResponse);
+                        var body = this.gmailParseManager.GetBody(emailInfoResponse);
+                        var attachmentsOfEmail = this.gmailParseManager.GetAttachments(emailInfoResponse);
 
-                        }
-
-                        //Body
-                        string body = str.ToString();
-
-                        ICollection<AttachmentDTO> attachmentsOfEmail = new List<AttachmentDTO>();
-
-                        if (!(itemToResolve.MimeType == "text/plain"))
-                        {
-                            attachmentsOfEmail = ParseAttachments(emailInfoResponse);
-                        }
+                    
 
                         var emailDTO = new EmailDTO
                         {
-                            RecievingDateAtMailServer = dateRecieved,
-                            GmailEmailId = gmailEmailId,
-                            Sender = ParseSender(sender),
-                            Subject = subject,
+                            RecievingDateAtMailServer = headers["dateRecieved"],
+                            GmailEmailId = headers["gmailEmailId"],
+                            Sender = headers["sender"],
+                            Subject = headers["subject"],
                             Body = body,
                             Attachments = attachmentsOfEmail,
                             Status = EmailStatusesEnum.NotReviewed
@@ -132,30 +102,7 @@ namespace TBIApp.MailClient.Client
             }
         }
 
-        public ICollection<AttachmentDTO> ParseAttachments(Message emailInfoResponse)
-        {
-            IList<AttachmentDTO> result = new List<AttachmentDTO>();
-
-            foreach (var attachment in emailInfoResponse.Payload.Parts.Skip(1))
-            {
-                var attachmentName = attachment.Filename;
-                var attachmentSize = double.Parse(attachment.Body.Size.Value.ToString());
-
-                var attachmentDTO = new AttachmentDTO
-                {
-                    FileName = attachmentName,
-                    SizeKb = Math.Round(attachmentSize / 1024, 2),
-                    SizeMb = Math.Round(attachmentSize / 1024 / 1024, 2)
-                };
-
-                result.Add(attachmentDTO);
-            }
-
-            return result;
-
-        }
-
-       
+               
 
         public async Task<ListMessagesResponse> GetNewEmails(GmailService service)
         {
@@ -166,28 +113,6 @@ namespace TBIApp.MailClient.Client
             emailListRequest.IncludeSpamTrash = false;
 
             return await emailListRequest.ExecuteAsync();
-        }
-
-        public string ParseSender(string sender)
-        {
-            var index = 0;
-            var lastIndex = 0;
-            for (int i = 0; i < sender.Length; i++)
-            {
-                if (sender[i] == '<')
-                {
-                    index = i + 1;
-                }
-                if (sender[i] == '>')
-                {
-                    lastIndex = i;
-                }
-            }
-
-            var result = sender.Substring(index, lastIndex - index);
-
-            return result;
-
         }
     }
 }
