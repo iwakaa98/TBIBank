@@ -17,7 +17,7 @@ namespace TBIApp.MailClient.Client
 {
     public class GmailAPIService : IGmailAPIService
     {
-        //When you change GmailService.Scope to another, remember to delete credential.json file (which is placed in (TBIBankApp), then remove folder (token.json) placed in (TBIBankAPP) and request new credential from https://developers.google.com/gmail/api/quickstart/python. 
+        //When you change GmailService.Scope to another, remember to delete credential.json file (which is placed in (TBIBankApp), then remove folder (token.json) placed in (TBIBankAPP) and request new credential from https://developers.google.com/gmail/api/quickstart/dotnet. 
 
         static string[] Scopes = { GmailService.Scope.GmailModify };
         static string ApplicationName = "Gmail API .NET Quickstart";
