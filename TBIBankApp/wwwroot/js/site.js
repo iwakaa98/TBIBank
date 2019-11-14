@@ -7,18 +7,18 @@ document.onkeyup = function (e) {
         window.location.replace("http://localhost:54266/Manager/Register");
     }
     if (e.shiftKey && e.which == 73) {
-        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=InvalidApplication")
+        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=InvalidApplication")
     }
     if (e.shiftKey && e.which == 82) {
-        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=NotReviewed");
+        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=NotReviewed");
     }
     if (e.shiftKey && e.which == 79) {
-        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=Open");
+        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=Open");
     }
     if (e.shiftKey && e.which == 67) {
-        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=Closed");
+        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=Closed");
     }
     if (e.shiftKey && e.which == 78) {
-        window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=New");
+        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=New");
     }
 }

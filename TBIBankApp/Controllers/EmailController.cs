@@ -28,14 +28,14 @@ namespace TBIBankApp.Controllers
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         }
 
-        public async Task<IActionResult> ListEmails(int id, string emailStatus)
+        public async Task<IActionResult> ListEmailsAsync(int id, string emailStatus)
         {
             
             try
             {
                 var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
 
-                var result = await GetEmails(id,newEmailStatus);
+                var result = await GetEmailsAsync(id,newEmailStatus);
 
                 string status = "List" + newEmailStatus.ToString() + "Emails";
 
@@ -52,7 +52,7 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ChangeStatus(string id, string status)
+        public async Task<IActionResult> ChangeStatusAsync(string id, string status)
         {
 
             //Can we replace id&status with ViewModel
@@ -65,7 +65,7 @@ namespace TBIBankApp.Controllers
 
                 var currentUser = await this.userManager.GetUserAsync(User);
 
-                await this.emailService.ChangeStatus(id, newEmailStatus, currentUser);
+                await this.emailService.ChangeStatusAsync(id, newEmailStatus, currentUser);
             }
             catch (Exception)
             {
@@ -78,11 +78,11 @@ namespace TBIBankApp.Controllers
             return Ok();
         }
 
-        public async Task<EmailListModel> GetEmails(int Id, EmailStatusesEnum status)
+        public async Task<EmailListModel> GetEmailsAsync(int Id, EmailStatusesEnum status)
         {
             if (Id == 0) { Id = 1; }
 
-            var listEmailDTOS = await this.emailService.GetCurrentPageEmails(Id, status);
+            var listEmailDTOS = await this.emailService.GetCurrentPageEmailsAsync(Id, status);
 
             var currentUser = await userManager.GetUserAsync(User);
 
@@ -94,7 +94,7 @@ namespace TBIBankApp.Controllers
                 PreviousPage = Id == 1 ? 1 : Id - 1,
                 CurrentPage = Id,
                 NextPage = Id + 1,
-                LastPage = await this.emailService.GetEmailsPagesByType(status)
+                LastPage = await this.emailService.GetEmailsPagesByTypeAsync(status)
             };
 
             return result;
@@ -102,22 +102,22 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> IsItOpen(string id)
+        public async Task<IActionResult> IsItOpenAsync(string id)
         {
-            if(await emailService.IsOpen(id))
+            if(await emailService.IsOpenAsync(id))
             {
                 return new JsonResult("true");
-            }
+            }   
 
-            await this.emailService.LockButton(id);
+            await this.emailService.LockButtonAsync(id);
 
             return new JsonResult("false");
         }
 
         [HttpGet]
-        public async Task SetToEnable(string id)
+        public async Task SetToEnableAsync(string id)
         {
-            await this.emailService.UnLockButton(id);
+            await this.emailService.UnLockButtonAsync(id);
         }
 
 

@@ -37,7 +37,5 @@ namespace TBIApp.Services.Services
             return newLoan;
         }
 
-
-
     }
 }

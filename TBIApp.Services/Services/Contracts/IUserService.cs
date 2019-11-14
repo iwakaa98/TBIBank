@@ -8,10 +8,10 @@ namespace TBIApp.Services.Services.Contracts
 {
     public interface IUserService
     {
-        Task ChangeLastLogin(User user);
-        Task<bool> CheckForEmail(string email);
-        Task<bool> CheckForUserName(string userName);
-        Task<bool> CheckForPassword(string password);
-        Task<bool> ValidateCredential(string username, string password);
+        Task ChangeLastLoginAsync(User user);
+        Task<bool> CheckForEmailAsync(string email);
+        Task<bool> CheckForUserNameAsync(string userName);
+        Task<bool> CheckForPasswordAsync(string password);
+        Task<bool> ValidateCredentialAsync(string username, string password);
     }
 }

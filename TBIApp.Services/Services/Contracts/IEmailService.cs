@@ -9,12 +9,12 @@ namespace TBIApp.Services.Services.Contracts
     {
         Task<EmailDTO> CreateAsync(EmailDTO emailDTO);
         Task<ICollection<EmailDTO>> GetAllAsync(int page);
-        Task<ICollection<EmailDTO>> GetCurrentPageEmails(int page, EmailStatusesEnum typeOfEmail);
-        Task ChangeStatus(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser);
-        Task<int> GetEmailsPagesByType(EmailStatusesEnum statusOfEmail);
-        Task<int> GetAllEmailsPages();
-        Task<bool> IsOpen(string id);
-        Task LockButton(string id);
-        Task UnLockButton(string id);
+        Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail);
+        Task ChangeStatusAsync(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser);
+        Task<int> GetEmailsPagesByTypeAsync(EmailStatusesEnum statusOfEmail);
+        Task<int> GetAllEmailsPagesAsync();
+        Task<bool> IsOpenAsync(string id);
+        Task LockButtonAsync(string id);
+        Task UnLockButtonAsync(string id);
     }
 }

@@ -26,28 +26,31 @@
             $.ajax(
                 {
                     type: "POST",
-                    url: "/Home/CheckForUserNameAndPassowrd",
+                    url: "/Home/CheckForUserNameAndPassowrdAsync",
                     data: data,
                     dataType: 'JSON',
                     success: function (returndata) {
-                        if (!returndata) {
+                        console.log(returndata);
+                        if (returndata === "false") {
+                            console.log(returndata);
                             $('#focus-Password').text('Invalid username or password!');
-                            a = true;
-                            check(a);
+                        }
+                        else if (returndata === "true") {
+                            console.log(returndata);
+                            $('#focus-Password').text('');
+                            window.location.replace("/Home/Privacy");
                         }
                         else {
-                            $('#focus-Password').text('');
-                            window.location.replace("http://localhost:54266/Home/Privacy");
+                            console.log(15);
+                            console.log(returndata);
+                            //window.location.replace("/Home/ChangePassword")
                         }
+                    },
+                    error: function (response) {
+                        console.log(response);
+                        $("div:first").replaceWith(response.responseText);
+
                     }
                 })
-        }
-
-        function check(a) {
-            console.log(a);
-            if (a) {
-                console.log(15);
-                e.preventDefault();
-            }
         }
     })

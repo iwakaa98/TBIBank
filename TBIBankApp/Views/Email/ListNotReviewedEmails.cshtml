@@ -43,7 +43,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div class="divWrapper">@item.Body</div>
+                                <div class="divWrapper">@Html.Raw(item.Body)</div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:red" onclick="SetInvalid(this.value)">Set to Invalid</button>
