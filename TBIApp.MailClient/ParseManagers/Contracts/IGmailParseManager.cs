@@ -8,6 +8,6 @@ namespace TBIApp.MailClient.ParseManagers.Contracts
     {
         Dictionary<string, string> GetHeaders(Message email);
         ICollection<AttachmentDTO> GetAttachments(Message email);
-        string GetBody(Message email);
+        string GetHtmlBody(Message email);
     }
 }

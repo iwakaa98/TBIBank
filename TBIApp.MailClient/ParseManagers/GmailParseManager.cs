@@ -26,7 +26,7 @@ namespace TBIApp.MailClient.ParseManagers
             return headers;
         }
 
-        public string GetBody(Message email)
+        public string GetHtmlBody(Message email)
         {
             if (email.Payload.Parts[0].MimeType == "text/plain"){ return email.Payload.Parts[0].Body.Data; }
 

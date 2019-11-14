@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TBIApp.Data.Models;
-using TBIApp.MailClient.Contracts;
+using TBIApp.MailClient.Client.Contracts;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Models;
 

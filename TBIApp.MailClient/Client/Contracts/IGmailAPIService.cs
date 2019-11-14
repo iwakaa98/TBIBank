@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TBIApp.Services.Models;
 
-namespace TBIApp.MailClient.Contracts
+namespace TBIApp.MailClient.Client.Contracts
 {
     public interface IGmailAPIService
     {

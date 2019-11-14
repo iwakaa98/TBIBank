@@ -19,9 +19,11 @@ using TBIApp.Data.Models;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Mappers;
 using TBIApp.MailClient.Client;
-using TBIApp.MailClient.Contracts;
+using TBIApp.MailClient.Client.Contracts;
 using TBIApp.MailClient.ParseManagers;
 using TBIApp.MailClient.ParseManagers.Contracts;
+using TBIApp.MailClient.Mappers;
+using TBIApp.MailClient.Mappers.Contracts;
 
 namespace TBIBankApp
 {
@@ -82,7 +84,7 @@ namespace TBIBankApp
 
             //MailClient 
             services.AddScoped<IGmailParseManager, GmailParseManager>();
-
+            services.AddScoped<IMessageToEmailDTOMapper, MessageToEmailDTOMapper>();
 
             services.ConfigureApplicationCookie(opt =>
             {
