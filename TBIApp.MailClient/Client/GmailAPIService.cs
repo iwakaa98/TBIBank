@@ -17,6 +17,8 @@ namespace TBIApp.MailClient.Client
 {
     public class GmailAPIService : IGmailAPIService
     {
+        //When you change GmailService.Scope to another, remember to delete credential.json file (which is placed in (TBIBankApp), then remove folder (token.json) placed in (TBIBankAPP) and request new credential from https://developers.google.com/gmail/api/quickstart/python. 
+
         static string[] Scopes = { GmailService.Scope.GmailModify };
         static string ApplicationName = "Gmail API .NET Quickstart";
         static string gmailAccountName = "ivomishotelerik@gmail.com";
@@ -34,16 +36,20 @@ namespace TBIApp.MailClient.Client
         
         public async Task SyncEmails()
         {
-            var service = await this.GetService();
+            //Create a GmailService which crucial for accecing Gmail API.
+            GmailService service = await this.GetService();
 
-            var emailListResponse = await GetNewEmails(service);
+            //Get all the messages from INBOX which are mark with UNREAD label.
+            var emailListResponse = await GetNewEmailsAsync(service);
+
 
             if (emailListResponse != null && emailListResponse.Messages != null)
             {
                 foreach (var email in emailListResponse.Messages)
                 {
                     var emailInfoRequest = service.Users.Messages.Get(gmailAccountName, email.Id);
-
+                    
+                    //After executeAsync we recieve one email with all his data and attachments. 
                     var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
 
                     var emailDTO = this.messageToEmailDTOPmapper.MapToDTO(emailInfoResponse);
@@ -83,9 +89,11 @@ namespace TBIApp.MailClient.Client
 
             return service;
         }
-               
 
-        public async Task<ListMessagesResponse> GetNewEmails(GmailService service)
+        //Get all emails from mail client which is mark as UNREAD, if you want to specify additional labels user "SPAM", "URGETNT", "TRASH" or any custom labels.
+        //For more detailed information visit https://developers.google.com/gmail/api/guides
+
+        public async Task<ListMessagesResponse> GetNewEmailsAsync(GmailService service)
         {
             var emailListRequest = service.Users.Messages.List(gmailAccountName);
 
@@ -96,6 +104,7 @@ namespace TBIApp.MailClient.Client
             return await emailListRequest.ExecuteAsync();
         }
 
+        //Remove all the labels from email with provided ID and label "UNREAD". 
         public async Task MarkAsReadAsync(GmailService service, string emailId)
         {
             var markAsReadEmail = new ModifyMessageRequest { RemoveLabelIds = new List<string> { "UNREAD" } };

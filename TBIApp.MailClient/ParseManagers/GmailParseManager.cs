@@ -24,6 +24,7 @@ namespace TBIApp.MailClient.ParseManagers
             return headers;
         }
 
+        //We take the body in HTML format. Take in mind when you display it.
         public string GetHtmlBody(Message email)
         {
             if (email.Payload.Parts[0].MimeType == "text/plain"){ return email.Payload.Parts[0].Body.Data; }
