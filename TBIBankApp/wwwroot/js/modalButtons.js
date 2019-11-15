@@ -14,6 +14,12 @@ function ChekForDisable(id) {
         {
             type: "GET",
             url: "IsItOpenAsync",
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             data:
             {
                 'id': id,
@@ -73,6 +79,12 @@ function SetButtonToEnable(id) {
         {
             type: "Get",
             url: "SetToEnableAsync",
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             data:
             {
                 'id': id,
@@ -81,7 +93,7 @@ function SetButtonToEnable(id) {
                 $(butTestDisable).removeAttr("disabled");
                 //butTestDisable.setAttribute("disabled", false);
                 $(butTestDisable).css('background-color', '#007bff');
-                $(butTestDisable).text('Body Preview');
+                $(butTestDisable).text('Preview');
 
             }
 
@@ -102,9 +114,15 @@ function SetInvalid(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             data: data,
             success: function () {
-                window.location.replace("http://localhost:54266/Email/ListEmails?emailStatus=InvalidApplication");
+                window.location.replace("/Email/ListEmails?emailStatus=InvalidApplication");
             }
         })
 };
@@ -123,6 +141,12 @@ function SetNew(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             data: data,
             success: function () {
             }
@@ -142,6 +166,12 @@ function SetClosed(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             data: data,
             success: function () {
             }
@@ -159,6 +189,12 @@ function SetNotReviewed(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             data: data,
             success: function () {
             }
@@ -169,16 +205,22 @@ function SetOpen(value) {
     let firstName = value + '+customFirstName';
     let lastName = value + '+customLastName';
     let Egn = value + '+customEgn';
+    let cardId = value + '+customCardId';
+    let checkEgn = value + '+checkEgn';
+
     let firstname = document.getElementById(firstName).value;
     let lastname = document.getElementById(lastName).value;
     let egn = document.getElementById(Egn).value;
+    let cardid = document.getElementById(cardId).value;
     let but = document.getElementById(value + '+classID');
+    let checkegn = document.getElementById(checkEgn);
 
     data = {
         'EmailId': value,
         'FirstName': firstname,
         'LastName': lastname,
-        'EGN': egn
+        'EGN': egn,
+        'CardId': cardid
     }
     $.ajax(
         {
@@ -193,29 +235,31 @@ function SetOpen(value) {
             data: JSON.stringify(data),
             dataType: 'text',
             success: function (response) {
-                //if (!response) {
-                //    $('#checkEgn').text('This Egn is invalid!');
-                //    event.preventDefault();
-                //}
-                //if (response) {
-                //    console.log('wlizammmmmm');
-                but.remove();
-                $.ajax(
-                    {
-                        type: "Get",
-                        url: 'ChangeStatusAsync',
-                        data: {
-                            'id': value,
-                            'status': 'Open'
-                        },
-                        success: function () {
-                            console.log(221323);
-                            $(`.${value}`).modal('hide');
-                        },
-                        error: function () {
-                            $(`.${value}`).modal('hide');
-                        }
-                    })
+                console.log(response);
+                if (response === `"false"`) {
+                    console.log($(checkegn));
+                    $(checkegn).text('This EGN is invalid!');
+                }
+                else {
+                    but.remove();
+                    $.ajax(
+                        {
+                            type: "Get",
+                            url: 'ChangeStatusAsync',
+                            data: {
+                                'id': value,
+                                'status': 'Open'
+                            },
+                            success: function () {
+                                console.log(221323);
+                                $(`.${value}`).modal('hide');
+                                $('.modal-backdrop').hide();
+                            },
+                            error: function () {
+                                $(`.${value}`).modal('hide');
+                            }
+                        })
+                }
             }
 
         })

@@ -33,7 +33,8 @@ namespace TBIBankApp.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromBody] LoanApplicationViewModel vm)
+        [AutoValidateAntiforgeryToken]
+        public async Task<string> CreateAsync([FromBody] LoanApplicationViewModel vm)
         {
             if (!ModelState.IsValid) throw new ArgumentException("Invalid application VM!");
             //logger logsmth
@@ -41,8 +42,8 @@ namespace TBIBankApp.Controllers
             var isRealEgn = await checkEgnService.IsRealAsync(vm.EGN);
             if(!isRealEgn)
             {
-                //return new JsonResult(false);
-                return Ok();
+                return "false";
+               
             }
             vm.EGN = encryptService.EncryptString(vm.EGN);
             var application = this.applicationViewModelMapper.MapFrom(vm);
@@ -50,7 +51,7 @@ namespace TBIBankApp.Controllers
 
 
             //Redirect to smth
-            return Ok();
+            return "true";
         }
     }
 }

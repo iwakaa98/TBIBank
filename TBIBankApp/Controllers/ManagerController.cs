@@ -29,7 +29,7 @@ namespace TBIBankApp.Controllers
         {
             return View();
         }
-        
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> RegisterUserAsync(RegisterViewModel Input)
         {
             if (ModelState.IsValid)
@@ -38,9 +38,9 @@ namespace TBIBankApp.Controllers
                 var result = await userManager.CreateAsync(user, Input.Password);
                 await userManager.AddToRoleAsync(user, "Operator");
             }
-            // If we got this far, something failed, redisplay form
-            return RedirectToAction("Register");
+            return Ok();
         }
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> CheckForUserAndEmailAsync(UserViewModel user)
         {
             if (await userService.CheckForEmailAsync(user.Email))

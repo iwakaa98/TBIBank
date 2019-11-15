@@ -65,6 +65,7 @@ namespace TBIBankApp.Controllers
             }
             return View("ChangePassword", Input);
         }
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ChangePasswordAsync(LoginViewModel Input)
         {
             await Task.Delay(0);

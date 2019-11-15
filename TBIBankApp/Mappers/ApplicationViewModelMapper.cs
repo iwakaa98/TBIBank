@@ -19,7 +19,7 @@ namespace TBIBankApp.Mappers
                 LastName = entity.LastName,
                 EGN = entity.EGN,
                 Status = entity.Status,
-                CardId = entity.Id,
+                CardId = entity.CardId,
                 PhoneNumber = entity.PhoneNumber,
                 EmailId = entity.EmailId,
                 //Email = entity.Email

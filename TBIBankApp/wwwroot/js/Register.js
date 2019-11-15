@@ -8,7 +8,8 @@
         let data =
         {
             'Email': email,
-            'UserName': username
+            'UserName': username,
+            'Password': password
         }
         if (!(password === confirmpassword)) {
             $('#ConfirmPassword').text('Password does not match!');
@@ -40,9 +41,9 @@
         }
         if (!confirmpassword) {
             $('#ConfirmPassword').text('Please enter password');
-            flag=1;
+            flag = 1;
         }
-        else if (password === confirmpassword){
+        else if (password === confirmpassword) {
             $('#ConfirmPassword').text('');
         }
         if (flag === 1) {
@@ -52,28 +53,45 @@
             {
                 type: "POST",
                 url: "/Manager/CheckForUserAndEmailAsync",
+                headers: {
+                    RequestVerificationToken:
+                        $('input:hidden[name="__RequestVerificationToken"]').val(),
+
+                },
                 data: data,
                 dataType: 'json',
                 success: function (returndata) {
+                    console.log(returndata);
                     if (returndata === "true email") {
                         $('#validate-email').text('There is already registered user with this email!');
                         e.preventDefault();
                     }
-                    //else {
-                    //    $('#validate-email').text('');
-                    //}
-                    //if (returndata === "true user") {
-                    //    $('#validate-name').text('There is already registered user with this username')
-                    //    e.preventDefault();
-                    //}
-                    //else if (!username) {
-                    //    $('#validate-name').text('Please enter username!');
-                    //    e.preventDefault();
-                    //}
-                    //else {
-                    //    $('#validate-name').text('');
-                    //    e.preventDefault();
-                    //}
-                },
+                    else {
+                        $('#validate-email').text('');
+                    }
+                    if (returndata === "true user") {
+                        $('#validate-name').text('There is already registered user with this username')
+                        e.preventDefault();
+                    }
+                    else {
+                        $('#validate-name').text('');
+                        e.preventDefault();
+                    }
+                    if (returndata !== "true email" && returndata !== "true user") {
+                        $.ajax({
+                            type: "POST",
+                            url: "/Manager/RegisterUserAsync",
+                            headers: {
+                                RequestVerificationToken:
+                                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+
+                            },
+                            data: data,
+                            success: function (response) {
+                                console.log(response);
+                            }
+                        })
+                    }
+                }
             })
     });

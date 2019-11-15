@@ -27,7 +27,7 @@ namespace TBIBankApp.Controllers
             this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         }
-
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ListEmailsAsync(int id, string emailStatus)
         {
             
@@ -52,6 +52,7 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ChangeStatusAsync(string id, string status)
         {
 
@@ -102,6 +103,7 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IsItOpenAsync(string id)
         {
             if(await emailService.IsOpenAsync(id))
@@ -115,6 +117,7 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
+        [AutoValidateAntiforgeryToken]
         public async Task SetToEnableAsync(string id)
         {
             await this.emailService.UnLockButtonAsync(id);

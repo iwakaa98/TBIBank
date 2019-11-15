@@ -27,6 +27,11 @@
                 {
                     type: "POST",
                     url: "/Home/CheckForUserNameAndPassowrdAsync",
+                    //headers: {
+                    //    RequestVerificationToken:
+                    //        $('input:hidden[name="__RequestVerificationToken"]').val(),
+                        
+                    //},
                     data: data,
                     dataType: 'JSON',
                     success: function (returndata) {

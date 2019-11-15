@@ -5,7 +5,7 @@
 <div class="page-content">
 
     <div class="form-v9-content">
-        <form class="form-detail" asp-action="RegisterUser">
+        <form class="form-detail">
             <h2>Registration Form</h2>
             <div class="form-row-total">
                 <div class="form-row">
@@ -27,12 +27,12 @@
             </div>
             <div class="form-row-total">
                 <div class="form-row">
-                    <input asp-for="ConfirmPassword" type="password" name="confirmpassword" id="confirm-password" class="input-text" placeholder="Cofirm Password" required>
+                    <input asp-for="Password" type="password" name="confirmpassword" id="confirm-password" class="input-text" placeholder="Cofirm Password" required>
                     <p asp-validation-for="ConfirmPassword"  class="custom-validation" id="ConfirmPassword" data-placeholder="&#xf207;"></p>
                 </div>
             </div>
             <div class="form-row-last">
-                <input type="submit" asp-controller="Manager" asp-action="RegisterUser" id="RegisterButton" name="register" class="register" value="Register">
+                <input type="button" id="RegisterButton" name="register" class="register" value="Register">
             </div>
         </form>
     </div>

@@ -20,12 +20,15 @@
             {
                 type: 'POST',
                 url: 'Home/SetNewPasswordAsync',
+                
                 data: {
                     'UserName': userName,
                     'currPassword': currPasword,
                     'newPassword': newPassword
                 },
                 success: function () {
+                    cosole.log(225);
+                    console.log(isEverythingFine);
                     if (isEverythingFine) {
                         window.location.replace("/Home/Privacy");
                     }

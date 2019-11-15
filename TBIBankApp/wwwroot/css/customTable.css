@@ -31,11 +31,11 @@
         background-position: center right
     }
 
-    table.dataTable thead .sorting {
+    /*table.dataTable thead .sorting {
         background-image: url("../images/sort_both.png")
-    }
+    }*/
 
-    table.dataTable thead .sorting_asc {
+    /*table.dataTable thead .sorting_asc {
         background-image: url("../images/sort_asc.png")
     }
 
@@ -49,7 +49,7 @@
 
     table.dataTable thead .sorting_desc_disabled {
         background-image: url("../images/sort_desc_disabled.png")
-    }
+    }*/
 
     table.dataTable tbody tr {
         background-color: #ffffff
@@ -268,7 +268,8 @@
     position: relative;
     clear: both;
     *zoom: 1;
-    zoom: 1
+    zoom: 1;
+    padding-top: 15px;
 }
 
     .dataTables_wrapper .dataTables_length {
@@ -320,7 +321,7 @@
                 background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
                 background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
                 background: -o-linear-gradient(top, #fff 0%, #dcdcdc 100%);
-                background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%)
+                background: linear-gradient(to bottom, #fff 0%, #f38f4b 100%)
             }
 
             .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
@@ -447,12 +448,12 @@
 .dispay1 td{
     padding:7px;border:#4e95f4 1px solid;
 }
-.display1 tr{
-    background: #b8d1f3;
+.display1 tr {
+    background: #eb742273;
 }
-.display1 tr:hover{
-    background-color:gray;
-}
+    .display1 tr:hover {
+        background-color: #faeee2;
+    }
 .buttonsTest2 {
     margin-right: 180px;
 }
@@ -479,3 +480,19 @@
     .modal-dialog .modal-content {
         min-height: 50vh;
     }
+
+td > .btn-primary {
+    background-color: #f38f4b !important;
+    border: none;
+}
+
+#example_length {
+    padding-left: 16px;
+    padding-bottom: 7px;
+}
+
+#example_filter {
+    border: 1px solid black;
+    position: relative;
+    left: -19px;
+}

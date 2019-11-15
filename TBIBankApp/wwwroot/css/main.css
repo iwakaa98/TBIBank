@@ -550,5 +550,32 @@ iframe {
   }
 }
 
+#currentPass {
+    color: white;
+    position: relative;
+    top: 30px;
+    left: 5px;
+    font-size: 13pt;
+}
+
+#newPass {
+    color: white;
+    position: relative;
+    top: 30px;
+    left: 5px;
+    font-size: 13pt;
+}
+
+.input100::before {
+    padding-right: 40px;
+}
+
+#currentPass::after {
+    padding-right: 40px;
+}
+
+
+
+
 
 

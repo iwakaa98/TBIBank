@@ -33,41 +33,44 @@
 </head>
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light ">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TBIBankApp</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo-tbi.png" />
+                </a>
+                @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <div class="dropdown">
-                        <button class="btn btn-secondary bg-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <p>Email</p>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="nav-link text-dark" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">List Not Reviewed</a>
+                </button>*@
 
-                            <a class="nav-link text-dark" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">List Invalid</a>
-
-
-                            <a class="nav-link text-dark" id="listopen" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Open">List Open</a>
-
-                            <a class="nav-link text-dark" id="listinvalid" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="New">List New</a>
-
-                            <a class="nav-link text-dark" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">List Closed</a>
-                        </div>
-                    </div>
-                    <ul class="navbar-nav flex-grow-1">
+                <ul class="navbar-nav flex-grow-1">
+                    @if (User.IsInRole("Manager"))
+                    {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Manager" asp-action="Register">Register Operator</a>
+                            <a class="nav-link" asp-controller="Manager" asp-action="Register">Register Operator</a>
                         </li>
 
-                    </ul>
-                </div>
+                    }
+                    <li class="nav-item">
+                        <a class="nav-link" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">Not Reviewed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">Invalid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="listopen" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Open">Opened</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="listinvalid" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="New">New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">Closed</a>
+                    </li>
+                </ul>
+                <partial name="_LoginPartial" />
             </div>
+
         </nav>
     </header>
 

@@ -26,6 +26,10 @@ namespace TBIApp.Services.Services
                 }
                 egnArray[i] = egn[i]-48;
             }
+            if(!isValidMonthAndDate(egnArray))
+            {
+                return false;
+            }
             var sumEgn = EGNCount(egnArray);
 
 
@@ -44,6 +48,26 @@ namespace TBIApp.Services.Services
             }
             //false true
             return false;
+        }
+
+        private bool isValidMonthAndDate(int[] egnArray)
+        {
+            if(egnArray[2]*10+egnArray[3]>12)
+            {
+                return false;
+            }
+            if(egnArray[4]*10+egnArray[5]>31)
+            {
+                return false;
+            }
+            if(egnArray[2]*10+egnArray[3]==2)
+            {
+                if(egnArray[4]*10+egnArray[5]>28)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private int EGNCount(int[] egnArray)

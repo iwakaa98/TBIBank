@@ -34,7 +34,7 @@
                 <td>
 
                     <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
-                        Body Preview
+                        Preview
                     </button>
 
                     <!-- Modal -->
@@ -64,13 +64,16 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Egn</label>
                                         <input class="form-control" id="@item.Id+customEgn" placeholder="Enter Egn">
-                                        <span  id="checkEgn" data-placeholder="&#xf207;"></span>
-
+                                        <span  id="@item.Id+checkEgn" style="color:red" data-placeholder="&#xf207;"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CardID</label>
+                                        <input class="form-control" id="@item.Id+customCardId" placeholder="Enter CardId" />
                                     </div>
                                 </form>
 
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary buttonsTest3" data-dismiss="modal" value="@item.Id" onclick="SetOpen(this.value)" style="background-color:green">Set to Open</button>
+                                    <button type="button" class="btn btn-primary buttonsTest3" value="@item.Id" onclick="SetOpen(this.value)" style="background-color:green">Set to Open</button>
                                 </div>
                             </div>
                         </div>
