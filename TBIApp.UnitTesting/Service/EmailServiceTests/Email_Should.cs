@@ -18,8 +18,6 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
         [TestMethod]
         public async Task GetEmailsPagesByTypeAsync_Test()
         {
-
-
             var options = TestUtilities.GetOptions(nameof(GetEmailsPagesByTypeAsync_Test));
 
             var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
@@ -29,22 +27,51 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
 
             using (var actContext = new TBIAppDbContext(options))
             {
-                var email = await actContext.Emails.AddAsync(
+                await actContext.Emails.AddAsync(
                     new Email
                     {
                         Status = (EmailStatusesEnum)status
                     });
 
                 await actContext.SaveChangesAsync();
+            }
 
-                var sut = new EmailService(actContext, mockEmailDTOMapper, decodeService);
+            using(var assertContext = new TBIAppDbContext(options))
+            { 
+                var sut = new EmailService(assertContext, mockEmailDTOMapper, decodeService);
 
                 var result = await sut.GetEmailsPagesByTypeAsync((EmailStatusesEnum)status);
 
                 Assert.AreEqual(1, result);
             };
+        }
 
-           
+        [TestMethod]
+        public async Task GetAllEmailsPagesAsync_Test()
+        {
+            var options = TestUtilities.GetOptions(nameof(GetAllEmailsPagesAsync_Test));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var decodeService = new Mock<IDecodeService>().Object;
+
+            var expectedCount = 1;
+
+            using (var actContext = new TBIAppDbContext(options))
+            {
+                await actContext.Emails.AddAsync(new Email());
+                await actContext.Emails.AddAsync(new Email());
+
+                await actContext.SaveChangesAsync();
+            }
+
+            using (var assertContext = new TBIAppDbContext(options))
+            { 
+                var sut = new EmailService(assertContext, mockEmailDTOMapper, decodeService);
+
+                var result = await sut.GetAllEmailsPagesAsync();
+
+                Assert.AreEqual(expectedCount, result);
+            }
 
         }
     }

@@ -11,12 +11,6 @@ namespace TBIApp.UnitTesting
             return new DbContextOptionsBuilder<TBIAppDbContext>()
                 .UseInMemoryDatabase(databaseName)
                 .Options;
-
-
-
         }
-
-
-
     }
 }
