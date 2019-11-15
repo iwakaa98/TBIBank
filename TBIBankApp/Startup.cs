@@ -24,6 +24,8 @@ using TBIApp.MailClient.ParseManagers;
 using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.MailClient.Mappers;
 using TBIApp.MailClient.Mappers.Contracts;
+using TBIBankApp.Infrastructure.HostedServices;
+//using TBIBankApp.Infrastructure.HostedServices;
 
 namespace TBIBankApp
 {
@@ -92,7 +94,8 @@ namespace TBIBankApp
                 opt.AccessDeniedPath = new PathString("/Identity/Account/AccessDenied");
             });
 
-
+            //HostedServices added here
+            services.AddHostedService<HostedGetEmailsService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -105,7 +108,7 @@ namespace TBIBankApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseDatabaseErrorPage(); 
             }
             else
             {
@@ -113,7 +116,6 @@ namespace TBIBankApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

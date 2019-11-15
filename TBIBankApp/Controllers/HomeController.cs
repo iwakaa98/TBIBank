@@ -31,7 +31,7 @@ namespace TBIBankApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            await this.gmailAPIService.SyncEmails();
+            //await this.gmailAPIService.SyncEmails();
 
             if (User.Identity.IsAuthenticated)
             {
@@ -53,17 +53,23 @@ namespace TBIBankApp.Controllers
         public async Task<IActionResult> CheckForUserNameAndPassowrdAsync(LoginViewModel Input)
         {
             var passValidation = await this.userService.ValidateCredentialAsync(Input.UserName, Input.Password);
+
             if(!passValidation)
             {
                 return new JsonResult("false");
             }
+
             var user = await userManager.FindByNameAsync(Input.UserName);
+
             if (user.IsChangedPassword && passValidation)
             {
                 await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
                 return new JsonResult("true");
             }
+
             return View("ChangePassword", Input);
+
         }
         public async Task<IActionResult> ChangePasswordAsync(LoginViewModel Input)
         {
