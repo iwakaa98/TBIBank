@@ -11,6 +11,9 @@ namespace TBIApp.MailClient.ParseManagers
     {
         public Dictionary<string, string> GetHeaders(Message email)
         {
+
+            var email2 = 0;
+
             var headers = new Dictionary<string, string>();
 
             headers.Add("dateRecieved", email.Payload.Headers.FirstOrDefault(x => x.Name == "Date").Value.Replace("(GMT)", "").Trim());

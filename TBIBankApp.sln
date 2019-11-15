@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TBIApp.Data", "TBIApp.Data\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TBIApp.Services", "TBIApp.Services\TBIApp.Services.csproj", "{A0E7C18E-83E9-4DBB-8E82-0101D9AE528C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBIApp.MailClient", "TBIApp.MailClient\TBIApp.MailClient.csproj", "{2FA1307A-2FAF-4D19-9D67-1A1F62AE7D21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TBIApp.MailClient", "TBIApp.MailClient\TBIApp.MailClient.csproj", "{2FA1307A-2FAF-4D19-9D67-1A1F62AE7D21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBIApp.UnitTesting", "TBIApp.UnitTesting\TBIApp.UnitTesting.csproj", "{7C98BD70-8505-4B7C-A1BE-D1120CB60E72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2FA1307A-2FAF-4D19-9D67-1A1F62AE7D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA1307A-2FAF-4D19-9D67-1A1F62AE7D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA1307A-2FAF-4D19-9D67-1A1F62AE7D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C98BD70-8505-4B7C-A1BE-D1120CB60E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C98BD70-8505-4B7C-A1BE-D1120CB60E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C98BD70-8505-4B7C-A1BE-D1120CB60E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C98BD70-8505-4B7C-A1BE-D1120CB60E72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

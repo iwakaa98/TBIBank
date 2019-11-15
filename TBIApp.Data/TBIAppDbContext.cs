@@ -8,6 +8,10 @@ namespace TBIApp.Data
 {
     public class TBIAppDbContext : IdentityDbContext<User>
     {
+        public TBIAppDbContext()
+        {
+
+        }
         public TBIAppDbContext(DbContextOptions<TBIAppDbContext> options)
           : base(options)
         {

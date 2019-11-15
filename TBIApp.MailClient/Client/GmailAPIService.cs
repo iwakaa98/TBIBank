@@ -90,7 +90,7 @@ namespace TBIApp.MailClient.Client
             return service;
         }
 
-        //Get all emails from mail client which is mark as UNREAD, if you want to specify additional labels user "SPAM", "URGETNT", "TRASH" or any custom labels.
+        //Get all emails from mail client which is mark as UNREAD, if you want to specify additional labels user "SPAM", "URGETNT", "TRASH" or your custom labels.
         //For more detailed information visit https://developers.google.com/gmail/api/guides
 
         public async Task<ListMessagesResponse> GetNewEmailsAsync(GmailService service)
@@ -104,7 +104,7 @@ namespace TBIApp.MailClient.Client
             return await emailListRequest.ExecuteAsync();
         }
 
-        //Remove all the labels from email with provided ID and label "UNREAD". 
+        //Removes all the labels from email with provided ID and label "UNREAD". 
         public async Task MarkAsReadAsync(GmailService service, string emailId)
         {
             var markAsReadEmail = new ModifyMessageRequest { RemoveLabelIds = new List<string> { "UNREAD" } };
