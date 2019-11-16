@@ -25,7 +25,6 @@ using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.MailClient.Mappers;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIBankApp.Infrastructure.HostedServices;
-//using TBIBankApp.Infrastructure.HostedServices;
 
 namespace TBIBankApp
 {
@@ -119,6 +118,7 @@ namespace TBIBankApp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSerilogRequestLogging();
             app.UseCookiePolicy();
             app.UseAuthentication();
          
