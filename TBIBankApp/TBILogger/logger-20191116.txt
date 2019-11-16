@@ -1,0 +1,2 @@
+2019-11-16 18:59:01.415 +02:00 [INF] Application starting up!
+2019-11-16 18:59:07.631 +02:00 [INF] HTTP GET / responded 200 in 1249.1923 ms

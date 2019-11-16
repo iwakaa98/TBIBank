@@ -33,6 +33,7 @@ namespace TBIApp.MailClient.ParseManagers
             if (email.Payload.Parts[0].MimeType == "text/plain"){ return email.Payload.Parts[0].Body.Data; }
 
             else
+
                 return email.Payload.Parts[0].Parts[1].Body.Data;
 
         }

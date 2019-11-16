@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Serilog;
 using Microsoft.Extensions.Logging.Configuration;
 using System;
+using Serilog.Events;
 
 namespace TBIBankApp
 {
@@ -15,19 +16,30 @@ namespace TBIBankApp
 
         public static void Main(string[] args)
         {
-            //var configuration = new ConfigurationBuilder()
-            //    .AddJsonFile("appsettings.json")
-            //    .Build();
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                .Enrich.FromLogContext()
+                .WriteTo.File("TBILogger\\logger-.txt", rollingInterval: RollingInterval.Day)
+                .WriteTo.Console()
+                .CreateLogger();
 
-            //Log.Logger = new LoggerConfiguration()
-            //    .ReadFrom.Configuration(configuration)
-            //    .CreateLogger();
-
-            
-            //    Log.Information("Application starting Up");
+            try
+            {
+                Log.Information("Application starting up!");
                 CreateWebHostBuilder(args).Build().Run();
 
-            
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "Application failed to start!");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
+
+
         }
 
 
@@ -35,6 +47,7 @@ namespace TBIBankApp
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
+                .UseSerilog()
                 .UseStartup<Startup>();
         }
     }
