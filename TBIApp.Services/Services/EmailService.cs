@@ -67,6 +67,7 @@ namespace TBIApp.Services.Services
 
             var decodeEmails = emails;
 
+            //TODO remove from here
             for (int i = 0; i < decodeEmails.Count; i++)
             {
                 emails[i].Body = await this.decodeService.DecodeAsync(decodeEmails[i].Body);

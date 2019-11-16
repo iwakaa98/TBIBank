@@ -88,9 +88,9 @@ namespace TBIApp.MailClient.Client
 
                         //Body
                         var str = new StringBuilder();
-                        var itemToResolve = emailInfoResponse.Payload.Parts[0];
+                        var itemToResolve = emailInfoResponse.Payload.Parts[1];
 
-                        if (itemToResolve.MimeType == "text/plain")
+                        if (itemToResolve.MimeType == "text/html")
                         {
                             //str.Append(DecodeBody(itemToResolve));
                             str.Append(itemToResolve.Body.Data);

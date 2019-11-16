@@ -4,21 +4,26 @@
 // Write your JavaScript code.
 document.onkeyup = function (e) {
     if (e.shiftKey && e.which === 66) {
-        window.location.replace("http://localhost:54266/Manager/Register");
+        window.location.replace("/Manager/Register");
     }
     if (e.shiftKey && e.which == 73) {
-        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=InvalidApplication")
+        window.location.replace("/Email/ListEmailsAsync?emailStatus=InvalidApplication")
     }
     if (e.shiftKey && e.which == 82) {
-        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=NotReviewed");
+        window.location.replace("/Email/ListEmailsAsync?emailStatus=NotReviewed");
     }
     if (e.shiftKey && e.which == 79) {
-        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=Open");
+        window.location.replace("/Email/ListEmailsAsync?emailStatus=Open");
     }
     if (e.shiftKey && e.which == 67) {
-        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=Closed");
+        window.location.replace("/Email/ListEmailsAsync?emailStatus=Closed");
     }
     if (e.shiftKey && e.which == 78) {
-        window.location.replace("http://localhost:54266/Email/ListEmailsAsync?emailStatus=New");
+        window.location.replace("/Email/ListEmailsAsync?emailStatus=New");
     }
+    //$(document).ready(function () {
+    //    $(window).bind("beforeunload", function () {
+    //        return confirm("Do you really want to close?");
+    //    });
+    //});
 }

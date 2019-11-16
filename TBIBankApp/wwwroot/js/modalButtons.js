@@ -225,7 +225,7 @@ function SetOpen(value) {
     $.ajax(
         {
             type: "Post",
-            url: "http://localhost:54266/Application/CreateAsync",
+            url: "/Application/CreateAsync",
             headers: {
                 RequestVerificationToken:
                     $('input:hidden[name="__RequestVerificationToken"]').val(),
