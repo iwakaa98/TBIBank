@@ -99,24 +99,24 @@ namespace TBIApp.Services.Services
             await this.dbcontext.SaveChangesAsync();
 
             //log.Info($"User {currentUser} changed status from {lastStatus} to {newStatus} at {DateTime.Now}")
-
+            
             //log.Warning("ArgumentNullEx)
             //log.Fatal("")
 
         }
 
-        public Task<int> GetEmailsPagesByTypeAsync(EmailStatusesEnum statusOfEmail)
+        public async Task<int> GetEmailsPagesByTypeAsync(EmailStatusesEnum statusOfEmail)
         {
-            var totalEmails = this.dbcontext.Emails.Where(e => e.Status == statusOfEmail).Count();
+            var totalEmails = await this.dbcontext.Emails.Where(e => e.Status == statusOfEmail).CountAsync();
 
-            return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
+            return (totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
         }
 
-        public Task<int> GetAllEmailsPagesAsync()
+        public async Task<int> GetAllEmailsPagesAsync()
         {
-            var totalEmails = this.dbcontext.Emails.Count();
+            var totalEmails = await this.dbcontext.Emails.CountAsync();
 
-            return Task.FromResult(totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1);
+            return totalEmails % 15 == 0 ? totalEmails / 15 : totalEmails / 15 + 1;
         }
 
         public async Task<bool> IsOpenAsync(string id)

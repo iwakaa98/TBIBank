@@ -1,39 +1,71 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Gmail.v1;
 using Google.Apis.Gmail.v1.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using TBIApp.Data.Models;
-using TBIApp.MailClient.Contracts;
-using TBIApp.Services.Models;
+using TBIApp.MailClient.Client.Contracts;
+using TBIApp.MailClient.Mappers.Contracts;
+using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.MailClient.Client
 {
     public class GmailAPIService : IGmailAPIService
     {
-        private readonly IEmailService emailService;
+        //When you change GmailService.Scope to another, remember to delete credential.json file (which is placed in (TBIBankApp), then remove folder (token.json) placed in (TBIBankAPP) and request new credential from https://developers.google.com/gmail/api/quickstart/dotnet. 
 
-        public GmailAPIService(IEmailService emailService)
+        static string[] Scopes = { GmailService.Scope.GmailModify };
+        static string ApplicationName = "Gmail API .NET Quickstart";
+        static string gmailAccountName = "ivomishotelerik@gmail.com";
+
+        private readonly IEmailService emailService;
+        private readonly IMessageToEmailDTOMapper messageToEmailDTOPmapper;
+
+        public GmailAPIService(IEmailService emailService, IGmailParseManager gmailParseManager, IMessageToEmailDTOMapper messageToEmailDTOPmapper)
         {
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
+            this.messageToEmailDTOPmapper = messageToEmailDTOPmapper ?? throw new ArgumentNullException(nameof(messageToEmailDTOPmapper));
         }
-        static string[] Scopes = { GmailService.Scope.GmailReadonly };
-        static string ApplicationName = "Gmail API .NET Quickstart";
 
+
+        
         public async Task SyncEmails()
+        {
+            //Create a GmailService which crucial for accecing Gmail API.
+            GmailService service = await this.GetService();
+
+            //Get all the messages from INBOX which are mark with UNREAD label.
+            var emailListResponse = await GetNewEmailsAsync(service);
+
+
+            if (emailListResponse != null && emailListResponse.Messages != null)
+            {
+                foreach (var email in emailListResponse.Messages)
+                {
+                    var emailInfoRequest = service.Users.Messages.Get(gmailAccountName, email.Id);
+                    
+                    //After executeAsync we recieve one email with all his data and attachments. 
+                    var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
+
+                    var emailDTO = this.messageToEmailDTOPmapper.MapToDTO(emailInfoResponse);
+
+                    await emailService.CreateAsync(emailDTO);
+
+                    await this.MarkAsReadAsync(service, email.Id);
+                }
+            }
+        }
+
+        public async Task<GmailService> GetService()
         {
             UserCredential credential;
 
-            using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+            using (var stream =  new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
                 string credPath = "token.json";
                 credential =
@@ -46,6 +78,8 @@ namespace TBIApp.MailClient.Client
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
 
+            await Task.Delay(0);
+
             var service = new GmailService(new BaseClientService.Initializer()
             {
 
@@ -53,109 +87,15 @@ namespace TBIApp.MailClient.Client
                 ApplicationName = ApplicationName,
             });
 
-
-            var emailListResponse = await GetNewEmails(service);
-
-            if (emailListResponse != null && emailListResponse.Messages != null)
-            {
-
-                foreach (var email in emailListResponse.Messages)
-                {
-                    //Call ex method
-                    var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", email.Id);
-
-                    var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
-
-
-                    if (emailInfoResponse != null)
-                    {
-
-                        string dateRecieved = emailInfoResponse.Payload.Headers
-                            .FirstOrDefault(x => x.Name == "Date")
-                            .Value;
-
-                        var dtString = dateRecieved.Replace("(GMT)", "").Trim();
-
-                        string sender = emailInfoResponse.Payload.Headers
-                           .FirstOrDefault(x => x.Name == "From")
-                           .Value;
-
-                        //sender = ParseSender(sender);
-
-                        string subject = emailInfoResponse.Payload.Headers
-                            .FirstOrDefault(x => x.Name == "Subject")
-                            .Value;
-
-                        //Body
-                        var str = new StringBuilder();
-                        var itemToResolve = emailInfoResponse.Payload.Parts[1];
-
-                        if (itemToResolve.MimeType == "text/html")
-                        {
-                            //str.Append(DecodeBody(itemToResolve));
-                            str.Append(itemToResolve.Body.Data);
-                        }
-                        else
-                        {
-                            //str.Append(DecodeBody(itemToResolve.Parts[0]));
-                            str.Append(itemToResolve.Parts[1].Body.Data);
-
-                        }
-
-                        //Body
-                        string body = str.ToString();
-
-                        ICollection<AttachmentDTO> attachmentsOfEmail = new List<AttachmentDTO>();
-
-                        if (!(itemToResolve.MimeType == "text/plain"))
-                        {
-                            attachmentsOfEmail = ParseAttachments(emailInfoResponse);
-                        }
-
-                        var emailDTO = new EmailDTO
-                        {
-                            RecievingDateAtMailServer = dateRecieved,
-                            Sender = ParseSender(sender),
-                            Subject = subject,
-                            Body = body,
-                            Attachments = attachmentsOfEmail,
-                            Status = EmailStatusesEnum.NotReviewed
-                        };
-
-                        await emailService.CreateAsync(emailDTO);
-                    }
-                }
-            }
+            return service;
         }
 
-        public ICollection<AttachmentDTO> ParseAttachments(Message emailInfoResponse)
+        //Get all emails from mail client which is mark as UNREAD, if you want to specify additional labels user "SPAM", "URGETNT", "TRASH" or your custom labels.
+        //For more detailed information visit https://developers.google.com/gmail/api/guides
+
+        public async Task<ListMessagesResponse> GetNewEmailsAsync(GmailService service)
         {
-            IList<AttachmentDTO> result = new List<AttachmentDTO>();
-
-            foreach (var attachment in emailInfoResponse.Payload.Parts.Skip(1))
-            {
-                var attachmentName = attachment.Filename;
-                var attachmentSize = double.Parse(attachment.Body.Size.Value.ToString());
-
-                var attachmentDTO = new AttachmentDTO
-                {
-                    FileName = attachmentName,
-                    SizeKb = Math.Round(attachmentSize / 1024, 2),
-                    SizeMb = Math.Round(attachmentSize / 1024 / 1024, 2)
-                };
-
-                result.Add(attachmentDTO);
-            }
-
-            return result;
-
-        }
-
-       
-
-        public async Task<ListMessagesResponse> GetNewEmails(GmailService service)
-        {
-            var emailListRequest = service.Users.Messages.List("ivomishotelerik@gmail.com");
+            var emailListRequest = service.Users.Messages.List(gmailAccountName);
 
             emailListRequest.LabelIds = "UNREAD";
             
@@ -164,25 +104,12 @@ namespace TBIApp.MailClient.Client
             return await emailListRequest.ExecuteAsync();
         }
 
-        public string ParseSender(string sender)
+        //Removes all the labels from email with provided ID and label "UNREAD". 
+        public async Task MarkAsReadAsync(GmailService service, string emailId)
         {
-            var index = 0;
-            var lastIndex = 0;
-            for (int i = 0; i < sender.Length; i++)
-            {
-                if (sender[i] == '<')
-                {
-                    index = i + 1;
-                }
-                if (sender[i] == '>')
-                {
-                    lastIndex = i;
-                }
-            }
+            var markAsReadEmail = new ModifyMessageRequest { RemoveLabelIds = new List<string> { "UNREAD" } };
 
-            var result = sender.Substring(index, lastIndex - index);
-
-            return result;
+            await service.Users.Messages.Modify(markAsReadEmail, gmailAccountName, emailId).ExecuteAsync();
 
         }
     }

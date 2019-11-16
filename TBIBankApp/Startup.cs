@@ -19,7 +19,12 @@ using TBIApp.Data.Models;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Mappers;
 using TBIApp.MailClient.Client;
-using TBIApp.MailClient.Contracts;
+using TBIApp.MailClient.Client.Contracts;
+using TBIApp.MailClient.ParseManagers;
+using TBIApp.MailClient.ParseManagers.Contracts;
+using TBIApp.MailClient.Mappers;
+using TBIApp.MailClient.Mappers.Contracts;
+using TBIBankApp.Infrastructure.HostedServices;
 
 namespace TBIBankApp
 {
@@ -78,6 +83,9 @@ namespace TBIBankApp
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
             services.AddScoped<ILoanApplicationDTOMapper, LoanApplicationDTOMapper>();
 
+            //MailClient 
+            services.AddScoped<IGmailParseManager, GmailParseManager>();
+            services.AddScoped<IMessageToEmailDTOMapper, MessageToEmailDTOMapper>();
 
             services.ConfigureApplicationCookie(opt =>
             {
@@ -85,7 +93,8 @@ namespace TBIBankApp
                 opt.AccessDeniedPath = new PathString("/Identity/Account/AccessDenied");
             });
 
-
+            //HostedServices added here
+            services.AddHostedService<HostedGetEmailsService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -98,7 +107,7 @@ namespace TBIBankApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseDatabaseErrorPage(); 
             }
             else
             {
@@ -107,9 +116,9 @@ namespace TBIBankApp
                 app.UseHsts();
             }
 
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSerilogRequestLogging();
             app.UseCookiePolicy();
             app.UseAuthentication();
          

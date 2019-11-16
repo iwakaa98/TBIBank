@@ -24,6 +24,7 @@ namespace TBIApp.Services.Mappers
                 Id = entity.Id,
                 Sender = entity.Sender,
                 Subject = entity.Subject,
+                GmailEmailId = entity.GmailEmailId,
                 Status = entity.Status,
                 Attachments = this.attachmentDTOMapper.MapFrom(entity.Attachments),
                 LoanApplication = entity.LoanApplication,
@@ -43,6 +44,7 @@ namespace TBIApp.Services.Mappers
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 Status = entity.Status,
+                GmailEmailId = entity.GmailEmailId,
                 Attachments = this.attachmentDTOMapper
                                   .MapFrom(entity.Attachments) ?? new List<AttachmentDTO>(),
                 LoanApplication = entity.LoanApplication,

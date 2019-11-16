@@ -1,25 +1,44 @@
-﻿using Google.Apis.Gmail.v1.Data;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using Google.Apis.Gmail.v1.Data;
+using TBIApp.Data.Models;
+using TBIApp.MailClient.Mappers.Contracts;
+using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.Services.Models;
+using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.MailClient.Mappers
 {
-    public static class MessageToEmailDTOMapper
+    public class MessageToEmailDTOMapper : IMessageToEmailDTOMapper
     {
-        //public static EmailDTO MapToDTO(this Message message, Serivce service)
-        //{
+        private readonly IGmailParseManager gmailParseManager;
 
-        //    //var emailInfoRequest = service.Users.Messages.Get("ivomishotelerik@gmail.com", message.Id);
+        public MessageToEmailDTOMapper(IGmailParseManager gmailParseManager, IEmailService emailService)
+        {
+            this.gmailParseManager = gmailParseManager ?? throw new ArgumentNullException(nameof(gmailParseManager));
+        }
 
-        //    //var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
+        public EmailDTO MapToDTO(Message email)
+        {
+            var headers = this.gmailParseManager.GetHeaders(email);
+            var body = this.gmailParseManager.GetHtmlBody(email);
+            var attachmentsOfEmail = this.gmailParseManager.GetAttachments(email);
 
-        //    var emailDTO = new EmailDTO();
 
-        //    //emailDTO.Body = GetBody(x);
 
-        //}
+            var emailDTO = new EmailDTO
+            {
+                //TODO check which date is assigned
+                RecievingDateAtMailServer = headers["dateRecieved"],
+                GmailEmailId = headers["gmailEmailId"],
+                Sender = headers["sender"],
+                Subject = headers["subject"],
+                Body = body,
+                Attachments = attachmentsOfEmail,
+                Status = EmailStatusesEnum.NotReviewed
+            };
 
+            
+            return emailDTO;
+        }
     }
 }
