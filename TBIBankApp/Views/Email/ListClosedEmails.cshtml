@@ -46,7 +46,7 @@
                 <td>@item.Status</td>
                 <td>
 
-                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
+                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="samename(this.id)">
                         Preview
                     </button>
 
@@ -91,7 +91,7 @@
 
 @section Scripts
 {
-
+    <script src="~/js/signalr-test.js"></script>
     <script type="text/javascript" src="~/js/customTable.js"></script>
     <script type="text/javascript" src="~/js/modalButtons.js"></script>
 }

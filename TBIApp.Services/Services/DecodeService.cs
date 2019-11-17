@@ -9,7 +9,8 @@ namespace TBIApp.Services.Services
     public class DecodeService : IDecodeService
     {
         public async Task<string> DecodeAsync(string message)
-        { 
+        {
+            await Task.Delay(0);
             string codedBody = message.Replace("-", "+");
             codedBody = codedBody.Replace("_", "/");
             byte[] data = Convert.FromBase64String(codedBody);

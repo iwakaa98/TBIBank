@@ -1,0 +1,2 @@
+2019-11-18 00:05:30.404 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=2773b223-f7ea-4e02-8121-43206ab4e4bf responded 200 in 101.2865 ms
+2019-11-18 00:05:31.244 +02:00 [INF] HTTP GET /notification?id=GrS4nbTJhWni5YN-qsD4tw responded 101 in 998519.2336 ms

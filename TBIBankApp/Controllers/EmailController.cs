@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
+using TBIBankApp.Hubs;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models.Emails;
 
@@ -19,14 +21,16 @@ namespace TBIBankApp.Controllers
         private readonly IEmailService emailService;
         private readonly IEmailViewModelMapper emailMapper;
         private readonly UserManager<User> userManager;
+        private readonly IHubContext<NotificationHub> hubContext;
 
-        
-        public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager)
+        public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager, IHubContext<NotificationHub> hubContext)
         {
-            this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
-            this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
-            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            this.emailService = emailService;
+            this.emailMapper = emailMapper;
+            this.userManager = userManager;
+            this.hubContext = hubContext;
         }
+
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ListEmailsAsync(int id, string emailStatus)
         {
@@ -112,6 +116,7 @@ namespace TBIBankApp.Controllers
             }   
 
             await this.emailService.LockButtonAsync(id);
+            await this.hubContext.Clients.All.SendAsync("LockButton", id);
 
             return new JsonResult("false");
         }
@@ -121,6 +126,7 @@ namespace TBIBankApp.Controllers
         public async Task SetToEnableAsync(string id)
         {
             await this.emailService.UnLockButtonAsync(id);
+            await this.hubContext.Clients.All.SendAsync("UnlockButton", id);
         }
 
 

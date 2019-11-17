@@ -127,7 +127,7 @@ function SetInvalid(value) {
             },
             data: data,
             success: function () {
-                window.location.replace("/Email/ListEmails?emailStatus=InvalidApplication");
+                window.location.replace("/Email/ListEmailsAsync?emailStatus=InvalidApplication");
             }
         })
 };

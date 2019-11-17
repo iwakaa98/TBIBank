@@ -17,7 +17,6 @@ namespace TBIApp.MailClient.ParseManagers
 
             var b = new DateTime((long)a).ToLocalTime();
 
-            var c = 0;
 
             var headers = new Dictionary<string, string>();
 

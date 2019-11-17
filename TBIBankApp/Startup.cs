@@ -25,6 +25,7 @@ using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.MailClient.Mappers;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIBankApp.Infrastructure.HostedServices;
+using TBIBankApp.Hubs;
 
 namespace TBIBankApp
 {
@@ -93,6 +94,8 @@ namespace TBIBankApp
                 opt.AccessDeniedPath = new PathString("/Identity/Account/AccessDenied");
             });
 
+            services.AddSignalR();
+
             //HostedServices added here
             services.AddHostedService<HostedGetEmailsService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -121,7 +124,11 @@ namespace TBIBankApp
             app.UseSerilogRequestLogging();
             app.UseCookiePolicy();
             app.UseAuthentication();
-         
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<NotificationHub>("/notification");
+            });
 
             app.UseMvc(routes =>
             {

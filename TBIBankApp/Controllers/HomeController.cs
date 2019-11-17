@@ -32,7 +32,7 @@ namespace TBIBankApp.Controllers
         public async Task<IActionResult> Index()
         {
             //await this.gmailAPIService.SyncEmails();
-
+            await Task.Delay(0);
             if (User.Identity.IsAuthenticated)
             {
                 return View("Privacy");
@@ -71,12 +71,7 @@ namespace TBIBankApp.Controllers
             return View("ChangePassword", Input);
 
         }
-        [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> ChangePasswordAsync(LoginViewModel Input)
-        {
-            await Task.Delay(0);
-            return View(Input);
-        }
+
 
         [HttpPost]
         public async Task SetNewPasswordAsync(string UserName, string currPassword, string newPassword)
