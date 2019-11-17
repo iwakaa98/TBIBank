@@ -1,0 +1,1255 @@
+2019-11-17 00:52:52.474 +02:00 [INF] Application starting up!
+2019-11-17 00:53:04.633 +02:00 [INF] HTTP GET / responded 200 in 984.2933 ms
+2019-11-17 00:53:16.141 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 3017.5434 ms
+2019-11-17 00:53:16.141 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 1328.764 ms
+2019-11-17 00:53:16.930 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 368.4232 ms
+2019-11-17 00:53:17.115 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 860.4197 ms
+2019-11-17 00:53:17.117 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 844.7701 ms
+2019-11-17 00:53:17.119 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 167.2035 ms
+2019-11-17 00:53:17.306 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 404 in 6.7856 ms
+2019-11-17 00:53:17.316 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6834 ms
+2019-11-17 00:53:17.345 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.8008 ms
+2019-11-17 00:53:17.346 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.1508 ms
+2019-11-17 00:53:17.349 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 404 in 1.9673 ms
+2019-11-17 00:53:17.363 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 404 in 1.6519 ms
+2019-11-17 00:53:17.372 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 404 in 0.8146 ms
+2019-11-17 00:53:17.383 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 404 in 0.9186 ms
+2019-11-17 00:53:18.011 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 404 in 2.2828 ms
+2019-11-17 00:53:21.328 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 1172.79 ms
+2019-11-17 00:53:21.423 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 10.9429 ms
+2019-11-17 00:53:21.424 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.544 ms
+2019-11-17 00:53:21.426 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.3998 ms
+2019-11-17 00:53:21.455 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.493 ms
+2019-11-17 00:53:21.455 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5471 ms
+2019-11-17 00:53:21.467 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7965 ms
+2019-11-17 00:53:21.477 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5526 ms
+2019-11-17 00:53:21.494 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.1664 ms
+2019-11-17 00:53:25.415 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=276165b0-2612-4ae4-900f-4f15e56b3874 responded 200 in 189.2223 ms
+2019-11-17 00:53:33.818 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=276165b0-2612-4ae4-900f-4f15e56b3874 responded 200 in 273.8952 ms
+2019-11-17 00:53:35.552 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=838aaec4-646c-434e-b231-6a8e069b5e20 responded 200 in 37.7875 ms
+2019-11-17 00:53:38.645 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=838aaec4-646c-434e-b231-6a8e069b5e20 responded 200 in 23.9473 ms
+2019-11-17 00:53:39.941 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=005f427e-3b42-4857-a311-d9f67a67a7ff responded 200 in 34.4691 ms
+2019-11-17 00:53:42.110 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=005f427e-3b42-4857-a311-d9f67a67a7ff&status=New responded 200 in 150.2089 ms
+2019-11-17 00:53:48.887 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=686cd6d5-4c40-4bad-ac7a-28ea1ea08a09 responded 200 in 13.5193 ms
+2019-11-17 00:54:03.148 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=686cd6d5-4c40-4bad-ac7a-28ea1ea08a09&status=New responded 200 in 39.3563 ms
+2019-11-17 00:54:05.961 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 98.8352 ms
+2019-11-17 00:54:06.036 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 1.0303 ms
+2019-11-17 00:54:06.038 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 1.7566 ms
+2019-11-17 00:54:06.045 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.8608 ms
+2019-11-17 00:54:06.046 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 1.0889 ms
+2019-11-17 00:54:06.048 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 1.184 ms
+2019-11-17 00:54:06.053 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.6897 ms
+2019-11-17 00:54:06.064 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.54 ms
+2019-11-17 00:54:06.069 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 2.5837 ms
+2019-11-17 00:54:08.136 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 91.8146 ms
+2019-11-17 00:54:08.230 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.6465 ms
+2019-11-17 00:54:08.233 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6872 ms
+2019-11-17 00:54:08.239 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.7043 ms
+2019-11-17 00:54:08.240 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 2.538 ms
+2019-11-17 00:54:08.250 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 1.305 ms
+2019-11-17 00:54:08.252 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.7741 ms
+2019-11-17 00:54:08.258 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.2807 ms
+2019-11-17 00:54:08.261 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.0397 ms
+2019-11-17 00:54:09.977 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=005f427e-3b42-4857-a311-d9f67a67a7ff responded 200 in 23.3029 ms
+2019-11-17 00:54:16.559 +02:00 [INF] HTTP POST /Application/CreateAsync responded 200 in 140.7525 ms
+2019-11-17 00:54:20.139 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=005f427e-3b42-4857-a311-d9f67a67a7ff responded 200 in 15.3632 ms
+2019-11-17 00:56:09.961 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=686cd6d5-4c40-4bad-ac7a-28ea1ea08a09 responded 200 in 13.1181 ms
+2019-11-17 00:56:12.346 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=686cd6d5-4c40-4bad-ac7a-28ea1ea08a09 responded 200 in 5.1379 ms
+2019-11-17 00:56:42.308 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 52.6938 ms
+2019-11-17 00:56:42.369 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 1.6757 ms
+2019-11-17 00:56:42.370 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.6051 ms
+2019-11-17 00:56:42.373 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.4975 ms
+2019-11-17 00:56:42.373 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5143 ms
+2019-11-17 00:56:42.375 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7053 ms
+2019-11-17 00:56:42.384 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5714 ms
+2019-11-17 00:56:42.386 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5573 ms
+2019-11-17 00:56:42.387 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.754 ms
+2019-11-17 00:56:45.359 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 65.4103 ms
+2019-11-17 00:56:45.425 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 404 in 20.65 ms
+2019-11-17 00:56:45.430 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5704 ms
+2019-11-17 00:56:45.430 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.8959 ms
+2019-11-17 00:56:45.431 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 404 in 0.5059 ms
+2019-11-17 00:56:45.433 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 404 in 0.6416 ms
+2019-11-17 00:56:45.433 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 404 in 0.3005 ms
+2019-11-17 00:56:45.434 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 404 in 0.4997 ms
+2019-11-17 00:56:45.434 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7911 ms
+2019-11-17 00:56:46.308 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 14.5587 ms
+2019-11-17 00:56:46.360 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5366 ms
+2019-11-17 00:56:46.360 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5444 ms
+2019-11-17 00:56:46.368 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 2.2589 ms
+2019-11-17 00:56:46.375 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.597 ms
+2019-11-17 00:56:46.375 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4328 ms
+2019-11-17 00:56:46.375 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.3754 ms
+2019-11-17 00:56:46.375 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.3275 ms
+2019-11-17 00:56:46.376 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.3962 ms
+2019-11-17 00:56:58.829 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=5e828326-0740-41ac-afc8-1fe7e3b3b823 responded 200 in 14.1362 ms
+2019-11-17 00:57:01.356 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=5e828326-0740-41ac-afc8-1fe7e3b3b823&status=New responded 200 in 19.3651 ms
+2019-11-17 00:57:12.968 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=627031f3-4d24-42a1-8272-f10226e1ec9b responded 200 in 4.4097 ms
+2019-11-17 00:57:14.593 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=627031f3-4d24-42a1-8272-f10226e1ec9b&status=InvalidApplication responded 200 in 27.0879 ms
+2019-11-17 00:57:14.616 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 2.2706 ms
+2019-11-17 00:57:20.040 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.3059 ms
+2019-11-17 00:57:22.454 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 33.097 ms
+2019-11-17 00:57:24.241 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=276165b0-2612-4ae4-900f-4f15e56b3874 responded 200 in 5.2543 ms
+2019-11-17 00:57:26.158 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=276165b0-2612-4ae4-900f-4f15e56b3874&status=InvalidApplication responded 200 in 6.6519 ms
+2019-11-17 00:57:26.176 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 0.5717 ms
+2019-11-17 00:57:30.789 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 10.0786 ms
+2019-11-17 00:57:34.404 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 44.8008 ms
+2019-11-17 00:57:34.460 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.8345 ms
+2019-11-17 00:57:34.461 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5651 ms
+2019-11-17 00:57:34.462 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.3967 ms
+2019-11-17 00:57:34.467 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 1.2614 ms
+2019-11-17 00:57:34.471 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 5.5341 ms
+2019-11-17 00:57:34.476 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4504 ms
+2019-11-17 00:57:34.476 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4832 ms
+2019-11-17 00:57:34.482 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 2.5425 ms
+2019-11-17 00:57:40.293 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 16.8127 ms
+2019-11-17 00:57:40.345 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.4824 ms
+2019-11-17 00:57:40.345 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.33 ms
+2019-11-17 00:57:40.346 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.2834 ms
+2019-11-17 00:57:40.346 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.3943 ms
+2019-11-17 00:57:40.347 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.6808 ms
+2019-11-17 00:57:40.347 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.0962 ms
+2019-11-17 00:57:40.348 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 1.782 ms
+2019-11-17 00:57:40.348 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.3162 ms
+2019-11-17 00:57:41.495 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2cde0710-3e31-49f3-81f8-72b900a0ecac responded 200 in 5.6635 ms
+2019-11-17 00:57:43.055 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=2cde0710-3e31-49f3-81f8-72b900a0ecac&status=InvalidApplication responded 200 in 9.961 ms
+2019-11-17 00:57:43.072 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 0.5771 ms
+2019-11-17 00:57:48.058 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 5.698 ms
+2019-11-17 00:57:53.579 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 7.5049 ms
+2019-11-17 00:58:06.801 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 147.3942 ms
+2019-11-17 00:58:06.925 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6542 ms
+2019-11-17 00:58:06.934 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.6788 ms
+2019-11-17 00:58:06.934 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.5221 ms
+2019-11-17 00:58:06.936 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5517 ms
+2019-11-17 00:58:06.938 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.5181 ms
+2019-11-17 00:58:06.940 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 5.0555 ms
+2019-11-17 00:58:06.947 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.2401 ms
+2019-11-17 00:58:06.950 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7029 ms
+2019-11-17 00:58:08.848 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=3291aa88-a3b6-4b26-8fcb-a9e0fa296429 responded 200 in 38.8829 ms
+2019-11-17 00:58:11.454 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=3291aa88-a3b6-4b26-8fcb-a9e0fa296429&status=InvalidApplication responded 200 in 296.0893 ms
+2019-11-17 00:58:11.514 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 0.8763 ms
+2019-11-17 00:58:22.796 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 46.682 ms
+2019-11-17 00:58:25.271 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 86.731 ms
+2019-11-17 00:58:25.370 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 1.1337 ms
+2019-11-17 00:58:25.376 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 1.2065 ms
+2019-11-17 00:58:25.383 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.585 ms
+2019-11-17 00:58:25.383 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.3825 ms
+2019-11-17 00:58:25.385 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 2.0978 ms
+2019-11-17 00:58:25.386 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.6015 ms
+2019-11-17 00:58:25.387 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5545 ms
+2019-11-17 00:58:25.415 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.9526 ms
+2019-11-17 00:58:27.660 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 23.1367 ms
+2019-11-17 00:58:27.760 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 1.2073 ms
+2019-11-17 00:58:27.763 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 3.761 ms
+2019-11-17 00:58:27.764 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.5451 ms
+2019-11-17 00:58:27.765 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5819 ms
+2019-11-17 00:58:27.767 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 1.6216 ms
+2019-11-17 00:58:27.771 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.9728 ms
+2019-11-17 00:58:27.776 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4578 ms
+2019-11-17 00:58:27.776 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4124 ms
+2019-11-17 00:58:29.407 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 51.5794 ms
+2019-11-17 00:58:29.525 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.6431 ms
+2019-11-17 00:58:29.525 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5338 ms
+2019-11-17 00:58:29.526 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.7535 ms
+2019-11-17 00:58:29.535 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.6933 ms
+2019-11-17 00:58:29.551 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 2.2406 ms
+2019-11-17 00:58:29.557 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 1.9773 ms
+2019-11-17 00:58:29.564 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.0802 ms
+2019-11-17 00:58:29.579 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.6567 ms
+2019-11-17 00:58:30.380 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 25.1643 ms
+2019-11-17 00:58:30.502 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.7327 ms
+2019-11-17 00:58:30.503 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5906 ms
+2019-11-17 00:58:30.503 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.3481 ms
+2019-11-17 00:58:30.504 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.3733 ms
+2019-11-17 00:58:30.513 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.9496 ms
+2019-11-17 00:58:30.514 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 2.2308 ms
+2019-11-17 00:58:30.514 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.6233 ms
+2019-11-17 00:58:30.533 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.6692 ms
+2019-11-17 00:58:32.543 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 46.5085 ms
+2019-11-17 00:58:32.621 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5085 ms
+2019-11-17 00:58:32.623 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 1.0058 ms
+2019-11-17 00:58:32.630 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.1159 ms
+2019-11-17 00:58:32.646 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 7.0563 ms
+2019-11-17 00:58:32.655 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 1.4367 ms
+2019-11-17 00:58:32.658 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7457 ms
+2019-11-17 00:58:32.677 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.6415 ms
+2019-11-17 00:58:32.680 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.761 ms
+2019-11-17 00:58:38.593 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 32.1277 ms
+2019-11-17 00:58:38.691 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.7867 ms
+2019-11-17 00:58:38.691 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.4452 ms
+2019-11-17 00:58:38.692 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.4091 ms
+2019-11-17 00:58:38.692 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.4118 ms
+2019-11-17 00:58:38.693 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.4191 ms
+2019-11-17 00:58:38.696 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5899 ms
+2019-11-17 00:58:38.721 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 2.323 ms
+2019-11-17 00:58:38.725 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.9369 ms
+2019-11-17 00:58:40.020 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=81705b23-e844-4cab-8e42-bbf922b54d2d responded 200 in 19.6933 ms
+2019-11-17 00:58:41.273 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=81705b23-e844-4cab-8e42-bbf922b54d2d&status=InvalidApplication responded 200 in 13.7325 ms
+2019-11-17 00:58:41.303 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 0.5658 ms
+2019-11-17 00:58:47.982 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 77.378 ms
+2019-11-17 00:58:48.134 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.9338 ms
+2019-11-17 00:58:48.157 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 2.3663 ms
+2019-11-17 00:58:48.167 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.7597 ms
+2019-11-17 00:58:48.169 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.8803 ms
+2019-11-17 00:58:48.179 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 3.2666 ms
+2019-11-17 00:58:48.191 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.645 ms
+2019-11-17 00:58:48.197 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.8908 ms
+2019-11-17 00:58:48.208 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.8075 ms
+2019-11-17 00:59:36.482 +02:00 [INF] Application starting up!
+2019-11-17 00:59:48.181 +02:00 [INF] HTTP GET / responded 200 in 1802.6054 ms
+2019-11-17 00:59:53.347 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 1835.0068 ms
+2019-11-17 00:59:53.406 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 8.9175 ms
+2019-11-17 00:59:53.418 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 2.7612 ms
+2019-11-17 00:59:53.429 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 4.8827 ms
+2019-11-17 00:59:53.437 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.468 ms
+2019-11-17 00:59:53.437 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.6636 ms
+2019-11-17 00:59:53.444 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.6189 ms
+2019-11-17 00:59:53.453 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 9.9799 ms
+2019-11-17 00:59:53.463 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.856 ms
+2019-11-17 00:59:55.898 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=8b2f1cd3-1d36-4bb9-a5d2-d350262909a7 responded 200 in 733.7575 ms
+2019-11-17 00:59:57.768 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=8b2f1cd3-1d36-4bb9-a5d2-d350262909a7&status=InvalidApplication responded 200 in 453.5057 ms
+2019-11-17 00:59:57.896 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 0.6817 ms
+2019-11-17 01:00:11.968 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 0.8077 ms
+2019-11-17 01:00:16.412 +02:00 [INF] HTTP GET /Email/ListEmails?emailStatus=InvalidApplication responded 404 in 2.3122 ms
+2019-11-17 01:00:20.166 +02:00 [INF] HTTP GET / responded 200 in 20.1546 ms
+2019-11-17 01:00:22.192 +02:00 [INF] HTTP GET /vendor/bootstrap/js/popper.js.map responded 404 in 0.9477 ms
+2019-11-17 01:00:23.302 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 152.5373 ms
+2019-11-17 01:00:23.526 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.7369 ms
+2019-11-17 01:00:23.526 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5856 ms
+2019-11-17 01:00:23.527 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.3908 ms
+2019-11-17 01:00:23.527 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.363 ms
+2019-11-17 01:00:23.528 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.3594 ms
+2019-11-17 01:00:23.531 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4883 ms
+2019-11-17 01:00:23.531 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.383 ms
+2019-11-17 01:00:23.607 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.0177 ms
+2019-11-17 01:00:24.850 +02:00 [INF] HTTP GET /vendor/bootstrap/js/popper.js.map responded 404 in 2.0316 ms
+2019-11-17 01:00:25.243 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 404 in 0.603 ms
+2019-11-17 01:00:25.865 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=a1ec405d-0fab-4070-833b-95da9915b312 responded 200 in 118.4047 ms
+2019-11-17 01:00:27.023 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=a1ec405d-0fab-4070-833b-95da9915b312&status=InvalidApplication responded 200 in 99.509 ms
+2019-11-17 01:00:27.318 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 253.7235 ms
+2019-11-17 01:00:27.646 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.4858 ms
+2019-11-17 01:00:27.660 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.7305 ms
+2019-11-17 01:00:27.673 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.7188 ms
+2019-11-17 01:00:27.706 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.9893 ms
+2019-11-17 01:00:27.752 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.6922 ms
+2019-11-17 01:00:27.766 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.9588 ms
+2019-11-17 01:00:27.786 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.2147 ms
+2019-11-17 01:00:27.811 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.4015 ms
+2019-11-17 01:00:28.784 +02:00 [INF] HTTP GET /vendor/bootstrap/js/popper.js.map responded 404 in 0.4965 ms
+2019-11-17 01:00:35.894 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 274.1787 ms
+2019-11-17 01:00:36.185 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.9273 ms
+2019-11-17 01:00:36.226 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.6027 ms
+2019-11-17 01:00:36.227 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5946 ms
+2019-11-17 01:00:36.286 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5863 ms
+2019-11-17 01:00:36.304 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.7846 ms
+2019-11-17 01:00:36.354 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.9813 ms
+2019-11-17 01:00:36.367 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 1.0118 ms
+2019-11-17 01:00:36.372 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 3.5739 ms
+2019-11-17 01:00:37.266 +02:00 [INF] HTTP GET /vendor/bootstrap/js/popper.js.map responded 404 in 0.619 ms
+2019-11-17 01:00:41.379 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=9ecea92d-57f7-420b-addb-c082c3064ef9 responded 200 in 124.4249 ms
+2019-11-17 01:00:43.365 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=9ecea92d-57f7-420b-addb-c082c3064ef9&status=New responded 200 in 124.3288 ms
+2019-11-17 01:00:44.375 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=dcbd9094-eee7-4fdf-860b-dede8714079f responded 200 in 50.7306 ms
+2019-11-17 01:02:25.278 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=dcbd9094-eee7-4fdf-860b-dede8714079f&status=New responded 200 in 269.6792 ms
+2019-11-17 01:03:09.436 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 237.0803 ms
+2019-11-17 01:03:09.698 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 2.2908 ms
+2019-11-17 01:03:09.723 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 3.8156 ms
+2019-11-17 01:03:09.757 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.1639 ms
+2019-11-17 01:03:09.765 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.6702 ms
+2019-11-17 01:03:09.775 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.6436 ms
+2019-11-17 01:03:09.823 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5676 ms
+2019-11-17 01:03:09.861 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.6508 ms
+2019-11-17 01:03:09.873 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 2.0749 ms
+2019-11-17 01:03:10.749 +02:00 [INF] HTTP GET /vendor/bootstrap/js/popper.js.map responded 404 in 0.5966 ms
+2019-11-17 01:03:32.405 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 88.2952 ms
+2019-11-17 01:03:32.665 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 10.0539 ms
+2019-11-17 01:03:32.678 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 10.0515 ms
+2019-11-17 01:03:32.740 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.7747 ms
+2019-11-17 01:03:32.768 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.7242 ms
+2019-11-17 01:03:32.799 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7013 ms
+2019-11-17 01:03:32.824 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5959 ms
+2019-11-17 01:03:32.854 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.6016 ms
+2019-11-17 01:03:32.874 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 3.6635 ms
+2019-11-17 01:03:34.110 +02:00 [INF] HTTP GET /vendor/bootstrap/js/popper.js.map responded 404 in 0.568 ms
+2019-11-17 01:13:16.813 +02:00 [INF] Application starting up!
+2019-11-17 01:13:26.367 +02:00 [INF] HTTP GET / responded 200 in 1122.1537 ms
+2019-11-17 01:13:52.241 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 107.3883 ms
+2019-11-17 01:13:52.314 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 11.4655 ms
+2019-11-17 01:13:52.315 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 404 in 11.1964 ms
+2019-11-17 01:13:52.315 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 404 in 10.6755 ms
+2019-11-17 01:13:52.314 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 11.445 ms
+2019-11-17 01:13:52.319 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4685 ms
+2019-11-17 01:13:52.319 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.3592 ms
+2019-11-17 01:13:52.319 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 404 in 0.3528 ms
+2019-11-17 01:13:52.319 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 404 in 0.3194 ms
+2019-11-17 01:13:52.630 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 404 in 0.6059 ms
+2019-11-17 01:13:53.988 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 745.8384 ms
+2019-11-17 01:13:54.029 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 22.9784 ms
+2019-11-17 01:13:54.032 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 1.3816 ms
+2019-11-17 01:13:54.034 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7331 ms
+2019-11-17 01:13:54.035 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5777 ms
+2019-11-17 01:13:54.035 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.3658 ms
+2019-11-17 01:13:54.035 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.3057 ms
+2019-11-17 01:13:54.038 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.9674 ms
+2019-11-17 01:13:54.038 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 1.7548 ms
+2019-11-17 01:13:56.428 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=12d08c5a-4cd0-4d1b-88b1-c1c79626e6cd responded 200 in 216.7993 ms
+2019-11-17 01:13:59.113 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=12d08c5a-4cd0-4d1b-88b1-c1c79626e6cd responded 200 in 37.8017 ms
+2019-11-17 01:13:59.751 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=838aaec4-646c-434e-b231-6a8e069b5e20 responded 200 in 12.3354 ms
+2019-11-17 01:14:01.618 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.563 ms
+2019-11-17 01:14:01.689 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 404 in 0.5549 ms
+2019-11-17 01:14:01.691 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.6006 ms
+2019-11-17 01:14:01.692 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 404 in 0.5388 ms
+2019-11-17 01:14:01.694 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 404 in 0.7159 ms
+2019-11-17 01:14:01.695 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.7714 ms
+2019-11-17 01:14:01.695 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4914 ms
+2019-11-17 01:14:01.696 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.3916 ms
+2019-11-17 01:14:01.696 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.3187 ms
+2019-11-17 01:14:02.560 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 77.6638 ms
+2019-11-17 01:14:02.612 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5534 ms
+2019-11-17 01:14:02.619 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 1.4615 ms
+2019-11-17 01:14:02.621 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.754 ms
+2019-11-17 01:14:02.623 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.6847 ms
+2019-11-17 01:14:02.624 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.4992 ms
+2019-11-17 01:14:02.629 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.3184 ms
+2019-11-17 01:14:02.629 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4758 ms
+2019-11-17 01:14:02.632 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 2.5222 ms
+2019-11-17 01:14:03.397 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 67.8034 ms
+2019-11-17 01:14:03.445 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.6089 ms
+2019-11-17 01:14:03.446 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6481 ms
+2019-11-17 01:14:03.449 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.412 ms
+2019-11-17 01:14:03.450 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.0775 ms
+2019-11-17 01:14:03.467 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7239 ms
+2019-11-17 01:14:03.475 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.7563 ms
+2019-11-17 01:14:03.476 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5109 ms
+2019-11-17 01:14:03.477 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4968 ms
+2019-11-17 01:14:06.077 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 41.2979 ms
+2019-11-17 01:14:06.126 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.8848 ms
+2019-11-17 01:14:06.127 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5821 ms
+2019-11-17 01:14:06.127 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.4587 ms
+2019-11-17 01:14:06.129 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.5636 ms
+2019-11-17 01:14:06.132 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 1.3303 ms
+2019-11-17 01:14:06.136 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 1.0767 ms
+2019-11-17 01:14:06.141 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5806 ms
+2019-11-17 01:14:06.141 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4303 ms
+2019-11-17 01:15:18.071 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 6.719 ms
+2019-11-17 01:15:18.115 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6752 ms
+2019-11-17 01:15:18.115 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.6484 ms
+2019-11-17 01:15:18.116 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.4967 ms
+2019-11-17 01:15:18.116 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.641 ms
+2019-11-17 01:15:18.126 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 404 in 0.5593 ms
+2019-11-17 01:15:18.126 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 404 in 0.3825 ms
+2019-11-17 01:15:18.130 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 404 in 0.6219 ms
+2019-11-17 01:15:18.135 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 404 in 0.9917 ms
+2019-11-17 01:15:19.517 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 52.983 ms
+2019-11-17 01:15:19.564 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5709 ms
+2019-11-17 01:15:19.564 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.4686 ms
+2019-11-17 01:15:19.565 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5697 ms
+2019-11-17 01:15:19.567 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.6186 ms
+2019-11-17 01:15:19.570 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.6455 ms
+2019-11-17 01:15:19.573 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 1.0478 ms
+2019-11-17 01:15:19.580 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.8654 ms
+2019-11-17 01:15:19.585 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.2609 ms
+2019-11-17 01:15:20.622 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 14.1798 ms
+2019-11-17 01:15:20.664 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5243 ms
+2019-11-17 01:15:20.674 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.7461 ms
+2019-11-17 01:15:20.678 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.7747 ms
+2019-11-17 01:15:20.678 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.491 ms
+2019-11-17 01:15:20.684 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5702 ms
+2019-11-17 01:15:20.685 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4121 ms
+2019-11-17 01:15:20.688 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4498 ms
+2019-11-17 01:15:20.689 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4447 ms
+2019-11-17 01:15:21.353 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 9.5834 ms
+2019-11-17 01:15:21.389 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5933 ms
+2019-11-17 01:15:21.390 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.7882 ms
+2019-11-17 01:15:21.395 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.5111 ms
+2019-11-17 01:15:21.395 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5549 ms
+2019-11-17 01:15:21.397 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7925 ms
+2019-11-17 01:15:21.400 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.7727 ms
+2019-11-17 01:15:21.405 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 5.1789 ms
+2019-11-17 01:15:21.407 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.0129 ms
+2019-11-17 01:15:24.244 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 18.4356 ms
+2019-11-17 01:15:24.296 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.7482 ms
+2019-11-17 01:15:24.299 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 1.4366 ms
+2019-11-17 01:15:24.307 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5638 ms
+2019-11-17 01:15:24.309 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.7775 ms
+2019-11-17 01:15:24.313 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 2.3925 ms
+2019-11-17 01:15:24.316 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.8332 ms
+2019-11-17 01:15:24.320 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.6082 ms
+2019-11-17 01:15:24.326 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 1.7272 ms
+2019-11-17 12:16:14.573 +02:00 [INF] Application starting up!
+2019-11-17 12:16:29.674 +02:00 [INF] HTTP GET / responded 200 in 616.6801 ms
+2019-11-17 12:16:58.332 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 1167.8156 ms
+2019-11-17 12:16:58.981 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 586.9883 ms
+2019-11-17 12:16:59.055 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 3.4926 ms
+2019-11-17 12:16:59.084 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 1.0118 ms
+2019-11-17 12:16:59.085 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 404 in 1.6762 ms
+2019-11-17 12:16:59.085 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5232 ms
+2019-11-17 12:16:59.087 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 404 in 0.7834 ms
+2019-11-17 12:16:59.113 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 404 in 0.7096 ms
+2019-11-17 12:16:59.119 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 404 in 0.7514 ms
+2019-11-17 12:16:59.127 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 404 in 2.1054 ms
+2019-11-17 12:16:59.569 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 404 in 0.4483 ms
+2019-11-17 12:17:03.370 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 959.4174 ms
+2019-11-17 12:17:03.455 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 5.3945 ms
+2019-11-17 12:17:03.464 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 8.0287 ms
+2019-11-17 12:17:03.465 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5816 ms
+2019-11-17 12:17:03.480 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5 ms
+2019-11-17 12:17:03.480 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5496 ms
+2019-11-17 12:17:03.481 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4337 ms
+2019-11-17 12:17:03.482 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.8579 ms
+2019-11-17 12:17:03.485 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.9592 ms
+2019-11-17 12:17:03.770 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 404 in 0.5583 ms
+2019-11-17 12:17:12.957 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=a993d09d-1e06-43ab-8433-bb920b245028 responded 200 in 225.9359 ms
+2019-11-17 12:17:15.642 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=a993d09d-1e06-43ab-8433-bb920b245028 responded 200 in 26.1133 ms
+2019-11-17 12:17:16.369 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=838aaec4-646c-434e-b231-6a8e069b5e20 responded 200 in 2.6854 ms
+2019-11-17 12:17:17.932 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=12d08c5a-4cd0-4d1b-88b1-c1c79626e6cd responded 200 in 6.2138 ms
+2019-11-17 12:17:19.884 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=12d08c5a-4cd0-4d1b-88b1-c1c79626e6cd responded 200 in 5.2398 ms
+2019-11-17 12:17:20.597 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=de9e5608-de73-470c-9ccc-416c83cf637a responded 200 in 6.5974 ms
+2019-11-17 12:17:22.173 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=de9e5608-de73-470c-9ccc-416c83cf637a responded 200 in 6.3454 ms
+2019-11-17 12:17:23.079 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=debe007c-318c-49bf-a2aa-abd94db4799c responded 200 in 8.037 ms
+2019-11-17 12:17:24.324 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=debe007c-318c-49bf-a2aa-abd94db4799c responded 200 in 5.377 ms
+2019-11-17 12:21:12.435 +02:00 [INF] Application starting up!
+2019-11-17 12:21:20.327 +02:00 [INF] HTTP GET / responded 200 in 658.6399 ms
+2019-11-17 12:21:23.745 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 1020.4405 ms
+2019-11-17 12:21:23.792 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 9.9519 ms
+2019-11-17 12:21:23.793 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 9.2946 ms
+2019-11-17 12:21:23.793 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 8.2401 ms
+2019-11-17 12:21:23.793 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 9.2449 ms
+2019-11-17 12:21:23.793 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 9.9428 ms
+2019-11-17 12:21:23.798 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4278 ms
+2019-11-17 12:21:23.798 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4331 ms
+2019-11-17 12:21:23.798 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4964 ms
+2019-11-17 12:22:39.394 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=de9e5608-de73-470c-9ccc-416c83cf637a responded 200 in 140.4493 ms
+2019-11-17 12:22:41.160 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=debe007c-318c-49bf-a2aa-abd94db4799c responded 200 in 10.9349 ms
+2019-11-17 12:22:42.936 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=d06d2256-8f93-4bce-aa00-31b49c4523e2 responded 200 in 15.2214 ms
+2019-11-17 12:23:11.574 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=d06d2256-8f93-4bce-aa00-31b49c4523e2&status=New responded 200 in 128.6281 ms
+2019-11-17 12:23:13.107 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=79374dc3-add2-4050-9189-a540c06ffb9a responded 200 in 14.5438 ms
+2019-11-17 12:23:16.303 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=79374dc3-add2-4050-9189-a540c06ffb9a&status=InvalidApplication responded 200 in 21.0095 ms
+2019-11-17 12:23:16.481 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 156.0615 ms
+2019-11-17 12:23:16.547 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.7552 ms
+2019-11-17 12:23:16.557 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 4.278 ms
+2019-11-17 12:23:16.559 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 1.3746 ms
+2019-11-17 12:23:16.561 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 3.5413 ms
+2019-11-17 12:23:16.563 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 2.1712 ms
+2019-11-17 12:23:16.563 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5479 ms
+2019-11-17 12:23:16.564 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.7218 ms
+2019-11-17 12:23:16.567 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.7362 ms
+2019-11-17 12:23:20.524 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 48.1215 ms
+2019-11-17 12:23:20.593 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5226 ms
+2019-11-17 12:23:20.594 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.6552 ms
+2019-11-17 12:23:20.594 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.4429 ms
+2019-11-17 12:23:20.594 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.3625 ms
+2019-11-17 12:23:20.595 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.3432 ms
+2019-11-17 12:23:20.595 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.3043 ms
+2019-11-17 12:23:20.596 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.3291 ms
+2019-11-17 12:23:20.598 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.6464 ms
+2019-11-17 12:23:21.896 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21 responded 200 in 14.871 ms
+2019-11-17 12:23:31.925 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21&status=InvalidApplication responded 200 in 20.7596 ms
+2019-11-17 12:23:31.966 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 25.0208 ms
+2019-11-17 12:23:32.013 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.5267 ms
+2019-11-17 12:23:32.017 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6178 ms
+2019-11-17 12:23:32.018 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4568 ms
+2019-11-17 12:23:32.020 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.7092 ms
+2019-11-17 12:23:32.020 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4395 ms
+2019-11-17 12:23:32.021 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.4568 ms
+2019-11-17 12:23:32.022 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.3911 ms
+2019-11-17 12:23:32.022 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.3518 ms
+2019-11-17 12:23:35.362 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 70.3174 ms
+2019-11-17 12:23:35.487 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.4929 ms
+2019-11-17 12:23:35.491 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.4428 ms
+2019-11-17 12:23:35.492 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.4478 ms
+2019-11-17 12:23:35.493 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.3286 ms
+2019-11-17 12:23:35.494 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.3859 ms
+2019-11-17 12:23:35.539 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5619 ms
+2019-11-17 12:23:35.542 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 2.5294 ms
+2019-11-17 12:23:35.578 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.7027 ms
+2019-11-17 12:23:37.047 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5 responded 200 in 156.8739 ms
+2019-11-17 12:23:38.317 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5&status=New responded 200 in 64.6911 ms
+2019-11-17 12:23:39.122 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=1cc5999d-b036-406f-bc88-9d28b74e7a92 responded 200 in 17.447 ms
+2019-11-17 12:23:40.299 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=1cc5999d-b036-406f-bc88-9d28b74e7a92&status=New responded 200 in 132.7141 ms
+2019-11-17 12:23:54.783 +02:00 [INF] Application starting up!
+2019-11-17 12:24:01.209 +02:00 [INF] HTTP GET / responded 200 in 1210.6408 ms
+2019-11-17 12:24:02.399 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 2411.2278 ms
+2019-11-17 12:24:02.844 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 10.8632 ms
+2019-11-17 12:24:02.865 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6558 ms
+2019-11-17 12:24:02.876 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.6764 ms
+2019-11-17 12:24:02.885 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.5238 ms
+2019-11-17 12:24:02.896 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.4877 ms
+2019-11-17 12:24:02.905 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.4839 ms
+2019-11-17 12:24:02.996 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 52.2945 ms
+2019-11-17 12:24:03.081 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.591 ms
+2019-11-17 12:24:03.082 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.6009 ms
+2019-11-17 12:24:03.083 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.4192 ms
+2019-11-17 12:24:03.093 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 1.2288 ms
+2019-11-17 12:24:03.094 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4168 ms
+2019-11-17 12:24:03.095 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.4502 ms
+2019-11-17 12:24:03.095 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.2996 ms
+2019-11-17 12:24:03.129 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.5996 ms
+2019-11-17 12:24:03.583 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 2.1917 ms
+2019-11-17 12:24:03.720 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.7428 ms
+2019-11-17 12:24:05.371 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=debe007c-318c-49bf-a2aa-abd94db4799c responded 200 in 71.1324 ms
+2019-11-17 12:24:06.796 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=de9e5608-de73-470c-9ccc-416c83cf637a responded 200 in 11.8001 ms
+2019-11-17 12:24:07.765 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=be16f65c-3326-44c6-a0af-fc15de02dcfd responded 200 in 322.0252 ms
+2019-11-17 12:24:10.222 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=be16f65c-3326-44c6-a0af-fc15de02dcfd&status=New responded 200 in 140.0963 ms
+2019-11-17 12:24:12.730 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=8a860e8c-51e2-4756-a0bc-51519be70177 responded 200 in 18.0229 ms
+2019-11-17 12:24:17.223 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=8a860e8c-51e2-4756-a0bc-51519be70177&status=New responded 200 in 35.2611 ms
+2019-11-17 12:24:21.954 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5032 ms
+2019-11-17 12:24:21.955 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.493 ms
+2019-11-17 12:24:21.969 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 2852.4141 ms
+2019-11-17 12:24:21.971 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.5165 ms
+2019-11-17 12:24:21.985 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.8129 ms
+2019-11-17 12:24:21.998 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5183 ms
+2019-11-17 12:24:22.008 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.6561 ms
+2019-11-17 12:24:22.011 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4574 ms
+2019-11-17 12:24:22.014 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.5305 ms
+2019-11-17 12:24:23.647 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5 responded 200 in 383.1502 ms
+2019-11-17 12:24:37.571 +02:00 [INF] HTTP POST /Application/CreateAsync responded 200 in 143.6531 ms
+2019-11-17 12:24:47.655 +02:00 [INF] HTTP POST /Application/CreateAsync responded 200 in 143.5532 ms
+2019-11-17 12:24:47.686 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5&status=Open responded 200 in 21.7271 ms
+2019-11-17 12:24:49.813 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 112.0432 ms
+2019-11-17 12:24:49.873 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.6879 ms
+2019-11-17 12:24:49.874 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.4414 ms
+2019-11-17 12:24:49.874 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 1.4985 ms
+2019-11-17 12:24:49.875 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.3567 ms
+2019-11-17 12:24:49.875 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.3041 ms
+2019-11-17 12:24:49.886 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.592 ms
+2019-11-17 12:24:49.889 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.4884 ms
+2019-11-17 12:24:49.889 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.4598 ms
+2019-11-17 12:24:58.518 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5 responded 200 in 11.3336 ms
+2019-11-17 12:25:00.115 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5&status=Closed responded 200 in 17.0068 ms
+2019-11-17 12:25:01.200 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 200 in 55.1212 ms
+2019-11-17 12:25:01.247 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.6908 ms
+2019-11-17 12:25:01.248 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 0.5611 ms
+2019-11-17 12:25:01.249 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 0.574 ms
+2019-11-17 12:25:01.250 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.5263 ms
+2019-11-17 12:25:01.251 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5214 ms
+2019-11-17 12:25:01.251 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.8483 ms
+2019-11-17 12:25:01.254 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.5932 ms
+2019-11-17 12:25:01.265 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 1.0691 ms
+2019-11-17 12:25:04.433 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5 responded 200 in 25.4884 ms
+2019-11-17 12:25:08.291 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=0b8ab12f-5aa3-4b6a-b178-39d797a3abb5 responded 200 in 25.4266 ms
+2019-11-17 12:25:09.856 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 40.7948 ms
+2019-11-17 12:25:09.906 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 404 in 6.831 ms
+2019-11-17 12:25:09.908 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 404 in 1.1494 ms
+2019-11-17 12:25:09.910 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 404 in 0.7656 ms
+2019-11-17 12:25:09.917 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 404 in 0.5208 ms
+2019-11-17 12:25:09.917 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 404 in 0.426 ms
+2019-11-17 12:25:09.919 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 404 in 0.6625 ms
+2019-11-17 12:25:09.919 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 404 in 0.5587 ms
+2019-11-17 12:25:09.927 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 404 in 0.8021 ms
+2019-11-17 12:29:00.688 +02:00 [INF] Application starting up!
+2019-11-17 12:29:06.317 +02:00 [ERR] HTTP GET / responded 500 in 278.6889 ms
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'TBIApp.Services.Services.EmailService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-17 12:29:06.377 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'TBIApp.Services.Services.EmailService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-17 12:41:41.050 +02:00 [INF] Application starting up!
+2019-11-17 12:41:47.951 +02:00 [INF] HTTP GET / responded 200 in 781.1932 ms
+2019-11-17 12:41:53.202 +02:00 [INF] HTTP GET /123qwe responded 302 in 6.1682 ms
+2019-11-17 12:41:53.229 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.7463 ms
+2019-11-17 12:41:53.246 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.7869 ms
+2019-11-17 12:41:53.253 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5 ms
+2019-11-17 12:41:53.264 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4518 ms
+2019-11-17 12:41:53.278 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 7.3387 ms
+2019-11-17 12:41:53.285 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 3.1221 ms
+2019-11-17 12:41:53.292 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5068 ms
+2019-11-17 12:41:53.299 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.0295 ms
+2019-11-17 12:41:53.308 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6041 ms
+2019-11-17 12:41:53.315 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5102 ms
+2019-11-17 12:41:53.320 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4776 ms
+2019-11-17 12:41:53.326 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4665 ms
+2019-11-17 12:41:53.331 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4717 ms
+2019-11-17 12:41:53.336 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5402 ms
+2019-11-17 12:41:53.342 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6457 ms
+2019-11-17 12:41:53.347 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4738 ms
+2019-11-17 12:41:53.352 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4954 ms
+2019-11-17 12:41:53.356 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6598 ms
+2019-11-17 12:41:53.362 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.481 ms
+2019-11-17 12:41:53.728 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6443 ms
+2019-11-17 12:41:53.739 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.8189 ms
+2019-11-17 12:41:53.746 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6242 ms
+2019-11-17 12:41:53.757 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6401 ms
+2019-11-17 12:41:53.763 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5056 ms
+2019-11-17 12:41:53.770 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.0194 ms
+2019-11-17 12:41:53.777 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.4152 ms
+2019-11-17 12:41:53.785 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4909 ms
+2019-11-17 12:41:53.789 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.504 ms
+2019-11-17 12:41:53.805 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 2.3957 ms
+2019-11-17 12:41:53.833 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5439 ms
+2019-11-17 12:41:53.843 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 4.5167 ms
+2019-11-17 12:41:53.849 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5674 ms
+2019-11-17 12:41:53.854 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4944 ms
+2019-11-17 12:41:53.863 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6104 ms
+2019-11-17 12:41:53.870 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5875 ms
+2019-11-17 12:41:53.876 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4544 ms
+2019-11-17 12:41:53.881 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.0426 ms
+2019-11-17 12:41:53.887 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6225 ms
+2019-11-17 12:41:53.893 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5406 ms
+2019-11-17 12:41:59.030 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6591 ms
+2019-11-17 12:41:59.228 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6322 ms
+2019-11-17 12:41:59.250 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5227 ms
+2019-11-17 12:41:59.264 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5375 ms
+2019-11-17 12:41:59.270 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4696 ms
+2019-11-17 12:41:59.277 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4249 ms
+2019-11-17 12:41:59.283 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5602 ms
+2019-11-17 12:41:59.290 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.8752 ms
+2019-11-17 12:41:59.297 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5371 ms
+2019-11-17 12:41:59.302 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4427 ms
+2019-11-17 12:41:59.308 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4881 ms
+2019-11-17 12:41:59.313 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5582 ms
+2019-11-17 12:41:59.318 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4633 ms
+2019-11-17 12:41:59.325 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6283 ms
+2019-11-17 12:41:59.331 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4266 ms
+2019-11-17 12:41:59.337 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.593 ms
+2019-11-17 12:41:59.343 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5924 ms
+2019-11-17 12:41:59.349 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.486 ms
+2019-11-17 12:41:59.362 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5142 ms
+2019-11-17 12:41:59.367 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4775 ms
+2019-11-17 12:43:16.005 +02:00 [INF] Application starting up!
+2019-11-17 12:43:21.178 +02:00 [INF] HTTP GET / responded 200 in 756.1715 ms
+2019-11-17 12:43:25.423 +02:00 [INF] HTTP GET /qwe123 responded 302 in 6.9972 ms
+2019-11-17 12:43:25.439 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.731 ms
+2019-11-17 12:43:25.447 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.6414 ms
+2019-11-17 12:43:25.458 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5867 ms
+2019-11-17 12:43:25.471 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.9176 ms
+2019-11-17 12:43:25.477 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6621 ms
+2019-11-17 12:43:25.491 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 5.1935 ms
+2019-11-17 12:43:25.495 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4602 ms
+2019-11-17 12:43:25.503 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5445 ms
+2019-11-17 12:43:25.507 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5347 ms
+2019-11-17 12:43:25.511 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6197 ms
+2019-11-17 12:43:25.517 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.636 ms
+2019-11-17 12:43:25.522 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5287 ms
+2019-11-17 12:43:25.526 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4921 ms
+2019-11-17 12:43:25.530 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.0766 ms
+2019-11-17 12:43:25.535 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4213 ms
+2019-11-17 12:43:25.539 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.549 ms
+2019-11-17 12:43:25.543 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4627 ms
+2019-11-17 12:43:25.549 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6349 ms
+2019-11-17 12:43:25.553 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4637 ms
+2019-11-17 12:43:25.674 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.6674 ms
+2019-11-17 12:43:25.688 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 2.7561 ms
+2019-11-17 12:43:25.696 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.9457 ms
+2019-11-17 12:43:25.708 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6974 ms
+2019-11-17 12:43:25.720 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5436 ms
+2019-11-17 12:43:25.725 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6108 ms
+2019-11-17 12:43:25.730 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.0567 ms
+2019-11-17 12:43:25.738 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4981 ms
+2019-11-17 12:43:25.743 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.899 ms
+2019-11-17 12:43:25.750 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.8911 ms
+2019-11-17 12:43:25.755 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4476 ms
+2019-11-17 12:43:25.759 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.3951 ms
+2019-11-17 12:43:25.766 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.9207 ms
+2019-11-17 12:43:25.771 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.506 ms
+2019-11-17 12:43:25.775 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5049 ms
+2019-11-17 12:43:25.779 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6118 ms
+2019-11-17 12:43:25.784 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.3986 ms
+2019-11-17 12:43:25.788 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4577 ms
+2019-11-17 12:43:25.793 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.477 ms
+2019-11-17 12:43:25.800 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.5821 ms
+2019-11-17 12:43:30.850 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6676 ms
+2019-11-17 12:43:30.856 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6014 ms
+2019-11-17 12:43:30.865 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4715 ms
+2019-11-17 12:43:30.870 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5757 ms
+2019-11-17 12:43:30.876 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5442 ms
+2019-11-17 12:43:30.882 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5396 ms
+2019-11-17 12:43:30.887 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.595 ms
+2019-11-17 12:43:30.893 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5991 ms
+2019-11-17 12:43:30.901 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6451 ms
+2019-11-17 12:43:30.907 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5279 ms
+2019-11-17 12:43:30.915 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4732 ms
+2019-11-17 12:43:30.921 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4649 ms
+2019-11-17 12:43:30.927 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5538 ms
+2019-11-17 12:43:30.937 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.496 ms
+2019-11-17 12:43:30.943 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5158 ms
+2019-11-17 12:43:30.950 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5916 ms
+2019-11-17 12:43:30.958 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5838 ms
+2019-11-17 12:43:30.967 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6003 ms
+2019-11-17 12:43:30.972 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5724 ms
+2019-11-17 12:43:30.977 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5767 ms
+2019-11-17 12:44:01.045 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.703 ms
+2019-11-17 12:44:01.051 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5268 ms
+2019-11-17 12:44:01.057 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.656 ms
+2019-11-17 12:44:01.064 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6008 ms
+2019-11-17 12:44:01.074 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 3.5371 ms
+2019-11-17 12:44:01.082 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.2543 ms
+2019-11-17 12:44:01.088 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.6876 ms
+2019-11-17 12:44:01.097 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.9876 ms
+2019-11-17 12:44:01.105 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.8374 ms
+2019-11-17 12:44:01.113 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.7904 ms
+2019-11-17 12:44:01.120 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.5924 ms
+2019-11-17 12:44:01.132 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4966 ms
+2019-11-17 12:44:01.139 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5855 ms
+2019-11-17 12:44:01.145 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5709 ms
+2019-11-17 12:44:01.151 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.622 ms
+2019-11-17 12:44:01.160 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 1.2407 ms
+2019-11-17 12:44:01.166 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4641 ms
+2019-11-17 12:44:01.172 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.5855 ms
+2019-11-17 12:44:01.177 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.4994 ms
+2019-11-17 12:44:01.182 +02:00 [INF] HTTP GET /Home/PageNotFound responded 302 in 0.7403 ms
+2019-11-17 12:44:38.910 +02:00 [INF] Application starting up!
+2019-11-17 12:44:43.984 +02:00 [INF] HTTP GET / responded 200 in 772.9319 ms
+2019-11-17 12:44:49.438 +02:00 [INF] HTTP GET /qwe123 responded 302 in 6.01 ms
+2019-11-17 12:44:49.506 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 52.981 ms
+2019-11-17 12:44:49.568 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 10.4169 ms
+2019-11-17 12:44:49.568 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 6.5 ms
+2019-11-17 12:44:49.568 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 7.8549 ms
+2019-11-17 12:44:49.568 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 6.9864 ms
+2019-11-17 12:44:49.568 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 6.1054 ms
+2019-11-17 12:44:49.570 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6162 ms
+2019-11-17 12:44:49.570 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.3702 ms
+2019-11-17 12:44:49.570 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4065 ms
+2019-11-17 12:44:49.585 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0393 ms
+2019-11-17 12:44:49.592 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0945 ms
+2019-11-17 12:44:49.597 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3932 ms
+2019-11-17 12:44:49.601 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5779 ms
+2019-11-17 12:44:49.606 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9213 ms
+2019-11-17 12:44:49.614 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7377 ms
+2019-11-17 12:44:49.618 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3297 ms
+2019-11-17 12:44:49.623 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9545 ms
+2019-11-17 12:48:43.490 +02:00 [INF] Application starting up!
+2019-11-17 12:48:50.325 +02:00 [INF] HTTP GET / responded 200 in 1388.6975 ms
+2019-11-17 12:48:54.270 +02:00 [INF] HTTP GET /qwe123 responded 302 in 12.4747 ms
+2019-11-17 12:48:54.357 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 48.4251 ms
+2019-11-17 12:48:54.417 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.2218 ms
+2019-11-17 12:48:54.417 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 13.7805 ms
+2019-11-17 12:48:54.417 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 7.384 ms
+2019-11-17 12:48:54.417 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 13.3616 ms
+2019-11-17 12:48:54.418 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.3612 ms
+2019-11-17 12:48:54.418 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4976 ms
+2019-11-17 12:48:54.418 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.4031 ms
+2019-11-17 12:48:54.418 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5703 ms
+2019-11-17 12:48:54.431 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7491 ms
+2019-11-17 12:48:54.436 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7969 ms
+2019-11-17 12:48:54.443 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8432 ms
+2019-11-17 12:48:54.448 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5732 ms
+2019-11-17 12:48:54.453 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5794 ms
+2019-11-17 12:48:54.464 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7738 ms
+2019-11-17 12:48:54.469 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.541 ms
+2019-11-17 12:48:54.478 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.005 ms
+2019-11-17 12:50:33.984 +02:00 [INF] Application starting up!
+2019-11-17 12:50:38.985 +02:00 [INF] HTTP GET / responded 200 in 789.5754 ms
+2019-11-17 12:50:42.467 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 1081.5748 ms
+2019-11-17 12:50:42.545 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 13.8502 ms
+2019-11-17 12:50:42.545 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 16.5141 ms
+2019-11-17 12:50:42.546 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5809 ms
+2019-11-17 12:50:42.549 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.7719 ms
+2019-11-17 12:50:42.553 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.5426 ms
+2019-11-17 12:50:42.554 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4428 ms
+2019-11-17 12:50:42.556 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 1.5602 ms
+2019-11-17 12:50:42.567 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.4447 ms
+2019-11-17 12:50:42.613 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 46.4259 ms
+2019-11-17 12:50:42.623 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.2852 ms
+2019-11-17 12:50:42.629 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0253 ms
+2019-11-17 12:50:42.634 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8802 ms
+2019-11-17 12:50:42.640 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2037 ms
+2019-11-17 12:50:42.648 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2456 ms
+2019-11-17 12:50:42.654 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0053 ms
+2019-11-17 12:50:42.662 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0778 ms
+2019-11-17 12:50:47.180 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed/qwe123 responded 400 in 17.7139 ms
+2019-11-17 12:50:56.335 +02:00 [INF] HTTP GET /qwe123 responded 302 in 0.9222 ms
+2019-11-17 12:50:56.344 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8168 ms
+2019-11-17 12:50:56.453 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.7825 ms
+2019-11-17 12:50:56.531 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.0411 ms
+2019-11-17 12:50:56.535 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.3436 ms
+2019-11-17 12:50:56.542 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.1115 ms
+2019-11-17 12:50:56.545 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 1.8186 ms
+2019-11-17 12:50:56.548 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6755 ms
+2019-11-17 12:50:56.558 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 4.2099 ms
+2019-11-17 12:50:56.562 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.0194 ms
+2019-11-17 12:50:56.565 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6729 ms
+2019-11-17 12:50:56.600 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6267 ms
+2019-11-17 12:50:56.608 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.6001 ms
+2019-11-17 12:50:56.614 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4484 ms
+2019-11-17 12:50:56.620 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5389 ms
+2019-11-17 12:50:56.629 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.605 ms
+2019-11-17 12:50:56.634 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4171 ms
+2019-11-17 12:50:56.645 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7978 ms
+2019-11-17 12:50:56.651 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0882 ms
+2019-11-17 12:51:03.739 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 161.3676 ms
+2019-11-17 12:51:03.830 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 4.8349 ms
+2019-11-17 12:51:03.830 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 2.6468 ms
+2019-11-17 12:51:03.830 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.4432 ms
+2019-11-17 12:51:03.842 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.7206 ms
+2019-11-17 12:51:03.843 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4233 ms
+2019-11-17 12:51:03.843 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 0.5296 ms
+2019-11-17 12:51:03.854 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 2.8129 ms
+2019-11-17 12:51:03.854 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 2.2855 ms
+2019-11-17 12:51:03.867 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 13.1605 ms
+2019-11-17 12:51:03.877 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.092 ms
+2019-11-17 12:51:03.884 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2908 ms
+2019-11-17 12:51:03.894 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.3328 ms
+2019-11-17 12:51:03.904 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.2043 ms
+2019-11-17 12:51:03.911 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6455 ms
+2019-11-17 12:51:04.559 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8183 ms
+2019-11-17 12:51:04.567 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7402 ms
+2019-11-17 12:51:04.768 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.5859 ms
+2019-11-17 12:51:04.778 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4848 ms
+2019-11-17 12:51:05.627 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 29.1403 ms
+2019-11-17 12:51:05.682 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7666 ms
+2019-11-17 12:51:05.684 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 1.0081 ms
+2019-11-17 12:51:05.685 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.9962 ms
+2019-11-17 12:51:05.685 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.4498 ms
+2019-11-17 12:51:05.685 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.4068 ms
+2019-11-17 12:51:05.687 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4867 ms
+2019-11-17 12:51:05.687 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4873 ms
+2019-11-17 12:51:05.699 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6706 ms
+2019-11-17 12:51:05.716 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0464 ms
+2019-11-17 12:51:05.724 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.3091 ms
+2019-11-17 12:51:05.729 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.554 ms
+2019-11-17 12:51:05.736 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8841 ms
+2019-11-17 12:51:05.741 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4517 ms
+2019-11-17 12:51:05.746 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9362 ms
+2019-11-17 12:51:05.753 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0076 ms
+2019-11-17 12:51:05.759 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8797 ms
+2019-11-17 12:53:16.635 +02:00 [INF] Application starting up!
+2019-11-17 12:53:22.233 +02:00 [INF] HTTP GET / responded 200 in 906.6915 ms
+2019-11-17 12:53:25.180 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 1060.0157 ms
+2019-11-17 12:53:25.242 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 14.912 ms
+2019-11-17 12:53:25.242 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 19.8578 ms
+2019-11-17 12:53:25.242 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 5.5486 ms
+2019-11-17 12:53:25.244 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.5797 ms
+2019-11-17 12:53:25.246 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.7512 ms
+2019-11-17 12:53:25.254 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.8687 ms
+2019-11-17 12:53:25.260 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.6229 ms
+2019-11-17 12:53:25.265 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.6024 ms
+2019-11-17 12:53:25.293 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 19.197 ms
+2019-11-17 12:53:25.304 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.692 ms
+2019-11-17 12:53:25.309 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5959 ms
+2019-11-17 12:53:25.316 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.624 ms
+2019-11-17 12:53:25.321 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6071 ms
+2019-11-17 12:53:25.327 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6156 ms
+2019-11-17 12:53:25.336 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5344 ms
+2019-11-17 12:53:25.340 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5343 ms
+2019-11-17 12:53:27.256 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=017bb165-e918-4a77-b3c3-bd66ebe80526 responded 200 in 267.2023 ms
+2019-11-17 12:53:30.093 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=017bb165-e918-4a77-b3c3-bd66ebe80526&status=InvalidApplication responded 200 in 126.1019 ms
+2019-11-17 12:53:30.208 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 101.9554 ms
+2019-11-17 12:53:30.269 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5091 ms
+2019-11-17 12:53:30.270 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.4484 ms
+2019-11-17 12:53:30.274 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.739 ms
+2019-11-17 12:53:30.282 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6351 ms
+2019-11-17 12:53:30.283 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.486 ms
+2019-11-17 12:53:30.288 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.6404 ms
+2019-11-17 12:53:30.297 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 1.7356 ms
+2019-11-17 12:53:30.298 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.4668 ms
+2019-11-17 12:53:30.300 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6121 ms
+2019-11-17 12:53:30.316 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2846 ms
+2019-11-17 12:53:30.324 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0736 ms
+2019-11-17 12:53:30.332 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4003 ms
+2019-11-17 12:53:30.337 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7421 ms
+2019-11-17 12:53:30.343 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7079 ms
+2019-11-17 12:53:30.348 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6076 ms
+2019-11-17 12:53:30.353 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5177 ms
+2019-11-17 12:53:33.132 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21 responded 200 in 16.9826 ms
+2019-11-17 12:53:36.772 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21&status=NotReviewed responded 200 in 48.749 ms
+2019-11-17 12:53:38.835 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2cde0710-3e31-49f3-81f8-72b900a0ecac responded 200 in 9.1559 ms
+2019-11-17 12:53:39.956 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=2cde0710-3e31-49f3-81f8-72b900a0ecac&status=NotReviewed responded 200 in 41.7103 ms
+2019-11-17 12:53:42.911 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=81705b23-e844-4cab-8e42-bbf922b54d2d responded 200 in 12.2445 ms
+2019-11-17 13:05:21.477 +02:00 [INF] Application starting up!
+2019-11-17 13:05:29.138 +02:00 [INF] HTTP GET / responded 200 in 645.3861 ms
+2019-11-17 13:05:32.221 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 893.6271 ms
+2019-11-17 13:05:32.268 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 7.3788 ms
+2019-11-17 13:05:32.268 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 8.1121 ms
+2019-11-17 13:05:32.268 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 10.512 ms
+2019-11-17 13:05:32.268 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 10.5762 ms
+2019-11-17 13:05:32.273 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.9587 ms
+2019-11-17 13:05:32.273 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 1.1505 ms
+2019-11-17 13:05:32.274 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.7381 ms
+2019-11-17 13:05:32.277 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 3.0126 ms
+2019-11-17 13:05:32.316 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 20.6318 ms
+2019-11-17 13:05:32.330 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.6041 ms
+2019-11-17 13:05:32.338 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5904 ms
+2019-11-17 13:05:32.347 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1154 ms
+2019-11-17 13:05:32.352 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.824 ms
+2019-11-17 13:05:32.358 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3777 ms
+2019-11-17 13:05:32.364 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0467 ms
+2019-11-17 13:05:32.370 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9033 ms
+2019-11-17 13:05:34.558 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21 responded 200 in 274.5283 ms
+2019-11-17 13:05:37.634 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21 responded 200 in 39.0099 ms
+2019-11-17 13:12:31.051 +02:00 [INF] Application starting up!
+2019-11-17 13:12:36.868 +02:00 [INF] HTTP GET / responded 200 in 537.2241 ms
+2019-11-17 13:12:39.465 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 945.5911 ms
+2019-11-17 13:12:39.520 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 9.5685 ms
+2019-11-17 13:12:39.520 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 9.4824 ms
+2019-11-17 13:12:39.520 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 9.5383 ms
+2019-11-17 13:12:39.520 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 8.4016 ms
+2019-11-17 13:12:39.528 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.3666 ms
+2019-11-17 13:12:39.528 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.3333 ms
+2019-11-17 13:12:39.528 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.3074 ms
+2019-11-17 13:12:39.528 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4286 ms
+2019-11-17 13:12:39.567 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 20.9388 ms
+2019-11-17 13:12:39.583 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 11.1216 ms
+2019-11-17 13:12:39.591 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.2818 ms
+2019-11-17 13:12:39.597 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2285 ms
+2019-11-17 13:12:39.602 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6675 ms
+2019-11-17 13:12:39.611 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8665 ms
+2019-11-17 13:12:39.616 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5793 ms
+2019-11-17 13:12:39.621 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7752 ms
+2019-11-17 13:12:41.680 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21 responded 200 in 260.8215 ms
+2019-11-17 13:12:43.749 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0591b68c-52ce-4a78-81a3-6d60fcc61d21&status=New responded 200 in 120.1335 ms
+2019-11-17 13:12:45.029 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=12d08c5a-4cd0-4d1b-88b1-c1c79626e6cd responded 200 in 10.7803 ms
+2019-11-17 13:12:46.331 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=12d08c5a-4cd0-4d1b-88b1-c1c79626e6cd&status=InvalidApplication responded 200 in 29.7904 ms
+2019-11-17 13:12:46.400 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 59.0102 ms
+2019-11-17 13:12:46.456 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 3.2313 ms
+2019-11-17 13:12:46.456 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5079 ms
+2019-11-17 13:12:46.457 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.7437 ms
+2019-11-17 13:12:46.458 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.469 ms
+2019-11-17 13:12:46.461 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.7413 ms
+2019-11-17 13:12:46.473 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 3.0865 ms
+2019-11-17 13:12:46.477 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.8531 ms
+2019-11-17 13:12:46.479 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5855 ms
+2019-11-17 13:12:46.483 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4142 ms
+2019-11-17 13:12:46.490 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0323 ms
+2019-11-17 13:12:46.499 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1504 ms
+2019-11-17 13:12:46.506 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9032 ms
+2019-11-17 13:12:46.514 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0372 ms
+2019-11-17 13:12:46.519 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9105 ms
+2019-11-17 13:12:46.532 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9559 ms
+2019-11-17 13:12:46.545 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9707 ms
+2019-11-17 13:12:49.142 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=017bb165-e918-4a77-b3c3-bd66ebe80526 responded 200 in 16.028 ms
+2019-11-17 13:12:51.308 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=017bb165-e918-4a77-b3c3-bd66ebe80526 responded 200 in 25.6918 ms
+2019-11-17 13:12:52.648 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 31.3737 ms
+2019-11-17 13:12:52.695 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5549 ms
+2019-11-17 13:12:52.695 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.7394 ms
+2019-11-17 13:12:52.697 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5902 ms
+2019-11-17 13:12:52.697 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.4423 ms
+2019-11-17 13:12:52.709 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 2.5236 ms
+2019-11-17 13:12:52.710 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 1.0757 ms
+2019-11-17 13:12:52.710 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.4806 ms
+2019-11-17 13:12:52.711 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.4901 ms
+2019-11-17 13:12:52.726 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1339 ms
+2019-11-17 13:12:52.731 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7538 ms
+2019-11-17 13:12:52.741 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8552 ms
+2019-11-17 13:12:52.747 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5173 ms
+2019-11-17 13:12:52.754 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9379 ms
+2019-11-17 13:12:52.759 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7104 ms
+2019-11-17 13:12:52.766 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6952 ms
+2019-11-17 13:12:52.771 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0757 ms
+2019-11-17 13:12:54.024 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=838aaec4-646c-434e-b231-6a8e069b5e20 responded 200 in 4.715 ms
+2019-11-17 13:12:55.390 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=96802f29-cfaf-402e-a6ae-c08df19049ae responded 200 in 10.5359 ms
+2019-11-17 13:12:56.659 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=96802f29-cfaf-402e-a6ae-c08df19049ae&status=New responded 200 in 22.4357 ms
+2019-11-17 13:13:47.480 +02:00 [INF] Application starting up!
+2019-11-17 13:13:52.741 +02:00 [INF] HTTP GET / responded 200 in 738.3789 ms
+2019-11-17 13:13:56.266 +02:00 [INF] HTTP GET /qweqwe responded 302 in 6.7906 ms
+2019-11-17 13:13:56.349 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 36.4966 ms
+2019-11-17 13:13:56.427 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 12.6536 ms
+2019-11-17 13:13:56.427 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 12.7298 ms
+2019-11-17 13:13:56.427 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 11.916 ms
+2019-11-17 13:13:56.427 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 11.0821 ms
+2019-11-17 13:13:56.428 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5614 ms
+2019-11-17 13:13:56.441 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.7085 ms
+2019-11-17 13:13:56.446 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5515 ms
+2019-11-17 13:13:56.446 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1147 ms
+2019-11-17 13:13:56.447 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5334 ms
+2019-11-17 13:13:56.460 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1433 ms
+2019-11-17 13:13:56.467 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4336 ms
+2019-11-17 13:13:56.478 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4363 ms
+2019-11-17 13:13:56.488 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.365 ms
+2019-11-17 13:13:56.493 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9212 ms
+2019-11-17 13:13:56.501 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6124 ms
+2019-11-17 13:13:56.509 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1855 ms
+2019-11-17 13:19:46.679 +02:00 [INF] Application starting up!
+2019-11-17 13:19:53.322 +02:00 [INF] HTTP GET / responded 200 in 1223.3535 ms
+2019-11-17 13:19:56.881 +02:00 [INF] HTTP GET /qwe123 responded 302 in 6.6958 ms
+2019-11-17 13:19:56.926 +02:00 [ERR] The view 'PageNotFound' was not found. Searched locations: ["/Views/Home/PageNotFound.cshtml","/Views/Shared/PageNotFound.cshtml","/Pages/Shared/PageNotFound.cshtml"]
+2019-11-17 13:19:57.046 +02:00 [ERR] HTTP GET /Home/PageNotFound responded 500 in 154.8456 ms
+System.InvalidOperationException: The view 'PageNotFound' was not found. The following locations were searched:
+/Views/Home/PageNotFound.cshtml
+/Views/Shared/PageNotFound.cshtml
+/Pages/Shared/PageNotFound.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-17 13:19:57.191 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'PageNotFound' was not found. The following locations were searched:
+/Views/Home/PageNotFound.cshtml
+/Views/Shared/PageNotFound.cshtml
+/Pages/Shared/PageNotFound.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-17 13:20:36.631 +02:00 [INF] Application starting up!
+2019-11-17 13:20:40.829 +02:00 [INF] HTTP GET / responded 200 in 856.4639 ms
+2019-11-17 13:20:44.940 +02:00 [INF] HTTP GET /qwe123 responded 302 in 13.0637 ms
+2019-11-17 13:20:44.984 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 35.4175 ms
+2019-11-17 13:20:45.053 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 9.5452 ms
+2019-11-17 13:20:45.054 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 7.9619 ms
+2019-11-17 13:20:45.054 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 8.1693 ms
+2019-11-17 13:20:45.054 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 9.8159 ms
+2019-11-17 13:20:45.056 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.0504 ms
+2019-11-17 13:20:45.056 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.4385 ms
+2019-11-17 13:20:45.057 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4306 ms
+2019-11-17 13:20:45.057 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5337 ms
+2019-11-17 13:20:45.069 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6337 ms
+2019-11-17 13:20:45.077 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9104 ms
+2019-11-17 13:20:45.083 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8658 ms
+2019-11-17 13:20:45.096 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.685 ms
+2019-11-17 13:20:45.113 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.0491 ms
+2019-11-17 13:20:45.130 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2661 ms
+2019-11-17 13:20:45.147 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.7884 ms
+2019-11-17 13:20:45.164 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.8545 ms
+2019-11-17 13:21:00.873 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 850.1959 ms
+2019-11-17 13:21:00.919 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 10.6306 ms
+2019-11-17 13:21:00.922 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 1.5423 ms
+2019-11-17 13:21:00.922 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3574 ms
+2019-11-17 13:21:00.926 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.9114 ms
+2019-11-17 13:21:00.927 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5131 ms
+2019-11-17 13:21:00.930 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5218 ms
+2019-11-17 13:21:00.941 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6928 ms
+2019-11-17 13:21:00.942 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.9952 ms
+2019-11-17 13:21:00.947 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0447 ms
+2019-11-17 13:21:00.957 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7352 ms
+2019-11-17 13:21:00.962 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5176 ms
+2019-11-17 13:21:00.969 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7223 ms
+2019-11-17 13:21:00.973 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5155 ms
+2019-11-17 13:21:00.980 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8073 ms
+2019-11-17 13:21:00.986 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4548 ms
+2019-11-17 13:21:00.990 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6216 ms
+2019-11-17 13:21:02.127 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 61.8178 ms
+2019-11-17 13:21:02.174 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 6.162 ms
+2019-11-17 13:21:02.174 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.246 ms
+2019-11-17 13:21:02.174 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 2.0144 ms
+2019-11-17 13:21:02.174 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 2.1042 ms
+2019-11-17 13:21:02.175 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.3995 ms
+2019-11-17 13:21:02.175 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 0.2515 ms
+2019-11-17 13:21:02.175 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 0.4093 ms
+2019-11-17 13:21:02.177 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.5756 ms
+2019-11-17 13:21:02.188 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.973 ms
+2019-11-17 13:21:02.195 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.508 ms
+2019-11-17 13:21:02.201 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4889 ms
+2019-11-17 13:21:02.206 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5849 ms
+2019-11-17 13:21:02.210 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4444 ms
+2019-11-17 13:21:02.215 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5639 ms
+2019-11-17 13:21:02.220 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8317 ms
+2019-11-17 13:21:02.226 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8361 ms
+2019-11-17 13:21:02.377 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 3.3095 ms
+2019-11-17 13:21:02.385 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5906 ms
+2019-11-17 13:21:03.469 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 54.8329 ms
+2019-11-17 13:21:03.539 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5634 ms
+2019-11-17 13:21:03.545 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.5834 ms
+2019-11-17 13:21:03.546 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5707 ms
+2019-11-17 13:21:03.551 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.6085 ms
+2019-11-17 13:21:03.556 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.643 ms
+2019-11-17 13:21:03.557 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.7582 ms
+2019-11-17 13:21:03.559 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.3844 ms
+2019-11-17 13:21:03.559 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.4571 ms
+2019-11-17 13:21:03.560 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3951 ms
+2019-11-17 13:21:03.573 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7914 ms
+2019-11-17 13:21:03.579 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1098 ms
+2019-11-17 13:21:03.585 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4713 ms
+2019-11-17 13:21:03.589 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5112 ms
+2019-11-17 13:21:03.594 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.609 ms
+2019-11-17 13:21:03.601 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6044 ms
+2019-11-17 13:21:03.606 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6454 ms
+2019-11-17 13:21:07.314 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=838aaec4-646c-434e-b231-6a8e069b5e20 responded 200 in 42.8122 ms
+2019-11-17 13:21:08.432 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=a993d09d-1e06-43ab-8433-bb920b245028 responded 200 in 148.5723 ms
+2019-11-17 13:21:10.257 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=a993d09d-1e06-43ab-8433-bb920b245028 responded 200 in 21.7047 ms
+2019-11-17 13:22:34.012 +02:00 [INF] Application starting up!
+2019-11-17 13:22:38.682 +02:00 [INF] HTTP GET / responded 200 in 660.4901 ms
+2019-11-17 13:22:46.489 +02:00 [INF] HTTP GET /qwe123 responded 302 in 10.9707 ms
+2019-11-17 13:22:46.528 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 28.2666 ms
+2019-11-17 13:22:46.742 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 7.9491 ms
+2019-11-17 13:22:46.742 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 8.1856 ms
+2019-11-17 13:22:46.742 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 8.1762 ms
+2019-11-17 13:22:46.742 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.3084 ms
+2019-11-17 13:22:46.742 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 7.6791 ms
+2019-11-17 13:22:46.743 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.4649 ms
+2019-11-17 13:22:46.743 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5094 ms
+2019-11-17 13:22:46.743 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.3455 ms
+2019-11-17 13:22:46.794 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.0037 ms
+2019-11-17 13:22:46.811 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5644 ms
+2019-11-17 13:22:46.817 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2749 ms
+2019-11-17 13:22:46.828 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.4973 ms
+2019-11-17 13:22:46.833 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4993 ms
+2019-11-17 13:22:46.843 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.9321 ms
+2019-11-17 13:22:46.848 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3427 ms
+2019-11-17 13:22:46.855 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1028 ms
+2019-11-17 13:22:46.862 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3588 ms
+2019-11-17 13:22:46.921 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7229 ms
+2019-11-17 13:22:46.927 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0494 ms
+2019-11-17 13:22:46.932 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8031 ms
+2019-11-17 13:22:46.940 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0993 ms
+2019-11-17 13:22:46.946 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7791 ms
+2019-11-17 13:22:46.952 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3706 ms
+2019-11-17 13:22:46.959 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0553 ms
+2019-11-17 13:22:46.965 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1085 ms
+2019-11-17 13:23:03.884 +02:00 [INF] HTTP GET /Home/ responded 200 in 2.9024 ms
+2019-11-17 13:23:03.941 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5823 ms
+2019-11-17 13:23:03.942 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.1502 ms
+2019-11-17 13:23:03.945 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.7274 ms
+2019-11-17 13:23:03.946 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3663 ms
+2019-11-17 13:23:03.953 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.6729 ms
+2019-11-17 13:23:03.958 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.8422 ms
+2019-11-17 13:23:03.960 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.6155 ms
+2019-11-17 13:23:03.960 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5989 ms
+2019-11-17 13:23:03.967 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.3908 ms
+2019-11-17 13:23:03.974 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9759 ms
+2019-11-17 13:23:03.979 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5478 ms
+2019-11-17 13:23:03.987 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5438 ms
+2019-11-17 13:23:03.991 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6365 ms
+2019-11-17 13:23:03.996 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7811 ms
+2019-11-17 13:23:04.005 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.498 ms
+2019-11-17 13:23:04.009 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4988 ms
+2019-11-17 13:23:11.544 +02:00 [INF] HTTP GET /Home/qwe123 responded 302 in 0.6058 ms
+2019-11-17 13:23:11.555 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0689 ms
+2019-11-17 13:23:11.603 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.5923 ms
+2019-11-17 13:23:11.603 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4834 ms
+2019-11-17 13:23:11.603 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.437 ms
+2019-11-17 13:23:11.605 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5341 ms
+2019-11-17 13:23:11.605 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4169 ms
+2019-11-17 13:23:11.609 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5007 ms
+2019-11-17 13:23:11.609 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4167 ms
+2019-11-17 13:23:11.611 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.2436 ms
+2019-11-17 13:23:11.622 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.3541 ms
+2019-11-17 13:23:11.627 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9607 ms
+2019-11-17 13:23:11.634 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9273 ms
+2019-11-17 13:23:11.641 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0717 ms
+2019-11-17 13:23:11.648 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8433 ms
+2019-11-17 13:23:11.653 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6535 ms
+2019-11-17 13:23:11.657 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3439 ms
+2019-11-17 13:23:11.662 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0206 ms
+2019-11-17 13:25:35.212 +02:00 [INF] Application starting up!
+2019-11-17 13:25:39.700 +02:00 [INF] HTTP GET / responded 200 in 543.7819 ms
+2019-11-17 13:25:42.945 +02:00 [INF] HTTP GET /qwe123 responded 302 in 7.3692 ms
+2019-11-17 13:25:42.999 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 24.6973 ms
+2019-11-17 13:25:43.269 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 7.9984 ms
+2019-11-17 13:25:43.269 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 7.9984 ms
+2019-11-17 13:25:43.269 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 4.6347 ms
+2019-11-17 13:25:43.269 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 2.426 ms
+2019-11-17 13:25:43.276 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4816 ms
+2019-11-17 13:25:43.283 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5012 ms
+2019-11-17 13:25:43.283 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5006 ms
+2019-11-17 13:25:43.285 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6076 ms
+2019-11-17 13:25:43.314 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8773 ms
+2019-11-17 13:25:43.366 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8011 ms
+2019-11-17 13:25:43.409 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3586 ms
+2019-11-17 13:25:43.434 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6935 ms
+2019-11-17 13:25:43.442 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8371 ms
+2019-11-17 13:25:43.450 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.657 ms
+2019-11-17 13:25:43.458 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3313 ms
+2019-11-17 13:25:43.462 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0356 ms
+2019-11-17 13:25:43.744 +02:00 [INF] HTTP GET /qwe123123123 responded 302 in 0.5259 ms
+2019-11-17 13:25:43.755 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.8953 ms
+2019-11-17 13:25:43.814 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5265 ms
+2019-11-17 13:25:43.822 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.574 ms
+2019-11-17 13:25:43.830 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8792 ms
+2019-11-17 13:25:43.835 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9211 ms
+2019-11-17 13:25:43.844 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6388 ms
+2019-11-17 13:25:43.848 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5051 ms
+2019-11-17 13:25:43.855 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7051 ms
+2019-11-17 13:25:43.862 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9321 ms
+2019-11-17 13:25:48.659 +02:00 [INF] HTTP GET /Home/PageNotFound/qew123123123 responded 200 in 3.1011 ms
+2019-11-17 13:25:48.700 +02:00 [INF] HTTP GET /Home/PageNotFound/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.9932 ms
+2019-11-17 13:25:48.710 +02:00 [INF] HTTP GET /Home/PageNotFound/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5756 ms
+2019-11-17 13:25:48.710 +02:00 [INF] HTTP GET /Home/PageNotFound/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4066 ms
+2019-11-17 13:25:48.711 +02:00 [INF] HTTP GET /Home/PageNotFound/vendor/animate/animate.css responded 302 in 0.4754 ms
+2019-11-17 13:25:48.713 +02:00 [INF] HTTP GET /Home/PageNotFound/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5355 ms
+2019-11-17 13:25:48.723 +02:00 [INF] HTTP GET /Home/PageNotFound/vendor/animsition/css/animsition.min.css responded 302 in 1.2792 ms
+2019-11-17 13:25:48.723 +02:00 [INF] HTTP GET /Home/PageNotFound/vendor/select2/select2.min.css responded 302 in 1.0536 ms
+2019-11-17 13:25:48.728 +02:00 [INF] HTTP GET /Home/PageNotFound/vendor/daterangepicker/daterangepicker.css responded 302 in 1.8519 ms
+2019-11-17 13:25:48.731 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5088 ms
+2019-11-17 13:25:48.741 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.0647 ms
+2019-11-17 13:25:48.747 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9427 ms
+2019-11-17 13:25:48.755 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.52 ms
+2019-11-17 13:25:48.760 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4858 ms
+2019-11-17 13:25:48.764 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5408 ms
+2019-11-17 13:25:48.772 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1228 ms
+2019-11-17 13:25:48.778 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.48 ms
+2019-11-17 13:25:48.839 +02:00 [INF] HTTP GET /Home/PageNotFound/images/icons/favicon.ico responded 302 in 2.806 ms
+2019-11-17 13:25:48.862 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8167 ms

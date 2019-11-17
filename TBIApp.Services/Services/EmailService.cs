@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -98,7 +99,7 @@ namespace TBIApp.Services.Services
 
             await this.dbcontext.SaveChangesAsync();
 
-            //log.Info($"User {currentUser} changed status from {lastStatus} to {newStatus} at {DateTime.Now}")
+            //($"User {currentUser} changed status from {newEmaiLStatus} to {newEmaiLStatus} at {DateTime.Now}");
             
             //log.Warning("ArgumentNullEx)
             //log.Fatal("")

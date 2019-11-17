@@ -25,6 +25,7 @@ using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.MailClient.Mappers;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIBankApp.Infrastructure.HostedServices;
+using TBIBankApp.Infrastructure.Middleware;
 
 namespace TBIBankApp
 {
@@ -121,7 +122,9 @@ namespace TBIBankApp
             app.UseSerilogRequestLogging();
             app.UseCookiePolicy();
             app.UseAuthentication();
-         
+            app.UseMiddleware<PageNotFoundMiddleware>();
+            app.UseMiddleware<BadRequestMiddleware>();
+
 
             app.UseMvc(routes =>
             {

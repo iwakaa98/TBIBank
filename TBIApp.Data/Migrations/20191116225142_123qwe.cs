@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TBIApp.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class _123qwe : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -16,9 +16,9 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
     public class Email_Should
     {
         [TestMethod]
-        public async Task GetEmailsPagesByTypeAsync_Test()
+        public async Task GetEmailsPagesByTypeAsync_ShouldGet_True()
         {
-            var options = TestUtilities.GetOptions(nameof(GetEmailsPagesByTypeAsync_Test));
+            var options = TestUtilities.GetOptions(nameof(GetEmailsPagesByTypeAsync_ShouldGet_True));
 
             var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
             var decodeService = new Mock<IDecodeService>().Object;
@@ -47,9 +47,9 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
         }
 
         [TestMethod]
-        public async Task GetAllEmailsPagesAsync_Test()
+        public async Task GetAllEmailsPagesAsync_ShouldGet_True()
         {
-            var options = TestUtilities.GetOptions(nameof(GetAllEmailsPagesAsync_Test));
+            var options = TestUtilities.GetOptions(nameof(GetAllEmailsPagesAsync_ShouldGet_True));
 
             var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
             var decodeService = new Mock<IDecodeService>().Object;

@@ -90,5 +90,10 @@ namespace TBIBankApp.Controllers
             await signInManager.PasswordSignInAsync(UserName, newPassword, false, lockoutOnFailure: false);
 
         }
+
+        public async Task<IActionResult> PageNotFound()
+        {
+            return View();
+        }
     }
 }

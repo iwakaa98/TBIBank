@@ -10,8 +10,8 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191116174442_Initial")]
-    partial class Initial
+    [Migration("20191116225142_123qwe")]
+    partial class _123qwe
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -157,6 +157,8 @@ namespace TBIApp.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Body");
+
+                    b.Property<string>("GmailEmailId");
 
                     b.Property<bool>("IsOpne");
 
