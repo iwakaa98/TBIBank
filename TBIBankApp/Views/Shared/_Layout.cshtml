@@ -28,7 +28,6 @@
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" type="text/css" href="~/css/util.css">
-    <link rel="stylesheet" type="text/css" href="~/css/main.css">
     <link rel="stylesheet" href="~/css/style.css" />
 </head>
 <body>
@@ -43,7 +42,7 @@
                     @if (User.IsInRole("Manager"))
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Manager" asp-action="Register">Register Operator</a>
+                            <a class="nav-link" asp-controller="Manager" asp-action="Register">Manage Accounts</a>
                         </li>
 
                     }

@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+<link rel="stylesheet" type="text/css" href="~/css/main.css">
 
 <link rel="stylesheet" type="text/css" href="~/css/customTable.css" />
 
@@ -64,7 +65,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Egn</label>
                                         <input class="form-control" id="@item.Id+customEgn" placeholder="Enter Egn">
-                                        <span  id="@item.Id+checkEgn" style="color:red" data-placeholder="&#xf207;"></span>
+                                        <span id="@item.Id+checkEgn" style="color:red" data-placeholder="&#xf207;"></span>
                                     </div>
                                     <div class="form-group">
                                         <label>CardID</label>

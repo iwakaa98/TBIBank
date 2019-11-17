@@ -1,0 +1,199 @@
+2019-11-17 01:29:13.472 +02:00 [INF] Application starting up!
+2019-11-17 01:29:16.985 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 01:29:17.598 +02:00 [INF] HTTP GET / responded 200 in 555.8868 ms
+2019-11-17 01:29:22.664 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 292.7091 ms
+2019-11-17 01:29:22.908 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 228.1344 ms
+2019-11-17 01:29:25.851 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 37.0253 ms
+2019-11-17 01:29:27.747 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 206.8955 ms
+2019-11-17 01:29:30.715 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 37.5098 ms
+2019-11-17 01:29:31.584 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 24.6136 ms
+2019-11-17 01:29:32.378 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 23.0129 ms
+2019-11-17 01:29:33.200 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 200 in 20.7436 ms
+2019-11-17 01:29:34.004 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 8.5374 ms
+2019-11-17 01:32:27.889 +02:00 [INF] Application starting up!
+2019-11-17 01:32:30.113 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 01:32:30.619 +02:00 [INF] HTTP GET / responded 200 in 435.3034 ms
+2019-11-17 01:32:33.519 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 97.649 ms
+2019-11-17 01:32:36.449 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 295.3147 ms
+2019-11-17 01:32:39.602 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 29.251 ms
+2019-11-17 01:32:40.493 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.7058 ms
+2019-11-17 01:33:09.790 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.85 ms
+2019-11-17 01:33:29.922 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 4.2795 ms
+2019-11-17 01:33:50.713 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 4.436 ms
+2019-11-17 01:33:54.341 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 21.759 ms
+2019-11-17 01:33:56.038 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 4.7487 ms
+2019-11-17 01:34:23.284 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 34.9542 ms
+2019-11-17 01:34:24.537 +02:00 [INF] HTTP GET / responded 200 in 3.0266 ms
+2019-11-17 01:34:33.611 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.914 ms
+2019-11-17 01:37:07.537 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 5.423 ms
+2019-11-17 01:37:16.502 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 18.2857 ms
+2019-11-17 01:37:17.769 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.7015 ms
+2019-11-17 01:38:08.623 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 4.3533 ms
+2019-11-17 01:38:10.904 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.4404 ms
+2019-11-17 01:39:26.697 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 6.6369 ms
+2019-11-17 01:39:57.186 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 1.8177 ms
+2019-11-17 01:40:21.675 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.7266 ms
+2019-11-17 01:40:55.448 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.0867 ms
+2019-11-17 01:41:42.705 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.4075 ms
+2019-11-17 01:41:50.481 +02:00 [INF] Application starting up!
+2019-11-17 01:41:52.824 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 01:41:53.316 +02:00 [INF] HTTP GET / responded 200 in 392.421 ms
+2019-11-17 01:47:23.394 +02:00 [INF] HTTP GET / responded 200 in 9.6247 ms
+2019-11-17 01:47:24.605 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 115.5653 ms
+2019-11-17 01:47:25.928 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 344.1095 ms
+2019-11-17 01:47:27.111 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 46.0299 ms
+2019-11-17 01:47:27.747 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 61.1977 ms
+2019-11-17 01:47:28.343 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 33.7584 ms
+2019-11-17 01:47:28.885 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 200 in 44.0016 ms
+2019-11-17 01:50:20.504 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 6.2007 ms
+2019-11-17 01:50:26.004 +02:00 [INF] HTTP GET / responded 200 in 4.5085 ms
+2019-11-17 01:52:22.268 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 200 in 99.7506 ms
+2019-11-17 01:52:22.954 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 8.0243 ms
+2019-11-17 01:52:24.880 +02:00 [INF] HTTP GET / responded 200 in 6.475 ms
+2019-11-17 01:52:25.669 +02:00 [INF] HTTP GET / responded 200 in 2.2299 ms
+2019-11-17 01:59:28.337 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 143.8671 ms
+2019-11-17 02:03:33.309 +02:00 [INF] Application starting up!
+2019-11-17 02:03:35.526 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 02:03:36.043 +02:00 [INF] HTTP GET / responded 200 in 406.1205 ms
+2019-11-17 02:03:39.599 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 363.2619 ms
+2019-11-17 02:03:40.304 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 49.4458 ms
+2019-11-17 02:04:45.167 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 97.3573 ms
+2019-11-17 02:06:37.855 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=e509997d-2b2b-4cf2-a629-0cdeec4f3a1c responded 200 in 50.5206 ms
+2019-11-17 02:06:45.497 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=e509997d-2b2b-4cf2-a629-0cdeec4f3a1c responded 200 in 30.2456 ms
+2019-11-17 02:07:13.276 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=e509997d-2b2b-4cf2-a629-0cdeec4f3a1c responded 200 in 19.9891 ms
+2019-11-17 02:07:34.716 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=e509997d-2b2b-4cf2-a629-0cdeec4f3a1c responded 200 in 43.7139 ms
+2019-11-17 02:07:54.297 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=e509997d-2b2b-4cf2-a629-0cdeec4f3a1c responded 200 in 12.8095 ms
+2019-11-17 02:07:56.343 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=e509997d-2b2b-4cf2-a629-0cdeec4f3a1c responded 200 in 10.1934 ms
+2019-11-17 13:27:08.385 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 184.1517 ms
+2019-11-17 13:27:09.773 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 77.894 ms
+2019-11-17 13:27:11.648 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 12.6822 ms
+2019-11-17 13:27:14.522 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 11.2838 ms
+2019-11-17 13:29:28.497 +02:00 [INF] Application starting up!
+2019-11-17 13:29:31.662 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:29:32.410 +02:00 [INF] HTTP GET / responded 200 in 670.0569 ms
+2019-11-17 13:29:34.478 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 120.7875 ms
+2019-11-17 13:29:36.709 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 9.9417 ms
+2019-11-17 13:31:47.989 +02:00 [INF] Application starting up!
+2019-11-17 13:31:50.751 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:31:51.170 +02:00 [INF] HTTP GET / responded 200 in 363.947 ms
+2019-11-17 13:31:56.688 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 99.0695 ms
+2019-11-17 13:31:58.280 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 26.6961 ms
+2019-11-17 13:31:59.531 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.857 ms
+2019-11-17 13:32:00.473 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 7.8526 ms
+2019-11-17 13:32:07.381 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 8.7702 ms
+2019-11-17 13:32:40.953 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.2904 ms
+2019-11-17 13:41:20.026 +02:00 [INF] Application starting up!
+2019-11-17 13:41:22.818 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:41:23.225 +02:00 [INF] HTTP GET / responded 200 in 351.6811 ms
+2019-11-17 13:41:25.614 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 95.941 ms
+2019-11-17 13:41:28.666 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 13.8001 ms
+2019-11-17 13:41:43.896 +02:00 [INF] HTTP GET /Manager/Register responded 302 in 12.1021 ms
+2019-11-17 13:41:43.927 +02:00 [INF] HTTP GET /?ReturnUrl=%2FManager%2FRegister responded 200 in 22.5127 ms
+2019-11-17 13:41:49.209 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 447.8953 ms
+2019-11-17 13:41:49.233 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 8.5286 ms
+2019-11-17 13:41:50.745 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.1232 ms
+2019-11-17 13:41:52.711 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 5.463 ms
+2019-11-17 13:41:53.869 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 7.9763 ms
+2019-11-17 13:41:55.779 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 4.2974 ms
+2019-11-17 13:42:58.317 +02:00 [INF] Application starting up!
+2019-11-17 13:43:00.797 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:43:01.226 +02:00 [INF] HTTP GET / responded 200 in 363.4414 ms
+2019-11-17 13:43:07.419 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 87.9239 ms
+2019-11-17 13:43:43.178 +02:00 [INF] Application starting up!
+2019-11-17 13:43:45.729 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:43:46.179 +02:00 [INF] HTTP GET / responded 200 in 375.3131 ms
+2019-11-17 13:43:48.376 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 100.7305 ms
+2019-11-17 13:43:49.805 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 30.1629 ms
+2019-11-17 13:44:06.308 +02:00 [INF] Application starting up!
+2019-11-17 13:44:08.521 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:44:09.113 +02:00 [INF] HTTP GET / responded 200 in 494.1363 ms
+2019-11-17 13:44:11.473 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 105.3261 ms
+2019-11-17 13:44:13.718 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 26.3708 ms
+2019-11-17 13:44:35.059 +02:00 [INF] Application starting up!
+2019-11-17 13:44:37.832 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:44:38.413 +02:00 [INF] HTTP GET / responded 200 in 511.9192 ms
+2019-11-17 13:44:39.925 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 98.0124 ms
+2019-11-17 13:44:42.320 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 10.623 ms
+2019-11-17 13:44:43.052 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 4.1485 ms
+2019-11-17 13:44:43.938 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 6.0284 ms
+2019-11-17 13:45:02.501 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.5136 ms
+2019-11-17 13:46:32.682 +02:00 [INF] Application starting up!
+2019-11-17 13:46:34.974 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:46:35.393 +02:00 [INF] HTTP GET / responded 200 in 374.1817 ms
+2019-11-17 13:46:49.071 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 87.5251 ms
+2019-11-17 13:47:10.737 +02:00 [INF] Application starting up!
+2019-11-17 13:47:13.229 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:47:13.661 +02:00 [INF] HTTP GET / responded 200 in 377.7184 ms
+2019-11-17 13:47:15.837 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 102.9751 ms
+2019-11-17 13:47:18.049 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 11.6037 ms
+2019-11-17 13:47:39.689 +02:00 [INF] Application starting up!
+2019-11-17 13:47:41.896 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:47:42.391 +02:00 [INF] HTTP GET / responded 200 in 426.0541 ms
+2019-11-17 13:47:45.617 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 104.2295 ms
+2019-11-17 13:48:00.720 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 380.569 ms
+2019-11-17 13:48:02.238 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 13.6462 ms
+2019-11-17 13:48:03.131 +02:00 [INF] HTTP GET / responded 200 in 3.1798 ms
+2019-11-17 13:48:34.632 +02:00 [INF] Application starting up!
+2019-11-17 13:48:37.415 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:48:37.832 +02:00 [INF] HTTP GET / responded 200 in 363.2529 ms
+2019-11-17 13:48:39.461 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 147.7332 ms
+2019-11-17 13:48:42.718 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 466.2973 ms
+2019-11-17 13:48:43.458 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 8.3724 ms
+2019-11-17 13:49:05.024 +02:00 [INF] Application starting up!
+2019-11-17 13:49:07.325 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:49:07.801 +02:00 [INF] HTTP GET / responded 200 in 375.6287 ms
+2019-11-17 13:49:11.882 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 126.5637 ms
+2019-11-17 13:49:23.278 +02:00 [INF] Application starting up!
+2019-11-17 13:49:26.084 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:49:26.449 +02:00 [INF] HTTP GET / responded 200 in 325.4642 ms
+2019-11-17 13:49:32.483 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 98.4157 ms
+2019-11-17 13:49:49.894 +02:00 [INF] Application starting up!
+2019-11-17 13:49:52.505 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:49:52.973 +02:00 [INF] HTTP GET / responded 200 in 386.4407 ms
+2019-11-17 13:49:54.754 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 92.3212 ms
+2019-11-17 13:51:23.353 +02:00 [INF] HTTP GET / responded 200 in 4.0812 ms
+2019-11-17 13:51:24.211 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 13.3235 ms
+2019-11-17 13:51:25.605 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 364.8913 ms
+2019-11-17 13:51:26.430 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.009 ms
+2019-11-17 13:51:28.729 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 30.9814 ms
+2019-11-17 13:51:29.655 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 26.8964 ms
+2019-11-17 13:51:30.449 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 24.77 ms
+2019-11-17 13:51:31.129 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 25.369 ms
+2019-11-17 13:51:31.684 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 200 in 49.9926 ms
+2019-11-17 13:51:35.640 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 2.8274 ms
+2019-11-17 13:51:38.904 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 10.3897 ms
+2019-11-17 13:51:40.202 +02:00 [INF] HTTP GET / responded 200 in 1.5635 ms
+2019-11-17 13:51:42.310 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 10.6412 ms
+2019-11-17 13:51:56.518 +02:00 [INF] Application starting up!
+2019-11-17 13:51:59.243 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:51:59.747 +02:00 [INF] HTTP GET / responded 200 in 445.5592 ms
+2019-11-17 13:52:03.990 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 455.373 ms
+2019-11-17 13:52:05.615 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 76.1637 ms
+2019-11-17 13:52:43.869 +02:00 [INF] Application starting up!
+2019-11-17 13:52:46.523 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:52:47.030 +02:00 [INF] HTTP GET / responded 200 in 431.5013 ms
+2019-11-17 13:52:48.471 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 113.605 ms
+2019-11-17 13:52:51.504 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 453.2923 ms
+2019-11-17 13:52:55.378 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 118.1431 ms
+2019-11-17 13:52:56.605 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 12.7463 ms
+2019-11-17 13:55:44.034 +02:00 [INF] Application starting up!
+2019-11-17 13:55:46.837 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 13:55:47.245 +02:00 [INF] HTTP GET / responded 200 in 343.3566 ms
+2019-11-17 13:55:49.953 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 408.0191 ms
+2019-11-17 13:55:51.139 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 39.135 ms
+2019-11-17 13:55:51.947 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 194.502 ms
+2019-11-17 13:55:53.068 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 82.6652 ms
+2019-11-17 14:04:45.545 +02:00 [INF] Application starting up!
+2019-11-17 14:04:54.499 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-17 14:04:55.076 +02:00 [INF] HTTP GET / responded 200 in 497.1276 ms
+2019-11-17 14:05:00.721 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 906.3386 ms
+2019-11-17 14:05:01.370 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 550.5806 ms
+2019-11-17 14:05:05.013 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 75.0277 ms
+2019-11-17 14:05:07.413 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 537.4144 ms
+2019-11-17 14:05:09.428 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 51.9362 ms
+2019-11-17 14:05:14.525 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 54.3554 ms
+2019-11-17 14:05:16.466 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 42.7057 ms
+2019-11-17 14:05:24.521 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 9.6174 ms
+2019-11-17 14:05:33.112 +02:00 [INF] User logged out.
+2019-11-17 14:05:33.116 +02:00 [INF] HTTP POST /Identity/Account/Logout?returnUrl=%2F responded 302 in 67.0373 ms
+2019-11-17 14:05:33.126 +02:00 [INF] HTTP GET / responded 200 in 1.3673 ms

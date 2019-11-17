@@ -34,9 +34,9 @@ namespace TBIBankApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = Input.UserName, Email = Input.Email };
+                var user = new User { UserName = Input.UserName, Email = Input.Email,FirstName=Input.FirstName,LastName=Input.LastName };
                 var result = await userManager.CreateAsync(user, Input.Password);
-                await userManager.AddToRoleAsync(user, "Operator");
+                await userManager.AddToRoleAsync(user, Input.Role);
             }
             return Ok();
         }

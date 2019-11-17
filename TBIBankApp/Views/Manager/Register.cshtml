@@ -1,41 +1,70 @@
-﻿@model  RegisterViewModel
+﻿@model RegisterViewModel
+@*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/registerOperator.css">*@
+<link rel="stylesheet" href="~/css/registerOperator.css" />
 
-<link rel="stylesheet" type="text/css" href="~/css/registerOperator.css">
+<div class="registerBody">
+    <div class="registerClass">
+        <div class="row">
+            <form class="col s12" id="reg-form">
 
-<div class="page-content">
+                <div class="row">
 
-    <div class="form-v9-content">
-        <form class="form-detail">
-            <h2>Registration Form</h2>
-            <div class="form-row-total">
-                <div class="form-row">
-                    <input asp-for="Email" type="text" name="email" id="your-email" class="input-text" placeholder="Email" required pattern="[^@@]+@@[^@@]+.[a-zA-Z]{2,6}">
-                    <p asp-validation-for="Email" id="validate-email" class="custom-validation" data-placeholder="&#xf207;"></p>
+                    <div class="input-field col s6">
+                        <input asp-for="FirstName" type="text" name="firstname" id="your-firstName" class="input-text" placeholder="First Name">
+                        <span asp-validation-for="FirstName" id="validate-firstName" class="custom-validation" data-placeholder="&#xf207;"></span>
+                    </div>
+                    <div class="input-field col s6">
+                        <input asp-for="LastName" type="text" name="lastname" id="your-lastName" class="input-text" placeholder="Last Name">
+                        <span asp-validation-for="Email" id="validate-email" class="custom-validation" data-placeholder="&#xf207;"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="form-row-total">
-                <div class="form-row">
-                    <input asp-for="UserName" type="text" name="username" id="your-name" class="input-text" placeholder="Username" required >
-                    <p asp-validation-for="UserName" id="validate-name" class="custom-validation" data-placeholder="&#xf207;"></p>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input asp-for="Email" type="text" name="email" id="your-email" class="input-text" placeholder="Email" required pattern="[^@@]+@@[^@@]+.[a-zA-Z]{2,6}">
+                        <span asp-validation-for="Email" id="validate-email" class="custom-validation" data-placeholder="&#xf207;"></span>
+                    </div>
+                    <div class="input-field col s6">
+                        <input asp-for="UserName" type="text" name="username" id="your-name" class="input-text" placeholder="Username" required>
+                        <span asp-validation-for="UserName" id="validate-name" class="custom-validation" data-placeholder="&#xf207;"></span>
+                    </div>
+
                 </div>
-            </div>
-            <div class="form-row-total">
-                <div class="form-row">
-                    <input asp-for="Password" type="password" name="password" id="password" class="input-text" placeholder="Password" required>
-                     <p asp-validation-for="Password" id="validate-password" class="custom-validation" data-placeholder="&#xf207;"></p>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input asp-for="Password" type="password" name="password" id="password" class="input-text" placeholder="Password" required>
+                        <p asp-validation-for="Password" id="validate-password" class="custom-validation" data-placeholder="&#xf207;"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="form-row-total">
-                <div class="form-row">
-                    <input asp-for="Password" type="password" name="confirmpassword" id="confirm-password" class="input-text" placeholder="Cofirm Password" required>
-                    <p asp-validation-for="ConfirmPassword"  class="custom-validation" id="ConfirmPassword" data-placeholder="&#xf207;"></p>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input asp-for="Password" type="password" name="confirmpassword" id="confirm-password" class="input-text" placeholder="Cofirm Password" required>
+                        <p asp-validation-for="ConfirmPassword" class="custom-validation" id="ConfirmPassword" data-placeholder="&#xf207;"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="form-row-last">
-                <input type="button" id="RegisterButton" name="register" class="register" value="Register">
-            </div>
-        </form>
+
+                <div class="input-field col s6">
+                    <div class="gender-male" id="operator-manager">
+                        <input class="with-gap" name="role" value="Operator" type="radio" id="operator" required />
+                        <label for="operator">Operator</label>
+                    </div>
+                    <div class="gender-female">
+                        <input class="with-gap" name="role" value="Manager" type="radio" id="manager" required />
+                        <label for="manager">Manager</label>
+                    </div>
+                </div>
+
+                <div class="input-field col s6">
+                    <input type="button" id="RegisterButton" name="register" class="register btn btn-large btn-register waves-effect waves-light" value="Register">
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-<script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/Register.js"></script>
+@section Scripts{
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/Register.js"></script>
+}

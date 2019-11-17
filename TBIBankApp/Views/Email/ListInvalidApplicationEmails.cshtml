@@ -5,6 +5,8 @@
     ViewData["Title"] = "Index";
 }
 
+<link rel="stylesheet" type="text/css" href="~/css/main.css">
+
 <link rel="stylesheet" type="text/css" href="~/css/customTable.css" />
 
 
@@ -23,7 +25,7 @@
         </tr>
     </thead>
     <tbody>
-        
+
         @foreach (var item in Model.EmailViewModels)
         {
             <tr id="@item.Id+classID" class="hoverCustom">

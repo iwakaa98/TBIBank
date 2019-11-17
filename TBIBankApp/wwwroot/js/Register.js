@@ -4,12 +4,24 @@
         let confirmpassword = $('#confirm-password').val();
         let username = $('#your-name').val();
         let email = $('#your-email').val();
+        let firstName = $('#your-firstName').val();
+        let lastName = $('#your-lastName').val();
+        let role;
+        if (document.getElementById('operator').checked) {
+            role = 'Operator';
+        }
+        else {
+            role = 'Manager';
+        }
         let flag = 0;
         let data =
         {
             'Email': email,
             'UserName': username,
-            'Password': password
+            'Password': password,
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Role': role
         }
         if (!(password === confirmpassword)) {
             $('#ConfirmPassword').text('Password does not match!');
@@ -88,6 +100,7 @@
                             },
                             data: data,
                             success: function (response) {
+                                
                                 console.log(response);
                             }
                         })

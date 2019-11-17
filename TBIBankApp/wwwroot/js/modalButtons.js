@@ -1,11 +1,16 @@
 ﻿let butTestDisable;
 let timercheto;
+let modalId;
 $(document).ready(function () {
     $('#example').DataTable();
 });
 function ModalTest(id) {
     $(`.${id}`).modal('show');
 }
+$(`.${modalId}`).on('hidden.bs.modal', () => {
+    console.log(213123);
+    SetButtonToEnable(modalId);
+})
 
 function ChekForDisable(id) {
     let thirtyminutes = 1800;
@@ -31,7 +36,7 @@ function ChekForDisable(id) {
                     $(butTestDisable).text('Denied');
                 }
                 else {
-
+                    modalId = id;
                     $(`.${id}`).modal('show');
                     starttimer(thirtyminutes, id);
 
