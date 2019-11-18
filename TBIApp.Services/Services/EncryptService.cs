@@ -13,6 +13,7 @@ namespace TBIApp.Services.Services
         private static byte[] iv = new byte[8] { 10,42,98,51,102,127,124,71 };
         //TODO move the salt in invisible site
         private static string salt = ".ivomishotelerik";
+
         public string EncryptString(string text)
         {
             text += salt;
@@ -24,7 +25,7 @@ namespace TBIApp.Services.Services
         }
         public string DecryptString(string text)
         {
-            SymmetricAlgorithm algorithm = DES.Create();
+            SymmetricAlgorithm algorithm = DES.Create();  
             ICryptoTransform transform = algorithm.CreateDecryptor(key, iv);
             byte[] inputbuffer = Convert.FromBase64String(text);
             byte[] outputBuffer = transform.TransformFinalBlock(inputbuffer, 0, inputbuffer.Length);

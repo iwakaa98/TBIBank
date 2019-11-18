@@ -22,6 +22,7 @@ namespace TBIBankApp.Infrastructure.Middleware
             {
                 httpContext.Response.Redirect("/Home/BadRequest");
             }
+            //Add other status codes here! remove 404
         }
     }
 }

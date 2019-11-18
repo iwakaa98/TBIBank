@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using TBIApp.Data.Models;
@@ -7,7 +8,9 @@ namespace TBIApp.Services.Models
 {
     public class EmailDTO
     {
+        [JsonProperty]
         public string Id { get; set; }
+       
         public string Sender { get; set; }
         public string Subject { get; set; }
         public string GmailEmailId { get; set; }
@@ -20,5 +23,7 @@ namespace TBIApp.Services.Models
         public string RecievingDateAtMailServer { get; set; }
         public DateTime RegisteredInDataBase { get; set; }
         public DateTime LastStatusUpdate { get; set; }
+
+
     }
 }

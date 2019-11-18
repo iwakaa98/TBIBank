@@ -1,46 +1,51 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TBIApp.Data.Models;
-using TBIApp.MailClient.Client.Contracts;
-using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Models;
+using TBIApp.Services.Services.Contracts;
 
 namespace TBIBankApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IGmailAPIService gmailAPIService;
         private readonly SignInManager<User> signInManager;
         private readonly UserManager<User> userManager;
         private readonly IUserService userService;
+        private readonly ILogger<HomeController> logger;
 
-        public HomeController(IGmailAPIService gmailAPIService,
+        public HomeController(
             SignInManager<User> signInManager,
             UserManager<User> userManager,
-            IUserService userService)
+            IUserService userService,
+            ILogger<HomeController> logger)
         {
-            this.gmailAPIService = gmailAPIService ?? throw new ArgumentNullException(nameof(gmailAPIService));
             this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public async Task<IActionResult> Index()
         {
-            //await this.gmailAPIService.SyncEmails();
-
-            if (User.Identity.IsAuthenticated)
+            try
             {
-                return View("Privacy");
+                if (User.Identity.IsAuthenticated)
+                {
+                    return View("Privacy");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError("User is not authenticated!", ex);
             }
 
             return View();
         }
-        
 
         [Authorize]
         public IActionResult Privacy()
@@ -48,29 +53,36 @@ namespace TBIBankApp.Controllers
             return View();
         }
 
-      
         [HttpPost]
         public async Task<IActionResult> CheckForUserNameAndPassowrdAsync(LoginViewModel Input)
         {
-            var passValidation = await this.userService.ValidateCredentialAsync(Input.UserName, Input.Password);
-
-            if(!passValidation)
+            try
             {
-                return new JsonResult("false");
+                var passValidation = await this.userService.ValidateCredentialAsync(Input.UserName, Input.Password);
+
+                if (!passValidation)
+                {
+                    return new JsonResult("false");
+                }
+
+                var user = await userManager.FindByNameAsync(Input.UserName);
+
+                if (user.IsChangedPassword && passValidation)
+                {
+                    await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+                    return new JsonResult("true");
+                }
             }
-
-            var user = await userManager.FindByNameAsync(Input.UserName);
-
-            if (user.IsChangedPassword && passValidation)
+            catch (Exception ex)
             {
-                await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-
-                return new JsonResult("true");
+                this.logger.LogError("Invalid credential. User missmatch his password", ex);
             }
 
             return View("ChangePassword", Input);
 
         }
+
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ChangePasswordAsync(LoginViewModel Input)
         {
@@ -81,13 +93,21 @@ namespace TBIBankApp.Controllers
         [HttpPost]
         public async Task SetNewPasswordAsync(string UserName, string currPassword, string newPassword)
         {
-            var user = await userManager.FindByNameAsync(UserName);
+            try
+            {
+                var user = await userManager.FindByNameAsync(UserName);
 
-            user.IsChangedPassword = true;
+                user.IsChangedPassword = true;
 
-            await userManager.ChangePasswordAsync(user, currPassword, newPassword);
+                await userManager.ChangePasswordAsync(user, currPassword, newPassword);
 
-            await signInManager.PasswordSignInAsync(UserName, newPassword, false, lockoutOnFailure: false);
+                await signInManager.PasswordSignInAsync(UserName, newPassword, false, lockoutOnFailure: false);
+            }
+            catch (Exception ex)
+            {
+
+                this.logger.LogError($"Trying to change password with ivnalid credential for user - {UserName} at {DateTime.Now}.", ex);
+            }
 
         }
 

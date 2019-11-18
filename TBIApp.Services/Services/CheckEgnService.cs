@@ -39,18 +39,16 @@ namespace TBIApp.Services.Services
                 {
                     return true;
                 }
-                //false true
                 return false;
             }
             if(sumEgn%11==egnArray[9])
             {
                 return true;
             }
-            //false true
             return false;
         }
 
-        private bool isValidMonthAndDate(int[] egnArray)
+        public bool isValidMonthAndDate(int[] egnArray)
         {
             if(egnArray[2]*10+egnArray[3]>12)
             {

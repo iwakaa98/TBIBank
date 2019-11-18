@@ -19,7 +19,7 @@ namespace TBIBankApp.Infrastructure.HostedServices
         public Task StartAsync(CancellationToken cancellationToken)
         {
             this.timer = new Timer(GetEmails, null, TimeSpan.FromSeconds(0),
-               TimeSpan.FromSeconds(60));
+               TimeSpan.FromSeconds(5));
 
             return Task.CompletedTask;
         }

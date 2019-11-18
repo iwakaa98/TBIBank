@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Models;
@@ -16,12 +15,14 @@ namespace TBIBankApp.Controllers
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
         private readonly IUserService userService;
+        private readonly ILogger<ManagerController> logger;
 
-        public ManagerController(UserManager<User> userManager, SignInManager<User> signInManager, IUserService userService)
+        public ManagerController(UserManager<User> userManager, SignInManager<User> signInManager, IUserService userService, ILogger<ManagerController> logger)
         {
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
             this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         [Authorize(Roles = "Manager")]
@@ -32,25 +33,45 @@ namespace TBIBankApp.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> RegisterUserAsync(RegisterViewModel Input)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var user = new User { UserName = Input.UserName, Email = Input.Email };
-                var result = await userManager.CreateAsync(user, Input.Password);
-                await userManager.AddToRoleAsync(user, "Operator");
+                if (ModelState.IsValid)
+                {
+                    var user = new User { UserName = Input.UserName, Email = Input.Email };
+                    var result = await userManager.CreateAsync(user, Input.Password);
+                    await userManager.AddToRoleAsync(user, "Operator");
+                }
+                
             }
+            catch (Exception ex)
+            {
+
+                this.logger.LogError("Error occurred while registering new user.", ex);
+            }
+
             return Ok();
         }
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> CheckForUserAndEmailAsync(UserViewModel user)
         {
-            if (await userService.CheckForEmailAsync(user.Email))
+            try
             {
-                return new JsonResult("true email");
+                if (await userService.CheckForEmailAsync(user.Email))
+                {
+                    return new JsonResult("true email");
+                }
+                if (await userService.CheckForUserNameAsync(user.UserName))
+                {
+                    return new JsonResult("true user");
+                }
+
             }
-            if (await userService.CheckForUserNameAsync(user.UserName))
+            catch (Exception ex)
             {
-                return new JsonResult("true user");
+
+                this.logger.LogError($"Error occurred while checking for email with id {user.Email}.", ex);
             }
+
             return new JsonResult("false");
         }
     }

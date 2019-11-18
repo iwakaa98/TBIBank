@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Mappers.Contracts;
@@ -19,13 +18,14 @@ namespace TBIBankApp.Controllers
         private readonly IEmailService emailService;
         private readonly IEmailViewModelMapper emailMapper;
         private readonly UserManager<User> userManager;
+        private readonly ILogger<EmailController> logger;
 
-        
-        public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager)
+        public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager, ILogger<EmailController> logger)
         {
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
             this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(userManager));
         }
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ListEmailsAsync(int id, string emailStatus)
@@ -41,9 +41,9 @@ namespace TBIBankApp.Controllers
 
                 return View($"{status}",result);
             }
-            catch
+            catch (Exception ex)
             {
-                // log...error
+                this.logger.LogError($"Error occurred while trying to get emails for page {id} and status {emailStatus} at {DateTime.Now}.", ex);
 
             }
 
@@ -68,14 +68,11 @@ namespace TBIBankApp.Controllers
 
                 await this.emailService.ChangeStatusAsync(id, newEmailStatus, currentUser);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                //log.Error("My exception, ex);
+                this.logger.LogError($"Error occurred while trying to change status of email {id} to status {status}", ex);
             }
 
-            //We should remove current email from listed, cuz status is changed!
-            //return RedirectToAction("ListAllEmails");
             return Ok();
         }
 
@@ -122,7 +119,5 @@ namespace TBIBankApp.Controllers
         {
             await this.emailService.UnLockButtonAsync(id);
         }
-
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
@@ -40,19 +41,22 @@ namespace TBIApp.MailClient.Client
             GmailService service = await this.GetService();
 
             //Get all the messages from INBOX which are mark with UNREAD label.
-            var emailListResponse = await GetNewEmailsAsync(service);
-
+            ListMessagesResponse emailListResponse = await GetNewEmailsAsync(service);
 
             if (emailListResponse != null && emailListResponse.Messages != null)
             {
                 foreach (var email in emailListResponse.Messages)
                 {
                     var emailInfoRequest = service.Users.Messages.Get(gmailAccountName, email.Id);
-                    
-                    //After executeAsync we recieve one email with all his data and attachments. 
-                    var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
 
-                    var emailDTO = this.messageToEmailDTOPmapper.MapToDTO(emailInfoResponse);
+                    //After executeAsync we recieve one email with all his data and attachments. 
+                    Message currentMessage = await emailInfoRequest.ExecuteAsync();
+
+                    //Testhere
+
+                    //Testened here
+
+                    var emailDTO = this.messageToEmailDTOPmapper.MapToDTO(currentMessage);
 
                     await emailService.CreateAsync(emailDTO);
 

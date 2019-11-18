@@ -122,6 +122,7 @@ namespace TBIBankApp
             app.UseSerilogRequestLogging();
             app.UseCookiePolicy();
             app.UseAuthentication();
+            //Use extension method 
             app.UseMiddleware<PageNotFoundMiddleware>();
             app.UseMiddleware<BadRequestMiddleware>();
 
