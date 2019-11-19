@@ -1,0 +1,674 @@
+2019-11-19 12:06:07.517 +02:00 [INF] Application starting up!
+2019-11-19 12:06:11.507 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:06:12.303 +02:00 [INF] HTTP GET / responded 302 in 698.9813 ms
+2019-11-19 12:06:13.286 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 702.8531 ms
+2019-11-19 12:06:14.128 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 15.4201 ms
+2019-11-19 12:06:36.355 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 302.0827 ms
+2019-11-19 12:06:36.436 +02:00 [INF] HTTP GET /notification?id=e7gwfoe--Gz7Kr18Uk1WtQ responded 101 in 22301.7084 ms
+2019-11-19 12:06:36.754 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.3773 ms
+2019-11-19 12:06:39.121 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 44.5628 ms
+2019-11-19 12:06:39.132 +02:00 [INF] HTTP GET /notification?id=UR6_vp84yEPR0ywmFYIuoQ responded 101 in 2268.7087 ms
+2019-11-19 12:06:39.221 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5436 ms
+2019-11-19 12:06:41.203 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 44.504 ms
+2019-11-19 12:06:41.207 +02:00 [INF] HTTP GET /notification?id=fJ3nfW6GsQ0Tu_H0bKvFeQ responded 101 in 1762.0565 ms
+2019-11-19 12:06:41.441 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5331 ms
+2019-11-19 12:06:50.207 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 88.0065 ms
+2019-11-19 12:06:50.218 +02:00 [INF] HTTP GET /notification?id=32Ff4J71N-A1TmzYnfd5pQ responded 101 in 8740.8944 ms
+2019-11-19 12:06:51.647 +02:00 [INF] HTTP GET / responded 302 in 1.9071 ms
+2019-11-19 12:06:51.666 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 10.5297 ms
+2019-11-19 12:06:51.985 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5033 ms
+2019-11-19 12:07:56.504 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 12.4723 ms
+2019-11-19 12:07:56.519 +02:00 [INF] HTTP GET /notification?id=buJzD-O6LBsy0vQgU-nRqg responded 101 in 64503.1848 ms
+2019-11-19 12:07:56.796 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4318 ms
+2019-11-19 12:07:58.712 +02:00 [INF] HTTP GET /notification?id=qsMrM4cnbT6t0Bc61_FMTA responded 101 in 1828.6646 ms
+2019-11-19 12:07:58.783 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 96.0444 ms
+2019-11-19 12:07:59.053 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6468 ms
+2019-11-19 12:08:04.504 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=07d68968-def2-4191-a194-fac84010e4f0 responded 200 in 118.1832 ms
+2019-11-19 12:08:11.883 +02:00 [ERR] Failed executing DbCommand (20ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 450), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [LoanApplications] ([Id], [CardId], [EGN], [EmailId], [FirstName], [LastName], [PhoneNumber], [Status])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (07d68968-def2-4191-a194-fac84010e4f0).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:235ab8f4-68d1-44bc-9b4e-8f784daca163
+Error Number:2601,State:1,Class:14
+2019-11-19 12:08:11.986 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'TBIApp.Data.TBIAppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (07d68968-def2-4191-a194-fac84010e4f0).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (07d68968-def2-4191-a194-fac84010e4f0).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2019-11-19 12:08:12.021 +02:00 [ERR] HTTP POST /Application/CreateAsync responded 500 in 245.2442 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (07d68968-def2-4191-a194-fac84010e4f0).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TBIApp.Services.Services.ApplicationService.CreateAsync(LoanApplicationDTO newLoan) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIApp.Services\Services\ApplicationService.cs:line 36
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 50
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-19 12:08:12.081 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (07d68968-def2-4191-a194-fac84010e4f0).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TBIApp.Services.Services.ApplicationService.CreateAsync(LoanApplicationDTO newLoan) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIApp.Services\Services\ApplicationService.cs:line 36
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 50
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-19 12:08:12.135 +02:00 [ERR] HTTP POST /Application/CreateAsync responded 500 in 2.5905 ms
+System.ArgumentException: Invalid application VM!
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 42
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-19 12:08:12.159 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.ArgumentException: Invalid application VM!
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 42
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-19 12:08:12.184 +02:00 [ERR] Connection id "0HLRCR0D41LHQ", Request id "0HLRCR0D41LHQ:00000011": An unhandled exception was thrown by the application.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (07d68968-def2-4191-a194-fac84010e4f0).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TBIApp.Services.Services.ApplicationService.CreateAsync(LoanApplicationDTO newLoan) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIApp.Services\Services\ApplicationService.cs:line 36
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 50
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-19 12:08:25.849 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=07d68968-def2-4191-a194-fac84010e4f0 responded 200 in 26.9107 ms
+2019-11-19 12:08:30.949 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=505ee65c-b32d-4de8-a82a-d792b8c3893c responded 200 in 5.1278 ms
+2019-11-19 12:08:38.100 +02:00 [INF] HTTP POST /Application/CreateAsync responded 200 in 21.6566 ms
+2019-11-19 12:08:38.162 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=505ee65c-b32d-4de8-a82a-d792b8c3893c&status=Open responded 200 in 49.6982 ms
+2019-11-19 12:08:39.919 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 7.2039 ms
+2019-11-19 12:08:39.931 +02:00 [INF] HTTP GET /notification?id=VSeRvRWvpBH0YZpBhkekdA responded 101 in 40840.1734 ms
+2019-11-19 12:08:40.171 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4894 ms
+2019-11-19 12:12:42.915 +02:00 [INF] Application starting up!
+2019-11-19 12:13:55.383 +02:00 [INF] Application starting up!
+2019-11-19 12:13:58.079 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:13:58.522 +02:00 [INF] HTTP GET / responded 302 in 386.9119 ms
+2019-11-19 12:13:58.955 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 405.6475 ms
+2019-11-19 12:13:59.507 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 31.3814 ms
+2019-11-19 12:14:12.167 +02:00 [INF] HTTP GET / responded 302 in 1.4446 ms
+2019-11-19 12:14:12.191 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 15.9614 ms
+2019-11-19 12:14:12.285 +02:00 [INF] HTTP GET /notification?id=WQ_4mLHhsgbGhejinqt27A responded 101 in 12732.5297 ms
+2019-11-19 12:14:12.343 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8029 ms
+2019-11-19 12:14:17.740 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 309.7434 ms
+2019-11-19 12:14:17.750 +02:00 [INF] HTTP GET /notification?id=fQ8TsXgO-Hy_nqLJuewzyA responded 101 in 5267.0284 ms
+2019-11-19 12:14:18.069 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7055 ms
+2019-11-19 12:14:28.051 +02:00 [INF] HTTP GET / responded 302 in 0.675 ms
+2019-11-19 12:14:28.070 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 7.4376 ms
+2019-11-19 12:14:28.400 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8146 ms
+2019-11-19 12:14:31.033 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0a6d34d1-6ec3-4c86-823f-feb0fd42d368 responded 200 in 154.5938 ms
+2019-11-19 12:14:32.626 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0a6d34d1-6ec3-4c86-823f-feb0fd42d368&status=InvalidApplication responded 200 in 49.9423 ms
+2019-11-19 12:14:32.677 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 32.1977 ms
+2019-11-19 12:14:32.690 +02:00 [INF] HTTP GET /notification?id=Ro1KebeZjU1DDQ7LGvCVqg responded 101 in 14610.5325 ms
+2019-11-19 12:14:32.782 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4193 ms
+2019-11-19 12:14:47.659 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 17.2129 ms
+2019-11-19 12:14:47.672 +02:00 [INF] HTTP GET /notification?id=M6zkZjHZ_gWXi8sIuKmnGw responded 101 in 14727.3605 ms
+2019-11-19 12:14:47.946 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5799 ms
+2019-11-19 12:14:52.967 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0a6d34d1-6ec3-4c86-823f-feb0fd42d368 responded 200 in 2.7849 ms
+2019-11-19 12:14:54.667 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 14.4358 ms
+2019-11-19 12:14:55.777 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e&status=New responded 200 in 6.6997 ms
+2019-11-19 12:14:57.993 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 9.9716 ms
+2019-11-19 12:14:58.011 +02:00 [INF] HTTP GET /notification?id=oPYxTkgpnX67ZIJfMZh9gw responded 101 in 9976.4189 ms
+2019-11-19 12:14:58.475 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.515 ms
+2019-11-19 12:15:25.958 +02:00 [INF] Application starting up!
+2019-11-19 12:15:35.391 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:15:36.024 +02:00 [INF] HTTP GET / responded 200 in 565.7594 ms
+2019-11-19 12:15:52.458 +02:00 [INF] Application starting up!
+2019-11-19 12:16:03.041 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:16:03.511 +02:00 [INF] HTTP GET / responded 200 in 406.9829 ms
+2019-11-19 12:16:16.355 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 639.6039 ms
+2019-11-19 12:16:16.917 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 522.7462 ms
+2019-11-19 12:16:18.286 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 28.2643 ms
+2019-11-19 12:16:20.081 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 463.5557 ms
+2019-11-19 12:16:20.224 +02:00 [INF] HTTP GET /notification?id=olqDFWsShkeprVcBO4F19Q responded 101 in 1916.1909 ms
+2019-11-19 12:16:20.974 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.3883 ms
+2019-11-19 12:16:23.099 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=89624855-3625-4484-bc24-12e55d592421 responded 200 in 170.9078 ms
+2019-11-19 12:17:30.785 +02:00 [INF] HTTP GET /notification?id=Dy00TxAtf_HKLul32J0O5Q responded 101 in 69792.7922 ms
+2019-11-19 12:17:33.498 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=89624855-3625-4484-bc24-12e55d592421&status=New responded 200 in 69403.6397 ms
+2019-11-19 12:17:51.635 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 4533.7353 ms
+2019-11-19 12:17:52.685 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.372 ms
+2019-11-19 12:17:55.594 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 44.0342 ms
+2019-11-19 12:17:55.604 +02:00 [INF] HTTP GET /notification?id=vjtCgxOsd2hIa88rIcMFsQ responded 101 in 2794.1192 ms
+2019-11-19 12:17:56.314 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.582 ms
+2019-11-19 12:17:57.542 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 24.3605 ms
+2019-11-19 12:17:57.555 +02:00 [INF] HTTP GET /notification?id=XKGOv9d1erRJ-iJcr7pn3Q responded 101 in 1154.5721 ms
+2019-11-19 12:17:58.417 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6425 ms
+2019-11-19 12:17:59.159 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 64.8568 ms
+2019-11-19 12:17:59.169 +02:00 [INF] HTTP GET /notification?id=UMpKajlUan3onEq2FOWvEg responded 101 in 730.6806 ms
+2019-11-19 12:17:59.891 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5678 ms
+2019-11-19 12:18:01.177 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 59.1232 ms
+2019-11-19 12:18:01.245 +02:00 [INF] HTTP GET /notification?id=23JYH2niTxpvag1sgkv3bA responded 101 in 1271.3039 ms
+2019-11-19 12:18:01.987 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.8088 ms
+2019-11-19 12:18:12.822 +02:00 [INF] Application starting up!
+2019-11-19 12:18:16.080 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:18:16.408 +02:00 [INF] HTTP GET / responded 302 in 277.422 ms
+2019-11-19 12:18:17.031 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 580.5757 ms
+2019-11-19 12:18:17.825 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 34.8257 ms
+2019-11-19 12:18:41.902 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 491.9927 ms
+2019-11-19 12:18:42.104 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8023 ms
+2019-11-19 12:18:48.514 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0a6d34d1-6ec3-4c86-823f-feb0fd42d368 responded 200 in 54.8615 ms
+2019-11-19 12:18:49.819 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 2.3293 ms
+2019-11-19 12:18:50.499 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c responded 200 in 155.5709 ms
+2019-11-19 12:18:52.617 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c responded 200 in 26.5015 ms
+2019-11-19 12:18:53.283 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 16.1214 ms
+2019-11-19 12:18:53.353 +02:00 [INF] HTTP GET /notification?id=h06YD6yCIkGQcD8S-aJ3Nw responded 101 in 11050.8243 ms
+2019-11-19 12:18:53.840 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.3179 ms
+2019-11-19 12:18:54.318 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 11.8795 ms
+2019-11-19 12:18:54.351 +02:00 [INF] HTTP GET /notification?id=Wa6vMaibpaDRtgEQvGRMSQ responded 101 in 379.7462 ms
+2019-11-19 12:18:54.779 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.9489 ms
+2019-11-19 12:18:55.493 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 18.4605 ms
+2019-11-19 12:18:55.510 +02:00 [INF] HTTP GET /notification?id=-1Nqd0xXFOfAM8yf8uYyJw responded 101 in 37655.7551 ms
+2019-11-19 12:18:56.084 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5066 ms
+2019-11-19 12:19:00.828 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=e530516b-f99a-4d0a-a17d-f578faab13f1 responded 200 in 16.7652 ms
+2019-11-19 12:19:02.940 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=e530516b-f99a-4d0a-a17d-f578faab13f1&status=New responded 200 in 59.8585 ms
+2019-11-19 12:19:05.038 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 14.2357 ms
+2019-11-19 12:19:05.048 +02:00 [INF] HTTP GET /notification?id=PE_J-LJoespz7OIy8rsWWg responded 101 in 10054.9012 ms
+2019-11-19 12:19:05.540 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.9813 ms
+2019-11-19 12:19:27.929 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=e530516b-f99a-4d0a-a17d-f578faab13f1 responded 200 in 5.4317 ms
+2019-11-19 12:19:28.728 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=93ecfc0b-685f-4af2-8929-2de5e2a2d200 responded 200 in 7.6577 ms
+2019-11-19 12:19:30.191 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=93ecfc0b-685f-4af2-8929-2de5e2a2d200&status=New responded 200 in 15.6304 ms
+2019-11-19 12:19:32.173 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=91ed9fd1-ce8f-4c59-9ecc-c192a17ac410 responded 200 in 11.0169 ms
+2019-11-19 12:19:33.427 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=91ed9fd1-ce8f-4c59-9ecc-c192a17ac410&status=New responded 200 in 9.9934 ms
+2019-11-19 12:19:34.073 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=77d61de6-bb68-401b-ac3d-a11040232214 responded 200 in 5.384 ms
+2019-11-19 12:19:35.745 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=77d61de6-bb68-401b-ac3d-a11040232214&status=InvalidApplication responded 200 in 7.8679 ms
+2019-11-19 12:19:35.859 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 58.8798 ms
+2019-11-19 12:19:35.873 +02:00 [INF] HTTP GET /notification?id=jkbQP6PYwtK5BkzGHgCppQ responded 101 in 30167.881 ms
+2019-11-19 12:19:36.516 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7844 ms
+2019-11-19 12:20:24.693 +02:00 [INF] HTTP GET /notification?id=0RRLFOLqLY_kl2tfPMESwQ responded 101 in 88580.0757 ms
+2019-11-19 12:20:30.830 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 8.6074 ms
+2019-11-19 12:20:30.841 +02:00 [INF] HTTP GET /notification?id=ApTZpZyBv4w8oSgi9GvHFA responded 101 in 54224.887 ms
+2019-11-19 12:20:31.525 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 9.4582 ms
+2019-11-19 12:20:33.532 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 16.3629 ms
+2019-11-19 12:20:33.545 +02:00 [INF] HTTP GET /notification?id=BAVdejx8dyJx9YdoyGkcJQ responded 101 in 1943.2776 ms
+2019-11-19 12:20:34.255 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.2238 ms
+2019-11-19 12:20:35.567 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 2.7189 ms
+2019-11-19 12:20:36.044 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c responded 200 in 14.5748 ms
+2019-11-19 12:20:38.123 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c&status=New responded 200 in 7.0738 ms
+2019-11-19 12:20:41.267 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 59.503 ms
+2019-11-19 12:20:41.280 +02:00 [INF] HTTP GET /notification?id=tELCaG8yU_H0n2zZFgZ-fg responded 101 in 6867.1025 ms
+2019-11-19 12:20:41.910 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6001 ms
+2019-11-19 12:21:19.389 +02:00 [INF] HTTP GET /notification?id=E4CeCc9iXsn-db3G763ytA responded 101 in 37346.498 ms
+2019-11-19 12:21:24.321 +02:00 [INF] Application starting up!
+2019-11-19 12:21:27.737 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:21:28.209 +02:00 [INF] HTTP GET / responded 200 in 416.5859 ms
+2019-11-19 12:21:42.400 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 503.7694 ms
+2019-11-19 12:21:42.874 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 454.8604 ms
+2019-11-19 12:21:43.651 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 29.9047 ms
+2019-11-19 12:21:46.672 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 460.3941 ms
+2019-11-19 12:21:46.748 +02:00 [INF] HTTP GET /notification?id=ZHDDf6xLGZkCVgcEiTSlNQ responded 101 in 3084.9252 ms
+2019-11-19 12:21:47.135 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8579 ms
+2019-11-19 12:21:51.955 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0a6d34d1-6ec3-4c86-823f-feb0fd42d368 responded 200 in 41.6737 ms
+2019-11-19 12:21:52.466 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 2.3697 ms
+2019-11-19 12:21:52.942 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c responded 200 in 2.5398 ms
+2019-11-19 12:21:53.698 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=77d61de6-bb68-401b-ac3d-a11040232214 responded 200 in 2.2663 ms
+2019-11-19 12:21:54.277 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=91ed9fd1-ce8f-4c59-9ecc-c192a17ac410 responded 200 in 2.4545 ms
+2019-11-19 12:21:54.705 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=93ecfc0b-685f-4af2-8929-2de5e2a2d200 responded 200 in 4.679 ms
+2019-11-19 12:21:55.558 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=e530516b-f99a-4d0a-a17d-f578faab13f1 responded 200 in 3.1298 ms
+2019-11-19 12:22:35.088 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 13.6803 ms
+2019-11-19 12:22:35.101 +02:00 [INF] HTTP GET /notification?id=SwPjBpKKnRl3HO4g25R97w responded 101 in 47831.4339 ms
+2019-11-19 12:22:35.473 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.4944 ms
+2019-11-19 12:22:36.928 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0a6d34d1-6ec3-4c86-823f-feb0fd42d368 responded 200 in 150.5064 ms
+2019-11-19 12:22:37.875 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0a6d34d1-6ec3-4c86-823f-feb0fd42d368&status=InvalidApplication responded 200 in 118.3037 ms
+2019-11-19 12:22:37.965 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 71.3044 ms
+2019-11-19 12:22:37.989 +02:00 [INF] HTTP GET /notification?id=teh6QF4dMx68RwpRQk8z6g responded 101 in 2410.4854 ms
+2019-11-19 12:22:38.117 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5858 ms
+2019-11-19 12:22:43.014 +02:00 [INF] HTTP GET / responded 302 in 2.858 ms
+2019-11-19 12:22:43.069 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 26.6736 ms
+2019-11-19 12:22:43.455 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 25.5672 ms
+2019-11-19 12:22:44.120 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.168 ms
+2019-11-19 12:22:51.650 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 17.0883 ms
+2019-11-19 12:22:51.662 +02:00 [INF] HTTP GET /notification?id=jMIqdrJE4A0yJYQDyAPk9g responded 101 in 13388.0796 ms
+2019-11-19 12:22:51.888 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.557 ms
+2019-11-19 12:22:52.909 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 9.6702 ms
+2019-11-19 12:22:54.398 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e&status=New responded 200 in 13.1868 ms
+2019-11-19 12:22:57.901 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 25.5815 ms
+2019-11-19 12:22:57.911 +02:00 [INF] HTTP GET /notification?id=wv6Y7vTanPysyS11U9Fj-A responded 101 in 5936.1122 ms
+2019-11-19 12:22:57.996 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6049 ms
+2019-11-19 12:22:59.226 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 10.6612 ms
+2019-11-19 12:23:15.966 +02:00 [INF] HTTP POST /Application/CreateAsync responded 200 in 92.3923 ms
+2019-11-19 12:23:15.983 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e&status=Open responded 200 in 6.9922 ms
+2019-11-19 12:23:41.413 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=89624855-3625-4484-bc24-12e55d592421 responded 200 in 13.3926 ms
+2019-11-19 12:23:43.486 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=89624855-3625-4484-bc24-12e55d592421 responded 200 in 25.5895 ms
+2019-11-19 12:23:44.167 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 39.9631 ms
+2019-11-19 12:23:44.179 +02:00 [INF] HTTP GET /notification?id=2uewUeyB36q60tvxwRDxVQ responded 101 in 46050.0851 ms
+2019-11-19 12:23:44.402 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6521 ms
+2019-11-19 12:23:46.745 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 10.7096 ms
+2019-11-19 12:24:10.098 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e&status=New responded 200 in 24.2192 ms
+2019-11-19 12:24:56.194 +02:00 [INF] Application starting up!
+2019-11-19 12:24:58.380 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:24:58.598 +02:00 [INF] HTTP GET / responded 302 in 177.8581 ms
+2019-11-19 12:24:59.004 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 382.4746 ms
+2019-11-19 12:24:59.428 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 26.5982 ms
+2019-11-19 12:25:37.649 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 250.8887 ms
+2019-11-19 12:25:37.753 +02:00 [INF] HTTP GET /notification?id=BBybkUnUlekCoTkvvZ5Tmw responded 101 in 38300.9901 ms
+2019-11-19 12:25:37.946 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7193 ms
+2019-11-19 12:25:39.512 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 118.2059 ms
+2019-11-19 12:25:55.629 +02:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 450), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [LoanApplications] ([Id], [CardId], [EGN], [EmailId], [FirstName], [LastName], [PhoneNumber], [Status])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (156fdf4e-0469-4f2e-a214-754ce844122e).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:09b8277f-128d-497f-a428-bbf1285445ce
+Error Number:2601,State:1,Class:14
+2019-11-19 12:25:55.715 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'TBIApp.Data.TBIAppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (156fdf4e-0469-4f2e-a214-754ce844122e).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (156fdf4e-0469-4f2e-a214-754ce844122e).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2019-11-19 12:25:55.752 +02:00 [ERR] HTTP POST /Application/CreateAsync responded 500 in 214.8875 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (156fdf4e-0469-4f2e-a214-754ce844122e).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TBIApp.Services.Services.ApplicationService.CreateAsync(LoanApplicationDTO newLoan) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIApp.Services\Services\ApplicationService.cs:line 36
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 50
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-19 12:25:55.813 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (156fdf4e-0469-4f2e-a214-754ce844122e).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TBIApp.Services.Services.ApplicationService.CreateAsync(LoanApplicationDTO newLoan) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIApp.Services\Services\ApplicationService.cs:line 36
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 50
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-19 12:25:55.867 +02:00 [ERR] HTTP POST /Application/CreateAsync responded 500 in 4.2768 ms
+System.ArgumentException: Invalid application VM!
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 42
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-19 12:25:55.894 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.ArgumentException: Invalid application VM!
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 42
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-19 12:25:55.919 +02:00 [ERR] Connection id "0HLRCRAT40G8P", Request id "0HLRCRAT40G8P:00000007": An unhandled exception was thrown by the application.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.LoanApplications' with unique index 'IX_LoanApplications_EmailId'. The duplicate key value is (156fdf4e-0469-4f2e-a214-754ce844122e).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TBIApp.Services.Services.ApplicationService.CreateAsync(LoanApplicationDTO newLoan) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIApp.Services\Services\ApplicationService.cs:line 36
+   at TBIBankApp.Controllers.ApplicationController.CreateAsync(LoanApplicationViewModel vm) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\ApplicationController.cs:line 50
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-19 12:25:59.114 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=156fdf4e-0469-4f2e-a214-754ce844122e responded 200 in 25.9752 ms
+2019-11-19 12:26:00.358 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=89624855-3625-4484-bc24-12e55d592421 responded 200 in 16.3647 ms
+2019-11-19 12:26:09.454 +02:00 [INF] HTTP POST /Application/CreateAsync responded 200 in 22.1516 ms
+2019-11-19 12:26:09.539 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=89624855-3625-4484-bc24-12e55d592421&status=Open responded 200 in 73.3969 ms
+2019-11-19 12:26:11.417 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 35.4811 ms
+2019-11-19 12:26:11.428 +02:00 [INF] HTTP GET /notification?id=JwCEU48yQBHZrpzENURXeg responded 101 in 33457.8567 ms
+2019-11-19 12:26:11.531 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5445 ms
+2019-11-19 12:26:24.422 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=89624855-3625-4484-bc24-12e55d592421 responded 200 in 10.2798 ms
+2019-11-19 12:26:26.199 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=89624855-3625-4484-bc24-12e55d592421&status=New responded 200 in 13.7131 ms
+2019-11-19 12:26:27.985 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 8.7104 ms
+2019-11-19 12:26:27.993 +02:00 [INF] HTTP GET /notification?id=792-75kdqPv46Ui0HKSx-A responded 101 in 16293.6019 ms
+2019-11-19 12:26:28.086 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5347 ms
+2019-11-19 12:26:41.571 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 7.3703 ms
+2019-11-19 12:26:41.581 +02:00 [INF] HTTP GET /notification?id=OZlYuesPPNUZlp-LO0Nk-g responded 101 in 13358.6155 ms
+2019-11-19 12:26:41.665 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5328 ms
+2019-11-19 12:26:44.516 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 47.0615 ms
+2019-11-19 12:26:44.524 +02:00 [INF] HTTP GET /notification?id=bFfgWOaxWtRak5tV4edtjQ responded 101 in 2721.2529 ms
+2019-11-19 12:26:44.614 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5457 ms
+2019-11-19 12:26:45.873 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c responded 200 in 10.5049 ms
+2019-11-19 12:26:51.193 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c&status=New responded 200 in 18.1509 ms
+2019-11-19 12:26:52.340 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 9.0928 ms
+2019-11-19 12:26:52.349 +02:00 [INF] HTTP GET /notification?id=OH0Gwps_8H1dJ7KSFIF1cA responded 101 in 7598.0363 ms
+2019-11-19 12:26:52.442 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5599 ms
+2019-11-19 12:26:56.209 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c responded 200 in 9.7106 ms
+2019-11-19 12:27:11.247 +02:00 [INF] HTTP POST /Application/CreateAsync responded 200 in 10.9005 ms
+2019-11-19 12:27:11.265 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c&status=Open responded 200 in 7.7489 ms
+2019-11-19 12:27:12.701 +02:00 [INF] HTTP GET /notification?id=vDLPO3JSdtFS0Qdox4fySA responded 101 in 20138.0251 ms
+2019-11-19 12:27:18.423 +02:00 [INF] Application starting up!
+2019-11-19 12:27:25.671 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:27:26.102 +02:00 [INF] HTTP GET / responded 200 in 386.3037 ms
+2019-11-19 12:27:41.847 +02:00 [INF] Application starting up!
+2019-11-19 12:27:49.603 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-19 12:27:49.973 +02:00 [INF] HTTP GET / responded 200 in 326.9666 ms
+2019-11-19 12:27:55.344 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 673.8919 ms
+2019-11-19 12:27:55.895 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 507.1608 ms
+2019-11-19 12:27:59.309 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 33.0965 ms
+2019-11-19 12:28:01.172 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 379.0548 ms
+2019-11-19 12:28:01.335 +02:00 [INF] HTTP GET /notification?id=BI0NC2dGufW_XgKkSlwGHw responded 101 in 2010.033 ms
+2019-11-19 12:28:01.980 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7385 ms
+2019-11-19 12:28:03.542 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2ff48e2f-3751-4a9c-91f3-59326603228c responded 200 in 183.8942 ms

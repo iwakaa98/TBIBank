@@ -16,5 +16,6 @@ namespace TBIApp.Services.Services.Contracts
         Task<bool> IsOpenAsync(string id);
         Task LockButtonAsync(string id);
         Task UnLockButtonAsync(string id);
+        Task<Email> GetEmailAsync(string id);
     }
 }

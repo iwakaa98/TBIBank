@@ -22,6 +22,7 @@ namespace TBIBankApp.Mappers
             return new EmailViewModel()
             {
                 Id = entity.Id,
+                ReferenceNumber = entity.Id.Substring(0, 10),
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 GmailEmailId = entity.GmailEmailId,

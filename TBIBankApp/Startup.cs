@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Serilog;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using TBIBankApp.Infrastructure.Extensions;
@@ -71,6 +70,7 @@ namespace TBIBankApp
             services.AddScoped<IDecodeService, DecodeService>();
             services.AddScoped<ICheckEgnService, CheckEgnService>();
             services.AddScoped<IEncryptService, EncryptService>();
+            services.AddScoped<IStatisticsService, StatisticsService>();
             //We registerMappers here
 
 
@@ -78,8 +78,10 @@ namespace TBIBankApp
             services.AddScoped<IEmailViewModelMapper, EmailViewModelMapper>();
             services.AddScoped<IAttachmentViewModelMapper, AttachmentViewModelMapper>();
             services.AddScoped<IApplicationViewModelMapper, ApplicationViewModelMapper>();
+            services.AddScoped<IReportDiagramViewModelMapper, ReportDiagramViewModelMapper>();
 
             //ServiceMapper
+            services.AddScoped<IReportDiagramDTOMapper, ReportDiagramDTOMapper>();
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
             services.AddScoped<ILoanApplicationDTOMapper, LoanApplicationDTOMapper>();

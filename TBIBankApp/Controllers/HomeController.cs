@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TBIApp.Data.Models;
 using TBIApp.MailClient.Client.Contracts;
+using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
+using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models;
 
 namespace TBIBankApp.Controllers
@@ -17,16 +19,22 @@ namespace TBIBankApp.Controllers
         private readonly SignInManager<User> signInManager;
         private readonly UserManager<User> userManager;
         private readonly IUserService userService;
+        private readonly IStatisticsService statisticsService;
+        private readonly IReportDiagramViewModelMapper reportDiagramViewModelMapper;
 
         public HomeController(IGmailAPIService gmailAPIService,
             SignInManager<User> signInManager,
             UserManager<User> userManager,
-            IUserService userService)
+            IUserService userService,
+            IStatisticsService statisticsService,
+            IReportDiagramViewModelMapper reportDiagramViewModelMapper)
         {
             this.gmailAPIService = gmailAPIService ?? throw new ArgumentNullException(nameof(gmailAPIService));
             this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
+            this.statisticsService = statisticsService ?? throw new ArgumentNullException(nameof(statisticsService));
+            this.reportDiagramViewModelMapper = reportDiagramViewModelMapper;
         }
 
         public async Task<IActionResult> Index()
@@ -35,7 +43,7 @@ namespace TBIBankApp.Controllers
             await Task.Delay(0);
             if (User.Identity.IsAuthenticated)
             {
-                return View("Privacy");
+                return RedirectToAction("Privacy");
             }
 
             return View();
@@ -43,9 +51,12 @@ namespace TBIBankApp.Controllers
         
 
         [Authorize]
-        public IActionResult Privacy()
+        public async Task<IActionResult> Privacy()
         {
-            return View();
+            var modelDTO = await statisticsService.GetStatisticsAsync();
+            var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
+
+            return View(vm);
         }
 
       

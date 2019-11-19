@@ -46,7 +46,7 @@
                 <td>@item.Status</td>
                 <td>
 
-                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="samename(this.id)">
+                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="SetButtonToEnable(this.id)">
                         Preview
                     </button>
 
@@ -55,7 +55,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
+                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel"></h5>
                                     <div id="@item.Id+timerId"></div>
                                     <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,5 +38,13 @@ namespace TBIApp.Services.Services
             return newLoan;
         }
 
+        public async Task RemoveAsync(string id)
+        {
+            var application = await this.dbcontext.LoanApplications.FirstOrDefaultAsync(x => x.Id == id);
+
+            this.dbcontext.LoanApplications.Remove(application);
+
+            await this.dbcontext.SaveChangesAsync();
+        }
     }
 }

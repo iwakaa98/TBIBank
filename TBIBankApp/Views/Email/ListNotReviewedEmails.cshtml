@@ -23,7 +23,7 @@
         @foreach (var item in Model.EmailViewModels)
         {
             <tr id="@item.Id+classID">
-                <th>@item.Id</th>
+                <th>@item.ReferenceNumber</th>
                 <td>@item.RegisteredInDataBase</td>
                 <td>@item.Sender</td>
                 <td>@item.Subject</td>
@@ -37,7 +37,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel">Full Email Body</h5>
+                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel"></h5>
                                     <div id="@item.Id+timerId"></div>
                                     <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>

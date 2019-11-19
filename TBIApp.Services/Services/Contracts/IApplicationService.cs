@@ -6,5 +6,6 @@ namespace TBIApp.Services.Services.Contracts
     public interface IApplicationService
     {
         Task<LoanApplicationDTO> CreateAsync(LoanApplicationDTO newLoan);
+        Task RemoveAsync(string id);
     }
 }
