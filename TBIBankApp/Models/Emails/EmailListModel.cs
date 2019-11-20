@@ -17,5 +17,8 @@ namespace TBIBankApp.Models.Emails
         public bool ContainAttachment { get; set; }
         public User CurrentUser { get; set; }
         public ICollection<EmailViewModel> EmailViewModels { get; set; }
+        public bool IsOpne { get; set; }
+        public DateTime LastOpen { get; set; }
+
     }
 }

@@ -18,14 +18,12 @@ namespace TBIApp.MailClient.Mappers
         {
             this.gmailParseManager = gmailParseManager ?? throw new ArgumentNullException(nameof(gmailParseManager));
         }
-
         
         public EmailDTO MapToDTO(Message email)
         {
             var headers = this.gmailParseManager.GetHeaders(email);
             var body = this.gmailParseManager.GetHtmlBody(email);
             var attachmentsOfEmail = this.gmailParseManager.GetAttachments(email);
-
 
             var emailDTO = new EmailDTO
             {
@@ -38,7 +36,6 @@ namespace TBIApp.MailClient.Mappers
                 Attachments = attachmentsOfEmail,
                 Status = EmailStatusesEnum.NotReviewed
             };
-
             
             return emailDTO;
         }

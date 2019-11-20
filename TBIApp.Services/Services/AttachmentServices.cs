@@ -24,13 +24,13 @@ namespace TBIApp.Services.Services
         {
             var attachment = this.attachmentDTOMapper.MapFrom(attachmentDTO);
 
+            if (attachment == null) throw new ArgumentNullException();
+
             this.dbcontext.Attachments.Add(attachment);
 
             await this.dbcontext.SaveChangesAsync();
 
             return this.attachmentDTOMapper.MapFrom(attachment);
         }
-
-
     }
 }

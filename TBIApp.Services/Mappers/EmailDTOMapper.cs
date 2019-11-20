@@ -33,7 +33,9 @@ namespace TBIApp.Services.Mappers
                 Body = entity.Body,
                 RecievingDateAtMailServer = entity.RecievingDateAtMailServer,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
-                LastStatusUpdate = entity.LastStatusUpdate
+                LastStatusUpdate = entity.LastStatusUpdate,
+                IsOpne = entity.IsOpne,
+                LastOpen = entity.LastOpen
             };
         }
         public EmailDTO MapFrom(Email entity)
@@ -53,7 +55,10 @@ namespace TBIApp.Services.Mappers
                 Body = entity.Body,
                 RecievingDateAtMailServer = entity.RecievingDateAtMailServer,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
-                LastStatusUpdate = entity.LastStatusUpdate
+                LastStatusUpdate = entity.LastStatusUpdate,
+                IsOpne = entity.IsOpne,
+                LastOpen = entity.LastOpen
+                
             };
         }
         public IList<Email> MapFrom(ICollection<EmailDTO> entities)

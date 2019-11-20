@@ -32,7 +32,9 @@ namespace TBIBankApp.Mappers
                 UserId = entity.UserId,
                 User = entity.User,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
-                LastStatusUpdate = entity.LastStatusUpdate
+                LastStatusUpdate = entity.LastStatusUpdate,
+                IsOpne = entity.IsOpne,
+                LastOpen = entity.LastOpen
             };
         }
 
@@ -48,7 +50,9 @@ namespace TBIBankApp.Mappers
                 UserId = entity.UserId,
                 User = entity.User,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
-                LastStatusUpdate = entity.LastStatusUpdate
+                LastStatusUpdate = entity.LastStatusUpdate,
+                IsOpne = entity.IsOpne,
+                LastOpen = entity.LastOpen
             };
         }
         public IList<EmailViewModel> MapFrom(ICollection<EmailDTO> entities)

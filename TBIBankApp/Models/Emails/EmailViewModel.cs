@@ -21,5 +21,7 @@ namespace TBIBankApp.Models.Emails
         public User User { get; set; }
         public DateTime RegisteredInDataBase { get; set; }
         public DateTime LastStatusUpdate { get; set; }
+        public bool IsOpne { get; set; }
+        public DateTime LastOpen { get; set; }
     }
 }

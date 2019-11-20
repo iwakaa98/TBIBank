@@ -10,13 +10,11 @@ namespace TBIApp.Data.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EGN { get; set; }
-        //TODO remove Body
-        //public string Body { get; set; }
         public LoanApplicationStatus Status { get; set; }
         public string CardId { get; set; }
         public string PhoneNumber { get; set; }
         public string EmailId { get; set; }
-        //public Email Email { get; set; }
+     
 
     }
 }

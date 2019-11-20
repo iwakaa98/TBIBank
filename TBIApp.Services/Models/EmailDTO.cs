@@ -8,9 +8,7 @@ namespace TBIApp.Services.Models
 {
     public class EmailDTO
     {
-        [JsonProperty]
         public string Id { get; set; }
-       
         public string Sender { get; set; }
         public string Subject { get; set; }
         public string GmailEmailId { get; set; }
@@ -23,6 +21,8 @@ namespace TBIApp.Services.Models
         public string RecievingDateAtMailServer { get; set; }
         public DateTime RegisteredInDataBase { get; set; }
         public DateTime LastStatusUpdate { get; set; }
+        public bool IsOpne { get; set; }
+        public DateTime LastOpen { get; set; }
 
 
     }
