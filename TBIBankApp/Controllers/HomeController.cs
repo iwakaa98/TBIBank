@@ -24,8 +24,7 @@ namespace TBIBankApp.Controllers
             SignInManager<User> signInManager,
             UserManager<User> userManager,
             IUserService userService,
-            ILogger<HomeController> logger)
-            IUserService userService,
+            ILogger<HomeController> logger,
             IStatisticsService statisticsService,
             IReportDiagramViewModelMapper reportDiagramViewModelMapper)
         {
@@ -43,7 +42,7 @@ namespace TBIBankApp.Controllers
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    return View("Privacy");
+                    return RedirectToAction("Privacy");
                 }
 
             }

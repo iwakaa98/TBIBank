@@ -39,7 +39,7 @@ namespace TBIBankApp.Controllers
                 {
                     var user = new User { UserName = Input.UserName, Email = Input.Email };
                     var result = await userManager.CreateAsync(user, Input.Password);
-                    await userManager.AddToRoleAsync(user, "Operator");
+                    await userManager.AddToRoleAsync(user, Input.Role);
                 }
                 
             }

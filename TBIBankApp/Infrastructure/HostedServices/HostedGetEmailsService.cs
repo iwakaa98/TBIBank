@@ -31,6 +31,8 @@ namespace TBIBankApp.Infrastructure.HostedServices
                 var gmailApiService = scope.ServiceProvider.GetRequiredService<IGmailAPIService>();
 
                 await gmailApiService.SyncEmails();
+
+                var stop = 0;
             }
         }
 

@@ -24,17 +24,19 @@ namespace TBIBankApp.Controllers
         private readonly IHubContext<NotificationHub> hubContext;
         private readonly IApplicationService applicationService;
 
-        public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager, IHubContext<NotificationHub> hubContext, IApplicationService applicationService)
+        public EmailController(IEmailService emailService, 
+                               IEmailViewModelMapper emailMapper, 
+                               UserManager<User> userManager, 
+                               IHubContext<NotificationHub> hubContext, 
+                               IApplicationService applicationService,
+                               ILogger<EmailController> logger)
         {
-            this.emailService = emailService;
-            this.emailMapper = emailMapper;
-            this.userManager = userManager;
-            this.hubContext = hubContext;
-            this.applicationService = applicationService;
+            this.hubContext = hubContext ?? throw new ArgumentNullException(nameof(hubContext));
+            this.applicationService = applicationService ?? throw new ArgumentNullException(nameof(applicationService));
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
             this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
-            this.logger = logger ?? throw new ArgumentNullException(nameof(userManager));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         [AutoValidateAntiforgeryToken]

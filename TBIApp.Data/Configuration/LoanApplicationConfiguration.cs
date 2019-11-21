@@ -13,16 +13,16 @@ namespace TBIApp.Data.Configuration
         {
             builder.HasKey(la => la.Id);
 
-            builder.Property(la => la.FirstName)
-                .IsRequired();
+            //builder.Property(la => la.FirstName)
+            //    .IsRequired();
 
-            builder.Property(la => la.LastName)
-                .IsRequired();
+            //builder.Property(la => la.LastName)
+            //    .IsRequired();
 
-            builder.Property(la => la.EGN)
-                .IsRequired();
+            //builder.Property(la => la.EGN)
+            //    .IsRequired();
 
-            //builder.Property(la => la.CardId)
+            ////builder.Property(la => la.CardId)
             //    .IsRequired();
 
             //builder.Property(la => la.PhoneNumber)
