@@ -13,23 +13,23 @@ namespace TBIApp.Data.Configuration
             builder.HasMany(a => a.Attachments)
                 .WithOne(e => e.Email);
 
-            builder.Property(e => e.IsOpne)
-                .IsRequired();
+            //builder.Property(e => e.IsOpne)
+            //    .IsRequired();
 
-            builder.Property(e => e.Sender)
-                .IsRequired();
+            //builder.Property(e => e.Sender)
+            //    .IsRequired();
 
-            builder.Property(e => e.GmailEmailId)
-                .IsRequired();
+            //builder.Property(e => e.GmailEmailId)
+            //    .IsRequired();
 
-            builder.Property(e => e.RecievingDateAtMailServer)
-                .IsRequired();
+            //builder.Property(e => e.RecievingDateAtMailServer)
+            //    .IsRequired();
 
-            builder.Property(e => e.Body)
-                .HasMaxLength(500);
+            //builder.Property(e => e.Body)
+            //    .HasMaxLength(500);
 
-            builder.Property(e => e.Subject)
-                .HasMaxLength(50);
+            //builder.Property(e => e.Subject)
+            //    .HasMaxLength(50);
 
         }
     }

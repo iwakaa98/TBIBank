@@ -43,7 +43,7 @@ namespace TBIBankApp.Controllers
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    return View("Privacy");
+                    return RedirectToAction("Privacy");
                 }
 
             }

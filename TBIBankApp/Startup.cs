@@ -72,10 +72,9 @@ namespace TBIBankApp
             services.AddScoped<ICheckEgnService, CheckEgnService>();
             services.AddScoped<IEncryptService, EncryptService>();
             services.AddScoped<IStatisticsService, StatisticsService>();
-            services.AddScoped<IcheckCardIdService, checkCardIdService>();
+            services.AddScoped<IcheckCardIdService, CheckCardIdService>();
             services.AddScoped<ICheckPhoneNumberService, CheckPhoneNumberService>();
             //We registerMappers here
-
 
             //ViewModelMappers
             services.AddScoped<IEmailViewModelMapper, EmailViewModelMapper>();

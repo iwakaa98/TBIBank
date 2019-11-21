@@ -3,7 +3,7 @@ using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.Services.Services
 {
-    public class checkCardIdService : IcheckCardIdService
+    public class CheckCardIdService : IcheckCardIdService
     {
         public async Task<bool> IsRealAsync(string cardId)
         {

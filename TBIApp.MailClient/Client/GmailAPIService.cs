@@ -50,11 +50,7 @@ namespace TBIApp.MailClient.Client
                     var emailInfoRequest = service.Users.Messages.Get(gmailAccountName, email.Id);
 
                     //After executeAsync we recieve one email with all his data and attachments. 
-                    Message currentMessage = await emailInfoRequest.ExecuteAsync();
-
-                    //Testhere
-
-                    //Testened here
+                    var currentMessage = await emailInfoRequest.ExecuteAsync();
 
                     var emailDTO = this.messageToEmailDTOPmapper.MapToDTO(currentMessage);
 

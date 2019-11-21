@@ -37,7 +37,7 @@ namespace TBIApp.Services.Services
         {
             var email = this.emailDTOMapper.MapFrom(emailDTO);
 
-            if (email == null) throw new ArgumentNullException();
+            //if (email == null) throw new ArgumentNullException();
 
             email.RegisteredInDataBase = DateTime.Now;
 
