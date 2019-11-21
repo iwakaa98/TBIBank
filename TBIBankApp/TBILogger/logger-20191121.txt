@@ -1590,3 +1590,7 @@ System.InvalidOperationException: Unable to resolve service for type 'TBIApp.Ser
 2019-11-21 15:22:31.140 +02:00 [INF] HTTP GET / responded 302 in 323.04 ms
 2019-11-21 15:22:31.230 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 71.2245 ms
 2019-11-21 15:22:31.441 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6896 ms
+2019-11-21 15:38:48.519 +02:00 [INF] HTTP GET /notification?id=BPnZzSRn0zvv4Yh5lndVAg responded 101 in 976866.2552 ms
+2019-11-21 16:31:26.432 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 43.0503 ms
+2019-11-21 16:31:26.824 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.9265 ms
+2019-11-21 16:31:41.775 +02:00 [INF] HTTP GET /notification?id=hns0Zv0xaTnvU0oEGJggww responded 101 in 14904.5681 ms
