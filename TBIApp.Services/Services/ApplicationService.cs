@@ -40,7 +40,7 @@ namespace TBIApp.Services.Services
 
         public async Task RemoveAsync(string id)
         {
-            var application = await this.dbcontext.LoanApplications.FirstOrDefaultAsync(x => x.Id == id);
+            var application = await this.dbcontext.LoanApplications.FirstOrDefaultAsync(x => x.EmailId == id);
 
             this.dbcontext.LoanApplications.Remove(application);
 

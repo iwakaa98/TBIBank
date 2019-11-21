@@ -30,7 +30,7 @@ namespace TBIBankApp.Controllers
             return View();
         }
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> RegisterUserAsync(RegisterViewModel Input)
+        public async Task<IActionResult> RegisterUserAsync( RegisterViewModel Input)
         {
             if (ModelState.IsValid)
             {
@@ -41,7 +41,7 @@ namespace TBIBankApp.Controllers
             return Ok();
         }
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> CheckForUserAndEmailAsync(UserViewModel user)
+        public async Task<IActionResult> CheckForUserAndEmailAsync( UserViewModel user)
         {
             if (await userService.CheckForEmailAsync(user.Email))
             {

@@ -35,12 +35,23 @@
 <body>
 
     <header class="header">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light ">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/logo-tbi.png" />
-                </a>
-                <ul class="navbar-nav flex-grow-1">
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light ">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/images/logo-tbi.png" />
+            </a>
+            <ul class="navbar-nav flex-grow-1">*@
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/images/logo-tbi.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
                     @if (User.IsInRole("Manager"))
                     {
                         <li class="nav-item">
@@ -64,7 +75,10 @@
                         <a class="nav-link" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">Closed</a>
                     </li>
                 </ul>
-                <partial name="_LoginPartial" />
+                    <partial name="_LoginPartial" />
+                
+
+                
             </div>
 
         </nav>

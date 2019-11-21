@@ -1,7 +1,10 @@
 ﻿@model ReportDiagramViewModel
 
+@section  Styles{ 
+    <link rel="stylesheet" href="~/css/customDiagram.css" />
+}
 <body>
-    <div id="chartContainer" style="height: 370px; width: 100%; margin-top: 100px; margin-right:100px"></div>
+    <div id="chartContainer" style="height: 370px; width: 100%; margin-top: 33px;"></div>
     <div id="invalidcount" data-value="@Model.InvalidCount"></div>
     <div id="notreviewedcount" data-value="@Model.NotReviewedCount"></div>
     <div id="closedcount" data-value="@Model.ClosedCount"></div>

@@ -39,7 +39,7 @@ namespace TBIBankApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            //await this.gmailAPIService.SyncEmails();
+            await this.gmailAPIService.SyncEmails();
             await Task.Delay(0);
             if (User.Identity.IsAuthenticated)
             {

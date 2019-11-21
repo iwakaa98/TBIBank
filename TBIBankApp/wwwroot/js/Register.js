@@ -9,6 +9,7 @@ $('#RegisterButton').click(
         register(e);
     });
 function register(e) {
+    
     let password = $('#password').val();
     let confirmpassword = $('#confirm-password').val();
     let username = $('#your-name').val();
@@ -67,9 +68,17 @@ function register(e) {
     else if (password === confirmpassword) {
         $('#ConfirmPassword').text('');
     }
+    if (!firstName) {
+        $('#validate-firstName').text('Please neter first name');
+    }
+    if (!lastName) {
+        $('#validate-lastName').text('Please neter last name');
+    }
     if (flag === 1) {
         e.preventDefault();
     }
+    else {
+
     $.ajax(
         {
             type: "POST",
@@ -77,7 +86,6 @@ function register(e) {
             headers: {
                 RequestVerificationToken:
                     $('input:hidden[name="__RequestVerificationToken"]').val(),
-
             },
             data: data,
             dataType: 'json',
@@ -105,7 +113,6 @@ function register(e) {
                         headers: {
                             RequestVerificationToken:
                                 $('input:hidden[name="__RequestVerificationToken"]').val(),
-
                         },
                         data: data,
                         success: function (response) {
@@ -117,4 +124,5 @@ function register(e) {
                 }
             }
         })
+    }
 }

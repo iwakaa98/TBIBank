@@ -1,26 +1,26 @@
-﻿.registerBody {
+﻿
+html, body, #entirePage {
+    height: 96%;
+}
+
+#background {
+    background-image: url('../images/registration-image2.jpg');
+    background-attachment: fixed;
+    background-size: 48%;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-fill-mode: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-    width: 550px;
-    margin: auto;
-    position: relative;
+    background-position: left;
 }
 
 .registerClass {
     background: white;
-    padding: 20px 25px;
+    padding: 35px 0px 35px 40px;
     border: 3px solid #EC7423;
     border-radius: 5px;
     width: 550px;
     height: auto;
     box-sizing: border-box;
     position: relative;
+    margin-top: 35px;
 }
 
 .col.s6 > .btn {
@@ -77,6 +77,17 @@ radio:required {
 button, input {
     color: #000;
 }
-span{
-    color: red !important;
+
+#registrationForm > h1, h4 {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    top: 10px;
+    left: -7%;
+    color: #EC7423;
+}
+
+legend {
+    font-size: 1rem;
+    left: -15px;
+    position: relative;
 }

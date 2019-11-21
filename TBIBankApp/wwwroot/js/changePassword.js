@@ -1,4 +1,13 @@
-﻿
+﻿document.onkeyup = function (e) {
+    if (e.which == 13) {
+        login(e);
+    }
+}
+
+$('.login100-form-btn').click(
+    function (e) {
+        login(e);
+    })
 
 function changePassword(currPasword, userName) {
     let isEverythingFine = true;

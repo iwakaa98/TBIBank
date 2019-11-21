@@ -29,7 +29,7 @@ function updateChart() {
                     { label: `New`, y: Number(newcount) },
                     { label: `Open`, y: Number(opencount) },
                     { label: `Closed`, y: Number(closedcount) }
-                    ]
+                    ],
                 
             }
         ]
