@@ -10,6 +10,7 @@ namespace TBIBankApp.Models.Emails
     public class EmailViewModel
     {
         public string Id { get; set; }
+        public string ReferenceNumber { get; set; }
         public string Sender { get; set; }
         public string Subject { get; set; }
         public string GmailEmailId { get; set; }

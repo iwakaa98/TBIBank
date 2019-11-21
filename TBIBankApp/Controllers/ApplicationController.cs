@@ -18,13 +18,17 @@ namespace TBIBankApp.Controllers
         private readonly IApplicationService applicationService;
         private readonly IApplicationViewModelMapper applicationViewModelMapper;
         private readonly ICheckEgnService checkEgnService;
+        private readonly IcheckCardIdService checkCardIdService;
+        private readonly ICheckPhoneNumberService checkPhoneNumberService;
         private readonly IEncryptService encryptService;
 
-        public ApplicationController(IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IEncryptService encryptService)
+        public ApplicationController(IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IcheckCardIdService icheckCardId, ICheckPhoneNumberService checkPhoneNumber, IEncryptService encryptService)
         {
             this.applicationService = applicationService;
             this.applicationViewModelMapper = applicationViewModelMapper;
             this.checkEgnService = checkEgnService;
+            this.checkCardIdService = icheckCardId;
+            this.checkPhoneNumberService = checkPhoneNumber;
             this.encryptService = encryptService;
         }
 
@@ -42,9 +46,20 @@ namespace TBIBankApp.Controllers
             var isRealEgn = await checkEgnService.IsRealAsync(vm.EGN);
             if(!isRealEgn)
             {
-                return "false";
-               
+                return "false egn";
             }
+            var isRealPhoneNumber = await checkPhoneNumberService.IsRealAsync(vm.PhoneNumber);
+            if(!isRealPhoneNumber)
+            {
+                return "false phonenumber";
+            }
+            var isRealCardId = await checkCardIdService.IsRealAsync(vm.CardId);
+            if(!isRealCardId)
+            {
+                return "false cardId";
+            }
+            vm.CardId = encryptService.EncryptString(vm.CardId);
+            vm.LastName = encryptService.EncryptString(vm.LastName);
             vm.EGN = encryptService.EncryptString(vm.EGN);
             var application = this.applicationViewModelMapper.MapFrom(vm);
             await this.applicationService.CreateAsync(application);

@@ -1,4 +1,15 @@
-﻿function changePassword(currPasword, userName) {
+﻿document.onkeyup = function (e) {
+    if (e.which == 13) {
+        login(e);
+    }
+}
+
+$('.login100-form-btn').click(
+    function (e) {
+        login(e);
+    })
+
+function changePassword(currPasword, userName) {
     let isEverythingFine = true;
     let currrentPasword = $('#currPassword').val();
     let newPassword = $('#newPassword').val();
@@ -20,18 +31,22 @@
             {
                 type: 'POST',
                 url: 'Home/SetNewPasswordAsync',
-                
+
                 data: {
                     'UserName': userName,
                     'currPassword': currPasword,
                     'newPassword': newPassword
                 },
                 success: function () {
-                    cosole.log(225);
+                    console.log(225);
                     console.log(isEverythingFine);
                     if (isEverythingFine) {
                         window.location.replace("/Home/Privacy");
                     }
+                    //else {
+
+                    //    window.location.replace("/Home/Privacy");
+                    //}
                 }
             })
     }

@@ -7,7 +7,7 @@ namespace TBIApp.MailClient.Client.Contracts
     public interface IGmailAPIService
     {
         Task SyncEmails();
-        Task<GmailService> GetService();
+        Task<GmailService> GetServiceAsync();
         Task<ListMessagesResponse> GetNewEmailsAsync(GmailService service);
         Task MarkAsReadAsync(GmailService service, string emailId);
     }

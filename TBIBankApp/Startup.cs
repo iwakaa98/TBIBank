@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Serilog;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using TBIBankApp.Infrastructure.Extensions;
@@ -26,6 +25,7 @@ using TBIApp.MailClient.Mappers;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIBankApp.Infrastructure.HostedServices;
 using TBIBankApp.Infrastructure.Middleware;
+using TBIBankApp.Hubs;
 
 namespace TBIBankApp
 {
@@ -71,6 +71,9 @@ namespace TBIBankApp
             services.AddScoped<IDecodeService, DecodeService>();
             services.AddScoped<ICheckEgnService, CheckEgnService>();
             services.AddScoped<IEncryptService, EncryptService>();
+            services.AddScoped<IStatisticsService, StatisticsService>();
+            services.AddScoped<IcheckCardIdService, checkCardIdService>();
+            services.AddScoped<ICheckPhoneNumberService, CheckPhoneNumberService>();
             //We registerMappers here
 
 
@@ -78,8 +81,10 @@ namespace TBIBankApp
             services.AddScoped<IEmailViewModelMapper, EmailViewModelMapper>();
             services.AddScoped<IAttachmentViewModelMapper, AttachmentViewModelMapper>();
             services.AddScoped<IApplicationViewModelMapper, ApplicationViewModelMapper>();
+            services.AddScoped<IReportDiagramViewModelMapper, ReportDiagramViewModelMapper>();
 
             //ServiceMapper
+            services.AddScoped<IReportDiagramDTOMapper, ReportDiagramDTOMapper>();
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
             services.AddScoped<ILoanApplicationDTOMapper, LoanApplicationDTOMapper>();
@@ -93,6 +98,8 @@ namespace TBIBankApp
                 opt.LoginPath = new PathString("/");
                 opt.AccessDeniedPath = new PathString("/Identity/Account/AccessDenied");
             });
+
+            services.AddSignalR();
 
             //HostedServices added here
             services.AddHostedService<HostedGetEmailsService>();
@@ -126,6 +133,11 @@ namespace TBIBankApp
             app.UseMiddleware<PageNotFoundMiddleware>();
             app.UseMiddleware<BadRequestMiddleware>();
 
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<NotificationHub>("/notification");
+            });
 
             app.UseMvc(routes =>
             {

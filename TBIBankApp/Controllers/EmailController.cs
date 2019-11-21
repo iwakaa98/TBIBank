@@ -3,9 +3,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
+using TBIBankApp.Hubs;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models.Emails;
 
@@ -19,27 +21,35 @@ namespace TBIBankApp.Controllers
         private readonly IEmailViewModelMapper emailMapper;
         private readonly UserManager<User> userManager;
         private readonly ILogger<EmailController> logger;
+        private readonly IHubContext<NotificationHub> hubContext;
+        private readonly IApplicationService applicationService;
 
-        public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager, ILogger<EmailController> logger)
+        public EmailController(IEmailService emailService, IEmailViewModelMapper emailMapper, UserManager<User> userManager, IHubContext<NotificationHub> hubContext, IApplicationService applicationService)
         {
+            this.emailService = emailService;
+            this.emailMapper = emailMapper;
+            this.userManager = userManager;
+            this.hubContext = hubContext;
+            this.applicationService = applicationService;
             this.emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
             this.emailMapper = emailMapper ?? throw new ArgumentNullException(nameof(emailMapper));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.logger = logger ?? throw new ArgumentNullException(nameof(userManager));
         }
+
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ListEmailsAsync(int id, string emailStatus)
         {
-            
+
             try
             {
                 var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), emailStatus, true);
 
-                var result = await GetEmailsAsync(id,newEmailStatus);
+                var result = await GetEmailsAsync(id, newEmailStatus);
 
                 string status = "List" + newEmailStatus.ToString() + "Emails";
 
-                return View($"{status}",result);
+                return View($"{status}", result);
             }
             catch (Exception ex)
             {
@@ -56,17 +66,26 @@ namespace TBIBankApp.Controllers
         public async Task<IActionResult> ChangeStatusAsync(string id, string status)
         {
 
+
             //Can we replace id&status with ViewModel
             if (!ModelState.IsValid) return BadRequest();
 
+            var email = await this.emailService.GetEmailAsync(id);
+            var oldstatus = email.Status;
             try
             {
                 //Ca we use ChangeStatusViewModel and map it to DTO => Entity
-                var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), status, true);                   
-
+                var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), status, true);
+                if (oldstatus == EmailStatusesEnum.Open && status.ToLower() == "new")
+                {
+                    await this.applicationService.RemoveAsync(id);
+                }
                 var currentUser = await this.userManager.GetUserAsync(User);
 
+
                 await this.emailService.ChangeStatusAsync(id, newEmailStatus, currentUser);
+
+                await this.hubContext.Clients.All.SendAsync("UpdateChart", status, oldstatus);
             }
             catch (Exception ex)
             {
@@ -103,12 +122,14 @@ namespace TBIBankApp.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IsItOpenAsync(string id)
         {
-            if(await emailService.IsOpenAsync(id))
+            if (await emailService.IsOpenAsync(id))
             {
                 return new JsonResult("true");
-            }   
+            }
 
             await this.emailService.LockButtonAsync(id);
+
+            await this.hubContext.Clients.All.SendAsync("LockButton", id);
 
             return new JsonResult("false");
         }
@@ -118,6 +139,7 @@ namespace TBIBankApp.Controllers
         public async Task SetToEnableAsync(string id)
         {
             await this.emailService.UnLockButtonAsync(id);
+            await this.hubContext.Clients.All.SendAsync("UnlockButton", id);
         }
     }
 }

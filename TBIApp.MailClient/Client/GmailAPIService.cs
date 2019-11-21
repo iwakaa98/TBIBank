@@ -37,7 +37,7 @@ namespace TBIApp.MailClient.Client
         public async Task SyncEmails()
         {
             //Create a GmailService which crucial for accecing Gmail API.
-            GmailService service = await this.GetService();
+            GmailService service = await this.GetServiceAsync();
 
             //Get all the messages from INBOX which are mark with UNREAD label.
             ListMessagesResponse emailListResponse = await GetNewEmailsAsync(service);
@@ -46,6 +46,7 @@ namespace TBIApp.MailClient.Client
             {
                 foreach (var email in emailListResponse.Messages)
                 {
+
                     var emailInfoRequest = service.Users.Messages.Get(gmailAccountName, email.Id);
 
                     //After executeAsync we recieve one email with all his data and attachments. 
@@ -64,7 +65,7 @@ namespace TBIApp.MailClient.Client
             }
         }
 
-        public async Task<GmailService> GetService()
+        public async Task<GmailService> GetServiceAsync()
         {
             UserCredential credential;
 

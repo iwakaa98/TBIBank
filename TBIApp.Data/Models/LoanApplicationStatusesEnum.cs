@@ -11,7 +11,7 @@ namespace TBIApp.Data.Models
         NotReviewed = 1,
 
         [Display(Name = "Approved")]
-        InvalidApplication = 2,
+        Accepted = 2,
 
         [Display(Name = "Rejected")]
         Rejected = 3

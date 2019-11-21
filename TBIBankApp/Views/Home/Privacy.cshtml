@@ -1,11 +1,22 @@
-﻿<button type="button" id="asd">click me</button>
-<span id="focus-Password" data-placeholder="&#xf207;"></span>
+﻿@model ReportDiagramViewModel
 
-<script src="~/lib/jquery/dist/jquery.js"></script>
-<script>
+@section  Styles{ 
+    <link rel="stylesheet" href="~/css/customDiagram.css" />
+}
+<body>
+    <div id="chartContainer" style="height: 370px; width: 100%; margin-top: 33px;"></div>
+    <div id="invalidcount" data-value="@Model.InvalidCount"></div>
+    <div id="notreviewedcount" data-value="@Model.NotReviewedCount"></div>
+    <div id="closedcount" data-value="@Model.ClosedCount"></div>
+    <div id="newcount" data-value="@Model.NewCount"></div>
+    <div id="opencount" data-value="@Model.OpenCount"></div>
+    <div id="acceptedcount" data-value="@Model.AcceptedCount"></div>
+    <div id="rejectedcount" data-value="@Model.RejectedCount"></div>
 
-    $('#asd').click(function (e) {
-        $('#focus-Password').text('asd');
-    })
+</body>
 
-</script>
+
+@section Scripts{
+    <script type="text/javascript" src="~/js/canvas.js"></script>
+    <script type="text/javascript" src="~/js/customDiagram.js"></script>
+}

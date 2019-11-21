@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TBIApp.Data.Models;
+using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models;
 using TBIApp.Services.Services.Contracts;
 
@@ -15,6 +16,8 @@ namespace TBIBankApp.Controllers
         private readonly SignInManager<User> signInManager;
         private readonly UserManager<User> userManager;
         private readonly IUserService userService;
+        private readonly IStatisticsService statisticsService;
+        private readonly IReportDiagramViewModelMapper reportDiagramViewModelMapper;
         private readonly ILogger<HomeController> logger;
 
         public HomeController(
@@ -22,10 +25,15 @@ namespace TBIBankApp.Controllers
             UserManager<User> userManager,
             IUserService userService,
             ILogger<HomeController> logger)
+            IUserService userService,
+            IStatisticsService statisticsService,
+            IReportDiagramViewModelMapper reportDiagramViewModelMapper)
         {
             this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
+            this.statisticsService = statisticsService ?? throw new ArgumentNullException(nameof(statisticsService));
+            this.reportDiagramViewModelMapper = reportDiagramViewModelMapper;
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -48,9 +56,12 @@ namespace TBIBankApp.Controllers
         }
 
         [Authorize]
-        public IActionResult Privacy()
+        public async Task<IActionResult> Privacy()
         {
-            return View();
+            var modelDTO = await statisticsService.GetStatisticsAsync();
+            var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
+
+            return View(vm);
         }
 
         [HttpPost]
@@ -83,12 +94,6 @@ namespace TBIBankApp.Controllers
 
         }
 
-        [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> ChangePasswordAsync(LoginViewModel Input)
-        {
-            await Task.Delay(0);
-            return View(Input);
-        }
 
         [HttpPost]
         public async Task SetNewPasswordAsync(string UserName, string currPassword, string newPassword)

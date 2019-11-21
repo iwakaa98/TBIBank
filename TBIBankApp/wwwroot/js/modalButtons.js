@@ -1,11 +1,16 @@
 ﻿let butTestDisable;
 let timercheto;
+let modalId;
 $(document).ready(function () {
     $('#example').DataTable();
 });
 function ModalTest(id) {
     $(`.${id}`).modal('show');
 }
+$(`.${modalId}`).on('hidden.bs.modal', () => {
+    console.log(213123);
+    SetButtonToEnable(modalId);
+})
 
 function ChekForDisable(id) {
     let thirtyminutes = 1800;
@@ -31,7 +36,7 @@ function ChekForDisable(id) {
                     $(butTestDisable).text('Denied');
                 }
                 else {
-
+                    modalId = id;
                     $(`.${id}`).modal('show');
                     starttimer(thirtyminutes, id);
 
@@ -122,7 +127,7 @@ function SetInvalid(value) {
             },
             data: data,
             success: function () {
-                window.location.replace("/Email/ListEmailsAsync?emailStatus=InvalidApplication");
+                //window.location.replace("/Email/ListEmailsAsync?emailStatus=InvalidApplication");
             }
         })
 };
@@ -149,6 +154,7 @@ function SetNew(value) {
             },
             data: data,
             success: function () {
+                window.location.replace("/Email/ListEmailsAsync?emailStatus=New")
             }
         })
 }
@@ -174,6 +180,7 @@ function SetClosed(value) {
             },
             data: data,
             success: function () {
+                window.location.replace("/Email/ListEmailsAsync?emailStatus=Closed");
             }
         })
 }
@@ -197,30 +204,73 @@ function SetNotReviewed(value) {
             },
             data: data,
             success: function () {
+                window.location.replace("/Email/ListEmailsAsync?emailStatus=NotReviewed");
             }
         })
 }
 function SetOpen(value) {
+    let isEverythingFine = true;
 
+
+    let button = value + '+classID';
     let firstName = value + '+customFirstName';
     let lastName = value + '+customLastName';
     let Egn = value + '+customEgn';
     let cardId = value + '+customCardId';
-    let checkEgn = value + '+checkEgn';
+    let phoneNumber = value + '+phoneId'
 
+    let checkFirstName = value + '+checkFirstName';
+    let checkLastName = value + '+checkLastName';
+    let checkEgn = value + '+checkEgn';
+    let checkCardId = value + '+checkCardId';
+    let checkPhoneNumber = value + '+checkPhoneId';
+    
     let firstname = document.getElementById(firstName).value;
     let lastname = document.getElementById(lastName).value;
     let egn = document.getElementById(Egn).value;
     let cardid = document.getElementById(cardId).value;
-    let but = document.getElementById(value + '+classID');
+    let phonenumber = document.getElementById(phoneNumber).value;
+    let but = document.getElementById(button);
     let checkegn = document.getElementById(checkEgn);
+    let checkphone = document.getElementById(checkPhoneNumber);
+    let checkcard = document.getElementById(checkCardId);
 
+
+    if (!firstname) {
+        isEverythingFine = false;
+        $(`#${checkFirstName}`).text('Please enter first name');
+    }
+    else {
+        $(`#${checkFirstName}`).text('');
+    }
+    if (!lastname) {
+        isEverythingFine = false;
+        $(`#${checkLastName}`).text('Please enter last name');
+    }
+    else {
+        $(`#${checkLastName}`).text('');
+    }
+    if (!firstname) {
+        isEverythingFine = false;
+        $(`#${checkPhoneNumber}`).text('Please enter phone number');
+    }
+    else {
+        $(`#${checkPhoneNumber}`).text('');
+    }
+    if (!firstname) {
+        isEverythingFine = false;
+        $(`#${checkCardId}`).text('Please enter cardId');
+    }
+    else {
+        $(`#${checkCardId}`).text('');
+    }
     data = {
         'EmailId': value,
         'FirstName': firstname,
         'LastName': lastname,
         'EGN': egn,
-        'CardId': cardid
+        'CardId': cardid,
+        'PhoneNumber': phonenumber
     }
     $.ajax(
         {
@@ -236,9 +286,17 @@ function SetOpen(value) {
             dataType: 'text',
             success: function (response) {
                 console.log(response);
-                if (response === `"false"`) {
+                if (response === `"false egn"`) {
                     console.log($(checkegn));
                     $(checkegn).text('This EGN is invalid!');
+                }
+                else if (response === `"false phonenumber"`)
+                {
+                    $(checkphone).text('This phonenumber is invalid!');
+                }
+                else if (response === `"false cardId"`)
+                {
+                    $(checkcard).text('This cardId is invalid!');
                 }
                 else {
                     but.remove();
@@ -254,6 +312,7 @@ function SetOpen(value) {
                                 console.log(221323);
                                 $(`.${value}`).modal('hide');
                                 $('.modal-backdrop').hide();
+                                window.location.replace("/Email/ListEmailsAsync?emailStatus=Open");
                             },
                             error: function () {
                                 $(`.${value}`).modal('hide');
@@ -261,6 +320,5 @@ function SetOpen(value) {
                         })
                 }
             }
-
         })
 }
