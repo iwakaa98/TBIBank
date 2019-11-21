@@ -24,7 +24,7 @@ namespace TBIBankApp.Controllers
             SignInManager<User> signInManager,
             UserManager<User> userManager,
             IUserService userService,
-            ILogger<HomeController> logger)
+            ILogger<HomeController> logger,
             IUserService userService,
             IStatisticsService statisticsService,
             IReportDiagramViewModelMapper reportDiagramViewModelMapper)
