@@ -1,7 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using TBIApp.Data.Models;
 
 namespace TBIApp.Services.Models

@@ -14,6 +14,7 @@ namespace TBIApp.UnitTesting.Service.CheckEgnServiceTests
         [TestMethod]
         public async Task IsRealAsync_ShouldReturn_True()
         {
+            //Mock
             var testEgn = "8810120964";
 
             var checkEgnService = new CheckEgnService();

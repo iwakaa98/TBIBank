@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using TBIApp.Data.Models;
 using TBIApp.Services.Mappers.Contracts;
 using TBIApp.Services.Models;

@@ -13,10 +13,24 @@ namespace TBIApp.Data.Configuration
             builder.HasMany(a => a.Attachments)
                 .WithOne(e => e.Email);
 
-            //builder.HasOne<LoanApplication>()
-            //    .WithOne(e => e.EmailId)
-            //    .HasForeignKey<LoanApplication>(a => a.Id);
-        
+            builder.Property(e => e.IsOpne)
+                .IsRequired();
+
+            builder.Property(e => e.Sender)
+                .IsRequired();
+
+            builder.Property(e => e.GmailEmailId)
+                .IsRequired();
+
+            builder.Property(e => e.RecievingDateAtMailServer)
+                .IsRequired();
+
+            builder.Property(e => e.Body)
+                .HasMaxLength(500);
+
+            builder.Property(e => e.Subject)
+                .HasMaxLength(50);
+
         }
     }
 }

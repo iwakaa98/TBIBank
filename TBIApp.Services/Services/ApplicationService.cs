@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using TBIApp.Data;
 using TBIApp.Data.Models;
-using TBIApp.Services.Mappers;
 using TBIApp.Services.Mappers.Contracts;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
@@ -36,6 +33,5 @@ namespace TBIApp.Services.Services
 
             return newLoan;
         }
-
     }
 }

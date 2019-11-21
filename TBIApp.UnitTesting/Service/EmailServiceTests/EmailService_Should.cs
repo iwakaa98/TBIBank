@@ -1,11 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TBIApp.Data;
 using TBIApp.Data.Models;
 using TBIApp.Services.Mappers.Contracts;
@@ -18,7 +16,6 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
     [TestClass]
     public class EmailService_Should
     {
-        
 
         [TestMethod]
         public async Task CreateAsync_ShouldCreateEmail()
@@ -210,6 +207,83 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public async Task IsOpenAsync_ShouldThrowArgumentNullEx()
+        {
+            var options = TestUtilities.GetOptions(nameof(IsOpenAsync_ShouldThrowArgumentNullEx));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var mockDecodeService = new Mock<IDecodeService>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+            var mockEmail = new Mock<Email>().Object;
+
+            var testId = string.Empty;
+            mockEmail.Id = "correctTestId";
+            mockEmail.IsOpne = true;
+
+            using (var actContext = new TBIAppDbContext(options))
+            {
+                await actContext.Emails.AddAsync(mockEmail);
+                await actContext.SaveChangesAsync();
+            }
+
+            using (var assertContext = new TBIAppDbContext(options))
+            {
+                var emailService = new EmailService(assertContext, mockEmailDTOMapper, mockDecodeService, mockLogger, mockEncryptService);
+
+                var sut = await emailService.IsOpenAsync(testId);
+            }
+        }
+
+        [TestMethod]
+        public async Task IsOpenAsync_ShouldBeCalledOnce()
+        {
+            var options = TestUtilities.GetOptions(nameof(IsOpenAsync_ShouldBeCalledOnce));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var mockDecodeService = new Mock<IDecodeService>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+            var mockEmail = new Mock<Email>().Object;
+
+            var testInput = "testId";
+            var testResult = true;
+
+            var mockEmailService = new Mock<IEmailService>();
+            mockEmailService.Setup(x => x.IsOpenAsync(testInput)).ReturnsAsync(testResult);
+
+            await mockEmailService.Object.IsOpenAsync(testInput);
+
+            mockEmailService.Verify(x => x.IsOpenAsync(testInput), Times.Once);
+
+        }
+
+
+        [TestMethod]
+        public async Task IsOpenAsync_ShouldReturnTypeOfBool()
+        {
+            var options = TestUtilities.GetOptions(nameof(IsOpenAsync_ShouldReturnTypeOfBool));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var mockDecodeService = new Mock<IDecodeService>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+            var mockEmail = new Mock<Email>().Object;
+
+            var testInput = "testId";
+            var testResult = true;
+
+            var mockEmailService = new Mock<IEmailService>();
+            mockEmailService.Setup(x => x.IsOpenAsync(testInput)).ReturnsAsync(testResult);
+
+            var sut = await mockEmailService.Object.IsOpenAsync(testInput);
+
+            Assert.IsInstanceOfType(sut, typeof(bool));
+
+        }
+
+        [TestMethod]
         public async Task IsOpenAsync_ShouldGet_False()
         {
             var options = TestUtilities.GetOptions(nameof(IsOpenAsync_ShouldGet_False));
@@ -274,6 +348,41 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
                 var sut = assertContext.Emails.FirstOrDefault();
 
                 Assert.AreEqual(expectedResult, sut.IsOpne);
+            }
+        }
+
+        [TestMethod]
+        public async Task LockButtonAsync_ShouldReturnTypeOfBool()
+        {
+            var options = TestUtilities.GetOptions(nameof(LockButtonAsync_ShouldReturnTypeOfBool));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var mockDecodeService = new Mock<IDecodeService>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+            var mockEmail = new Mock<Email>().Object;
+
+            var testId = "testId";
+            mockEmail.Id = testId;
+            mockEmail.IsOpne = false;
+
+            using (var actContext = new TBIAppDbContext(options))
+            {
+                await actContext.Emails.AddAsync(mockEmail);
+                await actContext.SaveChangesAsync();
+            }
+
+            using (var assertContext = new TBIAppDbContext(options))
+            {
+                var emailService = new EmailService(assertContext, mockEmailDTOMapper, mockDecodeService, mockLogger, mockEncryptService);
+
+                await emailService.LockButtonAsync(testId);
+
+                var email = assertContext.Emails.FirstOrDefault();
+
+                var sut = email.IsOpne;
+
+                Assert.IsInstanceOfType(sut, typeof(bool));
             }
         }
 
@@ -355,6 +464,41 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
                 var sut = assertContext.Emails.FirstOrDefault();
 
                 Assert.AreEqual(expectedResult, sut.IsOpne);
+            }
+        }
+
+        [TestMethod]
+        public async Task UnLockButtonAsync_ShouldReturnTypeOfBool()
+        {
+            var options = TestUtilities.GetOptions(nameof(UnLockButtonAsync_ShouldReturnTypeOfBool));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var mockDecodeService = new Mock<IDecodeService>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+            var mockEmail = new Mock<Email>().Object;
+
+            var testId = "testId";
+            mockEmail.Id = testId;
+            mockEmail.IsOpne = true;
+
+            using (var actContext = new TBIAppDbContext(options))
+            {
+                await actContext.Emails.AddAsync(mockEmail);
+                await actContext.SaveChangesAsync();
+            }
+
+            using (var assertContext = new TBIAppDbContext(options))
+            {
+                var emailService = new EmailService(assertContext, mockEmailDTOMapper, mockDecodeService, mockLogger, mockEncryptService);
+
+                await emailService.UnLockButtonAsync(testId);
+
+                var email = assertContext.Emails.FirstOrDefault();
+
+                var sut = email.IsOpne;
+
+                Assert.IsInstanceOfType(sut, typeof(bool));
             }
         }
 
@@ -533,6 +677,49 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
         }
 
         [TestMethod]
+        public async Task GetEmailsPagesByTypeAsync_ShouldBeCalledOnce()
+        {
+            var options = TestUtilities.GetOptions(nameof(GetEmailsPagesByTypeAsync_ShouldBeCalledOnce));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var decodeService = new Mock<IDecodeService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+
+            var testStatus = EmailStatusesEnum.InvalidApplication;
+            var testReturn = 1;
+
+            var mockEmailService = new Mock<IEmailService>();
+            mockEmailService.Setup(x => x.GetEmailsPagesByTypeAsync(testStatus)).ReturnsAsync(testReturn);
+
+            await mockEmailService.Object.GetEmailsPagesByTypeAsync(testStatus);
+
+            mockEmailService.Verify(x => x.GetEmailsPagesByTypeAsync(testStatus), Times.Once);
+
+        }
+
+        [TestMethod]
+        public async Task GetEmailsPagesByTypeAsync_ShouldReturnTypeOfInt()
+        {
+            var options = TestUtilities.GetOptions(nameof(GetEmailsPagesByTypeAsync_ShouldReturnTypeOfInt));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var decodeService = new Mock<IDecodeService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+
+            var testStatus = EmailStatusesEnum.InvalidApplication;
+            var testReturn = 1;
+
+            var mockEmailService = new Mock<IEmailService>();
+            mockEmailService.Setup(x => x.GetEmailsPagesByTypeAsync(testStatus)).ReturnsAsync(testReturn);
+
+            var sut = await mockEmailService.Object.GetEmailsPagesByTypeAsync(testStatus);
+
+            Assert.IsInstanceOfType(sut, typeof(int));
+        }
+
+        [TestMethod]
         public async Task GetCurrentPageEmailsAsync_ThrowEx_True()
         {
             var options = TestUtilities.GetOptions(nameof(GetCurrentPageEmailsAsync_ThrowEx_True));
@@ -584,5 +771,46 @@ namespace TBIApp.UnitTesting.Service.EmailServiceTest
                 Assert.AreEqual(expectedCount, result);
             }
         }
+
+        [TestMethod]
+        public async Task GetAllEmailsPagesAsync_ShouldBeCalledOnce()
+        {
+            var options = TestUtilities.GetOptions(nameof(GetAllEmailsPagesAsync_ShouldBeCalledOnce));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var mockDecodeService = new Mock<IDecodeService>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+
+            var testResult = 1;
+
+            var mockEmailService = new Mock<IEmailService>();
+            mockEmailService.Setup(x => x.GetAllEmailsPagesAsync()).ReturnsAsync(testResult);
+
+            await mockEmailService.Object.GetAllEmailsPagesAsync();
+
+            mockEmailService.Verify(x => x.GetAllEmailsPagesAsync(), Times.Once);
+        }
+
+        [TestMethod]
+        public async Task GetAllEmailsPagesAsync_ShouldReturn_TypeOf()
+        {
+            var options = TestUtilities.GetOptions(nameof(GetAllEmailsPagesAsync_ShouldBeCalledOnce));
+
+            var mockEmailDTOMapper = new Mock<IEmailDTOMapper>().Object;
+            var mockDecodeService = new Mock<IDecodeService>().Object;
+            var mockEncryptService = new Mock<IEncryptService>().Object;
+            var mockLogger = new Mock<ILogger<EmailService>>().Object;
+
+            var testResult = 1;
+
+            var mockEmailService = new Mock<IEmailService>();
+            mockEmailService.Setup(x => x.GetAllEmailsPagesAsync()).ReturnsAsync(testResult);
+
+            var sut  =await mockEmailService.Object.GetAllEmailsPagesAsync();
+
+            Assert.IsInstanceOfType(sut, typeof(int));
+        }
+
     }
 }

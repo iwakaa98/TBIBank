@@ -27,7 +27,6 @@ namespace TBIApp.MailClient.Mappers
 
             var emailDTO = new EmailDTO
             {
-                //TODO check which date is assigned
                 RecievingDateAtMailServer = headers["dateRecieved"],
                 GmailEmailId = headers["gmailEmailId"],
                 Sender = headers["sender"],

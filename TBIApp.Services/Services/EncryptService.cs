@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Security.Cryptography;
 using System.Text;
 using TBIApp.Services.Services.Contracts;

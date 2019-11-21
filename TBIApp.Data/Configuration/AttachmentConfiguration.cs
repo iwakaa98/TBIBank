@@ -10,6 +10,14 @@ namespace TBIApp.Data.Configuration
         {
             builder.HasKey(a => a.Id);
 
+            builder.Property(a => a.FileName)
+                .IsRequired();
+
+            builder.Property(a => a.SizeKb)
+                .IsRequired();
+
+            builder.Property(a => a.SizeMb)
+                .IsRequired();
 
         }
     }

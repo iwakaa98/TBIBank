@@ -1,12 +1,7 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TBIApp.Data;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using TBIApp.Data.Models;
 using TBIApp.Services.Mappers.Contracts;
 using TBIApp.Services.Models;
@@ -17,12 +15,10 @@ namespace TBIApp.Services.Mappers
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
                 EGN = entity.EGN,
-                //Body = entity.Body,
                 Status = entity.Status,
                 CardId = entity.Id,
                 PhoneNumber = entity.PhoneNumber,
                 EmailId = entity.EmailId,
-                //Email = entity.Email
             };
         }
         public LoanApplication MapFrom(LoanApplicationDTO entity)
@@ -32,12 +28,10 @@ namespace TBIApp.Services.Mappers
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
                 EGN = entity.EGN,
-                //Body = entity.Body,
                 Status = entity.Status,
                 CardId = entity.Id,
                 PhoneNumber = entity.PhoneNumber,
                 EmailId = entity.EmailId,
-                //Email = entity.Email
 
             };
         }

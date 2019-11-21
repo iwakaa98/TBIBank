@@ -151,6 +151,5 @@ namespace TBIApp.UnitTesting.Service.ApplicationServiceTests
 
             }
         }
-
     }
 }

@@ -13,9 +13,20 @@ namespace TBIApp.Data.Configuration
         {
             builder.HasKey(la => la.Id);
 
-            //builder.HasOne<Email>()
-            //   .WithOne(la => la.LoanApplication)
-            //   .HasForeignKey<Email>(e => e.Id);
+            builder.Property(la => la.FirstName)
+                .IsRequired();
+
+            builder.Property(la => la.LastName)
+                .IsRequired();
+
+            builder.Property(la => la.EGN)
+                .IsRequired();
+
+            //builder.Property(la => la.CardId)
+            //    .IsRequired();
+
+            //builder.Property(la => la.PhoneNumber)
+            //    .IsRequired();
 
         }
     }
