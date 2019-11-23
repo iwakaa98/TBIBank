@@ -65,13 +65,11 @@ namespace TBIApp.Services.Services
             return true;
         }
 
-        private int EGNCount(int[] egnArray)
+        public int EGNCount(int[] egnArray)
         {
-
             return 2 * egnArray[0] + 4 * egnArray[1] + 8 * egnArray[2] + 5 * egnArray[3] +
                 10 * egnArray[4] + 9 * egnArray[5] + 7 * egnArray[6]
                 + 3 * egnArray[7] + 6 * egnArray[8];
-
         }
     }
 }

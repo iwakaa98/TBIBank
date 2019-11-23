@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Google.Apis.Gmail.v1.Data;
 using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.Services.Models;
@@ -44,7 +45,6 @@ namespace TBIApp.MailClient.ParseManagers
         {
             if (email.Payload.Parts[0].MimeType == "text/plain")
             {
-                
                 return encryptService.EncryptString(email.Payload.Parts[1].Body.Data);
             }
             else

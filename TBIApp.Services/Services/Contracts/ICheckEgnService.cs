@@ -9,5 +9,6 @@ namespace TBIApp.Services.Services.Contracts
     {
         Task<bool> IsRealAsync(string egn);
         bool isValidMonthAndDate(int[] egnArray);
+        int EGNCount(int[] egnArray);
     }
 }

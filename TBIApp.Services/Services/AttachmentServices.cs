@@ -12,7 +12,8 @@ namespace TBIApp.Services.Services
         private readonly TBIAppDbContext dbcontext;
         private readonly IAttachmentDTOMapper attachmentDTOMapper;
 
-        public AttachmentService(TBIAppDbContext dbcontext, IAttachmentDTOMapper attachmentDTOMapper)
+        public AttachmentService(TBIAppDbContext dbcontext, 
+                                 IAttachmentDTOMapper attachmentDTOMapper)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.attachmentDTOMapper = attachmentDTOMapper ?? throw new ArgumentNullException(nameof(attachmentDTOMapper));

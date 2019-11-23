@@ -24,7 +24,6 @@ namespace TBIApp.Services.Services
             await dbcontext.SaveChangesAsync();
         }
 
-        //Test methdod!!! remember to update it
         public async Task<bool> ValidateCredentialAsync(string username, string password)
         {
             var user = await this.dbcontext.Users.FirstOrDefaultAsync(u => u.UserName == username);
@@ -56,7 +55,6 @@ namespace TBIApp.Services.Services
         public Task<bool> CheckForUserNameAsync(string userName)
         {
             return this.dbcontext.Users.AnyAsync(x => x.UserName == userName);
-          
         }
     }
 }
