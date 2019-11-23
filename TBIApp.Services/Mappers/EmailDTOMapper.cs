@@ -35,6 +35,7 @@ namespace TBIApp.Services.Mappers
                 LastStatusUpdate = entity.LastStatusUpdate,
                 IsOpne = entity.IsOpne,
                 LastOpen = entity.LastOpen
+
             };
         }
         public EmailDTO MapFrom(Email entity)
@@ -56,7 +57,8 @@ namespace TBIApp.Services.Mappers
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate,
                 IsOpne = entity.IsOpne,
-                LastOpen = entity.LastOpen
+                LastOpen = entity.LastOpen,
+                LoanApplicationStatus = entity.LoanApplication?.Status.ToString()
                 
             };
         }

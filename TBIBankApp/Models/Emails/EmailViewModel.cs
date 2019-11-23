@@ -16,6 +16,7 @@ namespace TBIBankApp.Models.Emails
         public string GmailEmailId { get; set; }
         public string Body { get; set; }
         public string Status { get; set; }
+        public string LoanApplicationStatus { get; set; }
         public ICollection<AttachmentViewModel> Attachments { get; set; }
         public int AttachmentCount { get; set; }
         public string UserId { get; set; }

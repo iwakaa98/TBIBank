@@ -25,6 +25,7 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
+    <link rel="icon" type="image/ico" href="images/icons/favicon.ico" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" type="text/css" href="~/css/util.css">
     <link rel="stylesheet" href="~/css/style.css" />
@@ -36,11 +37,11 @@
 
     <header class="header">
         @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light ">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                <img src="~/images/logo-tbi.png" />
-            </a>
-            <ul class="navbar-nav flex-grow-1">*@
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo-tbi.png" />
+                </a>
+                <ul class="navbar-nav flex-grow-1">*@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
@@ -59,6 +60,7 @@
                         </li>
 
                     }
+
                     <li class="nav-item">
                         <a class="nav-link" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">Not Reviewed</a>
                     </li>
@@ -74,11 +76,12 @@
                     <li class="nav-item">
                         <a class="nav-link" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">Closed</a>
                     </li>
-                </ul>
-                    <partial name="_LoginPartial" />
-                
 
-                
+                </ul>
+                <partial name="_LoginPartial" />
+
+
+
             </div>
 
         </nav>
@@ -117,6 +120,7 @@
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/autologout.js"></script>
     @*<script src="~/js/listEmails.js" asp-append-version="true"></script>*@
     @*<script>
             $("#registerOperator").click(function () {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Google.Apis.Gmail.v1.Data;
 using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.Services.Models;
@@ -42,15 +43,24 @@ namespace TBIApp.MailClient.ParseManagers
         //We take the body in HTML format. Take in mind when you display it.
         public string GetHtmlBody(Message email)
         {
-            if (email.Payload.Parts[0].MimeType == "text/plain")
+            var stop = 0;
+            if (email.Payload.Parts[1].MimeType == "text/html")
             {
-                
+                var a = email.Payload.Parts[1].Body.Data;
+                string codedBody = a.Replace("-", "+");
+                codedBody = codedBody.Replace("_", "/");
+                byte[] data = Convert.FromBase64String(codedBody);
+                var result = Encoding.UTF8.GetString(data);
+
+
                 return encryptService.EncryptString(email.Payload.Parts[1].Body.Data);
             }
             else
             {
-                return encryptService.EncryptString(email.Payload.Parts[0].Parts[1].Body.Data);
+                return encryptService.EncryptString(email.Payload.Parts[1].Parts[1].Body.Data);
             }
+
+
 
         }
         public ICollection<AttachmentDTO> GetAttachments(Message email)

@@ -21,13 +21,13 @@ namespace TBIBankApp.Controllers
         private readonly IEmailViewModelMapper emailMapper;
         private readonly UserManager<User> userManager;
         private readonly ILogger<EmailController> logger;
-        private readonly IHubContext<NotificationHub> hubContext;
+        private readonly IHubContext<Hub> hubContext;
         private readonly IApplicationService applicationService;
 
         public EmailController(IEmailService emailService, 
                                IEmailViewModelMapper emailMapper, 
                                UserManager<User> userManager, 
-                               IHubContext<NotificationHub> hubContext, 
+                               IHubContext<Hub> hubContext, 
                                IApplicationService applicationService,
                                ILogger<EmailController> logger)
         {
@@ -78,7 +78,7 @@ namespace TBIBankApp.Controllers
             {
                 //Ca we use ChangeStatusViewModel and map it to DTO => Entity
                 var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), status, true);
-                if (oldstatus == EmailStatusesEnum.Open && status.ToLower() == "new")
+                if ((oldstatus == EmailStatusesEnum.Open||oldstatus==EmailStatusesEnum.Closed) && status.ToLower() == "new")
                 {
                     await this.applicationService.RemoveAsync(id);
                 }
@@ -101,9 +101,9 @@ namespace TBIBankApp.Controllers
         {
             if (Id == 0) { Id = 1; }
 
-            var listEmailDTOS = await this.emailService.GetCurrentPageEmailsAsync(Id, status);
-
             var currentUser = await userManager.GetUserAsync(User);
+            var listEmailDTOS = await this.emailService.GetCurrentPageEmailsAsync(Id, status, currentUser);
+
 
             var result = new EmailListModel()
             {

@@ -1,7 +1,5 @@
 ﻿"use strict";
-
-var connection = new signalR.HubConnectionBuilder().withUrl("/notification").build();
-
+let connection = new signalR.HubConnectionBuilder().withUrl("/notification").build();
 
 connection.on("LockButton", function (id) {
     let tr = document.getElementById(id + '+classID');
@@ -25,7 +23,5 @@ connection.start().then(function () {
 }).catch(function (err) {
     return console.error(err.toString());
 });
-function samename(id) {
-    connection.invoke("SendMessage", id);
-};
+
 

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TBIApp.Data.Models;
 using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Mappers.Contracts;
@@ -15,6 +17,8 @@ namespace TBIBankApp.Controllers
     [AutoValidateAntiforgeryToken]
     public class ApplicationController : Controller
     {
+        private readonly UserManager<User> userManager;
+        private readonly IEmailService emailService;
         private readonly IApplicationService applicationService;
         private readonly IApplicationViewModelMapper applicationViewModelMapper;
         private readonly ICheckEgnService checkEgnService;
@@ -22,8 +26,10 @@ namespace TBIBankApp.Controllers
         private readonly ICheckPhoneNumberService checkPhoneNumberService;
         private readonly IEncryptService encryptService;
 
-        public ApplicationController(IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IcheckCardIdService icheckCardId, ICheckPhoneNumberService checkPhoneNumber, IEncryptService encryptService)
+        public ApplicationController(UserManager<User> userManager,IEmailService emailService,IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IcheckCardIdService icheckCardId, ICheckPhoneNumberService checkPhoneNumber, IEncryptService encryptService)
         {
+            this.userManager = userManager;
+            this.emailService = emailService;
             this.applicationService = applicationService;
             this.applicationViewModelMapper = applicationViewModelMapper;
             this.checkEgnService = checkEgnService;
@@ -67,6 +73,22 @@ namespace TBIBankApp.Controllers
 
             //Redirect to smth
             return "true";
+        }
+        [Authorize]
+        [AutoValidateAntiforgeryToken]
+        public async Task ChangeStatusAsync(string id, string appStatus)
+        {
+            try
+            {
+                var currentUser = await this.userManager.GetUserAsync(User);
+
+                await applicationService.ChangeStatusAsync(id, appStatus);
+                await emailService.ChangeStatusAsync(id, EmailStatusesEnum.Closed, currentUser);
+            }
+            catch
+            {
+                throw new Exception();
+            }
         }
     }
 }

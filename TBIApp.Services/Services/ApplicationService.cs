@@ -20,6 +20,19 @@ namespace TBIApp.Services.Services
             this.loanApplicatioDTOMapper = loanApplicatioDTOMapper ?? throw new ArgumentNullException(nameof(loanApplicatioDTOMapper));
         }
 
+        public async Task ChangeStatusAsync(string id, string appStatus)
+        {
+            var application = await this.dbcontext.LoanApplications.FirstOrDefaultAsync(x => x.EmailId == id);
+
+            var newEmailStatus = (LoanApplicationStatus)Enum.Parse(typeof(LoanApplicationStatus), appStatus, true);
+
+            application.Status = newEmailStatus;
+
+            this.dbcontext.Update(application);
+
+            await this.dbcontext.SaveChangesAsync();
+        }
+
         public async Task<LoanApplicationDTO> CreateAsync(LoanApplicationDTO newLoan)
         {
             var loanApplication = this.loanApplicatioDTOMapper.MapFrom(newLoan);

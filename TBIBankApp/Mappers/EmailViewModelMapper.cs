@@ -26,7 +26,7 @@ namespace TBIBankApp.Mappers
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 GmailEmailId = entity.GmailEmailId,
-                Body = entity.Body,   
+                Body = entity.Body,
                 Status = entity.Status.ToString(),
                 Attachments = this.attachmentMapper.MapFrom(entity.Attachments),
                 AttachmentCount = entity.Attachments.Count(),
@@ -35,7 +35,8 @@ namespace TBIBankApp.Mappers
                 RegisteredInDataBase = entity.RegisteredInDataBase,
                 LastStatusUpdate = entity.LastStatusUpdate,
                 IsOpne = entity.IsOpne,
-                LastOpen = entity.LastOpen
+                LastOpen = entity.LastOpen,
+                LoanApplicationStatus = entity.LoanApplicationStatus
             };
         }
 

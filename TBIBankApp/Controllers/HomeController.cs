@@ -13,6 +13,8 @@ namespace TBIBankApp.Controllers
 {
     public class HomeController : Controller
     {
+
+        static int logedInUsersCount = 0;
         private readonly SignInManager<User> signInManager;
         private readonly UserManager<User> userManager;
         private readonly IUserService userService;
@@ -20,10 +22,10 @@ namespace TBIBankApp.Controllers
         private readonly IReportDiagramViewModelMapper reportDiagramViewModelMapper;
         private readonly ILogger<HomeController> logger;
 
+
         public HomeController(
             SignInManager<User> signInManager,
             UserManager<User> userManager,
-            IUserService userService,
             ILogger<HomeController> logger,
             IUserService userService,
             IStatisticsService statisticsService,
@@ -80,6 +82,11 @@ namespace TBIBankApp.Controllers
 
                 if (user.IsChangedPassword && passValidation)
                 {
+                    if(logedInUsersCount>=1)
+                    {
+                        return new JsonResult("maxlogedusers");
+                    }
+                    logedInUsersCount += 1;
                     await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
 
                     return new JsonResult("true");
@@ -107,6 +114,7 @@ namespace TBIBankApp.Controllers
                 await userManager.ChangePasswordAsync(user, currPassword, newPassword);
 
                 await signInManager.PasswordSignInAsync(UserName, newPassword, false, lockoutOnFailure: false);
+                logedInUsersCount += 1;
             }
             catch (Exception ex)
             {
@@ -119,6 +127,12 @@ namespace TBIBankApp.Controllers
         public async Task<IActionResult> PageNotFound()
         {
             return View();
+        }
+
+        public async Task LogOutAsync()
+        {
+           logedInUsersCount -= 1;
+           await signInManager.SignOutAsync();
         }
     }
 }
