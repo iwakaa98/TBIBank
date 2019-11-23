@@ -43,24 +43,14 @@ namespace TBIApp.MailClient.ParseManagers
         //We take the body in HTML format. Take in mind when you display it.
         public string GetHtmlBody(Message email)
         {
-            var stop = 0;
-            if (email.Payload.Parts[1].MimeType == "text/html")
+            if (email.Payload.Parts[0].MimeType == "text/plain")
             {
-                var a = email.Payload.Parts[1].Body.Data;
-                string codedBody = a.Replace("-", "+");
-                codedBody = codedBody.Replace("_", "/");
-                byte[] data = Convert.FromBase64String(codedBody);
-                var result = Encoding.UTF8.GetString(data);
-
-
                 return encryptService.EncryptString(email.Payload.Parts[1].Body.Data);
             }
             else
             {
-                return encryptService.EncryptString(email.Payload.Parts[1].Parts[1].Body.Data);
+                return encryptService.EncryptString(email.Payload.Parts[0].Parts[1].Body.Data);
             }
-
-
 
         }
         public ICollection<AttachmentDTO> GetAttachments(Message email)

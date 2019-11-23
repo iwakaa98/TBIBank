@@ -14,7 +14,8 @@ namespace TBIApp.Services.Services
         private readonly TBIAppDbContext dbcontext;
         private readonly ILoanApplicationDTOMapper loanApplicatioDTOMapper;
 
-        public ApplicationService(TBIAppDbContext dbcontext, ILoanApplicationDTOMapper loanApplicatioDTOMapper)
+        public ApplicationService(TBIAppDbContext dbcontext, 
+                                  ILoanApplicationDTOMapper loanApplicatioDTOMapper)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.loanApplicatioDTOMapper = loanApplicatioDTOMapper ?? throw new ArgumentNullException(nameof(loanApplicatioDTOMapper));
@@ -50,9 +51,11 @@ namespace TBIApp.Services.Services
 
         public async Task RemoveAsync(string id)
         {
-            var application = await this.dbcontext.LoanApplications.FirstOrDefaultAsync(x => x.EmailId == id);
+            var loanApplication = await this.dbcontext.LoanApplications.FirstOrDefaultAsync(x => x.EmailId == id);
 
-            this.dbcontext.LoanApplications.Remove(application);
+            if (loanApplication == null) throw new ArgumentException("Application not found!");
+
+            this.dbcontext.LoanApplications.Remove(loanApplication);
 
             await this.dbcontext.SaveChangesAsync();
         }
