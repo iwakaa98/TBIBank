@@ -9,7 +9,7 @@ namespace TBIApp.Services.Services.Contracts
     {
         Task<EmailDTO> CreateAsync(EmailDTO emailDTO);
         Task<ICollection<EmailDTO>> GetAllAsync(int page);
-        Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail);
+        Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail, User user);
         Task ChangeStatusAsync(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser);
         Task<int> GetEmailsPagesByTypeAsync(EmailStatusesEnum statusOfEmail);
         Task<int> GetAllEmailsPagesAsync();

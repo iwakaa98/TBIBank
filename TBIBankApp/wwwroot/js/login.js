@@ -53,9 +53,8 @@ function login(e) {
                         $('#focus-Password').text('');
                         window.location.replace("/Home/Privacy");
                     }
-                    else {
-                        console.log(15);
-                        console.log(returndata);
+                    else if (returndata === "maxlogedusers") {
+                        $('#focus-Password').text('There are already the limit of logged users in the site!');
                         //window.location.replace("/Home/ChangePassword")
                     }
                 },

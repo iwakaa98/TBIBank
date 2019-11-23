@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TBIApp.Data;
@@ -18,18 +19,21 @@ namespace TBIApp.Services.Services
         private readonly IEmailDTOMapper emailDTOMapper;
         private readonly IDecodeService decodeService;
         private readonly ILogger<EmailService> logger;
+        private readonly UserManager<User> userManager;
         private readonly IEncryptService encryptService;
 
-        public EmailService(TBIAppDbContext dbcontext, 
-                            IEmailDTOMapper emailDTOMapper, 
-                            IDecodeService decodeService, 
+        public EmailService(TBIAppDbContext dbcontext,
+                            IEmailDTOMapper emailDTOMapper,
+                            IDecodeService decodeService,
                             ILogger<EmailService> logger,
-                            IEncryptService encryptService)
+                            UserManager<User> userManager,
+        IEncryptService encryptService)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.emailDTOMapper = emailDTOMapper ?? throw new ArgumentNullException(nameof(emailDTOMapper));
             this.decodeService = decodeService ?? throw new ArgumentNullException(nameof(decodeService));
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.encryptService = encryptService ?? throw new ArgumentNullException(nameof(encryptService));
         }
 
@@ -60,27 +64,44 @@ namespace TBIApp.Services.Services
 
             return this.emailDTOMapper.MapFrom(emails);
 
-            
+
         }
 
-        public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail)
+        public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail, User user)
         {
-            var emails = await this.dbcontext.Emails
-                .Where(e => e.Status == typeOfEmail)
-                .OrderByDescending(e => e.RegisteredInDataBase)
-                .Skip((page - 1) * 15)
-                .Take(150)
-                .Include(a=> a.Attachments)
-                .Include(e => e.User)
-                .ToListAsync();
-
+            List<Email> emails;
+            if (await userManager.IsInRoleAsync(user, "OPERATOR") && (typeOfEmail == EmailStatusesEnum.Open))
+            {
+                emails = await this.dbcontext.Emails
+                    .Where(e => e.Status == typeOfEmail)
+                    .OrderByDescending(e => e.RegisteredInDataBase)
+                    .Skip((page - 1) * 15)
+                    .Take(150)
+                    .Include(a => a.Attachments)
+                    .Include(e => e.User)
+                    .Include(e=>e.LoanApplication)
+                    .Where(e=>e.UserId==user.Id)
+                    .ToListAsync();
+            }
+            else
+            {
+                emails = await this.dbcontext.Emails
+                    .Where(e => e.Status == typeOfEmail)
+                    .OrderByDescending(e => e.RegisteredInDataBase)
+                    .Skip((page - 1) * 15)
+                    .Take(150)
+                    .Include(a => a.Attachments)
+                    .Include(e => e.User)
+                    .Include(e => e.LoanApplication)
+                    .ToListAsync();
+            }
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
             emails = await DecodeEmails(emails);
 
             return this.emailDTOMapper.MapFrom(emails);
         }
-     
+
         public async Task ChangeStatusAsync(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);

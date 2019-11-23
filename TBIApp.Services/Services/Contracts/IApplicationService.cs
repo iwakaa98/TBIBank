@@ -7,5 +7,6 @@ namespace TBIApp.Services.Services.Contracts
     {
         Task<LoanApplicationDTO> CreateAsync(LoanApplicationDTO newLoan);
         Task RemoveAsync(string id);
+        Task ChangeStatusAsync(string id, string appStatus);
     }
 }

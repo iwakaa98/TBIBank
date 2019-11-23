@@ -97,7 +97,7 @@ namespace TBIApp.MailClient.Client
         {
             var emailListRequest = service.Users.Messages.List(gmailAccountName);
 
-            emailListRequest.LabelIds = "UNREAD";
+            emailListRequest.LabelIds = new string[]{ "UNREAD","INBOX"};
             
             emailListRequest.IncludeSpamTrash = false;
 
