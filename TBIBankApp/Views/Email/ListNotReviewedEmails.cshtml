@@ -20,7 +20,77 @@
 
         @foreach (var item in Model.EmailViewModels)
         {
-            
+            @if (item.IsOpne)
+            {
+                <tr id="@item.Id+classID" style="background-color:#999593">
+                    <th>@item.ReferenceNumber</th>
+                    <td>@item.RegisteredInDataBase</td>
+                    <td>@item.Sender</td>
+                    <td>@item.Subject</td>
+                    <td>@item.Status</td>
+                    <td>
+
+                        @*@if (item.IsOpne)
+                        {
+                            <script>
+                                (function () {
+                                    let id = document.getElementsByClassName('testing').getAttribute('data-value');
+                                    console.log(id);
+                                    let tr = document.getElementById(id + '+classID');
+                                    console.log(tr);
+                                    let butTestDisable = document.getElementById(id);
+                                    $(tr).css('background-color', '#999593');
+                                    butTestDisable.setAttribute("disabled", true);
+                                    $(butTestDisable).css('background-color', '#FF0000');
+                                    $(butTestDisable).text('Denied');
+                                })();
+                            </script>
+                        }*@
+
+                        <button type="button"  disabled class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
+                            Denied
+                        </button>
+
+                        <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 align="center" class="modal-title text-center" id="exampleModalLabel"></h5>
+                                        <div id="@item.Id+timerId"></div>
+                                        <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="divWrapper">@item.Body</div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:red" onclick="SetInvalid(this.value)">Set to Invalid</button>
+                                        <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:green" onclick="SetNew(this.value)">Set to New</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        @if (item.AttachmentCount == 0)
+                        {
+                            <p>No attachments</p>
+                        }
+                        else
+                        {
+                            <p>
+                                @item.AttachmentCount attachments <span class="glyphicon glyphicon-tags"></span>
+                            </p>
+                        }
+                    </td>
+
+
+                </tr>
+            }
+            else
+            {
+
             <tr id="@item.Id+classID">
                 <th>@item.ReferenceNumber</th>
                 <td>@item.RegisteredInDataBase</td>
@@ -29,9 +99,27 @@
                 <td>@item.Status</td>
                 <td>
 
+                    @*@if (item.IsOpne)
+                    {
+                        <script>
+                            (function () {
+                                let id = document.getElementsByClassName('testing').getAttribute('data-value');
+                                console.log(id);
+                                let tr = document.getElementById(id + '+classID');
+                                console.log(tr);
+                                let butTestDisable = document.getElementById(id);
+                                $(tr).css('background-color', '#999593');
+                                butTestDisable.setAttribute("disabled", true);
+                                $(butTestDisable).css('background-color', '#FF0000');
+                                $(butTestDisable).text('Denied');
+                            })();
+                        </script>
+                    }*@
+
                     <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
                         Preview
                     </button>
+
                     <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -68,8 +156,9 @@
 
 
             </tr>
+            }
         }
-    <tfoot>
+<tfoot>
         <tr>
             <th>Email ID</th>
             <th>Recieved</th>
@@ -87,4 +176,24 @@
     <script type="text/javascript" src="~/js/customTable.js"></script>
     <script type="text/javascript" src="~/js/modalButtons.js"></script>
     <script src="~/js/signalr-test.js"></script>
+
+    @*<script>
+            function LockButton(id) {
+                console.log(id);
+                let tr = document.getElementById(id + '+classID');
+                let butTestDisable = document.getElementById(id);
+                $(tr).css('background-color', '#999593');
+                butTestDisable.setAttribute("disabled", true);
+                $(butTestDisable).css('background-color', '#FF0000');
+                $(butTestDisable).text('Denied');
+            }
+        </script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                console.log(1);
+            });
+
+        </script>*@
 }

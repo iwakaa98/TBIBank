@@ -1,0 +1,26 @@
+﻿let idleTime = 0;
+$(document).ready(function () {
+    //Increment the idle time counter every minute.
+    let idleInterval = setInterval(timerIncrement, 200); // 1 minute
+    //Zero the idle timer on mouse movement.
+    $(this).mousemove(function (e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        idleTime = 0;
+    });
+});
+
+function timerIncrement() {
+    idleTime = idleTime + 1;
+    if (idleTime > 14) { // 15 minutes
+        console.log(idleTime);
+        $.ajax({
+            type: "Post",
+            url: "/Home/LogOutAsync",
+            success: function () {
+                window.location.replace("");
+            }
+        })
+    }
+}

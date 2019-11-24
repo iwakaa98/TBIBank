@@ -40,8 +40,7 @@ namespace TBIApp.MailClient.Client
             GmailService service = await this.GetServiceAsync();
 
             //Get all the messages from INBOX which are mark with UNREAD label.
-            var emailListResponse = await GetNewEmailsAsync(service);
-
+            ListMessagesResponse emailListResponse = await GetNewEmailsAsync(service);
 
             if (emailListResponse != null && emailListResponse.Messages != null)
             {
@@ -49,11 +48,11 @@ namespace TBIApp.MailClient.Client
                 {
 
                     var emailInfoRequest = service.Users.Messages.Get(gmailAccountName, email.Id);
-                    
-                    //After executeAsync we recieve one email with all his data and attachments. 
-                    var emailInfoResponse = await emailInfoRequest.ExecuteAsync();
 
-                    var emailDTO = this.messageToEmailDTOPmapper.MapToDTO(emailInfoResponse);
+                    //After executeAsync we recieve one email with all his data and attachments. 
+                    var currentMessage = await emailInfoRequest.ExecuteAsync();
+
+                    var emailDTO = this.messageToEmailDTOPmapper.MapToDTO(currentMessage);
 
                     await emailService.CreateAsync(emailDTO);
 
@@ -98,7 +97,7 @@ namespace TBIApp.MailClient.Client
         {
             var emailListRequest = service.Users.Messages.List(gmailAccountName);
 
-            emailListRequest.LabelIds = "UNREAD";
+            emailListRequest.LabelIds = new string[]{ "UNREAD","INBOX"};
             
             emailListRequest.IncludeSpamTrash = false;
 

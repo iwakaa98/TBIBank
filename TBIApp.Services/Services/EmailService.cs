@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using TBIApp.Data;
 using TBIApp.Data.Models;
 using TBIApp.Services.Mappers.Contracts;
@@ -17,17 +18,30 @@ namespace TBIApp.Services.Services
         private readonly TBIAppDbContext dbcontext;
         private readonly IEmailDTOMapper emailDTOMapper;
         private readonly IDecodeService decodeService;
+        private readonly ILogger<EmailService> logger;
+        private readonly UserManager<User> userManager;
+        private readonly IEncryptService encryptService;
 
-        public EmailService(TBIAppDbContext dbcontext, IEmailDTOMapper emailDTOMapper, IDecodeService decodeService)
+        public EmailService(TBIAppDbContext dbcontext,
+                            IEmailDTOMapper emailDTOMapper,
+                            IDecodeService decodeService,
+                            ILogger<EmailService> logger,
+                            UserManager<User> userManager,
+        IEncryptService encryptService)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.emailDTOMapper = emailDTOMapper ?? throw new ArgumentNullException(nameof(emailDTOMapper));
             this.decodeService = decodeService ?? throw new ArgumentNullException(nameof(decodeService));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            this.encryptService = encryptService ?? throw new ArgumentNullException(nameof(encryptService));
         }
 
         public async Task<EmailDTO> CreateAsync(EmailDTO emailDTO)
         {
             var email = this.emailDTOMapper.MapFrom(emailDTO);
+
+            if (email == null) throw new ArgumentNullException();
 
             email.RegisteredInDataBase = DateTime.Now;
 
@@ -42,49 +56,59 @@ namespace TBIApp.Services.Services
         {
             var emails = await this.dbcontext.Emails
                 .Skip((page - 1) * 15)
-                .Take(15)
+                .Take(150)
                 .Include(a => a.Attachments)
                 .ToListAsync();
 
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
-            return this.emailDTOMapper.MapFrom(emails); 
+            return this.emailDTOMapper.MapFrom(emails);
+
+
         }
 
-        public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail)
+        public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail, User user)
         {
-            
-            var emails = await this.dbcontext.Emails
-                .Where(e => e.Status == typeOfEmail)
-                .OrderByDescending(e => e.RegisteredInDataBase)
-                .Skip((page - 1) * 15)
-                .Take(15)
-                .Include(a=> a.Attachments)
-                .Include(e => e.User)
-                .ToListAsync();
-
-            //Just for test
-
-            var decodeEmails = emails;
-
-            //TODO remove from here
-            for (int i = 0; i < decodeEmails.Count; i++)
+            List<Email> emails;
+            if (await userManager.IsInRoleAsync(user, "OPERATOR") && (typeOfEmail == EmailStatusesEnum.Open))
             {
-                emails[i].Body = await this.decodeService.DecodeAsync(decodeEmails[i].Body);
+                emails = await this.dbcontext.Emails
+                    .Where(e => e.Status == typeOfEmail)
+                    .OrderByDescending(e => e.RegisteredInDataBase)
+                    .Skip((page - 1) * 15)
+                    .Take(150)
+                    .Include(a => a.Attachments)
+                    .Include(e => e.User)
+                    .Include(e=>e.LoanApplication)
+                    .Where(e=>e.UserId==user.Id)
+                    .ToListAsync();
             }
-
-            //Just for test
+            else
+            {
+                emails = await this.dbcontext.Emails
+                    .Where(e => e.Status == typeOfEmail)
+                    .OrderByDescending(e => e.RegisteredInDataBase)
+                    .Skip((page - 1) * 15)
+                    .Take(150)
+                    .Include(a => a.Attachments)
+                    .Include(e => e.User)
+                    .Include(e => e.LoanApplication)
+                    .ToListAsync();
+            }
             if (emails == null) throw new ArgumentNullException("No emails found!");
+
+            emails = await DecodeEmails(emails);
 
             return this.emailDTOMapper.MapFrom(emails);
         }
 
-        //Replace string/int with ChangeStatusDTO model// Add User if user != Manager || Operator is diff!?
         public async Task ChangeStatusAsync(string emailId, EmailStatusesEnum newEmaiLStatus, User currentUser)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);
 
             if (email == null) throw new ArgumentNullException("Email not found!");
+
+            logger.LogInformation($"Status of email with id {emailId} has been updated by {currentUser.Id} at {DateTime.Now}. From status: {email.Status} to status: {newEmaiLStatus}.");
 
             email.Status = newEmaiLStatus;
 
@@ -97,12 +121,20 @@ namespace TBIApp.Services.Services
             this.dbcontext.Emails.Update(email);
 
             await this.dbcontext.SaveChangesAsync();
+        }
 
-            //log.Info($"User {currentUser} changed status from {lastStatus} to {newStatus} at {DateTime.Now}")
-            
-            //log.Warning("ArgumentNullEx)
-            //log.Fatal("")
+        public async Task<List<Email>> DecodeEmails(List<Email> emails)
+        {
+            var decodeEmails = emails;
 
+            for (int i = 0; i < decodeEmails.Count; i++)
+            {
+                emails[i].Body = this.encryptService.DecryptString(decodeEmails[i].Body);
+                emails[i].Body = await this.decodeService.DecodeAsync(emails[i].Body);
+                emails[i].Sender = this.encryptService.DecryptString(decodeEmails[i].Sender);
+            }
+
+            return emails;
         }
 
         public async Task<int> GetEmailsPagesByTypeAsync(EmailStatusesEnum statusOfEmail)
@@ -122,24 +154,31 @@ namespace TBIApp.Services.Services
         public async Task<bool> IsOpenAsync(string id)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
+
+            if (email is null) throw new ArgumentNullException();
+
             return email.IsOpne;
         }
+
         public async Task LockButtonAsync(string id)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
+
+            if (email is null) throw new ArgumentNullException();
+
             email.IsOpne = true;
 
-            //dbcontext.Emails.Update(email);
             await this.dbcontext.SaveChangesAsync();
         }
-        
-        //TODO Async all
+
         public async Task UnLockButtonAsync(string id)
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == id);
+
+            if (email is null) throw new ArgumentNullException();
+
             email.IsOpne = false;
 
-            //dbcontext.Emails.Update(email);
             await this.dbcontext.SaveChangesAsync();
         }
 

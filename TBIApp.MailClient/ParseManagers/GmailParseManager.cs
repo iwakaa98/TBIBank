@@ -1,30 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Google.Apis.Gmail.v1.Data;
 using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.Services.Models;
+using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.MailClient.ParseManagers
 {
     public class GmailParseManager : IGmailParseManager
     {
+        private readonly IEncryptService encryptService;
+
+        public GmailParseManager(IEncryptService encryptService)
+        {
+            this.encryptService = encryptService ?? throw new ArgumentNullException(nameof(encryptService));
+        }
+
         public Dictionary<string, string> GetHeaders(Message email)
         {
-
-            long? a = email.InternalDate;
-
-
-            var b = new DateTime((long)a).ToLocalTime();
-
-
             var headers = new Dictionary<string, string>();
+
+            var datedate = email.InternalDate;
 
             headers.Add("dateRecieved", email.Payload.Headers.FirstOrDefault(x => x.Name == "Date").Value.Replace("(GMT)", "").Trim());
 
-            headers.Add("sender", email.Payload.Headers.FirstOrDefault(x => x.Name == "From").Value);
+            //Encrypting sender and his email based on GDPR requirements.
+            var sender = encryptService.EncryptString(email.Payload.Headers.FirstOrDefault(x => x.Name == "From").Value);
+
+            headers.Add("sender", sender);
+
 
             headers.Add("subject", email.Payload.Headers.FirstOrDefault(x => x.Name == "Subject").Value);
+
 
             headers.Add("gmailEmailId", email.Id);
 
@@ -34,11 +43,14 @@ namespace TBIApp.MailClient.ParseManagers
         //We take the body in HTML format. Take in mind when you display it.
         public string GetHtmlBody(Message email)
         {
-            if (email.Payload.Parts[0].MimeType == "text/plain"){ return email.Payload.Parts[1].Body.Data; }
-
+            if (email.Payload.Parts[0].MimeType == "text/plain")
+            {
+                return encryptService.EncryptString(email.Payload.Parts[1].Body.Data);
+            }
             else
-
-                return email.Payload.Parts[0].Parts[1].Body.Data;
+            {
+                return encryptService.EncryptString(email.Payload.Parts[0].Parts[1].Body.Data);
+            }
 
         }
         public ICollection<AttachmentDTO> GetAttachments(Message email)

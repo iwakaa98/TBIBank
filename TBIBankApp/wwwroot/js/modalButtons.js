@@ -264,6 +264,18 @@ function SetOpen(value) {
     else {
         $(`#${checkCardId}`).text('');
     }
+    if (!phonenumber) {
+        $(checkphone).text('Please enter phone number');
+    }
+    else {
+        $(checkphone).text('');
+    }
+    if (!cardid) {
+        $(checkcard).text('This cardId is invalid!');
+    }
+    else {
+        $(checkcard).text('');
+    }
     data = {
         'EmailId': value,
         'FirstName': firstname,
@@ -321,4 +333,44 @@ function SetOpen(value) {
                 }
             }
         })
+}
+
+function SetAccept(value) {
+    console.log(value);
+    data = {
+        id: value,
+        appStatus: 'Accepted'
+    };
+    $.ajax({
+        type: 'POST',
+        url: '/Application/ChangeStatusAsync',
+        headers: {
+            RequestVerificationToken:
+                $('input:hidden[name="__RequestVerificationToken"]').val(),
+        },
+        data: data,
+        success: function () {
+            window.location.replace("/Email/ListEmailsAsync?emailStatus=Closed");
+        }
+    })
+}
+
+function SetReject(value) {
+    console.log(value);
+    data = {
+        id: value,
+        appStatus: 'Rejected'
+    };
+    $.ajax({
+        type: 'POST',
+        url: '/Application/ChangeStatusAsync',
+        headers: {
+            RequestVerificationToken:
+                $('input:hidden[name="__RequestVerificationToken"]').val(),
+        },
+        data: data,
+        success: function () {
+            window.location.replace("/Email/ListEmailsAsync?emailStatus=Closed");
+        }
+    })
 }

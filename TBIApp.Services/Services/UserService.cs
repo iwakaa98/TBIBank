@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using TBIApp.Data;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
@@ -27,7 +24,6 @@ namespace TBIApp.Services.Services
             await dbcontext.SaveChangesAsync();
         }
 
-        //Test methdod!!! remember to update it
         public async Task<bool> ValidateCredentialAsync(string username, string password)
         {
             var user = await this.dbcontext.Users.FirstOrDefaultAsync(u => u.UserName == username);
@@ -59,7 +55,6 @@ namespace TBIApp.Services.Services
         public Task<bool> CheckForUserNameAsync(string userName)
         {
             return this.dbcontext.Users.AnyAsync(x => x.UserName == userName);
-          
         }
     }
 }

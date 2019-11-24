@@ -8,6 +8,7 @@ $('#RegisterButton').click(
     function (e) {
         register(e);
     });
+
 function register(e) {
     
     let password = $('#password').val();
@@ -71,8 +72,15 @@ function register(e) {
     if (!firstName) {
         $('#validate-firstName').text('Please neter first name');
     }
+    else {
+        $('#validate-firstName').text('');
+
+    }
     if (!lastName) {
         $('#validate-lastName').text('Please neter last name');
+    }
+    else {
+        $('#validate-lastName').text('');
     }
     if (flag === 1) {
         e.preventDefault();

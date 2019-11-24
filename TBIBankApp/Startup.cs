@@ -24,6 +24,7 @@ using TBIApp.MailClient.ParseManagers.Contracts;
 using TBIApp.MailClient.Mappers;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIBankApp.Infrastructure.HostedServices;
+using TBIBankApp.Infrastructure.Middleware;
 using TBIBankApp.Hubs;
 
 namespace TBIBankApp
@@ -71,10 +72,9 @@ namespace TBIBankApp
             services.AddScoped<ICheckEgnService, CheckEgnService>();
             services.AddScoped<IEncryptService, EncryptService>();
             services.AddScoped<IStatisticsService, StatisticsService>();
-            services.AddScoped<IcheckCardIdService, checkCardIdService>();
+            services.AddScoped<IcheckCardIdService, CheckCardIdService>();
             services.AddScoped<ICheckPhoneNumberService, CheckPhoneNumberService>();
             //We registerMappers here
-
 
             //ViewModelMappers
             services.AddScoped<IEmailViewModelMapper, EmailViewModelMapper>();
@@ -128,6 +128,10 @@ namespace TBIBankApp
             app.UseSerilogRequestLogging();
             app.UseCookiePolicy();
             app.UseAuthentication();
+            //Use extension method 
+            app.UseMiddleware<PageNotFoundMiddleware>();
+            app.UseMiddleware<BadRequestMiddleware>();
+
 
             app.UseSignalR(routes =>
             {

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Google.Apis.Gmail.v1.Data;
+using Newtonsoft.Json;
 using TBIApp.Data.Models;
 using TBIApp.MailClient.Mappers.Contracts;
 using TBIApp.MailClient.ParseManagers.Contracts;
@@ -12,22 +14,19 @@ namespace TBIApp.MailClient.Mappers
     {
         private readonly IGmailParseManager gmailParseManager;
 
-        public MessageToEmailDTOMapper(IGmailParseManager gmailParseManager, IEmailService emailService)
+        public MessageToEmailDTOMapper(IGmailParseManager gmailParseManager)
         {
             this.gmailParseManager = gmailParseManager ?? throw new ArgumentNullException(nameof(gmailParseManager));
         }
-
+        
         public EmailDTO MapToDTO(Message email)
         {
             var headers = this.gmailParseManager.GetHeaders(email);
             var body = this.gmailParseManager.GetHtmlBody(email);
             var attachmentsOfEmail = this.gmailParseManager.GetAttachments(email);
 
-
-
             var emailDTO = new EmailDTO
             {
-                //TODO check which date is assigned
                 RecievingDateAtMailServer = headers["dateRecieved"],
                 GmailEmailId = headers["gmailEmailId"],
                 Sender = headers["sender"],
@@ -36,7 +35,6 @@ namespace TBIApp.MailClient.Mappers
                 Attachments = attachmentsOfEmail,
                 Status = EmailStatusesEnum.NotReviewed
             };
-
             
             return emailDTO;
         }

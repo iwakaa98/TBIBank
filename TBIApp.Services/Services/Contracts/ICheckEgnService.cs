@@ -8,5 +8,7 @@ namespace TBIApp.Services.Services.Contracts
     public interface ICheckEgnService
     {
         Task<bool> IsRealAsync(string egn);
+        bool isValidMonthAndDate(int[] egnArray);
+        int EGNCount(int[] egnArray);
     }
 }

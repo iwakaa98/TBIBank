@@ -26,14 +26,17 @@ namespace TBIBankApp.Mappers
                 Sender = entity.Sender,
                 Subject = entity.Subject,
                 GmailEmailId = entity.GmailEmailId,
-                Body = entity.Body,   
+                Body = entity.Body,
                 Status = entity.Status.ToString(),
                 Attachments = this.attachmentMapper.MapFrom(entity.Attachments),
                 AttachmentCount = entity.Attachments.Count(),
                 UserId = entity.UserId,
                 User = entity.User,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
-                LastStatusUpdate = entity.LastStatusUpdate
+                LastStatusUpdate = entity.LastStatusUpdate,
+                IsOpne = entity.IsOpne,
+                LastOpen = entity.LastOpen,
+                LoanApplicationStatus = entity.LoanApplicationStatus
             };
         }
 
@@ -49,7 +52,9 @@ namespace TBIBankApp.Mappers
                 UserId = entity.UserId,
                 User = entity.User,
                 RegisteredInDataBase = entity.RegisteredInDataBase,
-                LastStatusUpdate = entity.LastStatusUpdate
+                LastStatusUpdate = entity.LastStatusUpdate,
+                IsOpne = entity.IsOpne,
+                LastOpen = entity.LastOpen
             };
         }
         public IList<EmailViewModel> MapFrom(ICollection<EmailDTO> entities)

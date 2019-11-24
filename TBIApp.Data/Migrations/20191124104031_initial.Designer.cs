@@ -10,7 +10,7 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191116232846_initial")]
+    [Migration("20191124104031_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

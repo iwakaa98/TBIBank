@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TBIApp.Data.Models;
+﻿using TBIApp.Data.Models;
 
 namespace TBIApp.Services.Models
 {
@@ -11,7 +8,6 @@ namespace TBIApp.Services.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EGN { get; set; }
-        //TODO remove Body
         public string Body { get; set; }
         public LoanApplicationStatus Status { get; set; }
         public string CardId { get; set; }
