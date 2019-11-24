@@ -298,7 +298,7 @@ function SetOpen(value) {
                                     console.log(221323);
                                     $(`.${value}`).modal('hide');
                                     $('.modal-backdrop').hide();
-                                    //window.location.replace("/Email/ListEmailsAsync?emailStatus=Open");
+                                    window.location.replace("/Email/ListEmailsAsync?emailStatus=Open");
                                 },
                                 error: function () {
                                     $(`.${value}`).modal('hide');
