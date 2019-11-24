@@ -36,9 +36,13 @@ namespace TBIBankApp.Infrastructure.HostedServices
             {
                 var gmailApiService = scope.ServiceProvider.GetRequiredService<IGmailAPIService>();
 
-                await gmailApiService.SyncEmails();
+                var count = await gmailApiService.SyncEmails();
 
-                await this.hubContext.Clients.All.SendAsync("RecieveNewEmails");
+                if (count != 0)
+                {
+                    await this.hubContext.Clients.All.SendAsync("RecieveNewEmails",count);
+
+                }
             }
         }
 
@@ -50,4 +54,3 @@ namespace TBIBankApp.Infrastructure.HostedServices
         }
     }
 }
-    

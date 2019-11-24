@@ -80,8 +80,9 @@ connection.on("UpdateChart", function (status, oldstatus) {
     updateChart();
 });
 
-connection.on("RecieveNewEmails", function () {
-    notreviewedcount = Number(notreviewedcount) + Number(1);
+connection.on("RecieveNewEmails", function (count) {
+    console.log(count);
+    notreviewedcount = Number(notreviewedcount) + Number(count);
     updateChart();
 })
 

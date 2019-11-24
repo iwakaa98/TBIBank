@@ -33,8 +33,8 @@ namespace TBIApp.MailClient.Client
         }
 
 
-        
-        public async Task SyncEmails()
+
+        public async Task<int> SyncEmails()
         {
             //Create a GmailService which crucial for accecing Gmail API.
             GmailService service = await this.GetServiceAsync();
@@ -58,14 +58,16 @@ namespace TBIApp.MailClient.Client
 
                     await this.MarkAsReadAsync(service, email.Id);
                 }
+                return emailListResponse.Messages.Count;
             }
+            return 0;
         }
 
         public async Task<GmailService> GetServiceAsync()
         {
             UserCredential credential;
 
-            using (var stream =  new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
                 string credPath = "token.json";
                 credential =
@@ -97,8 +99,8 @@ namespace TBIApp.MailClient.Client
         {
             var emailListRequest = service.Users.Messages.List(gmailAccountName);
 
-            emailListRequest.LabelIds = new string[]{ "UNREAD","INBOX"};
-            
+            emailListRequest.LabelIds = new string[] { "UNREAD", "INBOX" };
+
             emailListRequest.IncludeSpamTrash = false;
 
             return await emailListRequest.ExecuteAsync();
