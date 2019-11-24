@@ -452,3 +452,780 @@
 2019-11-23 20:46:47.961 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6077 ms
 2019-11-23 20:46:48.388 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4263 ms
 2019-11-23 20:46:48.397 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6205 ms
+2019-11-23 21:00:33.950 +02:00 [INF] Application starting up!
+2019-11-23 21:01:02.236 +02:00 [INF] Application starting up!
+2019-11-23 21:01:04.359 +02:00 [ERR] Failed executing DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:fb0893f7-8121-4c49-b944-6c9430a4f01c
+Error Number:2714,State:6,Class:16
+2019-11-23 21:01:04.557 +02:00 [FTL] Application startup exception
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+ClientConnectionId:fb0893f7-8121-4c49-b944-6c9430a4f01c
+Error Number:2714,State:6,Class:16
+2019-11-23 21:01:04.622 +02:00 [FTL] Application failed to start!
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at TBIBankApp.Program.Main(String[] args) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Program.cs:line 30
+ClientConnectionId:fb0893f7-8121-4c49-b944-6c9430a4f01c
+Error Number:2714,State:6,Class:16
+2019-11-23 21:03:54.074 +02:00 [INF] Application starting up!
+2019-11-23 21:03:55.705 +02:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:c61b8843-d757-4246-a27e-607e0ae20a2e
+Error Number:2714,State:6,Class:16
+2019-11-23 21:03:55.789 +02:00 [FTL] Application startup exception
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+ClientConnectionId:c61b8843-d757-4246-a27e-607e0ae20a2e
+Error Number:2714,State:6,Class:16
+2019-11-23 21:03:55.838 +02:00 [FTL] Application failed to start!
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at TBIBankApp.Program.Main(String[] args) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Program.cs:line 30
+ClientConnectionId:c61b8843-d757-4246-a27e-607e0ae20a2e
+Error Number:2714,State:6,Class:16
+2019-11-23 21:04:17.167 +02:00 [INF] Application starting up!
+2019-11-23 21:04:18.818 +02:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:8a6e2c0b-60f9-4dcb-b399-f618b9c9b029
+Error Number:2714,State:6,Class:16
+2019-11-23 21:04:18.913 +02:00 [FTL] Application startup exception
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+ClientConnectionId:8a6e2c0b-60f9-4dcb-b399-f618b9c9b029
+Error Number:2714,State:6,Class:16
+2019-11-23 21:04:18.966 +02:00 [FTL] Application failed to start!
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at TBIBankApp.Program.Main(String[] args) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Program.cs:line 30
+ClientConnectionId:8a6e2c0b-60f9-4dcb-b399-f618b9c9b029
+Error Number:2714,State:6,Class:16
+2019-11-23 21:05:16.250 +02:00 [INF] Application starting up!
+2019-11-23 21:05:18.278 +02:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:dc86c2d4-1447-4d74-b17e-441c81aa3b6c
+Error Number:2714,State:6,Class:16
+2019-11-23 21:05:18.391 +02:00 [FTL] Application startup exception
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+ClientConnectionId:dc86c2d4-1447-4d74-b17e-441c81aa3b6c
+Error Number:2714,State:6,Class:16
+2019-11-23 21:05:18.458 +02:00 [FTL] Application failed to start!
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at TBIBankApp.Program.Main(String[] args) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Program.cs:line 30
+ClientConnectionId:dc86c2d4-1447-4d74-b17e-441c81aa3b6c
+Error Number:2714,State:6,Class:16
+2019-11-23 21:07:38.510 +02:00 [INF] Application starting up!
+2019-11-23 21:07:43.308 +02:00 [INF] HTTP GET / responded 200 in 428.6334 ms
+2019-11-23 21:07:53.074 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 385.5802 ms
+2019-11-23 21:07:53.460 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 357.1831 ms
+2019-11-23 21:07:53.524 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.0252 ms
+2019-11-23 21:07:53.524 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7406 ms
+2019-11-23 21:07:53.535 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 2.0695 ms
+2019-11-23 21:07:53.538 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5343 ms
+2019-11-23 21:07:53.539 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5322 ms
+2019-11-23 21:07:53.549 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.0789 ms
+2019-11-23 21:07:53.551 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.9551 ms
+2019-11-23 21:07:53.567 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 6.922 ms
+2019-11-23 21:07:53.589 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 21.2972 ms
+2019-11-23 21:07:53.596 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.6943 ms
+2019-11-23 21:07:53.601 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.605 ms
+2019-11-23 21:07:53.601 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6071 ms
+2019-11-23 21:07:53.601 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.439 ms
+2019-11-23 21:07:53.602 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0301 ms
+2019-11-23 21:07:53.603 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1239 ms
+2019-11-23 21:07:53.603 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3076 ms
+2019-11-23 21:07:54.001 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 28.1736 ms
+2019-11-23 21:07:54.029 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 3.0976 ms
+2019-11-23 21:07:54.038 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7569 ms
+2019-11-23 21:07:54.049 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5478 ms
+2019-11-23 21:07:54.058 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.715 ms
+2019-11-23 21:07:57.670 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 423.5923 ms
+2019-11-23 21:07:57.738 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 6.8855 ms
+2019-11-23 21:07:57.738 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 5.9334 ms
+2019-11-23 21:07:57.739 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 7.5343 ms
+2019-11-23 21:07:57.743 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.7393 ms
+2019-11-23 21:07:57.753 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.7821 ms
+2019-11-23 21:07:57.756 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.9262 ms
+2019-11-23 21:07:57.783 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5336 ms
+2019-11-23 21:07:57.785 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 4.4622 ms
+2019-11-23 21:07:57.790 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9511 ms
+2019-11-23 21:07:57.795 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8586 ms
+2019-11-23 21:07:57.799 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7509 ms
+2019-11-23 21:07:57.799 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7782 ms
+2019-11-23 21:07:57.818 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 11.3174 ms
+2019-11-23 21:07:57.819 +02:00 [INF] HTTP GET /notification?id=UdWH65ZJ4u81QZqvwaP9bg responded 101 in 3800.6176 ms
+2019-11-23 21:07:57.821 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7458 ms
+2019-11-23 21:07:57.826 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5024 ms
+2019-11-23 21:07:57.837 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1772 ms
+2019-11-23 21:07:57.947 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8396 ms
+2019-11-23 21:07:58.083 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.588 ms
+2019-11-23 21:07:58.095 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1848 ms
+2019-11-23 21:07:58.108 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.6336 ms
+2019-11-23 21:07:58.119 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6833 ms
+2019-11-23 21:07:58.818 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 17.2584 ms
+2019-11-23 21:07:58.832 +02:00 [INF] HTTP GET /notification?id=Ziubq5Cbp7Sk3vMyb9nsDw responded 101 in 846.4425 ms
+2019-11-23 21:07:58.851 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.7148 ms
+2019-11-23 21:07:58.856 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.822 ms
+2019-11-23 21:07:58.858 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.3845 ms
+2019-11-23 21:07:58.858 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5745 ms
+2019-11-23 21:07:58.859 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3708 ms
+2019-11-23 21:07:58.859 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.3291 ms
+2019-11-23 21:07:58.868 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.5598 ms
+2019-11-23 21:07:58.875 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5407 ms
+2019-11-23 21:07:58.881 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7538 ms
+2019-11-23 21:07:58.887 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.931 ms
+2019-11-23 21:07:58.896 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.5306 ms
+2019-11-23 21:07:58.905 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.2444 ms
+2019-11-23 21:07:58.906 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7222 ms
+2019-11-23 21:07:58.915 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.2964 ms
+2019-11-23 21:07:58.915 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6874 ms
+2019-11-23 21:07:58.934 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5752 ms
+2019-11-23 21:07:58.988 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5027 ms
+2019-11-23 21:07:59.034 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4286 ms
+2019-11-23 21:07:59.041 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7944 ms
+2019-11-23 21:07:59.056 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3825 ms
+2019-11-23 21:07:59.065 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6617 ms
+2019-11-23 21:08:11.229 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 99.5693 ms
+2019-11-23 21:08:11.242 +02:00 [INF] HTTP GET /notification?id=uG6IRUxU5i3n0F9nv-vrLg responded 101 in 12239.9123 ms
+2019-11-23 21:08:11.283 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 16.0941 ms
+2019-11-23 21:08:11.283 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5606 ms
+2019-11-23 21:08:11.293 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.7533 ms
+2019-11-23 21:08:11.294 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4393 ms
+2019-11-23 21:08:11.294 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3884 ms
+2019-11-23 21:08:11.295 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.4725 ms
+2019-11-23 21:08:11.304 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 1.5572 ms
+2019-11-23 21:08:11.315 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 3.3037 ms
+2019-11-23 21:08:11.337 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9057 ms
+2019-11-23 21:08:11.350 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8912 ms
+2019-11-23 21:08:11.363 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5851 ms
+2019-11-23 21:08:11.363 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9493 ms
+2019-11-23 21:08:11.363 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0464 ms
+2019-11-23 21:08:11.379 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1886 ms
+2019-11-23 21:08:11.379 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5547 ms
+2019-11-23 21:08:11.391 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3878 ms
+2019-11-23 21:08:11.663 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.9767 ms
+2019-11-23 21:08:11.682 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.826 ms
+2019-11-23 21:08:11.805 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.5478 ms
+2019-11-23 21:08:11.835 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6133 ms
+2019-11-23 21:08:12.464 +02:00 [INF] HTTP GET / responded 302 in 3.0923 ms
+2019-11-23 21:08:12.494 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 20.5575 ms
+2019-11-23 21:08:12.530 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 8.7581 ms
+2019-11-23 21:08:12.535 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 2.0129 ms
+2019-11-23 21:08:12.543 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.1689 ms
+2019-11-23 21:08:12.543 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.6876 ms
+2019-11-23 21:08:12.543 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.3875 ms
+2019-11-23 21:08:12.543 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3819 ms
+2019-11-23 21:08:12.551 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.6181 ms
+2019-11-23 21:08:12.560 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.3811 ms
+2019-11-23 21:08:12.563 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1125 ms
+2019-11-23 21:08:12.574 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3435 ms
+2019-11-23 21:08:12.578 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9698 ms
+2019-11-23 21:08:12.584 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8589 ms
+2019-11-23 21:08:12.588 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9856 ms
+2019-11-23 21:08:12.598 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3073 ms
+2019-11-23 21:08:12.603 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.659 ms
+2019-11-23 21:08:12.609 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0184 ms
+2019-11-23 21:08:12.742 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8086 ms
+2019-11-23 21:08:12.766 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.5528 ms
+2019-11-23 21:08:12.784 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0452 ms
+2019-11-23 21:08:12.794 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4634 ms
+2019-11-23 21:08:12.802 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6856 ms
+2019-11-23 21:08:15.301 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 131.3681 ms
+2019-11-23 21:08:15.313 +02:00 [INF] HTTP GET /notification?id=n63KzzsTdpgZDI693orc-w responded 101 in 2546.6662 ms
+2019-11-23 21:08:15.337 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.8121 ms
+2019-11-23 21:08:15.350 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 4.1565 ms
+2019-11-23 21:08:15.350 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.703 ms
+2019-11-23 21:08:15.350 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 3.1016 ms
+2019-11-23 21:08:15.351 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.7608 ms
+2019-11-23 21:08:15.363 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 11.929 ms
+2019-11-23 21:08:15.366 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 2.9081 ms
+2019-11-23 21:08:15.374 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 5.9432 ms
+2019-11-23 21:08:15.403 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2728 ms
+2019-11-23 21:08:15.412 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4095 ms
+2019-11-23 21:08:15.416 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0695 ms
+2019-11-23 21:08:15.423 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.7565 ms
+2019-11-23 21:08:15.427 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0793 ms
+2019-11-23 21:08:15.433 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7667 ms
+2019-11-23 21:08:15.452 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6599 ms
+2019-11-23 21:08:15.457 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5764 ms
+2019-11-23 21:08:15.574 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7582 ms
+2019-11-23 21:08:15.689 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.0906 ms
+2019-11-23 21:08:15.696 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6556 ms
+2019-11-23 21:08:15.712 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4558 ms
+2019-11-23 21:08:15.721 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0701 ms
+2019-11-23 21:08:18.884 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=44448f39-61fc-4071-b614-a3f1c7153dfd responded 200 in 35.3656 ms
+2019-11-23 21:08:21.411 +02:00 [INF] Status of email with id 44448f39-61fc-4071-b614-a3f1c7153dfd has been updated by 4b7e033b-a705-4afb-8c1d-f1cd669bc820 at 11/23/2019 9:08:21 PM. From status: NotReviewed to status: New.
+2019-11-23 21:08:21.445 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=44448f39-61fc-4071-b614-a3f1c7153dfd&status=New responded 200 in 78.1524 ms
+2019-11-23 21:08:21.525 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 65.477 ms
+2019-11-23 21:08:21.535 +02:00 [INF] HTTP GET /notification?id=ERCK6JBWqgFRSz_ORO-oHg responded 101 in 5854.2087 ms
+2019-11-23 21:08:21.572 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.4605 ms
+2019-11-23 21:08:21.573 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5425 ms
+2019-11-23 21:08:21.573 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.3296 ms
+2019-11-23 21:08:21.573 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.3251 ms
+2019-11-23 21:08:21.573 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3439 ms
+2019-11-23 21:08:21.574 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4167 ms
+2019-11-23 21:08:21.592 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.5238 ms
+2019-11-23 21:08:21.597 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.0043 ms
+2019-11-23 21:08:21.603 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1707 ms
+2019-11-23 21:08:21.607 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3726 ms
+2019-11-23 21:08:21.614 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8064 ms
+2019-11-23 21:08:21.626 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7368 ms
+2019-11-23 21:08:21.626 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9895 ms
+2019-11-23 21:08:21.654 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 20.8751 ms
+2019-11-23 21:08:21.671 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1245 ms
+2019-11-23 21:08:21.675 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9668 ms
+2019-11-23 21:08:21.775 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7179 ms
+2019-11-23 21:08:21.858 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4603 ms
+2019-11-23 21:08:21.867 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6089 ms
+2019-11-23 21:08:21.880 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3791 ms
+2019-11-23 21:08:21.886 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7862 ms
+2019-11-23 21:08:24.627 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=44448f39-61fc-4071-b614-a3f1c7153dfd responded 200 in 6.0101 ms
+2019-11-23 21:08:46.921 +02:00 [INF] HTTP POST /Application/CreateAsync responded 302 in 22.04 ms
+2019-11-23 21:08:46.928 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.3669 ms
+2019-11-23 21:08:46.939 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6395 ms
+2019-11-23 21:08:46.961 +02:00 [INF] Status of email with id 44448f39-61fc-4071-b614-a3f1c7153dfd has been updated by 4b7e033b-a705-4afb-8c1d-f1cd669bc820 at 11/23/2019 9:08:46 PM. From status: New to status: Open.
+2019-11-23 21:08:46.971 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=44448f39-61fc-4071-b614-a3f1c7153dfd&status=Open responded 200 in 13.9615 ms
+2019-11-23 21:08:47.041 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 49.0274 ms
+2019-11-23 21:08:47.071 +02:00 [INF] HTTP GET /notification?id=vqoGrC3mM80uHaC9KFY9Ng responded 101 in 25262.3933 ms
+2019-11-23 21:08:47.102 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 8.0268 ms
+2019-11-23 21:08:47.104 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 2.2819 ms
+2019-11-23 21:08:47.107 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.8873 ms
+2019-11-23 21:08:47.109 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.6911 ms
+2019-11-23 21:08:47.111 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6595 ms
+2019-11-23 21:08:47.113 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.5907 ms
+2019-11-23 21:08:47.118 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.6061 ms
+2019-11-23 21:08:47.126 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 2.9734 ms
+2019-11-23 21:08:47.131 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.3413 ms
+2019-11-23 21:08:47.137 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9395 ms
+2019-11-23 21:08:47.141 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2171 ms
+2019-11-23 21:08:47.148 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8197 ms
+2019-11-23 21:08:47.152 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2204 ms
+2019-11-23 21:08:47.157 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1635 ms
+2019-11-23 21:08:47.161 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8135 ms
+2019-11-23 21:08:47.170 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7502 ms
+2019-11-23 21:08:47.255 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6052 ms
+2019-11-23 21:08:47.311 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5046 ms
+2019-11-23 21:08:47.322 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.604 ms
+2019-11-23 21:08:47.332 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.7764 ms
+2019-11-23 21:08:47.339 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5821 ms
+2019-11-23 21:08:50.999 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=44448f39-61fc-4071-b614-a3f1c7153dfd responded 200 in 6.9223 ms
+2019-11-23 21:08:59.612 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=44448f39-61fc-4071-b614-a3f1c7153dfd responded 200 in 4.1118 ms
+2019-11-23 21:09:04.721 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 5.6294 ms
+2019-11-23 21:09:04.735 +02:00 [INF] HTTP GET /notification?id=bpfYlzDMqkvZWsRdPfWiAw responded 101 in 17457.8321 ms
+2019-11-23 21:09:04.756 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.7075 ms
+2019-11-23 21:09:04.768 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 3.2964 ms
+2019-11-23 21:09:04.784 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.6811 ms
+2019-11-23 21:09:04.785 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3904 ms
+2019-11-23 21:09:04.785 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4642 ms
+2019-11-23 21:09:04.786 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.4069 ms
+2019-11-23 21:09:04.787 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 0.4125 ms
+2019-11-23 21:09:04.802 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 1.0034 ms
+2019-11-23 21:09:04.805 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7412 ms
+2019-11-23 21:09:04.815 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2868 ms
+2019-11-23 21:09:04.819 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3692 ms
+2019-11-23 21:09:04.822 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9492 ms
+2019-11-23 21:09:04.831 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.243 ms
+2019-11-23 21:09:04.835 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5411 ms
+2019-11-23 21:09:04.840 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3195 ms
+2019-11-23 21:09:04.845 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4662 ms
+2019-11-23 21:09:05.085 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 2.2459 ms
+2019-11-23 21:09:05.098 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6068 ms
+2019-11-23 21:09:05.109 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 2.2628 ms
+2019-11-23 21:09:05.117 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7044 ms
+2019-11-23 21:09:07.095 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 38.923 ms
+2019-11-23 21:09:07.122 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.5445 ms
+2019-11-23 21:09:07.122 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4402 ms
+2019-11-23 21:09:07.123 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3639 ms
+2019-11-23 21:09:07.123 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.2909 ms
+2019-11-23 21:09:07.123 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3165 ms
+2019-11-23 21:09:07.129 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 1.6733 ms
+2019-11-23 21:09:07.139 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.6122 ms
+2019-11-23 21:09:07.147 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.4734 ms
+2019-11-23 21:09:07.155 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2672 ms
+2019-11-23 21:09:07.167 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9585 ms
+2019-11-23 21:09:07.174 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9243 ms
+2019-11-23 21:09:07.184 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.2156 ms
+2019-11-23 21:09:07.186 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9745 ms
+2019-11-23 21:09:07.194 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.325 ms
+2019-11-23 21:09:07.199 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9489 ms
+2019-11-23 21:09:07.203 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3322 ms
+2019-11-23 21:09:07.279 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5726 ms
+2019-11-23 21:09:07.339 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3621 ms
+2019-11-23 21:09:07.350 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9223 ms
+2019-11-23 21:09:07.359 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.6473 ms
+2019-11-23 21:09:07.367 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6661 ms
+2019-11-23 21:09:09.336 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 194.8224 ms
+2019-11-23 21:09:09.351 +02:00 [INF] HTTP GET /notification?id=eccFS-KrMaQtPmSTcKoPxQ responded 101 in 2049.5035 ms
+2019-11-23 21:09:09.398 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5302 ms
+2019-11-23 21:09:09.399 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.9486 ms
+2019-11-23 21:09:09.401 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4758 ms
+2019-11-23 21:09:09.402 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.5383 ms
+2019-11-23 21:09:09.402 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4076 ms
+2019-11-23 21:09:09.403 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4184 ms
+2019-11-23 21:09:09.424 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 1.4569 ms
+2019-11-23 21:09:09.429 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5788 ms
+2019-11-23 21:09:09.438 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8416 ms
+2019-11-23 21:09:09.448 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7581 ms
+2019-11-23 21:09:09.452 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2719 ms
+2019-11-23 21:09:09.455 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9884 ms
+2019-11-23 21:09:09.461 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.8394 ms
+2019-11-23 21:09:09.465 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8409 ms
+2019-11-23 21:09:09.470 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4127 ms
+2019-11-23 21:09:09.477 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.3345 ms
+2019-11-23 21:09:09.588 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6921 ms
+2019-11-23 21:09:09.695 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.6493 ms
+2019-11-23 21:09:09.731 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.4219 ms
+2019-11-23 21:09:09.739 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.6767 ms
+2019-11-23 21:09:09.751 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7103 ms
+2019-11-23 21:09:13.068 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 45.1663 ms
+2019-11-23 21:09:13.078 +02:00 [INF] HTTP GET /notification?id=uzdmN6V-31DdLk8XVKvcOg responded 101 in 3468.7943 ms
+2019-11-23 21:09:13.103 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.5524 ms
+2019-11-23 21:09:13.115 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7285 ms
+2019-11-23 21:09:13.117 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.6518 ms
+2019-11-23 21:09:13.118 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.5863 ms
+2019-11-23 21:09:13.120 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6061 ms
+2019-11-23 21:09:13.121 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.5222 ms
+2019-11-23 21:09:13.123 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 1.6172 ms
+2019-11-23 21:09:13.128 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.441 ms
+2019-11-23 21:09:13.130 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7839 ms
+2019-11-23 21:09:13.135 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0018 ms
+2019-11-23 21:09:13.145 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7434 ms
+2019-11-23 21:09:13.148 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0763 ms
+2019-11-23 21:09:13.153 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3392 ms
+2019-11-23 21:09:13.159 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8008 ms
+2019-11-23 21:09:13.164 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8657 ms
+2019-11-23 21:09:13.170 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6026 ms
+2019-11-23 21:09:13.241 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7888 ms
+2019-11-23 21:09:13.285 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4092 ms
+2019-11-23 21:09:13.295 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8012 ms
+2019-11-23 21:09:13.303 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3448 ms
+2019-11-23 21:09:13.315 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9573 ms
+2019-11-23 21:09:14.443 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 34.7179 ms
+2019-11-23 21:09:14.461 +02:00 [INF] HTTP GET /notification?id=5HEaca-t3Bu3nZm-24Aomg responded 101 in 1202.0503 ms
+2019-11-23 21:09:14.492 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.8906 ms
+2019-11-23 21:09:14.496 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5338 ms
+2019-11-23 21:09:14.496 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.2959 ms
+2019-11-23 21:09:14.496 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.2948 ms
+2019-11-23 21:09:14.497 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5961 ms
+2019-11-23 21:09:14.498 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.6627 ms
+2019-11-23 21:09:14.513 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 1.0616 ms
+2019-11-23 21:09:14.515 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.0477 ms
+2019-11-23 21:09:14.519 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6026 ms
+2019-11-23 21:09:14.527 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6673 ms
+2019-11-23 21:09:14.532 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.883 ms
+2019-11-23 21:09:14.536 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7622 ms
+2019-11-23 21:09:14.541 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2423 ms
+2019-11-23 21:09:14.551 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6332 ms
+2019-11-23 21:09:14.551 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0053 ms
+2019-11-23 21:09:14.559 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7493 ms
+2019-11-23 21:09:14.645 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5999 ms
+2019-11-23 21:09:14.724 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.6004 ms
+2019-11-23 21:09:14.748 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9888 ms
+2019-11-23 21:09:14.758 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3892 ms
+2019-11-23 21:09:14.765 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5642 ms
+2019-11-23 21:09:18.310 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 14.3524 ms
+2019-11-23 21:09:18.319 +02:00 [INF] HTTP GET /notification?id=livRylAgjjZLBue9Fm6--w responded 101 in 3604.2557 ms
+2019-11-23 21:09:18.336 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.8625 ms
+2019-11-23 21:09:18.346 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.8539 ms
+2019-11-23 21:09:18.348 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.7345 ms
+2019-11-23 21:09:18.352 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.6216 ms
+2019-11-23 21:09:18.353 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.687 ms
+2019-11-23 21:09:18.355 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 3.3015 ms
+2019-11-23 21:09:18.362 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 1.969 ms
+2019-11-23 21:09:18.367 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.8436 ms
+2019-11-23 21:09:18.372 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1052 ms
+2019-11-23 21:09:18.381 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6647 ms
+2019-11-23 21:09:18.384 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8255 ms
+2019-11-23 21:09:18.392 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.113 ms
+2019-11-23 21:09:18.397 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8023 ms
+2019-11-23 21:09:18.404 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9313 ms
+2019-11-23 21:09:18.415 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1074 ms
+2019-11-23 21:09:18.416 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8835 ms
+2019-11-23 21:09:18.525 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7198 ms
+2019-11-23 21:09:18.590 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.2435 ms
+2019-11-23 21:09:18.610 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.162 ms
+2019-11-23 21:09:18.626 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5752 ms
+2019-11-23 21:09:18.635 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9185 ms
+2019-11-23 21:09:25.115 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 16.2933 ms
+2019-11-23 21:09:25.129 +02:00 [INF] HTTP GET /notification?id=-nHzqjeLpp0pdlF6ikKveQ responded 101 in 6577.5192 ms
+2019-11-23 21:09:25.155 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 4.3821 ms
+2019-11-23 21:09:25.159 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 3.0148 ms
+2019-11-23 21:09:25.166 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4825 ms
+2019-11-23 21:09:25.170 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 1.9448 ms
+2019-11-23 21:09:25.170 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 2.148 ms
+2019-11-23 21:09:25.172 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 4.324 ms
+2019-11-23 21:09:25.175 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.6881 ms
+2019-11-23 21:09:25.181 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6223 ms
+2019-11-23 21:09:25.184 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0244 ms
+2019-11-23 21:09:25.190 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2234 ms
+2019-11-23 21:09:25.196 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9325 ms
+2019-11-23 21:09:25.200 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0454 ms
+2019-11-23 21:09:25.209 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.0286 ms
+2019-11-23 21:09:25.212 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6366 ms
+2019-11-23 21:09:25.217 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5747 ms
+2019-11-23 21:09:25.225 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1442 ms
+2019-11-23 21:09:25.303 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5649 ms
+2019-11-23 21:09:25.349 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3946 ms
+2019-11-23 21:09:25.361 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6123 ms
+2019-11-23 21:09:25.368 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5278 ms
+2019-11-23 21:09:25.378 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6185 ms
+2019-11-23 21:09:26.585 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 13.3579 ms
+2019-11-23 21:09:26.594 +02:00 [INF] HTTP GET /notification?id=nFVjCaDypzhNRiy-6zrYmw responded 101 in 1278.419 ms
+2019-11-23 21:09:26.617 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.8785 ms
+2019-11-23 21:09:26.628 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.9392 ms
+2019-11-23 21:09:26.629 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5047 ms
+2019-11-23 21:09:26.632 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6102 ms
+2019-11-23 21:09:26.632 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.9554 ms
+2019-11-23 21:09:26.633 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4488 ms
+2019-11-23 21:09:26.633 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.38 ms
+2019-11-23 21:09:26.641 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.546 ms
+2019-11-23 21:09:26.649 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9727 ms
+2019-11-23 21:09:26.656 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.787 ms
+2019-11-23 21:09:26.661 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8929 ms
+2019-11-23 21:09:26.665 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1349 ms
+2019-11-23 21:09:26.675 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.668 ms
+2019-11-23 21:09:26.679 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7326 ms
+2019-11-23 21:09:26.687 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2204 ms
+2019-11-23 21:09:26.691 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4138 ms
+2019-11-23 21:09:26.745 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5691 ms
+2019-11-23 21:09:26.796 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4667 ms
+2019-11-23 21:09:26.807 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8751 ms
+2019-11-23 21:09:26.822 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.544 ms
+2019-11-23 21:09:26.828 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.743 ms
+2019-11-23 21:09:28.720 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 27.5096 ms
+2019-11-23 21:09:28.729 +02:00 [INF] HTTP GET /notification?id=r8joZAzhK2glkdg4uWtvyA responded 101 in 1956.8512 ms
+2019-11-23 21:09:28.757 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.9323 ms
+2019-11-23 21:09:28.762 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3797 ms
+2019-11-23 21:09:28.762 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.772 ms
+2019-11-23 21:09:28.763 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3866 ms
+2019-11-23 21:09:28.763 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.6648 ms
+2019-11-23 21:09:28.764 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.7435 ms
+2019-11-23 21:09:28.774 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.5517 ms
+2019-11-23 21:09:28.790 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5622 ms
+2019-11-23 21:09:28.798 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7908 ms
+2019-11-23 21:09:28.804 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.307 ms
+2019-11-23 21:09:28.813 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8639 ms
+2019-11-23 21:09:28.819 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5733 ms
+2019-11-23 21:09:28.819 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7076 ms
+2019-11-23 21:09:28.832 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2789 ms
+2019-11-23 21:09:28.837 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7551 ms
+2019-11-23 21:09:28.855 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.907 ms
+2019-11-23 21:09:28.971 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.3082 ms
+2019-11-23 21:09:29.060 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.6207 ms
+2019-11-23 21:09:29.087 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6272 ms
+2019-11-23 21:09:29.099 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3897 ms
+2019-11-23 21:09:29.107 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9841 ms
+2019-11-23 21:09:40.370 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=96da08a9-137a-4725-b7a6-aac2224220e7 responded 200 in 9.9325 ms
+2019-11-23 21:09:52.232 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 302 in 22.3702 ms
+2019-11-23 21:09:52.248 +02:00 [INF] HTTP GET /?ReturnUrl=%2FEmail%2FListEmailsAsync%3FemailStatus%3DNotReviewed responded 200 in 5.9619 ms
+2019-11-23 21:09:57.341 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 22.5279 ms
+2019-11-23 21:10:06.553 +02:00 [INF] Status of email with id 96da08a9-137a-4725-b7a6-aac2224220e7 has been updated by 4b7e033b-a705-4afb-8c1d-f1cd669bc820 at 11/23/2019 9:10:06 PM. From status: NotReviewed to status: New.
+2019-11-23 21:10:06.568 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=96da08a9-137a-4725-b7a6-aac2224220e7&status=New responded 200 in 29.2978 ms
+2019-11-23 21:10:06.625 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 38.4375 ms
+2019-11-23 21:10:06.634 +02:00 [INF] HTTP GET /notification?id=ldv0pkv5aiCLL4zNqGvPWA responded 101 in 37643.2536 ms
+2019-11-23 21:10:06.660 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 5.7818 ms
+2019-11-23 21:10:06.669 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.9367 ms
+2019-11-23 21:10:06.677 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 5.338 ms
+2019-11-23 21:10:06.678 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5941 ms
+2019-11-23 21:10:06.681 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.8689 ms
+2019-11-23 21:10:06.683 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 2.4757 ms
+2019-11-23 21:10:06.683 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 1.5531 ms
+2019-11-23 21:10:06.688 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.4344 ms
+2019-11-23 21:10:06.694 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.092 ms
+2019-11-23 21:10:06.700 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7171 ms
+2019-11-23 21:10:06.704 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3717 ms
+2019-11-23 21:10:06.710 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0243 ms
+2019-11-23 21:10:06.713 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1335 ms
+2019-11-23 21:10:06.727 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.5789 ms
+2019-11-23 21:10:06.732 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0651 ms
+2019-11-23 21:10:06.735 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9448 ms
+2019-11-23 21:10:06.809 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.9097 ms
+2019-11-23 21:10:06.868 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3854 ms
+2019-11-23 21:10:06.879 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.63 ms
+2019-11-23 21:10:06.886 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4088 ms
+2019-11-23 21:10:06.898 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8543 ms
+2019-11-23 21:10:09.450 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.7258 ms
+2019-11-23 21:10:09.463 +02:00 [INF] HTTP GET /notification?id=DuWICHzmPxyChCgQ8Ak77g responded 101 in 2631.4533 ms
+2019-11-23 21:10:09.498 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 10.8371 ms
+2019-11-23 21:10:09.500 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5524 ms
+2019-11-23 21:10:09.500 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3389 ms
+2019-11-23 21:10:09.500 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.4982 ms
+2019-11-23 21:10:09.501 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.4359 ms
+2019-11-23 21:10:09.501 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4997 ms
+2019-11-23 21:10:09.513 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 4.1198 ms
+2019-11-23 21:10:09.515 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 0.9637 ms
+2019-11-23 21:10:09.522 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.751 ms
+2019-11-23 21:10:09.528 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8788 ms
+2019-11-23 21:10:09.537 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0208 ms
+2019-11-23 21:10:09.547 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0155 ms
+2019-11-23 21:10:09.553 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9047 ms
+2019-11-23 21:10:09.559 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5282 ms
+2019-11-23 21:10:09.565 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7647 ms
+2019-11-23 21:10:09.568 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7911 ms
+2019-11-23 21:10:09.774 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 2.0615 ms
+2019-11-23 21:10:09.785 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6583 ms
+2019-11-23 21:10:09.804 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.5359 ms
+2019-11-23 21:10:09.814 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6297 ms
+2019-11-23 21:10:17.377 +02:00 [INF] HTTP GET / responded 302 in 1.7871 ms
+2019-11-23 21:10:17.414 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 26.099 ms
+2019-11-23 21:10:17.465 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7022 ms
+2019-11-23 21:10:17.466 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.4804 ms
+2019-11-23 21:10:17.469 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.9033 ms
+2019-11-23 21:10:17.470 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.0876 ms
+2019-11-23 21:10:17.478 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.596 ms
+2019-11-23 21:10:17.481 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6641 ms
+2019-11-23 21:10:17.488 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 2.5872 ms
+2019-11-23 21:10:17.496 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.8496 ms
+2019-11-23 21:10:17.500 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9554 ms
+2019-11-23 21:10:17.510 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6111 ms
+2019-11-23 21:10:17.517 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7445 ms
+2019-11-23 21:10:17.517 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1106 ms
+2019-11-23 21:10:17.528 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7193 ms
+2019-11-23 21:10:17.535 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0351 ms
+2019-11-23 21:10:17.540 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0691 ms
+2019-11-23 21:10:17.553 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2833 ms
+2019-11-23 21:10:17.728 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.1779 ms
+2019-11-23 21:10:17.752 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6863 ms
+2019-11-23 21:10:17.776 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9314 ms
+2019-11-23 21:10:17.785 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4734 ms
+2019-11-23 21:10:17.794 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8809 ms
+2019-11-23 21:11:05.453 +02:00 [INF] HTTP GET /notification?id=7r3fThlvnFbnbfCzhp3eyw responded 101 in 47709.0527 ms

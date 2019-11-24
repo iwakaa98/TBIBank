@@ -52,20 +52,6 @@ namespace TBIApp.Services.Services
             return emailDTO;
         }
 
-        public async Task<ICollection<EmailDTO>> GetAllAsync(int page)
-        {
-            var emails = await this.dbcontext.Emails
-                .Skip((page - 1) * 15)
-                .Take(150)
-                .Include(a => a.Attachments)
-                .ToListAsync();
-
-            if (emails == null) throw new ArgumentNullException("No emails found!");
-
-            return this.emailDTOMapper.MapFrom(emails);
-
-
-        }
 
         public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail, User user)
         {
@@ -189,5 +175,17 @@ namespace TBIApp.Services.Services
             return await this.dbcontext.Emails.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        public async Task<ICollection<EmailDTO>> GetAllAsync(int page)
+        {
+            var emails = await this.dbcontext.Emails
+                .Skip((page - 1) * 15)
+                .Take(150)
+                .Include(a => a.Attachments)
+                .ToListAsync();
+
+            if (emails == null) throw new ArgumentNullException("No emails found!");
+
+            return this.emailDTOMapper.MapFrom(emails);
+        }
     }
 }
