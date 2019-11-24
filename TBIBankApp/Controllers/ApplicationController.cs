@@ -14,7 +14,6 @@ using TBIBankApp.Models.LoanApplication;
 
 namespace TBIBankApp.Controllers
 {
-    [AutoValidateAntiforgeryToken]
     public class ApplicationController : Controller
     {
         private readonly UserManager<User> userManager;
@@ -42,9 +41,9 @@ namespace TBIBankApp.Controllers
         {
             return View();
         }
-        [HttpPost]
-        [AutoValidateAntiforgeryToken]
-        public async Task<string> CreateAsync([FromBody] LoanApplicationViewModel vm)
+        [HttpPost] 
+        //[ValidateAntiForgeryToken]
+        public async Task<string> CreateAsync(LoanApplicationViewModel vm)
         {
             if (!ModelState.IsValid) throw new ArgumentException("Invalid application VM!");
             //logger logsmth
@@ -74,8 +73,7 @@ namespace TBIBankApp.Controllers
             //Redirect to smth
             return "true";
         }
-        [Authorize]
-        [AutoValidateAntiforgeryToken]
+        [HttpGet]
         public async Task ChangeStatusAsync(string id, string appStatus)
         {
             try

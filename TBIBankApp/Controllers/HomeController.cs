@@ -82,7 +82,7 @@ namespace TBIBankApp.Controllers
 
                 if (user.IsChangedPassword && passValidation)
                 {
-                    if(logedInUsersCount>=1)
+                    if(logedInUsersCount>=30)
                     {
                         return new JsonResult("maxlogedusers");
                     }

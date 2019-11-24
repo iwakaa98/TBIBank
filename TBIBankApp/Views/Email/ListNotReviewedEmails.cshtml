@@ -30,22 +30,7 @@
                     <td>@item.Status</td>
                     <td>
 
-                        @*@if (item.IsOpne)
-                        {
-                            <script>
-                                (function () {
-                                    let id = document.getElementsByClassName('testing').getAttribute('data-value');
-                                    console.log(id);
-                                    let tr = document.getElementById(id + '+classID');
-                                    console.log(tr);
-                                    let butTestDisable = document.getElementById(id);
-                                    $(tr).css('background-color', '#999593');
-                                    butTestDisable.setAttribute("disabled", true);
-                                    $(butTestDisable).css('background-color', '#FF0000');
-                                    $(butTestDisable).text('Denied');
-                                })();
-                            </script>
-                        }*@
+                        
 
                         <button type="button"  disabled class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
                             Denied
@@ -99,22 +84,7 @@
                 <td>@item.Status</td>
                 <td>
 
-                    @*@if (item.IsOpne)
-                    {
-                        <script>
-                            (function () {
-                                let id = document.getElementsByClassName('testing').getAttribute('data-value');
-                                console.log(id);
-                                let tr = document.getElementById(id + '+classID');
-                                console.log(tr);
-                                let butTestDisable = document.getElementById(id);
-                                $(tr).css('background-color', '#999593');
-                                butTestDisable.setAttribute("disabled", true);
-                                $(butTestDisable).css('background-color', '#FF0000');
-                                $(butTestDisable).text('Denied');
-                            })();
-                        </script>
-                    }*@
+                    
 
                     <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
                         Preview
@@ -173,27 +143,9 @@
 </table>
 @section Scripts
 {
+    <script src="~/js/signalr-test.js"></script>
     <script type="text/javascript" src="~/js/customTable.js"></script>
     <script type="text/javascript" src="~/js/modalButtons.js"></script>
-    <script src="~/js/signalr-test.js"></script>
 
-    @*<script>
-            function LockButton(id) {
-                console.log(id);
-                let tr = document.getElementById(id + '+classID');
-                let butTestDisable = document.getElementById(id);
-                $(tr).css('background-color', '#999593');
-                butTestDisable.setAttribute("disabled", true);
-                $(butTestDisable).css('background-color', '#FF0000');
-                $(butTestDisable).text('Denied');
-            }
-        </script>
-
-        <script type="text/javascript">
-
-            $(document).ready(function () {
-                console.log(1);
-            });
-
-        </script>*@
+   
 }

@@ -19,12 +19,7 @@ function ChekForDisable(id) {
         {
             type: "GET",
             url: "IsItOpenAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            
             data:
             {
                 'id': id,
@@ -45,9 +40,7 @@ function ChekForDisable(id) {
         })
 }
 function starttimer(duration, id) {
-    console.log(duration);
     let idName = id + '+timerId';
-    console.log(idName);
     let timer = duration, minutes, seconds;
     if (duration != 0) {
 
@@ -84,12 +77,7 @@ function SetButtonToEnable(id) {
         {
             type: "Get",
             url: "SetToEnableAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            
             data:
             {
                 'id': id,
@@ -119,12 +107,7 @@ function SetInvalid(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            
             data: data,
             success: function () {
                 //window.location.replace("/Email/ListEmailsAsync?emailStatus=InvalidApplication");
@@ -135,7 +118,6 @@ function SetInvalid(value) {
 
 function SetNew(value) {
     clearTimeout(timercheto);
-    console.log(value)
     let but = document.getElementById(value + '+classID');
     but.remove();
     data = {
@@ -146,12 +128,7 @@ function SetNew(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            
             data: data,
             success: function () {
                 window.location.replace("/Email/ListEmailsAsync?emailStatus=New")
@@ -172,12 +149,7 @@ function SetClosed(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            
             data: data,
             success: function () {
                 window.location.replace("/Email/ListEmailsAsync?emailStatus=Closed");
@@ -196,12 +168,7 @@ function SetNotReviewed(value) {
         {
             type: "Get",
             url: "ChangeStatusAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            
             data: data,
             success: function () {
                 window.location.replace("/Email/ListEmailsAsync?emailStatus=NotReviewed");
@@ -296,27 +263,26 @@ function SetOpen(value) {
         $.ajax(
             {
                 type: "Post",
-                url: "Application/CreateAsync",
-                headers: {
-                    RequestVerificationToken:
-                        $('input:hidden[name="__RequestVerificationToken"]').val(),
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
+                url: "/Application/CreateAsync",
+                //headers: {
+                //    RequestVerificationToken:
+                //        $('input:hidden[name="__RequestVerificationToken"]').val()
+                //    //'Accept': 'application/json',
+                //    //'Content-Type': 'application/json'
+                //},
                 data: data,
                 dataType: 'text',
-                
                 success: function (response) {
                     console.log(response);
-                    if (response === `"false egn"`) {
+                    if (response === `false egn`) {
                         console.log($(checkegn));
                         $(checkegn).text('This EGN is invalid!');
                     }
-                    else if (response === `"false phonenumber"`) {
-                        $(checkphone).text('This phonenumber is invalid!');
-                    }
-                    else if (response === `"false cardId"`) {
+                    else if (response === `false cardId`) {
                         $(checkcard).text('This cardId is invalid!');
+                    }
+                    else if (response === `false phonenumber`) {
+                        $(checkphone).text('This phonenumber is invalid!');
                     }
                     else {
                         but.remove();
@@ -353,10 +319,6 @@ function SetAccept(value) {
     $.ajax({
         type: 'Get',
         url: '/Application/ChangeStatusAsync',
-        headers: {
-            RequestVerificationToken:
-                $('input:hidden[name="__RequestVerificationToken"]').val(),
-        },
         data: data,
         success: function () {
             window.location.replace("/Email/ListEmailsAsync?emailStatus=Closed");
@@ -373,10 +335,7 @@ function SetReject(value) {
     $.ajax({
         type: 'Get',
         url: '/Application/ChangeStatusAsync',
-        headers: {
-            RequestVerificationToken:
-                $('input:hidden[name="__RequestVerificationToken"]').val(),
-        },
+        
         data: data,
         success: function () {
             window.location.replace("/Email/ListEmailsAsync?emailStatus=Closed");

@@ -21,13 +21,13 @@ namespace TBIBankApp.Controllers
         private readonly IEmailViewModelMapper emailMapper;
         private readonly UserManager<User> userManager;
         private readonly ILogger<EmailController> logger;
-        private readonly IHubContext<Hub> hubContext;
+        private readonly IHubContext<NotificationHub> hubContext;
         private readonly IApplicationService applicationService;
 
         public EmailController(IEmailService emailService, 
                                IEmailViewModelMapper emailMapper, 
                                UserManager<User> userManager, 
-                               IHubContext<Hub> hubContext, 
+                               IHubContext<NotificationHub> hubContext, 
                                IApplicationService applicationService,
                                ILogger<EmailController> logger)
         {
@@ -64,7 +64,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ChangeStatusAsync(string id, string status)
         {
 
@@ -121,7 +120,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IsItOpenAsync(string id)
         {
             if (await emailService.IsOpenAsync(id))
@@ -137,7 +135,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [AutoValidateAntiforgeryToken]
         public async Task SetToEnableAsync(string id)
         {
             await this.emailService.UnLockButtonAsync(id);

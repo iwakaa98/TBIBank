@@ -89,16 +89,13 @@ function register(e) {
 
     $.ajax(
         {
-            type: "POST",
+            type: "Post",
             url: "/Manager/CheckForUserAndEmailAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            //headers: {
+            //    RequestVerificationToken:
+            //        $('input:hidden[name="__RequestVerificationToken"]').val(),
+            //},
             data: data,
-            dataType: 'json',
             success: function (returndata) {
                 console.log(returndata);
                 if (returndata === "true email") {
@@ -120,12 +117,12 @@ function register(e) {
                     $.ajax({
                         type: "POST",
                         url: "/Manager/RegisterUserAsync",
-                        headers: {
-                            RequestVerificationToken:
-                                $('input:hidden[name="__RequestVerificationToken"]').val(),
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json'
-                        },
+                        //headers: {
+                        //    RequestVerificationToken:
+                        //        $('input:hidden[name="__RequestVerificationToken"]').val(),
+                        //    'Accept': 'application/json',
+                        //    'Content-Type': 'application/json'
+                        //},
                         data: data,
                         success: function (response) {
                             //window.location.replace("/Manager/Register")
