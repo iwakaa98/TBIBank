@@ -1243,3 +1243,4 @@
 2019-11-23 20:55:36.083 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3313 ms
 2019-11-23 20:55:36.110 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7611 ms
 2019-11-23 20:55:37.335 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=2731bbaf-68ab-421c-a9f5-e90cae872ffc responded 200 in 5.1202 ms
+2019-11-23 21:01:36.513 +02:00 [INF] HTTP GET /notification?id=ojf_5NNod2ryAVBAGk4CPA responded 101 in 360531.3182 ms
