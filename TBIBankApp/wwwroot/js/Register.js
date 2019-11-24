@@ -94,6 +94,8 @@ function register(e) {
             headers: {
                 RequestVerificationToken:
                     $('input:hidden[name="__RequestVerificationToken"]').val(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             },
             data: data,
             dataType: 'json',
@@ -121,6 +123,8 @@ function register(e) {
                         headers: {
                             RequestVerificationToken:
                                 $('input:hidden[name="__RequestVerificationToken"]').val(),
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
                         },
                         data: data,
                         success: function (response) {

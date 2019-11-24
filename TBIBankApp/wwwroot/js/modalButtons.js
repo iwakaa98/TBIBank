@@ -224,38 +224,34 @@ function SetOpen(value) {
     let checkEgn = value + '+checkEgn';
     let checkCardId = value + '+checkCardId';
     let checkPhoneNumber = value + '+checkPhoneId';
-    
+
     let firstname = document.getElementById(firstName).value;
     let lastname = document.getElementById(lastName).value;
     let egn = document.getElementById(Egn).value;
     let cardid = document.getElementById(cardId).value;
     let phonenumber = document.getElementById(phoneNumber).value;
+
+
     let but = document.getElementById(button);
+    let checkfirstname = document.getElementById(checkFirstName);
+    let checklastname = document.getElementById(checkLastName);
     let checkegn = document.getElementById(checkEgn);
     let checkphone = document.getElementById(checkPhoneNumber);
     let checkcard = document.getElementById(checkCardId);
 
-
     if (!firstname) {
         isEverythingFine = false;
-        $(`#${checkFirstName}`).text('Please enter first name');
+        $(checkfirstname).text('Please enter first name');
     }
     else {
-        $(`#${checkFirstName}`).text('');
+        $(checkfirstname).text('');
     }
     if (!lastname) {
         isEverythingFine = false;
-        $(`#${checkLastName}`).text('Please enter last name');
+        $(checklastname).text('Please enter last name');
     }
     else {
-        $(`#${checkLastName}`).text('');
-    }
-    if (!firstname) {
-        isEverythingFine = false;
-        $(`#${checkPhoneNumber}`).text('Please enter phone number');
-    }
-    else {
-        $(`#${checkPhoneNumber}`).text('');
+        $(checklastname).text('');
     }
     if (!firstname) {
         isEverythingFine = false;
@@ -264,75 +260,88 @@ function SetOpen(value) {
     else {
         $(`#${checkCardId}`).text('');
     }
+    if (!egn) {
+        isEverythingFine = false;
+        $(checkegn).text('Please enter egn');
+    }
+    else {
+        $(checkegn).text('');
+    }
+    if (!cardid) {
+        isEverythingFine = false;
+        $(checkcard).text('Please enter cardId!');
+    }
+    else {
+        $(checkcard).text('');
+    }
     if (!phonenumber) {
+        isEverythingFine = false;
         $(checkphone).text('Please enter phone number');
     }
     else {
         $(checkphone).text('');
     }
-    if (!cardid) {
-        $(checkcard).text('This cardId is invalid!');
+    console.log(isEverythingFine);
+    if (isEverythingFine) {
+
+        data = {
+            'EmailId': value,
+            'FirstName': firstname,
+            'LastName': lastname,
+            'EGN': egn,
+            'CardId': cardid,
+            'PhoneNumber': phonenumber
+        }
+
+        $.ajax(
+            {
+                type: "Post",
+                url: "Application/CreateAsync",
+                headers: {
+                    RequestVerificationToken:
+                        $('input:hidden[name="__RequestVerificationToken"]').val(),
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                data: data,
+                dataType: 'text',
+                
+                success: function (response) {
+                    console.log(response);
+                    if (response === `"false egn"`) {
+                        console.log($(checkegn));
+                        $(checkegn).text('This EGN is invalid!');
+                    }
+                    else if (response === `"false phonenumber"`) {
+                        $(checkphone).text('This phonenumber is invalid!');
+                    }
+                    else if (response === `"false cardId"`) {
+                        $(checkcard).text('This cardId is invalid!');
+                    }
+                    else {
+                        but.remove();
+                        $.ajax(
+                            {
+                                type: "Get",
+                                url: 'ChangeStatusAsync',
+                                data: {
+                                    'id': value,
+                                    'status': 'Open'
+                                },
+                                success: function () {
+                                    console.log(221323);
+                                    $(`.${value}`).modal('hide');
+                                    $('.modal-backdrop').hide();
+                                    //window.location.replace("/Email/ListEmailsAsync?emailStatus=Open");
+                                },
+                                error: function () {
+                                    $(`.${value}`).modal('hide');
+                                }
+                            })
+                    }
+                }
+            })
     }
-    else {
-        $(checkcard).text('');
-    }
-    data = {
-        'EmailId': value,
-        'FirstName': firstname,
-        'LastName': lastname,
-        'EGN': egn,
-        'CardId': cardid,
-        'PhoneNumber': phonenumber
-    }
-    $.ajax(
-        {
-            type: "Post",
-            url: "/Application/CreateAsync",
-            headers: {
-                RequestVerificationToken:
-                    $('input:hidden[name="__RequestVerificationToken"]').val(),
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            data: JSON.stringify(data),
-            dataType: 'text',
-            success: function (response) {
-                console.log(response);
-                if (response === `"false egn"`) {
-                    console.log($(checkegn));
-                    $(checkegn).text('This EGN is invalid!');
-                }
-                else if (response === `"false phonenumber"`)
-                {
-                    $(checkphone).text('This phonenumber is invalid!');
-                }
-                else if (response === `"false cardId"`)
-                {
-                    $(checkcard).text('This cardId is invalid!');
-                }
-                else {
-                    but.remove();
-                    $.ajax(
-                        {
-                            type: "Get",
-                            url: 'ChangeStatusAsync',
-                            data: {
-                                'id': value,
-                                'status': 'Open'
-                            },
-                            success: function () {
-                                console.log(221323);
-                                $(`.${value}`).modal('hide');
-                                $('.modal-backdrop').hide();
-                                window.location.replace("/Email/ListEmailsAsync?emailStatus=Open");
-                            },
-                            error: function () {
-                                $(`.${value}`).modal('hide');
-                            }
-                        })
-                }
-            }
-        })
 }
 
 function SetAccept(value) {
@@ -342,7 +351,7 @@ function SetAccept(value) {
         appStatus: 'Accepted'
     };
     $.ajax({
-        type: 'POST',
+        type: 'Get',
         url: '/Application/ChangeStatusAsync',
         headers: {
             RequestVerificationToken:
@@ -362,7 +371,7 @@ function SetReject(value) {
         appStatus: 'Rejected'
     };
     $.ajax({
-        type: 'POST',
+        type: 'Get',
         url: '/Application/ChangeStatusAsync',
         headers: {
             RequestVerificationToken:
