@@ -61,21 +61,15 @@ namespace TBIBankApp.Controllers
         [Authorize]
         public async Task<IActionResult> Privacy()
         {
-            try
-            {
+         
                 var modelDTO = await statisticsService.GetStatisticsAsync();
 
                 var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
 
                 return View(vm);
 
-            }
-            catch (Exception ex)
-            {
-                this.logger.LogError("Unable to get statistics");
-            }
-
-            return BadRequest();
+           
+          
         }
 
         [HttpPost]
