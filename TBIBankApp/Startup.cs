@@ -31,7 +31,6 @@ namespace TBIBankApp
 {
     public class Startup
     {
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -81,12 +80,14 @@ namespace TBIBankApp
             services.AddScoped<IAttachmentViewModelMapper, AttachmentViewModelMapper>();
             services.AddScoped<IApplicationViewModelMapper, ApplicationViewModelMapper>();
             services.AddScoped<IReportDiagramViewModelMapper, ReportDiagramViewModelMapper>();
+            services.AddScoped<IUserViewModelMapper, UserViewModelMapper>();
 
             //ServiceMapper
             services.AddScoped<IReportDiagramDTOMapper, ReportDiagramDTOMapper>();
             services.AddScoped<IAttachmentDTOMapper, AttachmentDTOMapper>();
             services.AddScoped<IEmailDTOMapper, EmailDTOMapper>();
             services.AddScoped<ILoanApplicationDTOMapper, LoanApplicationDTOMapper>();
+            services.AddScoped<IUserDTOMapper, UserDTOMapper>();
 
             //MailClient 
             services.AddScoped<IGmailParseManager, GmailParseManager>();

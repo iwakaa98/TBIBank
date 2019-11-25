@@ -10,6 +10,13 @@ namespace TBIApp.Services.Mappers
 {
     public class ReportDiagramDTOMapper : IReportDiagramDTOMapper
     {
+        private readonly IUserDTOMapper userDTOMapper;
+
+        public ReportDiagramDTOMapper(IUserDTOMapper userDTOMapper)
+        {
+            this.userDTOMapper = userDTOMapper;
+        }
+
         public ReportDiagram MapFrom(ReportDiagramDTO entity)
         {
             return new ReportDiagram()
@@ -27,7 +34,9 @@ namespace TBIApp.Services.Mappers
                 PercentNew = entity.PercentNew,
                 PercentNotReviewed = entity.PercentNotReviewed,
                 PercentOpen = entity.PercentOpen,
-                PercentRejected = entity.PercentRejected
+                PercentRejected = entity.PercentRejected,
+                OnlineUsers = this.userDTOMapper.MapFrom(entity.OnlineUsers)
+                
                 
             };
         }
@@ -48,7 +57,8 @@ namespace TBIApp.Services.Mappers
                 PercentNew = entity.PercentNew,
                 PercentNotReviewed = entity.PercentNotReviewed,
                 PercentOpen = entity.PercentOpen,
-                PercentRejected = entity.PercentRejected
+                PercentRejected = entity.PercentRejected,
+                OnlineUsers = this.userDTOMapper.MapFrom(entity.OnlineUsers)
 
             };
         }

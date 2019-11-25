@@ -38,6 +38,7 @@ namespace TBIApp.Services.Services
                 ClosedCount = this.dbcontext.Emails.Where(e => e.Status == EmailStatusesEnum.Closed).Count(),
                 RejectedCount = this.dbcontext.LoanApplications.Where(a => a.Status == LoanApplicationStatus.Rejected).Count(),
                 AcceptedCount = this.dbcontext.LoanApplications.Where(a => a.Status == LoanApplicationStatus.Accepted).Count(),
+                OnlineUsers = await this.dbcontext.Users.Where(u => u.IsOnline == true).Include(x=>x.UserEmails).ToListAsync()
 
             };
 

@@ -10,6 +10,13 @@ namespace TBIBankApp.Mappers
 {
     public class ReportDiagramViewModelMapper : IReportDiagramViewModelMapper
     {
+        private readonly IUserViewModelMapper userViewModelMapper;
+
+        public ReportDiagramViewModelMapper(IUserViewModelMapper userViewModelMapper)
+        {
+            this.userViewModelMapper = userViewModelMapper;
+        }
+
         public ReportDiagramViewModel MapFrom(ReportDiagramDTO entity)
         {
             return new ReportDiagramViewModel()
@@ -27,7 +34,8 @@ namespace TBIBankApp.Mappers
                 PercentNew = entity.PercentNew,
                 PercentNotReviewed = entity.PercentNotReviewed,
                 PercentOpen = entity.PercentOpen,
-                PercentRejected = entity.PercentRejected
+                PercentRejected = entity.PercentRejected,
+                OnlineUsers = this.userViewModelMapper.MapFrom(entity.OnlineUsers)
 
             };
         }
@@ -48,16 +56,17 @@ namespace TBIBankApp.Mappers
                 PercentNew = entity.PercentNew,
                 PercentNotReviewed = entity.PercentNotReviewed,
                 PercentOpen = entity.PercentOpen,
-                PercentRejected = entity.PercentRejected
+                PercentRejected = entity.PercentRejected,
+                OnlineUsers = this.userViewModelMapper.MapFrom(entity.OnlineUsers)
 
             };
         }
-        public IList<ReportDiagramViewModel> MapFrom(ICollection<ReportDiagramDTO> entities)
+        public ICollection<ReportDiagramViewModel> MapFrom(ICollection<ReportDiagramDTO> entities)
         {
             return entities.Select(this.MapFrom).ToList();
         }
 
-        public IList<ReportDiagramDTO> MapFrom(ICollection<ReportDiagramViewModel> entities)
+        public ICollection<ReportDiagramDTO> MapFrom(ICollection<ReportDiagramViewModel> entities)
         {
             return entities.Select(this.MapFrom).ToList();
         }

@@ -39,6 +39,31 @@ namespace TBIApp.Services.Services
             return false;
         }
 
+        public async Task<bool> SetOnlineStatusOn(string userId)
+        {
+            var user = await this.dbcontext.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user == null) throw new ArgumentException("User not found!");
+
+            user.IsOnline = true;
+
+            await this.dbcontext.SaveChangesAsync();
+
+            return true;
+        }
+
+        public async Task<bool> SetOnlineStatusOff(string userId)
+        {
+            var user = await this.dbcontext.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user == null) throw new ArgumentException("User not found!");
+
+            user.IsOnline = false;
+
+            await this.dbcontext.SaveChangesAsync();
+
+            return false;
+        }
 
         public Task<bool> CheckForEmailAsync(string email)
         {
