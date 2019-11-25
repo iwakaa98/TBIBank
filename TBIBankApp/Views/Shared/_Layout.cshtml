@@ -56,22 +56,21 @@
                     @if (User.IsInRole("Manager"))
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Manager" asp-action="Register">Manage Accounts</a>
+                            <a class="nav-link" asp-controller="Manager" asp-action="Register">Register</a>
                         </li>
 
                     }
-
                     <li class="nav-item">
-                        <a class="nav-link" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">Not Reviewed</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">Invalid</a>
+                        <a class="nav-link" id="listinvalid" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="New">New</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="listopen" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Open">Opened</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="listinvalid" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="New">New</a>
+                        <a class="nav-link" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">Not Reviewed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">Invalid</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">Closed</a>

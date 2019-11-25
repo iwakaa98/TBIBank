@@ -1,6 +1,6 @@
-﻿
-html, body, #entirePage {
+﻿html, body, #entirePage {
     height: 96%;
+    width: 100%;
 }
 
 #background {

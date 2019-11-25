@@ -13,6 +13,7 @@ function updateChart() {
         theme: "light1",
         animationEnabled: false, 
         title: {
+            fontFamily: "Arial",
             text: "Email Chart by Status"
         },
         data: [

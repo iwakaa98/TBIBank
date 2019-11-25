@@ -64,9 +64,9 @@
                                 <div class="modal-footer">
                                     @if (User.IsInRole("Manager"))
                                     {
-                                        <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" onclick="SetReject(this.value)" data-dismiss="modal" style="background-color:red">Reject</button>
-                                        <button type="button" class="btn btn-primary buttonsTest2" data-dismiss="modal" value="@item.Id" onclick="SetNew(this.value)" style="background-color:orange">Set to New</button>
-                                        <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" onclick="SetAccept(this.value)" data-dismiss="modal" style="background-color:green">Accept</button>
+                                        <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" onclick="SetReject(this.value)" data-dismiss="modal">Reject</button>
+                                        <button type="button" class="btn btn-light buttonsTest2" data-dismiss="modal" value="@item.Id" onclick="SetNew(this.value)">Set to New</button>
+                                        <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" onclick="SetAccept(this.value)" data-dismiss="modal">Accept</button>
                                     }
                                     else
                                     {

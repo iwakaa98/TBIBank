@@ -56,7 +56,7 @@
                         </button>
 
 
-                        <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        @*<div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -78,14 +78,14 @@
                                         <div class="divWrapper">@Html.Raw(item.Body)</div>
                                     </div>
                                     <div class="modal-footer">
-                                        @if (User.IsInRole("Manager"))
+                                        @if (User.IsInRole("Manager") && item.LoanApplicationStatus.ToLower()=="rejected")
                                         {
                                             <button type="button" class="btn btn-secondary buttonsTest4" value="@item.Id" data-dismiss="modal" onclick="SetNew(this.value)" style="background-color:green">Set to New</button>
                                         }
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>*@
                     </td>
                 </tr>
 

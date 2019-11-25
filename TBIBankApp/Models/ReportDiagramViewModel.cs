@@ -21,5 +21,7 @@ namespace TBIBankApp.Models
         public double PercentRejected { get; set; }
         public int AcceptedCount { get; set; }
         public double PercentAccepted { get; set; }
+
+        public List<string> UserNames { get; set; }
     }
 }

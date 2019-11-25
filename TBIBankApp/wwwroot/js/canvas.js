@@ -248,6 +248,7 @@
                         z && (Q === S && 0 < F.length) && (r = H + r); else "E" !== p[0] && "e" !== p[0] || "0" !== p[p.length - 1] || !/[eE][+-]*[0]+/.test(p) ? "," === p ? (Q++ , z = O, O = 0, 0 < F.length && (r = H + r)) : r = 1 < p.length && ('"' === p[0] && '"' === p[p.length - 1] || "'" === p[0] && "'" === p[p.length - 1]) ? p.slice(1, p.length - 1) + r : p + r : (p = 0 > U ? p.replace("+", "").replace("-", "") : p.replace("-", ""), r += p.replace(/[0]+/, function (h) { return $(U, h.length) })); H = ""; for (L = !1; 0 < R.length;)p = R.shift(), "#" === p || "0" === p ? 0 < h.length && 0 !== Number(h.join("")) ? (H += h.shift(), L = !0) : "0" === p && (H += "0", L =
                             !0) : 1 < p.length && ('"' === p[0] && '"' === p[p.length - 1] || "'" === p[0] && "'" === p[p.length - 1]) ? H += p.slice(1, p.length - 1) : "E" !== p[0] && "e" !== p[0] || "0" !== p[p.length - 1] || !/[eE][+-]*[0]+/.test(p) ? H += p : (p = 0 > U ? p.replace("+", "").replace("-", "") : p.replace("-", ""), H += p.replace(/[0]+/, function (h) { return $(U, h.length) })); r += (L ? v : "") + H; return u ? "-" + r : r
         }, Ra = function (h) {
+            
             var p = 0, r = 0; h = h || window.event; h.offsetX || 0 === h.offsetX ? (p = h.offsetX, r = h.offsetY) : h.layerX || 0 == h.layerX ? (p = h.layerX, r = h.layerY) : (p = h.pageX - h.target.offsetLeft,
                 r = h.pageY - h.target.offsetTop); return { x: p, y: r }
         }, bb = !0, Ua = window.devicePixelRatio || 1, Pa = 1, W = bb ? Ua / Pa : 1, ea = function (h, p, r, u, v, H, F, z, E, L, R, N, O) {
@@ -333,7 +334,8 @@
                 2), E = -90, I = "left", this.width = L.height, this.height = L.width) : "right" === this.horizontalAlign ? (r = p.x2 - 2, v = p.y1 + 2 + (this.maxWidth / 2 - L.width / 2), E = 90, I = "right", this.width = L.height, this.height = L.width) : "center" === this.horizontalAlign && (v = h.y1 + (h.height / 2 - L.height / 2), r = h.x1 + (h.width / 2 - L.width / 2), I = "center", this.width = L.width, this.height = L.height), z = "center"); H.x = r; H.y = v; H.angle = E; H.horizontalAlign = z; this._textBlock = H; h.layoutManager.registerSpace(I, {
                     width: this.width + ("left" === I || "right" === I ? this.margin + 2 : 0),
                     height: this.height + ("top" === I || "bottom" === I ? this.margin + 2 : 0)
-                }); this.bounds = { x1: r, y1: v, x2: r + this.width, y2: v + this.height }; this.ctx.textBaseline = "top"
+                }); this.bounds = { x1: r, y1: v, x2: r + this.width, y2: v + this.height };
+            this.ctx.textBaseline = "top"
         }
     }; Aa.prototype.render = function () { this._textBlock && this._textBlock.render(!0) }; qa(Ka, V); Ka.prototype.setLayout = Aa.prototype.setLayout; Ka.prototype.render = Aa.prototype.render; Wa.prototype.get = function (h, p) { var r = null; 0 < this.pool.length ? (r = this.pool.pop(), Oa(r, h, p)) : r = ta(h, p); return r }; Wa.prototype.release = function (h) { this.pool.push(h) }; qa(La, V); var Na = {
         addTheme: function (h,

@@ -575,7 +575,9 @@ iframe {
 }
 
 
-
+a:visited {
+    color: #eb7422 !important;
+}
 
 
 

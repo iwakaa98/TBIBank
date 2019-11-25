@@ -8,6 +8,7 @@ using TBIApp.Data.Models;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models;
 using TBIApp.Services.Services.Contracts;
+using System.Collections.Generic;
 
 namespace TBIBankApp.Controllers
 {
@@ -62,7 +63,13 @@ namespace TBIBankApp.Controllers
         {
             var modelDTO = await statisticsService.GetStatisticsAsync();
             var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
-
+            var list = new List<string>();
+            list.Add("iwaka");
+            list.Add("ivka");
+            list.Add("achkata");
+            list.Add("achkata");
+            list.Add("achkata");
+            vm.UserNames = list;
             return View(vm);
         }
 

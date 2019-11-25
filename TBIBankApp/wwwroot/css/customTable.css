@@ -1,6 +1,9 @@
-﻿#rejected{
+﻿#rejected, #accepted {
     position: absolute;
+    left: 698px;
+    top: 50px;
 }
+
 table.dataTable {
     width: 100%;
     margin: 0 auto;
@@ -487,6 +490,18 @@ table.dataTable {
         border: 1px solid #28a745 !important;
     }
 
+.modal-footer > .btn-light {
+    background: #9f9f9f !important;
+    border: 1px solid #9f9f9f !important;
+    color: white;
+}
+    .modal-footer > .btn-light:hover {
+        background: #f37682 !important;
+        border: 1px solid #f37682 !important;
+    }
+
+
+
 .modal-footer > .btn-secondary {
     background: #5a6268 !important;
 }
@@ -526,4 +541,12 @@ td > .btn-primary {
     border: 1px solid black;
     position: relative;
     left: -19px;
+}
+
+.navbar-nav > .nav-item > .nav-link:visited {
+    color: rgba(0,0,0,.5) !important;
+}
+
+.navbar-nav > .nav-item > .nav-link:hover {
+    color: #eb7422 !important
 }
