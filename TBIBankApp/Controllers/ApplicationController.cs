@@ -45,7 +45,11 @@ namespace TBIBankApp.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<string> CreateAsync(LoanApplicationViewModel vm)
         {
-            if (!ModelState.IsValid) throw new ArgumentException("Invalid application VM!");
+            if (!ModelState.IsValid)
+            {
+
+                throw new ArgumentException("Invalid application VM!");
+            }
             //logger logsmth
 
             var isRealEgn = await checkEgnService.IsRealAsync(vm.EGN);
