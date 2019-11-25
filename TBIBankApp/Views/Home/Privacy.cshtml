@@ -21,38 +21,12 @@
         <div id="curOnline" class="col-md-6">
 
             <h4>
-                Currently Online
+                Current Online
             </h4>
             <div class="col-12">
-                @*<div class="col-2" id="elements">
-                        @foreach (var item in Model.UserNames)
-                        {
-                            <p>
-                                @item
-                                <span id="online">o</span>
-                            </p>
-                        }
-                    </div>*@
+          
                 @foreach (var item in Model.OnlineUsers)
                 {
-
-                    @*<div id="accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#@item" aria-expanded="false" aria-controls="collapseOne">
-                                            Collapsible Group Item #1
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="@item" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                    <div class="card-body">
-                                        @item
-                                    </div>
-                                </div>
-                            </div>
-                        </div>*@
 
 
                     <div id="accordion">
@@ -85,6 +59,19 @@
                         </div>
                     </div>
                 }
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+
+                        <a asp-controller="BlogPosts" asp-action="ViewAllPosts" asp-route-Id="">
+                            <button type="submit" class="btn btn-primary">Previous</button>
+                        </a>
+
+                        <a asp-controller="BlogPosts" asp-action="ViewAllPosts" asp-route-Id="">
+                            <button type="submit" class="btn btn-primary">Next</button>
+                        </a>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </div>

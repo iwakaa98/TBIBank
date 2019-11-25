@@ -81,6 +81,7 @@ namespace TBIBankApp
             services.AddScoped<IApplicationViewModelMapper, ApplicationViewModelMapper>();
             services.AddScoped<IReportDiagramViewModelMapper, ReportDiagramViewModelMapper>();
             services.AddScoped<IUserViewModelMapper, UserViewModelMapper>();
+            services.AddScoped<IRegisterViewModelMapper, RegisterViewModelMapper>();
 
             //ServiceMapper
             services.AddScoped<IReportDiagramDTOMapper, ReportDiagramDTOMapper>();

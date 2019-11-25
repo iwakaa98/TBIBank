@@ -2,8 +2,10 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using TBIApp.Data;
 using TBIApp.Data.Models;
+using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
 namespace TBIApp.Services.Services
@@ -11,17 +13,42 @@ namespace TBIApp.Services.Services
     public class UserService : IUserService
     {
         private readonly TBIAppDbContext dbcontext;
+        private readonly ILogger<UserService> logger;
+        private readonly UserManager<User> userManager;
 
-        public UserService(TBIAppDbContext dbcontext)
+        public UserService(TBIAppDbContext dbcontext, 
+                           ILogger<UserService> logger, 
+                           UserManager<User> userManager)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
         }
 
         public async Task ChangeLastLoginAsync(User user)
         {
             user.LastLogIn = DateTime.Now;
 
+            logger.LogInformation($"User {user.Id} LoggedOn at {DateTime.Now}.");
+
             await dbcontext.SaveChangesAsync();
+        }
+
+        public async Task<RegisterDTO> CreateAsync(RegisterDTO registerDTO)
+        {
+            var user = new User()
+            {
+                UserName = registerDTO.UserName,
+                Email = registerDTO.Email,
+                FirstName = registerDTO.FirstName,
+                LastName = registerDTO.LastName
+            };
+
+            var result = await userManager.CreateAsync(user, registerDTO.Password);
+
+            await userManager.AddToRoleAsync(user, registerDTO.Role);
+
+            return registerDTO;
         }
 
         public async Task<bool> ValidateCredentialAsync(string username, string password)
@@ -67,14 +94,14 @@ namespace TBIApp.Services.Services
 
         public Task<bool> CheckForEmailAsync(string email)
         {
-            return  this.dbcontext.Users.AnyAsync(x => x.Email == email);
-        
+            return this.dbcontext.Users.AnyAsync(x => x.Email == email);
+
         }
 
         public Task<bool> CheckForPasswordAsync(string password)
         {
-            return  this.dbcontext.Users.AnyAsync(x => x.PasswordHash == password);
-            
+            return this.dbcontext.Users.AnyAsync(x => x.PasswordHash == password);
+
         }
 
         public Task<bool> CheckForUserNameAsync(string userName)

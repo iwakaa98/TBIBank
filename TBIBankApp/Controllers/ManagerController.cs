@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services.Contracts;
+using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models;
 
 namespace TBIBankApp.Controllers
@@ -16,13 +17,15 @@ namespace TBIBankApp.Controllers
         private readonly SignInManager<User> signInManager;
         private readonly IUserService userService;
         private readonly ILogger<ManagerController> logger;
+        private readonly IRegisterViewModelMapper registerViewModelMapper;
 
-        public ManagerController(UserManager<User> userManager, SignInManager<User> signInManager, IUserService userService, ILogger<ManagerController> logger)
+        public ManagerController(UserManager<User> userManager, SignInManager<User> signInManager, IUserService userService, ILogger<ManagerController> logger, IRegisterViewModelMapper registerViewModelMapper)
         {
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
             this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            this.registerViewModelMapper = registerViewModelMapper ?? throw new ArgumentNullException(nameof(registerViewModelMapper));
         }
 
         [Authorize(Roles = "Manager")]
@@ -32,15 +35,15 @@ namespace TBIBankApp.Controllers
         }
         [HttpPost]
         //[AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> RegisterUserAsync( RegisterViewModel Input)
+        public async Task<IActionResult> RegisterUserAsync(RegisterViewModel Input)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var user = new User { UserName = Input.UserName, Email = Input.Email };
-                    var result = await userManager.CreateAsync(user, Input.Password);
-                    await userManager.AddToRoleAsync(user, Input.Role);
+                    var registerDTO = this.registerViewModelMapper.MapFrom(Input);
+
+                    await userService.CreateAsync(registerDTO);
                 }
                 
             }

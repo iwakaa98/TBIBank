@@ -846,3 +846,1679 @@
 2019-11-26 00:52:58.043 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5907 ms
 2019-11-26 00:52:58.056 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9725 ms
 2019-11-26 00:53:01.948 +02:00 [INF] HTTP GET /notification?id=qacVQ_lY3vPOteVav-uSbg responded 101 in 3945.314 ms
+2019-11-26 01:19:22.776 +02:00 [INF] Application starting up!
+2019-11-26 01:19:27.959 +02:00 [INF] HTTP GET / responded 302 in 389.6314 ms
+2019-11-26 01:19:29.457 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1417.8913 ms
+2019-11-26 01:19:29.547 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 17.3019 ms
+2019-11-26 01:19:29.547 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 17.1979 ms
+2019-11-26 01:19:29.547 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 17.062 ms
+2019-11-26 01:19:29.547 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 18.2689 ms
+2019-11-26 01:19:29.547 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 35.4145 ms
+2019-11-26 01:19:29.558 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 2.6062 ms
+2019-11-26 01:19:29.558 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5103 ms
+2019-11-26 01:19:29.560 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.4533 ms
+2019-11-26 01:19:29.624 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 47.8709 ms
+2019-11-26 01:19:29.628 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8259 ms
+2019-11-26 01:19:29.632 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7995 ms
+2019-11-26 01:19:29.643 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0929 ms
+2019-11-26 01:19:29.647 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.759 ms
+2019-11-26 01:19:29.647 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.913 ms
+2019-11-26 01:19:29.648 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9385 ms
+2019-11-26 01:19:29.660 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.9453 ms
+2019-11-26 01:19:30.307 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.3409 ms
+2019-11-26 01:19:30.323 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2275 ms
+2019-11-26 01:19:30.339 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.527 ms
+2019-11-26 01:19:30.339 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 71.6706 ms
+2019-11-26 01:19:30.419 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 64.9581 ms
+2019-11-26 01:19:33.894 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 536.0392 ms
+2019-11-26 01:19:33.973 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 14.1264 ms
+2019-11-26 01:19:33.973 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 3.7791 ms
+2019-11-26 01:19:33.973 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 12.6801 ms
+2019-11-26 01:19:33.973 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 2.5797 ms
+2019-11-26 01:19:33.973 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 11.3306 ms
+2019-11-26 01:19:33.973 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 14.9726 ms
+2019-11-26 01:19:34.015 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 4.9365 ms
+2019-11-26 01:19:34.019 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 8.5743 ms
+2019-11-26 01:19:34.028 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.7754 ms
+2019-11-26 01:19:34.045 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9933 ms
+2019-11-26 01:19:34.059 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9882 ms
+2019-11-26 01:19:34.060 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7973 ms
+2019-11-26 01:19:34.059 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9883 ms
+2019-11-26 01:19:34.060 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9098 ms
+2019-11-26 01:19:34.078 +02:00 [INF] HTTP GET /notification?id=NouaqIrmngD044sjIgA7Pw responded 101 in 3723.5095 ms
+2019-11-26 01:19:34.090 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2625 ms
+2019-11-26 01:19:34.102 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.8456 ms
+2019-11-26 01:19:34.293 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.997 ms
+2019-11-26 01:19:34.421 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5716 ms
+2019-11-26 01:19:34.438 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.7003 ms
+2019-11-26 01:19:34.460 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5854 ms
+2019-11-26 01:19:34.493 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0812 ms
+2019-11-26 01:19:35.228 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 250.5715 ms
+2019-11-26 01:19:35.240 +02:00 [INF] HTTP GET /notification?id=2RKP00eaHRUqZxa-26CRTw responded 101 in 832.3773 ms
+2019-11-26 01:19:35.277 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5469 ms
+2019-11-26 01:19:35.277 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.3176 ms
+2019-11-26 01:19:35.278 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3002 ms
+2019-11-26 01:19:35.279 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.8365 ms
+2019-11-26 01:19:35.296 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.8166 ms
+2019-11-26 01:19:35.299 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 2.0205 ms
+2019-11-26 01:19:35.307 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.8784 ms
+2019-11-26 01:19:35.310 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.8865 ms
+2019-11-26 01:19:35.321 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5927 ms
+2019-11-26 01:19:35.328 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9134 ms
+2019-11-26 01:19:35.338 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0505 ms
+2019-11-26 01:19:35.340 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8077 ms
+2019-11-26 01:19:35.341 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5106 ms
+2019-11-26 01:19:35.350 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3716 ms
+2019-11-26 01:19:35.371 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.557 ms
+2019-11-26 01:19:35.376 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7124 ms
+2019-11-26 01:19:35.540 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7789 ms
+2019-11-26 01:19:35.699 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.6351 ms
+2019-11-26 01:19:35.738 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8695 ms
+2019-11-26 01:19:35.776 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.7044 ms
+2019-11-26 01:19:35.791 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.001 ms
+2019-11-26 01:19:37.146 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=3b1dafaf-02c0-4c5c-b290-2fe02e4ee4cb responded 200 in 230.7501 ms
+2019-11-26 01:19:38.295 +02:00 [INF] Status of email with id 3b1dafaf-02c0-4c5c-b290-2fe02e4ee4cb has been updated by 5bb9ce6a-eb3a-4dc3-9f16-72d299742c48 at 11/26/2019 1:19:38 AM. From status: NotReviewed to status: InvalidApplication.
+2019-11-26 01:19:38.395 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=3b1dafaf-02c0-4c5c-b290-2fe02e4ee4cb&status=InvalidApplication responded 200 in 154.1215 ms
+2019-11-26 01:19:39.627 +02:00 [INF] HTTP GET / responded 302 in 1.1023 ms
+2019-11-26 01:19:39.688 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 45.2523 ms
+2019-11-26 01:19:39.700 +02:00 [INF] HTTP GET /notification?id=mhwPIs_w0UKuUQ7Qc6vciw responded 101 in 4122.5653 ms
+2019-11-26 01:19:39.734 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.9352 ms
+2019-11-26 01:19:39.737 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.1426 ms
+2019-11-26 01:19:39.738 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4373 ms
+2019-11-26 01:19:39.738 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4028 ms
+2019-11-26 01:19:39.739 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5129 ms
+2019-11-26 01:19:39.739 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6022 ms
+2019-11-26 01:19:39.751 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.8568 ms
+2019-11-26 01:19:39.758 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6823 ms
+2019-11-26 01:19:39.763 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6066 ms
+2019-11-26 01:19:39.771 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7466 ms
+2019-11-26 01:19:39.777 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3971 ms
+2019-11-26 01:19:39.785 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.554 ms
+2019-11-26 01:19:39.789 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.585 ms
+2019-11-26 01:19:39.794 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5057 ms
+2019-11-26 01:19:39.802 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.037 ms
+2019-11-26 01:19:39.810 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9422 ms
+2019-11-26 01:19:40.042 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8975 ms
+2019-11-26 01:19:40.110 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1152 ms
+2019-11-26 01:19:40.129 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7216 ms
+2019-11-26 01:19:40.144 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.9769 ms
+2019-11-26 01:19:40.158 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0441 ms
+2019-11-26 01:19:41.879 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 141.6885 ms
+2019-11-26 01:19:41.891 +02:00 [INF] HTTP GET /notification?id=4e1RJ6XV0zbWUh0V_z4uhQ responded 101 in 1789.4749 ms
+2019-11-26 01:19:41.950 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 10.3446 ms
+2019-11-26 01:19:41.950 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 6.1225 ms
+2019-11-26 01:19:41.950 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 24.3317 ms
+2019-11-26 01:19:41.951 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 2.7284 ms
+2019-11-26 01:19:41.952 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 1.0707 ms
+2019-11-26 01:19:41.953 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.8927 ms
+2019-11-26 01:19:41.972 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 1.8991 ms
+2019-11-26 01:19:42.009 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 1.086 ms
+2019-11-26 01:19:42.021 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8603 ms
+2019-11-26 01:19:42.040 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.0491 ms
+2019-11-26 01:19:42.054 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 11.6991 ms
+2019-11-26 01:19:42.054 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.0686 ms
+2019-11-26 01:19:42.064 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.028 ms
+2019-11-26 01:19:42.071 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7631 ms
+2019-11-26 01:19:42.088 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.2419 ms
+2019-11-26 01:19:42.101 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.7051 ms
+2019-11-26 01:19:42.553 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 1.2139 ms
+2019-11-26 01:19:42.592 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2154 ms
+2019-11-26 01:19:42.770 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.5393 ms
+2019-11-26 01:19:42.781 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.6751 ms
+2019-11-26 01:19:57.720 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 200 in 120.3288 ms
+2019-11-26 01:19:57.995 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 200 in 266.7452 ms
+2019-11-26 01:20:16.653 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 200 in 5.5404 ms
+2019-11-26 01:20:16.708 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 200 in 42.7179 ms
+2019-11-26 01:20:26.331 +02:00 [INF] HTTP GET /Manager/Register responded 302 in 23.3343 ms
+2019-11-26 01:20:26.433 +02:00 [INF] HTTP GET /?ReturnUrl=%2FManager%2FRegister responded 200 in 93.3879 ms
+2019-11-26 01:20:33.963 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 82.2066 ms
+2019-11-26 01:20:39.442 +02:00 [INF] HTTP POST /Home/SetNewPasswordAsync responded 200 in 351.7316 ms
+2019-11-26 01:20:39.541 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 72.7303 ms
+2019-11-26 01:20:39.588 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.6296 ms
+2019-11-26 01:20:39.588 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.9114 ms
+2019-11-26 01:20:39.592 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5996 ms
+2019-11-26 01:20:39.601 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.8857 ms
+2019-11-26 01:20:39.620 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.8749 ms
+2019-11-26 01:20:39.626 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 2.1297 ms
+2019-11-26 01:20:39.640 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.9976 ms
+2019-11-26 01:20:39.643 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.7058 ms
+2019-11-26 01:20:39.690 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3156 ms
+2019-11-26 01:20:39.708 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2318 ms
+2019-11-26 01:20:39.719 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.6388 ms
+2019-11-26 01:20:39.722 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2262 ms
+2019-11-26 01:20:39.727 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9957 ms
+2019-11-26 01:20:39.738 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.1936 ms
+2019-11-26 01:20:39.746 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1837 ms
+2019-11-26 01:20:39.808 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3681 ms
+2019-11-26 01:20:40.281 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.4902 ms
+2019-11-26 01:20:40.357 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5573 ms
+2019-11-26 01:20:40.373 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9832 ms
+2019-11-26 01:20:40.389 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7314 ms
+2019-11-26 01:20:40.400 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0471 ms
+2019-11-26 01:20:44.325 +02:00 [INF] HTTP GET /notification?id=gzzzvuzbJA5dBhsCTUJ6GQ responded 101 in 3967.0919 ms
+2019-11-26 01:20:47.253 +02:00 [INF] HTTP GET /Manager/Register responded 302 in 1.9376 ms
+2019-11-26 01:20:47.271 +02:00 [INF] HTTP GET /?ReturnUrl=%2FManager%2FRegister responded 200 in 10.2804 ms
+2019-11-26 01:20:53.409 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 29.7254 ms
+2019-11-26 01:20:58.423 +02:00 [INF] HTTP POST /Home/SetNewPasswordAsync responded 200 in 128.5437 ms
+2019-11-26 01:20:58.546 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 79.5502 ms
+2019-11-26 01:20:58.605 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.224 ms
+2019-11-26 01:20:58.611 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 4.6994 ms
+2019-11-26 01:20:58.612 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.1606 ms
+2019-11-26 01:20:58.613 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.7543 ms
+2019-11-26 01:20:58.614 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4945 ms
+2019-11-26 01:20:58.614 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4808 ms
+2019-11-26 01:20:58.638 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 2.4735 ms
+2019-11-26 01:20:58.649 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.8084 ms
+2019-11-26 01:20:58.720 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9221 ms
+2019-11-26 01:20:58.734 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6094 ms
+2019-11-26 01:20:58.738 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3115 ms
+2019-11-26 01:20:58.751 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1447 ms
+2019-11-26 01:20:58.779 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.2728 ms
+2019-11-26 01:20:58.800 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.7556 ms
+2019-11-26 01:20:58.818 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.1847 ms
+2019-11-26 01:20:58.834 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 11.4197 ms
+2019-11-26 01:20:59.397 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6819 ms
+2019-11-26 01:20:59.507 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.8007 ms
+2019-11-26 01:20:59.520 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.659 ms
+2019-11-26 01:20:59.532 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6213 ms
+2019-11-26 01:20:59.542 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9282 ms
+2019-11-26 01:21:01.009 +02:00 [INF] HTTP GET /notification?id=pN6TXGxNMSb5sRlRtjdYLA responded 101 in 1500.6969 ms
+2019-11-26 01:21:02.665 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 3.58 ms
+2019-11-26 01:21:02.723 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.6544 ms
+2019-11-26 01:21:02.730 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 3.4838 ms
+2019-11-26 01:21:02.738 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.6002 ms
+2019-11-26 01:21:02.738 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.5298 ms
+2019-11-26 01:21:02.749 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.5233 ms
+2019-11-26 01:21:02.749 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6863 ms
+2019-11-26 01:21:02.754 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 0.7283 ms
+2019-11-26 01:21:02.754 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 0.9548 ms
+2019-11-26 01:21:02.769 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1685 ms
+2019-11-26 01:21:02.776 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8963 ms
+2019-11-26 01:21:02.781 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5179 ms
+2019-11-26 01:21:02.782 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1703 ms
+2019-11-26 01:21:02.782 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6657 ms
+2019-11-26 01:21:02.797 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.7637 ms
+2019-11-26 01:21:02.803 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5785 ms
+2019-11-26 01:21:02.815 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.101 ms
+2019-11-26 01:21:03.003 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 1.2699 ms
+2019-11-26 01:21:03.154 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9714 ms
+2019-11-26 01:21:03.182 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.5274 ms
+2019-11-26 01:21:03.202 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.876 ms
+2019-11-26 01:21:14.639 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 200 in 12.0767 ms
+2019-11-26 01:21:14.685 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 200 in 35.4611 ms
+2019-11-26 01:21:19.571 +02:00 [INF] HTTP GET /Manager/Register responded 302 in 0.3875 ms
+2019-11-26 01:21:19.591 +02:00 [INF] HTTP GET /?ReturnUrl=%2FManager%2FRegister responded 200 in 2.4437 ms
+2019-11-26 01:21:25.733 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 19.0693 ms
+2019-11-26 01:21:37.971 +02:00 [INF] HTTP POST /Home/SetNewPasswordAsync responded 200 in 122.4156 ms
+2019-11-26 01:21:38.069 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 76.4649 ms
+2019-11-26 01:21:38.153 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.7891 ms
+2019-11-26 01:21:38.154 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4871 ms
+2019-11-26 01:21:38.155 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.7115 ms
+2019-11-26 01:21:38.156 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5282 ms
+2019-11-26 01:21:38.158 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 2.0089 ms
+2019-11-26 01:21:38.163 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 3.4649 ms
+2019-11-26 01:21:38.209 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.4542 ms
+2019-11-26 01:21:38.209 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.5668 ms
+2019-11-26 01:21:38.230 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9896 ms
+2019-11-26 01:21:38.244 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2623 ms
+2019-11-26 01:21:38.253 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2531 ms
+2019-11-26 01:21:38.259 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.0916 ms
+2019-11-26 01:21:38.271 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.6559 ms
+2019-11-26 01:21:38.277 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2209 ms
+2019-11-26 01:21:38.291 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9576 ms
+2019-11-26 01:21:38.308 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.0966 ms
+2019-11-26 01:21:38.907 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6637 ms
+2019-11-26 01:21:38.957 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.6375 ms
+2019-11-26 01:21:38.974 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7228 ms
+2019-11-26 01:21:39.042 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6321 ms
+2019-11-26 01:21:39.070 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.4706 ms
+2019-11-26 01:22:52.106 +02:00 [INF] Application starting up!
+2019-11-26 01:22:56.803 +02:00 [INF] HTTP GET / responded 302 in 377.7527 ms
+2019-11-26 01:22:58.316 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1462.7812 ms
+2019-11-26 01:22:58.389 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 26.7236 ms
+2019-11-26 01:22:58.403 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.9563 ms
+2019-11-26 01:22:58.416 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5918 ms
+2019-11-26 01:22:58.417 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.8201 ms
+2019-11-26 01:22:58.418 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5166 ms
+2019-11-26 01:22:58.432 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6191 ms
+2019-11-26 01:22:58.435 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5345 ms
+2019-11-26 01:22:58.437 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5378 ms
+2019-11-26 01:22:58.517 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 52.4204 ms
+2019-11-26 01:22:58.522 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4798 ms
+2019-11-26 01:22:58.531 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.07 ms
+2019-11-26 01:22:58.537 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1134 ms
+2019-11-26 01:22:58.537 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6377 ms
+2019-11-26 01:22:58.537 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5461 ms
+2019-11-26 01:22:58.537 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7794 ms
+2019-11-26 01:22:58.540 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4225 ms
+2019-11-26 01:22:59.081 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5671 ms
+2019-11-26 01:22:59.097 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 58.7405 ms
+2019-11-26 01:22:59.099 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2051 ms
+2019-11-26 01:22:59.116 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7145 ms
+2019-11-26 01:22:59.122 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9186 ms
+2019-11-26 01:29:47.937 +02:00 [INF] Application starting up!
+2019-11-26 01:29:53.551 +02:00 [INF] HTTP GET / responded 302 in 395.0953 ms
+2019-11-26 01:29:55.250 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1631.4007 ms
+2019-11-26 01:29:55.361 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 20.9555 ms
+2019-11-26 01:29:55.362 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 25.168 ms
+2019-11-26 01:29:55.369 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.7837 ms
+2019-11-26 01:29:55.369 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3625 ms
+2019-11-26 01:29:55.373 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.8682 ms
+2019-11-26 01:29:55.381 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4688 ms
+2019-11-26 01:29:55.387 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.1576 ms
+2019-11-26 01:29:55.393 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 5.0438 ms
+2019-11-26 01:29:55.465 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 65.1239 ms
+2019-11-26 01:29:55.470 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0552 ms
+2019-11-26 01:29:55.478 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.64 ms
+2019-11-26 01:29:55.482 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8755 ms
+2019-11-26 01:29:55.482 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7857 ms
+2019-11-26 01:29:55.488 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.1821 ms
+2019-11-26 01:29:55.488 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3475 ms
+2019-11-26 01:29:55.498 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.4586 ms
+2019-11-26 01:29:56.087 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5891 ms
+2019-11-26 01:29:56.109 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0802 ms
+2019-11-26 01:29:56.117 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.5073 ms
+2019-11-26 01:29:56.126 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 71.342 ms
+2019-11-26 01:29:56.131 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1044 ms
+2019-11-26 01:30:07.261 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 30.3767 ms
+2019-11-26 01:30:07.332 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5236 ms
+2019-11-26 01:30:07.334 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5295 ms
+2019-11-26 01:30:07.342 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 7.3371 ms
+2019-11-26 01:30:07.349 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 1.7359 ms
+2019-11-26 01:30:07.349 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4693 ms
+2019-11-26 01:30:07.362 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5074 ms
+2019-11-26 01:30:07.394 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 2.6026 ms
+2019-11-26 01:30:07.398 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 2.806 ms
+2019-11-26 01:30:07.444 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.5586 ms
+2019-11-26 01:30:07.447 +02:00 [INF] HTTP GET /notification?id=A6bexSJEl0pUSUFT23vy4Q responded 101 in 11311.5627 ms
+2019-11-26 01:30:07.450 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1434 ms
+2019-11-26 01:30:07.456 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.5048 ms
+2019-11-26 01:30:07.459 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.3365 ms
+2019-11-26 01:30:07.460 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1289 ms
+2019-11-26 01:30:07.460 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7198 ms
+2019-11-26 01:30:07.479 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.6945 ms
+2019-11-26 01:30:07.484 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4317 ms
+2019-11-26 01:30:07.626 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 3.4776 ms
+2019-11-26 01:30:07.664 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.922 ms
+2019-11-26 01:30:07.684 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5127 ms
+2019-11-26 01:30:07.708 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 6.8242 ms
+2019-11-26 01:30:07.720 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4792 ms
+2019-11-26 01:30:08.631 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 29.3217 ms
+2019-11-26 01:30:08.646 +02:00 [INF] HTTP GET /notification?id=-F9FwXOLbIeUmvEo8ven4A responded 101 in 977.4834 ms
+2019-11-26 01:30:08.680 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.1983 ms
+2019-11-26 01:30:08.680 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.758 ms
+2019-11-26 01:30:08.681 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.657 ms
+2019-11-26 01:30:08.682 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5711 ms
+2019-11-26 01:30:08.682 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4627 ms
+2019-11-26 01:30:08.683 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6412 ms
+2019-11-26 01:30:08.693 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5873 ms
+2019-11-26 01:30:08.699 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.609 ms
+2019-11-26 01:30:08.708 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.5811 ms
+2019-11-26 01:30:08.712 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4277 ms
+2019-11-26 01:30:08.734 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.593 ms
+2019-11-26 01:30:08.740 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9919 ms
+2019-11-26 01:30:08.751 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6429 ms
+2019-11-26 01:30:08.765 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0093 ms
+2019-11-26 01:30:08.765 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6354 ms
+2019-11-26 01:30:08.781 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.4307 ms
+2019-11-26 01:30:09.007 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6924 ms
+2019-11-26 01:30:09.044 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 10.2368 ms
+2019-11-26 01:30:09.051 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1297 ms
+2019-11-26 01:30:09.068 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4087 ms
+2019-11-26 01:30:09.081 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0424 ms
+2019-11-26 01:30:09.197 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 29.6463 ms
+2019-11-26 01:30:09.214 +02:00 [INF] HTTP GET /notification?id=4pQ3fV6pOVqzmQ8JHu8VCw responded 101 in 183.0932 ms
+2019-11-26 01:30:09.245 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5401 ms
+2019-11-26 01:30:09.259 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 7.6422 ms
+2019-11-26 01:30:09.266 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.6017 ms
+2019-11-26 01:30:09.267 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4894 ms
+2019-11-26 01:30:09.268 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4287 ms
+2019-11-26 01:30:09.268 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.8091 ms
+2019-11-26 01:30:09.292 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 6.1996 ms
+2019-11-26 01:30:09.301 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.1469 ms
+2019-11-26 01:30:09.330 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6891 ms
+2019-11-26 01:30:09.342 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.8251 ms
+2019-11-26 01:30:09.347 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2596 ms
+2019-11-26 01:30:09.350 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5405 ms
+2019-11-26 01:30:09.368 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.6747 ms
+2019-11-26 01:30:09.382 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7011 ms
+2019-11-26 01:30:09.394 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6786 ms
+2019-11-26 01:30:09.398 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.996 ms
+2019-11-26 01:30:09.622 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7113 ms
+2019-11-26 01:30:09.667 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 5.6728 ms
+2019-11-26 01:30:09.683 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6922 ms
+2019-11-26 01:30:09.741 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.2261 ms
+2019-11-26 01:30:09.751 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1865 ms
+2019-11-26 01:30:09.763 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 28.3428 ms
+2019-11-26 01:30:09.779 +02:00 [INF] HTTP GET /notification?id=jRXH7WKgbjKQhXd2fbCSbA responded 101 in 129.3957 ms
+2019-11-26 01:30:09.814 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.8586 ms
+2019-11-26 01:30:09.816 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5613 ms
+2019-11-26 01:30:09.816 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3335 ms
+2019-11-26 01:30:09.816 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.3161 ms
+2019-11-26 01:30:09.817 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.2805 ms
+2019-11-26 01:30:09.817 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.2871 ms
+2019-11-26 01:30:09.828 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 3.2189 ms
+2019-11-26 01:30:09.831 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5508 ms
+2019-11-26 01:30:09.841 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.7156 ms
+2019-11-26 01:30:09.846 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7446 ms
+2019-11-26 01:30:09.851 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6729 ms
+2019-11-26 01:30:09.862 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.9927 ms
+2019-11-26 01:30:09.879 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.2417 ms
+2019-11-26 01:30:09.884 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6074 ms
+2019-11-26 01:30:09.893 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.5971 ms
+2019-11-26 01:30:09.911 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0379 ms
+2019-11-26 01:30:10.095 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8064 ms
+2019-11-26 01:30:10.118 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4642 ms
+2019-11-26 01:30:10.142 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0079 ms
+2019-11-26 01:30:10.176 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5351 ms
+2019-11-26 01:30:10.183 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7197 ms
+2019-11-26 01:30:10.196 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 22.5692 ms
+2019-11-26 01:30:10.213 +02:00 [INF] HTTP GET /notification?id=ZyYRC4VGenNFzcU30d1SqQ responded 101 in 96.1785 ms
+2019-11-26 01:30:10.246 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.3606 ms
+2019-11-26 01:30:10.247 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 3.0804 ms
+2019-11-26 01:30:10.249 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.8007 ms
+2019-11-26 01:30:10.254 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.821 ms
+2019-11-26 01:30:10.258 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.1678 ms
+2019-11-26 01:30:10.259 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4272 ms
+2019-11-26 01:30:10.263 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.7733 ms
+2019-11-26 01:30:10.267 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6369 ms
+2019-11-26 01:30:10.279 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2189 ms
+2019-11-26 01:30:10.288 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9911 ms
+2019-11-26 01:30:10.298 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0779 ms
+2019-11-26 01:30:10.309 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.5434 ms
+2019-11-26 01:30:10.342 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4535 ms
+2019-11-26 01:30:10.359 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.6788 ms
+2019-11-26 01:30:10.371 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7873 ms
+2019-11-26 01:30:10.379 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7896 ms
+2019-11-26 01:30:10.528 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6499 ms
+2019-11-26 01:30:10.562 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.4135 ms
+2019-11-26 01:30:10.593 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.6013 ms
+2019-11-26 01:30:10.609 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6939 ms
+2019-11-26 01:30:10.627 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.7862 ms
+2019-11-26 01:30:11.310 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 16.0376 ms
+2019-11-26 01:30:11.329 +02:00 [INF] HTTP GET /notification?id=K3abS2Wc_apF8jHArV_oiw responded 101 in 757.0768 ms
+2019-11-26 01:30:11.378 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 9.8942 ms
+2019-11-26 01:30:11.378 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 5.9994 ms
+2019-11-26 01:30:11.381 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4974 ms
+2019-11-26 01:30:11.381 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4238 ms
+2019-11-26 01:30:11.382 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5198 ms
+2019-11-26 01:30:11.383 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.3721 ms
+2019-11-26 01:30:11.394 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 3.0957 ms
+2019-11-26 01:30:11.399 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5637 ms
+2019-11-26 01:30:11.405 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.4762 ms
+2019-11-26 01:30:11.414 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1389 ms
+2019-11-26 01:30:11.421 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4122 ms
+2019-11-26 01:30:11.427 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8173 ms
+2019-11-26 01:30:11.431 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0913 ms
+2019-11-26 01:30:11.438 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.2229 ms
+2019-11-26 01:30:11.450 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3385 ms
+2019-11-26 01:30:11.463 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9049 ms
+2019-11-26 01:30:11.611 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.836 ms
+2019-11-26 01:30:11.646 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 12.2388 ms
+2019-11-26 01:30:11.660 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6662 ms
+2019-11-26 01:30:11.673 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.2505 ms
+2019-11-26 01:30:11.681 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0175 ms
+2019-11-26 01:31:11.379 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 792.3514 ms
+2019-11-26 01:31:11.391 +02:00 [INF] HTTP GET /notification?id=YSaVAT04F_Rs8KEQQZwEuQ responded 101 in 59743.6036 ms
+2019-11-26 01:31:11.444 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 11.7534 ms
+2019-11-26 01:31:11.444 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 13.4119 ms
+2019-11-26 01:31:11.445 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.3426 ms
+2019-11-26 01:31:11.445 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.7036 ms
+2019-11-26 01:31:11.446 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 1.1935 ms
+2019-11-26 01:31:11.446 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 12.7763 ms
+2019-11-26 01:31:11.467 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 5.4925 ms
+2019-11-26 01:31:11.478 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.1093 ms
+2019-11-26 01:31:11.498 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0426 ms
+2019-11-26 01:31:11.513 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7752 ms
+2019-11-26 01:31:11.529 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.7016 ms
+2019-11-26 01:31:11.533 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9711 ms
+2019-11-26 01:31:11.534 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2229 ms
+2019-11-26 01:31:11.545 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8746 ms
+2019-11-26 01:31:11.547 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6451 ms
+2019-11-26 01:31:11.582 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7661 ms
+2019-11-26 01:31:11.944 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.945 ms
+2019-11-26 01:31:12.198 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4043 ms
+2019-11-26 01:31:12.212 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9848 ms
+2019-11-26 01:31:12.240 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.0561 ms
+2019-11-26 01:31:12.256 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.9842 ms
+2019-11-26 01:31:28.111 +02:00 [INF] HTTP GET / responded 302 in 1.2392 ms
+2019-11-26 01:31:32.540 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 4420.2798 ms
+2019-11-26 01:31:32.554 +02:00 [INF] HTTP GET /notification?id=1BOtIH5nsuN5DvSlXyAorQ responded 101 in 20357.6797 ms
+2019-11-26 01:31:32.607 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5972 ms
+2019-11-26 01:31:32.609 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.508 ms
+2019-11-26 01:31:32.609 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.1289 ms
+2019-11-26 01:31:32.610 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5135 ms
+2019-11-26 01:31:32.610 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.7371 ms
+2019-11-26 01:31:32.611 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.8312 ms
+2019-11-26 01:31:32.628 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.503 ms
+2019-11-26 01:31:32.637 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 3.0209 ms
+2019-11-26 01:31:32.651 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.8704 ms
+2019-11-26 01:31:32.663 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1647 ms
+2019-11-26 01:31:32.672 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8379 ms
+2019-11-26 01:31:32.672 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.839 ms
+2019-11-26 01:31:32.687 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.179 ms
+2019-11-26 01:31:32.710 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.4755 ms
+2019-11-26 01:31:32.721 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.3324 ms
+2019-11-26 01:31:32.730 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8865 ms
+2019-11-26 01:31:33.020 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8041 ms
+2019-11-26 01:31:33.070 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3709 ms
+2019-11-26 01:31:33.092 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5761 ms
+2019-11-26 01:31:33.111 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7732 ms
+2019-11-26 01:31:33.126 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9488 ms
+2019-11-26 01:31:51.837 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 437.06 ms
+2019-11-26 01:31:51.851 +02:00 [INF] HTTP GET /notification?id=Iapzo0XjrIr5t6l-yTZD8w responded 101 in 18781.2864 ms
+2019-11-26 01:31:51.920 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.6034 ms
+2019-11-26 01:31:51.929 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.8203 ms
+2019-11-26 01:31:51.932 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.7151 ms
+2019-11-26 01:31:51.932 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5599 ms
+2019-11-26 01:31:51.935 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5839 ms
+2019-11-26 01:31:51.950 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.1382 ms
+2019-11-26 01:31:51.953 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.1544 ms
+2019-11-26 01:31:51.957 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.799 ms
+2019-11-26 01:31:52.013 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6168 ms
+2019-11-26 01:31:52.020 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3466 ms
+2019-11-26 01:31:52.022 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9396 ms
+2019-11-26 01:31:52.032 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.942 ms
+2019-11-26 01:31:52.033 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1476 ms
+2019-11-26 01:31:52.049 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7925 ms
+2019-11-26 01:31:52.055 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1092 ms
+2019-11-26 01:31:52.064 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.989 ms
+2019-11-26 01:31:52.494 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8929 ms
+2019-11-26 01:31:52.522 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5164 ms
+2019-11-26 01:31:52.537 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3322 ms
+2019-11-26 01:31:52.551 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7783 ms
+2019-11-26 01:31:52.566 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.3614 ms
+2019-11-26 01:32:18.819 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 415.9063 ms
+2019-11-26 01:32:18.830 +02:00 [INF] HTTP GET /notification?id=VRHM78rBOvpCip4Vw-3ceQ responded 101 in 26309.9059 ms
+2019-11-26 01:32:18.879 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 13.8178 ms
+2019-11-26 01:32:18.892 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5509 ms
+2019-11-26 01:32:18.906 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 4.1413 ms
+2019-11-26 01:32:18.907 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 1.0527 ms
+2019-11-26 01:32:18.912 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.042 ms
+2019-11-26 01:32:18.914 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6088 ms
+2019-11-26 01:32:18.924 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.6304 ms
+2019-11-26 01:32:18.929 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.9948 ms
+2019-11-26 01:32:18.972 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4061 ms
+2019-11-26 01:32:18.972 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9217 ms
+2019-11-26 01:32:18.972 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4967 ms
+2019-11-26 01:32:18.978 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3299 ms
+2019-11-26 01:32:18.980 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9819 ms
+2019-11-26 01:32:18.989 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6342 ms
+2019-11-26 01:32:18.998 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3316 ms
+2019-11-26 01:32:19.009 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.413 ms
+2019-11-26 01:32:19.372 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.911 ms
+2019-11-26 01:32:19.408 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.6718 ms
+2019-11-26 01:32:19.420 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3733 ms
+2019-11-26 01:32:19.430 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.9714 ms
+2019-11-26 01:32:19.446 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8974 ms
+2019-11-26 01:32:20.216 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 278.6555 ms
+2019-11-26 01:32:20.260 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 302 in 23.5164 ms
+2019-11-26 01:32:20.389 +02:00 [INF] HTTP GET /?ReturnUrl=%2FEmail%2FListEmailsAsync%3FemailStatus%3DNotReviewed responded 200 in 117.1097 ms
+2019-11-26 01:33:22.850 +02:00 [INF] HTTP GET /Home/Privacy responded 302 in 4.2237 ms
+2019-11-26 01:33:22.859 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy responded 200 in 2.3886 ms
+2019-11-26 01:33:22.880 +02:00 [INF] HTTP GET /notification?id=ODwr5JHsCQhUU5NEDxxj9g responded 101 in 63477.5569 ms
+2019-11-26 01:33:29.131 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 528.9104 ms
+2019-11-26 01:33:29.957 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 793.8007 ms
+2019-11-26 01:33:30.139 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 26.9752 ms
+2019-11-26 01:33:30.143 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4998 ms
+2019-11-26 01:33:30.182 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.505 ms
+2019-11-26 01:33:30.182 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.467 ms
+2019-11-26 01:33:30.194 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.9706 ms
+2019-11-26 01:33:30.202 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.9437 ms
+2019-11-26 01:33:30.210 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.3376 ms
+2019-11-26 01:33:30.210 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.1869 ms
+2019-11-26 01:33:30.226 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8516 ms
+2019-11-26 01:33:30.239 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8335 ms
+2019-11-26 01:33:30.247 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.855 ms
+2019-11-26 01:33:30.250 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9805 ms
+2019-11-26 01:33:30.256 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9697 ms
+2019-11-26 01:33:30.261 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.827 ms
+2019-11-26 01:33:30.275 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4763 ms
+2019-11-26 01:33:30.310 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.3475 ms
+2019-11-26 01:33:30.609 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7176 ms
+2019-11-26 01:33:30.644 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5913 ms
+2019-11-26 01:33:30.659 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9377 ms
+2019-11-26 01:33:30.674 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6598 ms
+2019-11-26 01:33:30.686 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0052 ms
+2019-11-26 01:33:38.587 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 54.2535 ms
+2019-11-26 01:33:38.604 +02:00 [INF] HTTP GET /notification?id=sVe-S5Z5g3xt6i170TenkA responded 101 in 7965.9918 ms
+2019-11-26 01:33:38.639 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.2117 ms
+2019-11-26 01:33:38.639 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4752 ms
+2019-11-26 01:33:38.658 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4951 ms
+2019-11-26 01:33:38.658 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4636 ms
+2019-11-26 01:33:38.658 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.415 ms
+2019-11-26 01:33:38.667 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 9.7584 ms
+2019-11-26 01:33:38.697 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 3.9986 ms
+2019-11-26 01:33:38.704 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.2174 ms
+2019-11-26 01:33:38.723 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0386 ms
+2019-11-26 01:33:38.737 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7408 ms
+2019-11-26 01:33:38.759 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7692 ms
+2019-11-26 01:33:38.760 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1809 ms
+2019-11-26 01:33:38.774 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7943 ms
+2019-11-26 01:33:38.774 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6387 ms
+2019-11-26 01:33:38.774 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.6279 ms
+2019-11-26 01:33:38.776 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4162 ms
+2019-11-26 01:33:38.953 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7743 ms
+2019-11-26 01:33:39.002 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6822 ms
+2019-11-26 01:33:39.020 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.206 ms
+2019-11-26 01:33:39.030 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7355 ms
+2019-11-26 01:33:39.038 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1779 ms
+2019-11-26 01:34:11.590 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 129.881 ms
+2019-11-26 01:34:11.607 +02:00 [INF] HTTP GET /notification?id=joQPO86iSHwJcByZyMeClw responded 101 in 32606.239 ms
+2019-11-26 01:34:11.676 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 12.9204 ms
+2019-11-26 01:34:11.677 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 13.6869 ms
+2019-11-26 01:34:11.692 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4627 ms
+2019-11-26 01:34:11.692 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.4471 ms
+2019-11-26 01:34:11.693 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.3008 ms
+2019-11-26 01:34:11.693 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4866 ms
+2019-11-26 01:34:11.698 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 0.5926 ms
+2019-11-26 01:34:11.714 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 1.6718 ms
+2019-11-26 01:34:11.742 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7976 ms
+2019-11-26 01:34:11.746 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1599 ms
+2019-11-26 01:34:11.757 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.277 ms
+2019-11-26 01:34:11.757 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4456 ms
+2019-11-26 01:34:11.757 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3923 ms
+2019-11-26 01:34:11.758 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.952 ms
+2019-11-26 01:34:11.758 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2289 ms
+2019-11-26 01:34:11.771 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.3004 ms
+2019-11-26 01:34:12.161 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.7619 ms
+2019-11-26 01:34:12.175 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0666 ms
+2019-11-26 01:34:12.196 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.7147 ms
+2019-11-26 01:34:12.214 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9896 ms
+2019-11-26 01:34:12.795 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 114.1683 ms
+2019-11-26 01:34:12.831 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.7544 ms
+2019-11-26 01:34:12.833 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.494 ms
+2019-11-26 01:34:12.833 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.4124 ms
+2019-11-26 01:34:12.833 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3536 ms
+2019-11-26 01:34:12.834 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.8507 ms
+2019-11-26 01:34:12.844 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.6394 ms
+2019-11-26 01:34:12.850 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.6168 ms
+2019-11-26 01:34:12.857 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 2.0628 ms
+2019-11-26 01:34:12.896 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.3981 ms
+2019-11-26 01:34:12.901 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2796 ms
+2019-11-26 01:34:12.913 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9016 ms
+2019-11-26 01:34:12.913 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.942 ms
+2019-11-26 01:34:12.914 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5574 ms
+2019-11-26 01:34:12.925 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.8695 ms
+2019-11-26 01:34:12.931 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.586 ms
+2019-11-26 01:34:12.940 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.4516 ms
+2019-11-26 01:34:13.059 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8566 ms
+2019-11-26 01:34:13.198 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5661 ms
+2019-11-26 01:34:13.216 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0856 ms
+2019-11-26 01:34:13.259 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 9.3334 ms
+2019-11-26 01:34:13.273 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.3888 ms
+2019-11-26 01:34:14.115 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 82.2523 ms
+2019-11-26 01:34:14.132 +02:00 [INF] HTTP GET /notification?id=3Ht9RWXrsmtvkuuEYInbRA responded 101 in 1029.8068 ms
+2019-11-26 01:34:14.175 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.7007 ms
+2019-11-26 01:34:14.177 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.453 ms
+2019-11-26 01:34:14.177 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4452 ms
+2019-11-26 01:34:14.177 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.4316 ms
+2019-11-26 01:34:14.177 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.2944 ms
+2019-11-26 01:34:14.178 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4207 ms
+2019-11-26 01:34:14.182 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.6719 ms
+2019-11-26 01:34:14.192 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.9148 ms
+2019-11-26 01:34:14.199 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1393 ms
+2019-11-26 01:34:14.209 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3181 ms
+2019-11-26 01:34:14.228 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.4521 ms
+2019-11-26 01:34:14.236 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.5315 ms
+2019-11-26 01:34:14.242 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6093 ms
+2019-11-26 01:34:14.261 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7974 ms
+2019-11-26 01:34:14.262 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8 ms
+2019-11-26 01:34:14.265 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0422 ms
+2019-11-26 01:34:14.399 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.1412 ms
+2019-11-26 01:34:14.489 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.0359 ms
+2019-11-26 01:34:14.513 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9939 ms
+2019-11-26 01:34:14.526 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.8391 ms
+2019-11-26 01:34:14.540 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.947 ms
+2019-11-26 01:34:14.937 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 39.531 ms
+2019-11-26 01:34:14.949 +02:00 [INF] HTTP GET /notification?id=GHGADWBnDxOVg_1XqwcRdg responded 101 in 520.7362 ms
+2019-11-26 01:34:15.001 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5643 ms
+2019-11-26 01:34:15.001 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.4046 ms
+2019-11-26 01:34:15.001 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.7976 ms
+2019-11-26 01:34:15.002 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5031 ms
+2019-11-26 01:34:15.003 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.3248 ms
+2019-11-26 01:34:15.003 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3729 ms
+2019-11-26 01:34:15.022 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.602 ms
+2019-11-26 01:34:15.026 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 3.1824 ms
+2019-11-26 01:34:15.030 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.202 ms
+2019-11-26 01:34:15.041 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5733 ms
+2019-11-26 01:34:15.046 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3464 ms
+2019-11-26 01:34:15.052 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.2325 ms
+2019-11-26 01:34:15.074 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.4676 ms
+2019-11-26 01:34:15.082 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7416 ms
+2019-11-26 01:34:15.087 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.557 ms
+2019-11-26 01:34:15.091 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9814 ms
+2019-11-26 01:34:15.243 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5802 ms
+2019-11-26 01:34:15.387 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 4.7556 ms
+2019-11-26 01:34:15.421 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.8869 ms
+2019-11-26 01:34:15.444 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.771 ms
+2019-11-26 01:34:15.460 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0953 ms
+2019-11-26 01:34:15.861 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 42.439 ms
+2019-11-26 01:34:15.877 +02:00 [INF] HTTP GET /notification?id=NLhFpS0Yoc1MI1qutJTQJQ responded 101 in 611.5547 ms
+2019-11-26 01:34:15.910 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 6.1775 ms
+2019-11-26 01:34:15.910 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5978 ms
+2019-11-26 01:34:15.911 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5189 ms
+2019-11-26 01:34:15.911 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.3015 ms
+2019-11-26 01:34:15.912 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5272 ms
+2019-11-26 01:34:15.913 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4076 ms
+2019-11-26 01:34:15.926 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 3.0808 ms
+2019-11-26 01:34:15.931 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.506 ms
+2019-11-26 01:34:15.939 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.0883 ms
+2019-11-26 01:34:15.948 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6425 ms
+2019-11-26 01:34:15.953 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3508 ms
+2019-11-26 01:34:15.962 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2575 ms
+2019-11-26 01:34:15.965 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6128 ms
+2019-11-26 01:34:15.974 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7279 ms
+2019-11-26 01:34:15.974 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8884 ms
+2019-11-26 01:34:15.980 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3507 ms
+2019-11-26 01:34:16.143 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7167 ms
+2019-11-26 01:34:16.232 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5865 ms
+2019-11-26 01:34:16.247 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2388 ms
+2019-11-26 01:34:16.264 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.741 ms
+2019-11-26 01:34:16.279 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5981 ms
+2019-11-26 01:34:16.774 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 26.8233 ms
+2019-11-26 01:34:16.793 +02:00 [INF] HTTP GET /notification?id=jo-5m4HVI78fQQOejz1c3g responded 101 in 616.8674 ms
+2019-11-26 01:34:16.849 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.963 ms
+2019-11-26 01:34:16.850 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.7932 ms
+2019-11-26 01:34:16.851 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7906 ms
+2019-11-26 01:34:16.854 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 2.2145 ms
+2019-11-26 01:34:16.858 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.6792 ms
+2019-11-26 01:34:16.861 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.4658 ms
+2019-11-26 01:34:16.873 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.6373 ms
+2019-11-26 01:34:16.880 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 2.8472 ms
+2019-11-26 01:34:16.882 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.2775 ms
+2019-11-26 01:34:16.898 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8452 ms
+2019-11-26 01:34:16.911 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.089 ms
+2019-11-26 01:34:16.924 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.9883 ms
+2019-11-26 01:34:16.926 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.1275 ms
+2019-11-26 01:34:16.928 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0221 ms
+2019-11-26 01:34:16.938 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.5041 ms
+2019-11-26 01:34:16.942 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9559 ms
+2019-11-26 01:34:17.076 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7224 ms
+2019-11-26 01:34:17.229 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5534 ms
+2019-11-26 01:34:17.260 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2127 ms
+2019-11-26 01:34:17.287 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 4.611 ms
+2019-11-26 01:34:17.298 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9198 ms
+2019-11-26 01:34:18.491 +02:00 [INF] HTTP GET / responded 302 in 2.1098 ms
+2019-11-26 01:34:19.085 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 582.0042 ms
+2019-11-26 01:34:19.094 +02:00 [INF] HTTP GET /notification?id=W2TU1BDfNQr0Np4HvZU9Yw responded 101 in 1978.5542 ms
+2019-11-26 01:34:19.127 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.9355 ms
+2019-11-26 01:34:19.127 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4155 ms
+2019-11-26 01:34:19.128 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.2995 ms
+2019-11-26 01:34:19.128 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.3829 ms
+2019-11-26 01:34:19.129 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.9373 ms
+2019-11-26 01:34:19.129 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5151 ms
+2019-11-26 01:34:19.161 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.1706 ms
+2019-11-26 01:34:19.175 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 5.2064 ms
+2019-11-26 01:34:19.189 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7226 ms
+2019-11-26 01:34:19.194 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0103 ms
+2019-11-26 01:34:19.209 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.5246 ms
+2019-11-26 01:34:19.211 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1548 ms
+2019-11-26 01:34:19.211 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0357 ms
+2019-11-26 01:34:19.211 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0476 ms
+2019-11-26 01:34:19.231 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6105 ms
+2019-11-26 01:34:19.236 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.2613 ms
+2019-11-26 01:34:19.458 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 6.2415 ms
+2019-11-26 01:34:19.497 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.9251 ms
+2019-11-26 01:34:19.521 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5212 ms
+2019-11-26 01:34:19.534 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.7727 ms
+2019-11-26 01:34:19.545 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0941 ms
+2019-11-26 01:34:28.151 +02:00 [INF] HTTP GET / responded 302 in 0.8976 ms
+2019-11-26 01:34:28.179 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 19.8772 ms
+2019-11-26 01:34:28.192 +02:00 [INF] HTTP GET /notification?id=eKNeWTqBnNnNmC--TgdqCg responded 101 in 8694.6948 ms
+2019-11-26 01:34:28.237 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 4.2223 ms
+2019-11-26 01:34:28.237 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 4.7686 ms
+2019-11-26 01:34:28.239 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4845 ms
+2019-11-26 01:34:28.240 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.3859 ms
+2019-11-26 01:34:28.240 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5745 ms
+2019-11-26 01:34:28.240 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.314 ms
+2019-11-26 01:34:28.252 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.0915 ms
+2019-11-26 01:34:28.260 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.5261 ms
+2019-11-26 01:34:28.261 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1551 ms
+2019-11-26 01:34:28.291 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 18.5029 ms
+2019-11-26 01:34:28.294 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7163 ms
+2019-11-26 01:34:28.300 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4932 ms
+2019-11-26 01:34:28.307 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.051 ms
+2019-11-26 01:34:28.324 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.0324 ms
+2019-11-26 01:34:28.330 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1481 ms
+2019-11-26 01:34:28.339 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.3964 ms
+2019-11-26 01:34:28.628 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6728 ms
+2019-11-26 01:34:28.656 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3701 ms
+2019-11-26 01:34:28.663 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3852 ms
+2019-11-26 01:34:28.684 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.0523 ms
+2019-11-26 01:34:28.691 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1747 ms
+2019-11-26 01:36:03.965 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 16.702 ms
+2019-11-26 01:36:03.992 +02:00 [INF] HTTP GET /Manager/Register responded 302 in 1.065 ms
+2019-11-26 01:36:04.007 +02:00 [INF] HTTP GET /?ReturnUrl=%2FManager%2FRegister responded 200 in 2.3094 ms
+2019-11-26 01:36:39.030 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 13.2233 ms
+2019-11-26 01:36:39.062 +02:00 [INF] HTTP GET /Home/Privacy responded 302 in 0.7462 ms
+2019-11-26 01:36:39.079 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy responded 200 in 3.183 ms
+2019-11-26 01:40:59.963 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 17.5606 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:41:00.147 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:41:59.916 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.6922 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:41:59.960 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:42:59.925 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.4352 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:42:59.971 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:43:59.912 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.4716 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:43:59.952 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:44:59.914 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 2.0594 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:44:59.960 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:45:59.916 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.469 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:45:59.972 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:46:59.916 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.7474 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:46:59.962 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:47:59.917 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.7903 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:47:59.972 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:48:59.915 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.6423 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:48:59.969 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:49:59.912 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.374 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:49:59.950 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:50:59.914 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.6328 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:50:59.954 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:51:59.920 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 2.521 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:51:59.962 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:52:59.914 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.7944 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:52:59.959 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:53:59.914 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 2.4258 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:53:59.964 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:54:59.915 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.8251 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:54:59.965 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:55:59.913 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 1.2851 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 01:55:59.955 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 149
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 01:56:23.348 +02:00 [INF] Application starting up!
+2019-11-26 01:56:29.522 +02:00 [INF] HTTP GET / responded 200 in 601.8096 ms
+2019-11-26 01:56:37.124 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 1103.8006 ms
+2019-11-26 01:56:38.010 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 202.1069 ms
+2019-11-26 01:56:38.520 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1347.0638 ms
+2019-11-26 01:56:38.528 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 495.4591 ms
+2019-11-26 01:56:38.599 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 4.7604 ms
+2019-11-26 01:56:38.599 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4992 ms
+2019-11-26 01:56:38.600 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4762 ms
+2019-11-26 01:56:38.600 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3724 ms
+2019-11-26 01:56:38.602 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.7732 ms
+2019-11-26 01:56:38.603 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.536 ms
+2019-11-26 01:56:38.644 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.568 ms
+2019-11-26 01:56:38.649 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.6894 ms
+2019-11-26 01:56:38.699 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 43.5319 ms
+2019-11-26 01:56:38.705 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9549 ms
+2019-11-26 01:56:38.712 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8137 ms
+2019-11-26 01:56:38.712 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3559 ms
+2019-11-26 01:56:38.714 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.956 ms
+2019-11-26 01:56:38.716 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8874 ms
+2019-11-26 01:56:38.724 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0061 ms
+2019-11-26 01:56:38.729 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.5947 ms
+2019-11-26 01:56:39.432 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4845 ms
+2019-11-26 01:56:39.434 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 51.891 ms
+2019-11-26 01:56:39.561 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1519 ms
+2019-11-26 01:56:39.579 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6873 ms
+2019-11-26 01:56:39.656 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0667 ms
+2019-11-26 01:56:41.404 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 101.8132 ms
+2019-11-26 01:56:41.480 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 7.9377 ms
+2019-11-26 01:56:41.481 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 8.9978 ms
+2019-11-26 01:56:41.499 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 9.468 ms
+2019-11-26 01:56:41.541 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.8585 ms
+2019-11-26 01:56:41.548 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.7813 ms
+2019-11-26 01:56:41.565 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5178 ms
+2019-11-26 01:56:41.576 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 2.4538 ms
+2019-11-26 01:56:41.582 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 1.1977 ms
+2019-11-26 01:56:41.584 +02:00 [INF] HTTP GET /notification?id=wtY3WrKBluu7_wuoYi0Uuw responded 101 in 2125.0774 ms
+2019-11-26 01:56:41.611 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.5477 ms
+2019-11-26 01:56:41.630 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.8138 ms
+2019-11-26 01:56:41.646 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1998 ms
+2019-11-26 01:56:41.648 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.0528 ms
+2019-11-26 01:56:41.648 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.2582 ms
+2019-11-26 01:56:41.652 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8743 ms
+2019-11-26 01:56:41.664 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6397 ms
+2019-11-26 01:56:41.670 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.2041 ms
+2019-11-26 01:56:41.976 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 1.227 ms
+2019-11-26 01:56:41.986 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0783 ms
+2019-11-26 01:56:42.017 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.7691 ms
+2019-11-26 01:56:42.047 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4956 ms
+2019-11-26 01:56:54.720 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 200 in 106.7648 ms
+2019-11-26 01:56:55.026 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 200 in 294.2308 ms
+2019-11-26 01:56:59.959 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 43.7298 ms
+2019-11-26 01:57:00.016 +02:00 [INF] HTTP GET /Home/Privacy responded 302 in 27.0781 ms
+2019-11-26 01:57:00.029 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy responded 200 in 3.0341 ms
+2019-11-26 01:57:01.106 +02:00 [INF] HTTP GET /Manager/Register responded 302 in 1.4822 ms
+2019-11-26 01:57:01.150 +02:00 [INF] HTTP GET /?ReturnUrl=%2FManager%2FRegister responded 200 in 1.4253 ms
+2019-11-26 01:57:08.777 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 48.1008 ms
+2019-11-26 01:57:14.180 +02:00 [INF] HTTP POST /Home/SetNewPasswordAsync responded 200 in 95.0536 ms
+2019-11-26 01:57:14.242 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 49.1569 ms
+2019-11-26 01:57:14.293 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.6107 ms
+2019-11-26 01:57:14.293 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4281 ms
+2019-11-26 01:57:14.293 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.2892 ms
+2019-11-26 01:57:14.293 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4084 ms
+2019-11-26 01:57:14.312 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.8798 ms
+2019-11-26 01:57:14.312 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 4.0003 ms
+2019-11-26 01:57:14.322 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.7926 ms
+2019-11-26 01:57:14.329 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.3453 ms
+2019-11-26 01:57:14.359 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6415 ms
+2019-11-26 01:57:14.371 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.4954 ms
+2019-11-26 01:57:14.375 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6628 ms
+2019-11-26 01:57:14.383 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.286 ms
+2019-11-26 01:57:14.393 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2352 ms
+2019-11-26 01:57:14.399 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3444 ms
+2019-11-26 01:57:14.407 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7138 ms
+2019-11-26 01:57:14.422 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.2142 ms
+2019-11-26 01:57:14.788 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.4592 ms
+2019-11-26 01:57:14.852 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 7.738 ms
+2019-11-26 01:57:14.874 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5177 ms
+2019-11-26 01:57:14.887 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5905 ms
+2019-11-26 01:57:14.900 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1957 ms
+2019-11-26 01:58:08.085 +02:00 [INF] HTTP GET /notification?id=j31oG4SuxCWFfDzfQ2Ax3Q responded 101 in 53229.8308 ms
