@@ -91,10 +91,10 @@ function register(e) {
         {
             type: "Post",
             url: "/Manager/CheckForUserAndEmailAsync",
-            //headers: {
-            //    RequestVerificationToken:
-            //        $('input:hidden[name="__RequestVerificationToken"]').val(),
-            //},
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val(),
+            },
             data: data,
             success: function (returndata) {
                 console.log(returndata);
@@ -111,18 +111,16 @@ function register(e) {
                 }
                 else {
                     $('#validate-name').text('');
-                    e.preventDefault();
                 }
                 if (returndata !== "true email" && returndata !== "true user") {
                     $.ajax({
                         type: "POST",
                         url: "/Manager/RegisterUserAsync",
-                        //headers: {
-                        //    RequestVerificationToken:
-                        //        $('input:hidden[name="__RequestVerificationToken"]').val(),
-                        //    'Accept': 'application/json',
-                        //    'Content-Type': 'application/json'
-                        //},
+                        headers: {
+                            RequestVerificationToken:
+                                $('input:hidden[name="__RequestVerificationToken"]').val(),
+                            
+                        },
                         data: data,
                         success: function (response) {
                             //window.location.replace("/Manager/Register")

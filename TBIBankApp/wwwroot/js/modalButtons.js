@@ -264,12 +264,12 @@ function SetOpen(value) {
             {
                 type: "Post",
                 url: "/Application/CreateAsync",
-                //headers: {
-                //    RequestVerificationToken:
-                //        $('input:hidden[name="__RequestVerificationToken"]').val()
-                //    //'Accept': 'application/json',
-                //    //'Content-Type': 'application/json'
-                //},
+                headers: {
+                    RequestVerificationToken:
+                        $('input:hidden[name="__RequestVerificationToken"]').val()
+                    //'Accept': 'application/json',
+                    //'Content-Type': 'application/json'
+                },
                 data: data,
                 dataType: 'text',
                 success: function (response) {

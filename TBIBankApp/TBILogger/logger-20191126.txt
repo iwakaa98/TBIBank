@@ -85,3 +85,1206 @@
 2019-11-26 00:25:02.262 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4757 ms
 2019-11-26 00:25:02.411 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5349 ms
 2019-11-26 00:25:02.426 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.881 ms
+2019-11-26 00:42:09.753 +02:00 [INF] Application starting up!
+2019-11-26 00:42:42.764 +02:00 [INF] Application starting up!
+2019-11-26 00:42:44.381 +02:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:daeeec70-0998-4525-949e-3e5580200439
+Error Number:2714,State:6,Class:16
+2019-11-26 00:42:44.515 +02:00 [FTL] Application startup exception
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Startup.cs:line 113
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+ClientConnectionId:daeeec70-0998-4525-949e-3e5580200439
+Error Number:2714,State:6,Class:16
+2019-11-26 00:42:44.578 +02:00 [FTL] Application failed to start!
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 22
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Startup.cs:line 113
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at TBIBankApp.Program.Main(String[] args) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Program.cs:line 30
+ClientConnectionId:daeeec70-0998-4525-949e-3e5580200439
+Error Number:2714,State:6,Class:16
+2019-11-26 00:45:01.345 +02:00 [INF] Application starting up!
+2019-11-26 00:46:02.824 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 00:46:03.032 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 179.4269 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:46:03.112 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:46:03.165 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 10.6355 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:46:03.203 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:46:03.253 +02:00 [ERR] Connection id "0HLRHV4VSMHTJ", Request id "0HLRHV4VSMHTJ:00000001": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-26 00:46:25.324 +02:00 [INF] HTTP GET / responded 302 in 121.5995 ms
+2019-11-26 00:46:25.836 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 499.9205 ms
+2019-11-26 00:46:26.439 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 33.4814 ms
+2019-11-26 00:46:26.719 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 3.0366 ms
+2019-11-26 00:46:26.771 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 38.1054 ms
+2019-11-26 00:46:32.888 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 32.1837 ms
+2019-11-26 00:46:33.016 +02:00 [INF] HTTP GET /notification?id=GRXKKg7SfyVigkZfeY4KMw responded 101 in 6569.7788 ms
+2019-11-26 00:46:33.345 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6929 ms
+2019-11-26 00:46:33.486 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3615 ms
+2019-11-26 00:46:33.494 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6908 ms
+2019-11-26 00:46:34.484 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status New at 26.11.2019 г. 0:46:34.
+2019-11-26 00:46:34.489 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 302 in 74.8593 ms
+2019-11-26 00:46:34.501 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 1.0304 ms
+2019-11-26 00:46:34.510 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7232 ms
+2019-11-26 00:46:34.525 +02:00 [INF] HTTP GET /notification?id=ubD_xgnnktXBF4COhrw3vA responded 101 in 1148.9318 ms
+2019-11-26 00:46:37.284 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 8.4738 ms
+2019-11-26 00:46:37.388 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4543 ms
+2019-11-26 00:46:37.399 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8053 ms
+2019-11-26 00:46:38.132 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status NotReviewed at 26.11.2019 г. 0:46:38.
+2019-11-26 00:46:38.135 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 302 in 12.6287 ms
+2019-11-26 00:46:38.146 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.324 ms
+2019-11-26 00:46:38.156 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7762 ms
+2019-11-26 00:46:38.169 +02:00 [INF] HTTP GET /notification?id=rk1-0pHEPyvqvhU32_6klg responded 101 in 867.5165 ms
+2019-11-26 00:47:04.127 +02:00 [INF] Application starting up!
+2019-11-26 00:47:06.412 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 00:47:06.747 +02:00 [INF] HTTP GET / responded 302 in 272.0428 ms
+2019-11-26 00:47:07.378 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 604.889 ms
+2019-11-26 00:47:07.933 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 35.0302 ms
+2019-11-26 00:47:08.095 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 6.796 ms
+2019-11-26 00:47:08.130 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 27.8193 ms
+2019-11-26 00:47:10.846 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status New at 26.11.2019 г. 0:47:10.
+2019-11-26 00:47:10.852 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 302 in 91.4826 ms
+2019-11-26 00:47:10.860 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.614 ms
+2019-11-26 00:47:10.870 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3927 ms
+2019-11-26 00:47:10.980 +02:00 [INF] HTTP GET /notification?id=uXg8acNVWi5wFpOHn0MOEg responded 101 in 3012.5217 ms
+2019-11-26 00:47:14.195 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.0058 ms
+2019-11-26 00:47:14.343 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3602 ms
+2019-11-26 00:47:14.358 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3225 ms
+2019-11-26 00:47:15.061 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status NotReviewed at 26.11.2019 г. 0:47:15.
+2019-11-26 00:47:15.063 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 302 in 18.4843 ms
+2019-11-26 00:47:15.075 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.4159 ms
+2019-11-26 00:47:15.087 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1807 ms
+2019-11-26 00:47:15.125 +02:00 [INF] HTTP GET /notification?id=am4cs-9ZkkvoVnPU6Icwtg responded 101 in 896.5728 ms
+2019-11-26 00:47:18.116 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6084 ms
+2019-11-26 00:47:18.250 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.5998 ms
+2019-11-26 00:47:18.261 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2308 ms
+2019-11-26 00:47:18.507 +02:00 [INF] HTTP GET / responded 302 in 0.9541 ms
+2019-11-26 00:47:18.524 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 8.663 ms
+2019-11-26 00:47:18.548 +02:00 [INF] HTTP GET /notification?id=cYeMtocqgQMYMQbrPwbR2Q responded 101 in 408.1649 ms
+2019-11-26 00:47:18.965 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5322 ms
+2019-11-26 00:47:19.171 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.5924 ms
+2019-11-26 00:47:19.184 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1303 ms
+2019-11-26 00:47:19.881 +02:00 [INF] HTTP GET / responded 302 in 0.6914 ms
+2019-11-26 00:47:19.901 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 9.1075 ms
+2019-11-26 00:47:19.918 +02:00 [INF] HTTP GET /notification?id=gBeO0PAThgd0FqQuqz5x8Q responded 101 in 922.2471 ms
+2019-11-26 00:47:20.054 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5538 ms
+2019-11-26 00:47:20.341 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6186 ms
+2019-11-26 00:47:20.355 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.77 ms
+2019-11-26 00:47:30.542 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status NotReviewed at 26.11.2019 г. 0:47:30.
+2019-11-26 00:47:30.545 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 302 in 16.8829 ms
+2019-11-26 00:47:30.559 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.3422 ms
+2019-11-26 00:47:30.571 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7148 ms
+2019-11-26 00:47:30.586 +02:00 [INF] HTTP GET /notification?id=Ng92rwE9CDY3B0q1cIrkuw responded 101 in 10360.6295 ms
+2019-11-26 00:47:32.542 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8468 ms
+2019-11-26 00:47:32.683 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4137 ms
+2019-11-26 00:47:32.692 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5783 ms
+2019-11-26 00:47:33.139 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status Closed at 26.11.2019 г. 0:47:33.
+2019-11-26 00:47:33.141 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 302 in 6.8894 ms
+2019-11-26 00:47:33.151 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.3234 ms
+2019-11-26 00:47:33.165 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6511 ms
+2019-11-26 00:47:33.177 +02:00 [INF] HTTP GET /notification?id=Qa5VQBm-wPGRLl6ZafaarQ responded 101 in 604.4466 ms
+2019-11-26 00:47:34.481 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4825 ms
+2019-11-26 00:47:34.606 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.5593 ms
+2019-11-26 00:47:34.617 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5951 ms
+2019-11-26 00:47:34.945 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status InvalidApplication at 26.11.2019 г. 0:47:34.
+2019-11-26 00:47:34.949 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 302 in 7.2649 ms
+2019-11-26 00:47:34.963 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.3475 ms
+2019-11-26 00:47:34.975 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7571 ms
+2019-11-26 00:47:34.988 +02:00 [INF] HTTP GET /notification?id=aGh42fRipyrPev9PP3tx0w responded 101 in 479.724 ms
+2019-11-26 00:47:36.259 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5123 ms
+2019-11-26 00:47:36.378 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4402 ms
+2019-11-26 00:47:36.388 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9841 ms
+2019-11-26 00:47:37.037 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 95.5121 ms
+2019-11-26 00:47:37.050 +02:00 [INF] HTTP GET /notification?id=yEX1t5XIdPaGTkReFfcd2w responded 101 in 758.815 ms
+2019-11-26 00:47:37.564 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 7.7531 ms
+2019-11-26 00:47:37.572 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6484 ms
+2019-11-26 00:47:39.964 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status NotReviewed at 26.11.2019 г. 0:47:39.
+2019-11-26 00:47:39.967 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 302 in 5.1373 ms
+2019-11-26 00:47:39.976 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 1.5481 ms
+2019-11-26 00:47:39.989 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.555 ms
+2019-11-26 00:47:41.987 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.541 ms
+2019-11-26 00:47:41.999 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1908 ms
+2019-11-26 00:47:42.541 +02:00 [INF] HTTP GET / responded 302 in 2.2653 ms
+2019-11-26 00:47:42.591 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 37.4309 ms
+2019-11-26 00:47:42.912 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5471 ms
+2019-11-26 00:47:43.034 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.375 ms
+2019-11-26 00:47:43.043 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1466 ms
+2019-11-26 00:47:48.612 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status New at 26.11.2019 г. 0:47:48.
+2019-11-26 00:47:48.617 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 302 in 11.6673 ms
+2019-11-26 00:47:48.635 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.7668 ms
+2019-11-26 00:47:48.645 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6672 ms
+2019-11-26 00:47:48.658 +02:00 [INF] HTTP GET /notification?id=v403NIQOBgYdBKsChzeWVQ responded 101 in 5709.6323 ms
+2019-11-26 00:47:50.909 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7143 ms
+2019-11-26 00:47:51.054 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4434 ms
+2019-11-26 00:47:51.064 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9388 ms
+2019-11-26 00:47:53.521 +02:00 [INF] HTTP GET /notification?id=2OYdd2ZLLQRR6p1C4TQiOQ responded 101 in 2560.7102 ms
+2019-11-26 00:50:39.322 +02:00 [INF] Application starting up!
+2019-11-26 00:50:44.598 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 00:50:45.171 +02:00 [INF] HTTP GET / responded 302 in 484.9432 ms
+2019-11-26 00:50:46.360 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 879.7674 ms
+2019-11-26 00:50:47.298 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 24.5257 ms
+2019-11-26 00:50:47.533 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 9.6818 ms
+2019-11-26 00:50:47.567 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 27.1705 ms
+2019-11-26 00:50:52.547 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status New at 26.11.2019 г. 0:50:52.
+2019-11-26 00:50:52.551 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 302 in 73.2035 ms
+2019-11-26 00:50:52.560 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.478 ms
+2019-11-26 00:50:52.568 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1707 ms
+2019-11-26 00:50:52.699 +02:00 [INF] HTTP GET /notification?id=uZlxhCZWCbsuJ0WITjsN2A responded 101 in 5331.0394 ms
+2019-11-26 00:50:55.070 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.2862 ms
+2019-11-26 00:50:55.331 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4783 ms
+2019-11-26 00:50:55.345 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6915 ms
+2019-11-26 00:50:55.999 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status NotReviewed at 26.11.2019 г. 0:50:55.
+2019-11-26 00:50:56.001 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 302 in 10.4463 ms
+2019-11-26 00:50:56.009 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.7102 ms
+2019-11-26 00:50:56.018 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.58 ms
+2019-11-26 00:50:56.032 +02:00 [INF] HTTP GET /notification?id=xADgodYhce2lW7Jrr09IUw responded 101 in 796.4461 ms
+2019-11-26 00:50:57.232 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7478 ms
+2019-11-26 00:50:57.385 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4715 ms
+2019-11-26 00:50:57.398 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8318 ms
+2019-11-26 00:50:57.678 +02:00 [ERR] Error occurred while trying to get emails for page 0 and status Closed at 26.11.2019 г. 0:50:57.
+2019-11-26 00:50:57.680 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 302 in 6.1697 ms
+2019-11-26 00:50:57.687 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.6833 ms
+2019-11-26 00:50:57.698 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8979 ms
+2019-11-26 00:50:57.713 +02:00 [INF] HTTP GET /notification?id=MAPPttbOnaG-RyyUMIarHg responded 101 in 452.0205 ms
+2019-11-26 00:50:59.152 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5603 ms
+2019-11-26 00:50:59.282 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3723 ms
+2019-11-26 00:50:59.295 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7775 ms
+2019-11-26 00:51:01.816 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 32.6231 ms
+2019-11-26 00:51:01.833 +02:00 [INF] HTTP GET /notification?id=6lEgOGDEHpfkS3Rn-5qYQw responded 101 in 2645.8328 ms
+2019-11-26 00:51:02.269 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6006 ms
+2019-11-26 00:51:02.405 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5504 ms
+2019-11-26 00:51:02.417 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6144 ms
+2019-11-26 00:51:04.164 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 25.8362 ms
+2019-11-26 00:51:04.184 +02:00 [INF] HTTP GET /notification?id=cGR8s4yhPzoT9MT0YMRn-Q responded 101 in 1876.3533 ms
+2019-11-26 00:51:04.599 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4941 ms
+2019-11-26 00:51:04.739 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4926 ms
+2019-11-26 00:51:04.752 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5891 ms
+2019-11-26 00:51:05.322 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 17.168 ms
+2019-11-26 00:51:05.353 +02:00 [INF] HTTP GET /notification?id=QB9lELNx_70EN5231cWL-w responded 101 in 722.6122 ms
+2019-11-26 00:51:05.736 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5774 ms
+2019-11-26 00:51:05.865 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3376 ms
+2019-11-26 00:51:05.875 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3878 ms
+2019-11-26 00:51:10.682 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 115.8706 ms
+2019-11-26 00:51:10.699 +02:00 [INF] HTTP GET /notification?id=qMZHVsr0aNLaWEKdZIwy0A responded 101 in 4936.0704 ms
+2019-11-26 00:51:11.364 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 8.2126 ms
+2019-11-26 00:51:11.386 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8957 ms
+2019-11-26 00:51:13.117 +02:00 [INF] HTTP GET / responded 302 in 1.5942 ms
+2019-11-26 00:51:13.141 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 11.9365 ms
+2019-11-26 00:51:13.547 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.1285 ms
+2019-11-26 00:51:13.690 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4045 ms
+2019-11-26 00:51:13.699 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7874 ms
+2019-11-26 00:51:15.837 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 19.023 ms
+2019-11-26 00:51:15.854 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 56.007 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:15.868 +02:00 [INF] HTTP GET /notification?id=VwALZBXcot3_Anio2GDbxw responded 101 in 2279.0452 ms
+2019-11-26 00:51:16.033 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:16.079 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 6.766 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:16.123 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:16.172 +02:00 [ERR] Connection id "0HLRHV7JHRNK6", Request id "0HLRHV7JHRNK6:00000012": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-26 00:51:16.276 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8034 ms
+2019-11-26 00:51:16.425 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5531 ms
+2019-11-26 00:51:16.435 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9409 ms
+2019-11-26 00:51:19.074 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 5.5671 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:19.104 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 19.2056 ms
+2019-11-26 00:51:19.121 +02:00 [INF] HTTP GET /notification?id=Q3-E6B2lzsCGg0L9H99vQA responded 101 in 2812.6109 ms
+2019-11-26 00:51:19.154 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:19.256 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 3.6432 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:19.303 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:19.349 +02:00 [ERR] Connection id "0HLRHV7JHRNK3", Request id "0HLRHV7JHRNK3:0000002C": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-26 00:51:19.493 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6627 ms
+2019-11-26 00:51:19.664 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.8388 ms
+2019-11-26 00:51:19.682 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.4639 ms
+2019-11-26 00:51:20.929 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 12.0313 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:20.951 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 15.5691 ms
+2019-11-26 00:51:20.968 +02:00 [INF] HTTP GET /notification?id=1VnndZYHjiQ8OwuV9Llulg responded 101 in 1438.9151 ms
+2019-11-26 00:51:21.028 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:21.344 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 7.8657 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:21.420 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:21.486 +02:00 [ERR] Connection id "0HLRHV7JHRNKC", Request id "0HLRHV7JHRNKC:0000000A": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-26 00:51:21.578 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4344 ms
+2019-11-26 00:51:21.729 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1202 ms
+2019-11-26 00:51:21.738 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8334 ms
+2019-11-26 00:51:22.497 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 6.2382 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:22.535 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 22.8929 ms
+2019-11-26 00:51:22.555 +02:00 [INF] HTTP GET /notification?id=TaeRaOmcpEDzphnSjr5kaQ responded 101 in 941.4284 ms
+2019-11-26 00:51:22.624 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:22.719 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 3.6162 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:22.766 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:22.818 +02:00 [ERR] Connection id "0HLRHV7JHRNKB", Request id "0HLRHV7JHRNKB:0000000C": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-26 00:51:22.984 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.0253 ms
+2019-11-26 00:51:23.139 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.0225 ms
+2019-11-26 00:51:23.153 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9118 ms
+2019-11-26 00:51:28.730 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 21.2615 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:28.753 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 23.7112 ms
+2019-11-26 00:51:28.773 +02:00 [INF] HTTP GET /notification?id=t7pIuXIql2ZQ9YNGg0262g responded 101 in 5753.3201 ms
+2019-11-26 00:51:28.844 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:29.054 +02:00 [ERR] HTTP POST /Home/LogOutAsync responded 500 in 13.245 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:51:29.106 +02:00 [ERR] An exception was thrown attempting to execute the error handler.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-11-26 00:51:29.169 +02:00 [ERR] Connection id "0HLRHV7JHRNKA", Request id "0HLRHV7JHRNKA:0000000C": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.LogOutAsync() in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Controllers\HomeController.cs:line 155
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\Ivaka\Desktop\TBIBan-Final\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-11-26 00:51:29.665 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5566 ms
+2019-11-26 00:51:29.854 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.2671 ms
+2019-11-26 00:51:29.867 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2509 ms
+2019-11-26 00:52:27.121 +02:00 [INF] HTTP GET /notification?id=nJMrgXutegLm5tMVXuTmUQ responded 101 in 57392.7658 ms
+2019-11-26 00:57:00.147 +02:00 [INF] Application starting up!
+2019-11-26 00:57:11.241 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 00:57:11.695 +02:00 [INF] HTTP GET / responded 200 in 409.7835 ms
+2019-11-26 00:57:16.878 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 1370.9287 ms
+2019-11-26 00:58:20.763 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 63805.8564 ms
+2019-11-26 00:58:20.949 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 4.5277 ms
+2019-11-26 00:58:21.247 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1739.1696 ms
+2019-11-26 00:58:21.355 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 206.5617 ms
+2019-11-26 00:59:56.736 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 84244.3201 ms
+2019-11-26 00:59:57.086 +02:00 [INF] HTTP GET /notification?id=uxsQqys_zc79_xMNFAV1-A responded 101 in 95818.9728 ms
+2019-11-26 00:59:59.132 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 3.2713 ms
+2019-11-26 00:59:59.462 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 4.586 ms
+2019-11-26 00:59:59.647 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.254 ms
+2019-11-26 01:02:16.480 +02:00 [INF] Application starting up!
+2019-11-26 01:02:19.209 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 01:02:19.890 +02:00 [INF] HTTP GET / responded 200 in 603.9325 ms
+2019-11-26 01:02:25.683 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 437.6985 ms
+2019-11-26 01:02:26.226 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 518.0687 ms
+2019-11-26 01:02:28.223 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 27.787 ms
+2019-11-26 01:02:28.868 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6867 ms
+2019-11-26 01:02:28.896 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 21.1802 ms
+2019-11-26 01:02:33.088 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 301.743 ms
+2019-11-26 01:02:33.176 +02:00 [INF] HTTP GET /notification?id=ob-nwmI_UI5dBPoGFClZig responded 101 in 4921.3001 ms
+2019-11-26 01:02:33.482 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6706 ms
+2019-11-26 01:02:33.663 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 6.1418 ms
+2019-11-26 01:02:33.673 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3598 ms
+2019-11-26 01:02:33.958 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Open responded 200 in 38.5633 ms
+2019-11-26 01:02:33.970 +02:00 [INF] HTTP GET /notification?id=qzeOtztcpuq0zTVqYrF-fg responded 101 in 463.4144 ms
+2019-11-26 01:02:34.069 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5372 ms
+2019-11-26 01:02:34.395 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.6025 ms
+2019-11-26 01:02:34.413 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2706 ms
+2019-11-26 01:02:35.085 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 36.8789 ms
+2019-11-26 01:02:35.095 +02:00 [INF] HTTP GET /notification?id=BLt6-kkIg4FBaKzlUlW7FQ responded 101 in 748.0288 ms
+2019-11-26 01:02:35.171 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4235 ms
+2019-11-26 01:02:35.407 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.2925 ms
+2019-11-26 01:02:35.418 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7327 ms
+2019-11-26 01:02:36.216 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 24.7582 ms
+2019-11-26 01:02:36.229 +02:00 [INF] HTTP GET /notification?id=59LsghXAgSYbW4bIgki4aw responded 101 in 957.9007 ms
+2019-11-26 01:02:36.519 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8757 ms
+2019-11-26 01:02:36.690 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 2.5177 ms
+2019-11-26 01:02:36.700 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6022 ms
+2019-11-26 01:02:37.055 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 37.7403 ms
+2019-11-26 01:02:37.069 +02:00 [INF] HTTP GET /notification?id=0_ogrFCq7i-W4NlCePNYgw responded 101 in 534.9753 ms
+2019-11-26 01:02:37.150 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6294 ms
+2019-11-26 01:02:37.475 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3079 ms
+2019-11-26 01:02:37.488 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6534 ms
+2019-11-26 01:02:37.846 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 200 in 35.2937 ms
+2019-11-26 01:02:37.857 +02:00 [INF] HTTP GET /notification?id=VTEnFO6dL4UzG9NW7e9hNQ responded 101 in 550.8316 ms
+2019-11-26 01:02:37.932 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.9463 ms
+2019-11-26 01:02:38.185 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3054 ms
+2019-11-26 01:02:38.215 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2959 ms
+2019-11-26 01:02:38.873 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 104.3528 ms
+2019-11-26 01:02:38.891 +02:00 [INF] HTTP GET /notification?id=CURDhG3tbTwiAClo4Yh57w responded 101 in 852.3073 ms
+2019-11-26 01:02:39.492 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 5.2604 ms
+2019-11-26 01:02:39.608 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.222 ms
+2019-11-26 01:02:40.219 +02:00 [INF] HTTP GET / responded 302 in 2.4251 ms
+2019-11-26 01:02:40.252 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 22.5188 ms
+2019-11-26 01:02:40.814 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.544 ms
+2019-11-26 01:02:40.994 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.9353 ms
+2019-11-26 01:02:41.039 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5941 ms
+2019-11-26 01:13:38.464 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 131.9393 ms
+2019-11-26 01:13:38.476 +02:00 [INF] HTTP GET /notification?id=LSjrSeKKxDqAMssknn_zpg responded 101 in 657626.158 ms
+2019-11-26 01:13:38.955 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.9938 ms
+2019-11-26 01:13:39.188 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1136 ms
+2019-11-26 01:13:39.209 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2061 ms
+2019-11-26 01:16:49.211 +02:00 [INF] HTTP GET /notification?id=ZhukvnVoiI3dCjNSwU3C7A responded 101 in 190193.2144 ms
+2019-11-26 01:28:08.245 +02:00 [INF] Application starting up!
+2019-11-26 01:28:11.183 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 01:28:11.597 +02:00 [INF] HTTP GET / responded 302 in 277.6172 ms
+2019-11-26 01:39:48.502 +02:00 [INF] HTTP GET / responded 302 in 385.2826 ms
+2019-11-26 01:39:48.989 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 460.0298 ms
+2019-11-26 01:39:49.791 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 39.2202 ms
+2019-11-26 01:39:49.990 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 14.0301 ms
+2019-11-26 01:39:50.029 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 32.5616 ms
+2019-11-26 01:39:59.909 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 343.8489 ms
+2019-11-26 01:40:00.000 +02:00 [INF] HTTP GET /notification?id=WR3RqEZJVgFVUtbAm8V3AA responded 101 in 10163.1766 ms
+2019-11-26 01:40:00.538 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7744 ms
+2019-11-26 01:40:00.748 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 2.9946 ms
+2019-11-26 01:40:00.762 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4229 ms
+2019-11-26 01:40:02.090 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=InvalidApplication responded 200 in 46.4417 ms
+2019-11-26 01:40:02.118 +02:00 [INF] HTTP GET /notification?id=PzuMjpnCopSSqsgkpKaXDQ responded 101 in 1522.8361 ms
+2019-11-26 01:40:02.389 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5513 ms
+2019-11-26 01:40:02.553 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.1094 ms
+2019-11-26 01:40:02.565 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1831 ms
+2019-11-26 01:40:03.465 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=Closed responded 200 in 49.7021 ms
+2019-11-26 01:40:03.480 +02:00 [INF] HTTP GET /notification?id=CooJqAvUxEkBjvv_PwPvOg responded 101 in 1065.97 ms
+2019-11-26 01:40:03.594 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4681 ms
+2019-11-26 01:40:03.878 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5464 ms
+2019-11-26 01:40:03.909 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7105 ms
+2019-11-26 01:40:04.787 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 51.292 ms
+2019-11-26 01:40:04.798 +02:00 [INF] HTTP GET /notification?id=rn9CkqWP2JXWFvbzmsOr3A responded 101 in 1089.5421 ms
+2019-11-26 01:40:05.072 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.4506 ms
+2019-11-26 01:40:05.289 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4921 ms
+2019-11-26 01:40:05.297 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.606 ms
+2019-11-26 01:40:06.622 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 95.3243 ms
+2019-11-26 01:40:06.633 +02:00 [INF] HTTP GET /notification?id=Kw12O0wNYQLUYQi-Y14XGg responded 101 in 1487.4785 ms
+2019-11-26 01:40:07.157 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 5.6804 ms
+2019-11-26 01:40:07.231 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.626 ms
+2019-11-26 01:40:57.760 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 200 in 108.1318 ms
+2019-11-26 01:41:12.528 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 302 in 39.1324 ms
+2019-11-26 01:41:41.588 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 1.4985 ms
+2019-11-26 01:41:41.606 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0091 ms
+2019-11-26 01:43:08.043 +02:00 [INF] Application starting up!
+2019-11-26 01:43:18.176 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 01:43:18.582 +02:00 [INF] HTTP GET / responded 200 in 344.6957 ms
+2019-11-26 01:43:40.886 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 897.9073 ms
+2019-11-26 01:43:51.405 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 10469.9582 ms
+2019-11-26 01:43:53.293 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 30.834 ms
+2019-11-26 01:43:53.527 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7567 ms
+2019-11-26 01:43:53.595 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 52.3899 ms
+2019-11-26 01:43:55.091 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 146.3965 ms
+2019-11-26 01:43:55.254 +02:00 [INF] HTTP GET /notification?id=zDN_OJaXGAQUNbo37MYbQQ responded 101 in 1925.3636 ms
+2019-11-26 01:43:57.248 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 3.8228 ms
+2019-11-26 01:43:57.401 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8742 ms
+2019-11-26 01:44:08.622 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 302 in 30.0882 ms
+2019-11-26 01:44:08.631 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 1.1292 ms
+2019-11-26 01:44:08.638 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6819 ms
+2019-11-26 01:44:08.662 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 302 in 11.7013 ms
+2019-11-26 01:44:08.668 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.3685 ms
+2019-11-26 01:44:08.674 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7457 ms
+2019-11-26 01:45:44.560 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 302 in 7.1203 ms
+2019-11-26 01:45:44.574 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.5084 ms
+2019-11-26 01:45:44.592 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9813 ms
+2019-11-26 01:45:44.626 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 302 in 6.1651 ms
+2019-11-26 01:45:44.657 +02:00 [INF] HTTP GET /Home/BadRequest responded 302 in 0.6125 ms
+2019-11-26 01:45:44.717 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1866 ms
+2019-11-26 01:51:32.758 +02:00 [INF] Application starting up!
+2019-11-26 01:51:34.995 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 01:51:35.404 +02:00 [INF] HTTP GET / responded 302 in 318.5351 ms
+2019-11-26 01:51:36.087 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 651.204 ms
+2019-11-26 01:51:36.718 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 45.8525 ms
+2019-11-26 01:51:36.881 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 8.6614 ms
+2019-11-26 01:51:36.943 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 36.8819 ms
+2019-11-26 01:51:39.382 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 399.1469 ms
+2019-11-26 01:51:39.490 +02:00 [INF] HTTP GET /notification?id=He8oXcOw3Fzf7uIFcq-vTw responded 101 in 2751.7446 ms
+2019-11-26 01:51:40.042 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7146 ms
+2019-11-26 01:51:40.881 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 5.8229 ms
+2019-11-26 01:51:40.906 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5012 ms
+2019-11-26 01:51:43.020 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=313541d0-ddd3-441d-979b-0305c6a7144f responded 200 in 137.2172 ms
+2019-11-26 01:51:51.265 +02:00 [INF] Status of email with id 313541d0-ddd3-441d-979b-0305c6a7144f has been updated by c9af2956-6bc6-4baf-bd07-c49e0c8e688a at 26.11.2019 г. 1:51:51. From status: NotReviewed to status: New.
+2019-11-26 01:51:51.324 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=313541d0-ddd3-441d-979b-0305c6a7144f&status=New responded 200 in 117.9695 ms
+2019-11-26 01:51:51.432 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 71.2911 ms
+2019-11-26 01:51:51.444 +02:00 [INF] HTTP GET /notification?id=Q-5Up5D6JGFKT0GWxu-mKw responded 101 in 11332.7754 ms
+2019-11-26 01:51:52.518 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6232 ms
+2019-11-26 01:51:53.928 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.5626 ms
+2019-11-26 01:51:53.946 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2963 ms
+2019-11-26 01:53:10.117 +02:00 [INF] HTTP GET / responded 302 in 2.0248 ms
+2019-11-26 01:53:10.158 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 31.1296 ms
+2019-11-26 01:53:10.168 +02:00 [INF] HTTP GET /notification?id=FhC-AJQWfgC_jCCR2mC8pw responded 101 in 77506.8839 ms
+2019-11-26 01:53:10.673 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.4941 ms
+2019-11-26 01:53:10.968 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3889 ms
+2019-11-26 01:53:10.976 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6349 ms
+2019-11-26 01:57:21.326 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 35.8932 ms
+2019-11-26 01:57:21.339 +02:00 [INF] HTTP GET /notification?id=b1KMGRT3ob4iuEq4IZmeLQ responded 101 in 250599.1095 ms
+2019-11-26 01:57:21.820 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.6872 ms
+2019-11-26 01:57:22.027 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3728 ms
+2019-11-26 01:57:22.035 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5783 ms
+2019-11-26 01:57:26.470 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 35.0496 ms
+2019-11-26 01:57:26.480 +02:00 [INF] HTTP GET /notification?id=zmuxHwwj6hwQbQEbPdLtFw responded 101 in 4588.063 ms
+2019-11-26 01:57:26.812 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.5286 ms
+2019-11-26 01:57:26.998 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3098 ms
+2019-11-26 01:57:27.010 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6329 ms
+2019-11-26 01:57:29.301 +02:00 [INF] HTTP GET /notification?id=3Pi14Sxj0ibUwT2W3WDmGA responded 101 in 2471.4206 ms
+2019-11-26 01:57:41.247 +02:00 [INF] Application starting up!
+2019-11-26 01:57:44.639 +02:00 [WRN] Failed to determine the https port for redirect.
+2019-11-26 01:57:45.072 +02:00 [INF] HTTP GET / responded 302 in 372.8112 ms
+2019-11-26 01:57:46.316 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1179.1405 ms
+2019-11-26 01:57:47.357 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 44.1955 ms
+2019-11-26 01:57:47.559 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 8.9922 ms
+2019-11-26 01:57:47.655 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 43.5287 ms
