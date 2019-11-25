@@ -2764,3 +2764,596 @@ System.InvalidOperationException: Writing is not allowed after writer was comple
 2019-11-25 22:24:12.025 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8314 ms
 2019-11-25 22:33:20.865 +02:00 [INF] HTTP GET /notification?id=D99zKl0ibe-fqaJUi0ubaQ responded 101 in 572225.1002 ms
 2019-11-25 22:33:20.865 +02:00 [INF] HTTP GET /notification?id=o11ZwgfBO55JrWvOtcSjNg responded 101 in 549340.6574 ms
+2019-11-25 22:58:42.343 +02:00 [INF] Application starting up!
+2019-11-25 22:58:50.188 +02:00 [ERR] Failed executing DbCommand (41ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsChangedPassword], [u].[IsOnline], [u].[LastLogIn], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:ba2fd732-038e-4613-be73-f04109c4d054
+Error Number:207,State:1,Class:16
+2019-11-25 22:58:50.406 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TBIApp.Data.TBIAppDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:ba2fd732-038e-4613-be73-f04109c4d054
+Error Number:207,State:1,Class:16
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:ba2fd732-038e-4613-be73-f04109c4d054
+Error Number:207,State:1,Class:16
+2019-11-25 22:58:50.480 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TBIApp.Data.TBIAppDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:ba2fd732-038e-4613-be73-f04109c4d054
+Error Number:207,State:1,Class:16
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:ba2fd732-038e-4613-be73-f04109c4d054
+Error Number:207,State:1,Class:16
+2019-11-25 22:59:36.454 +02:00 [INF] Application starting up!
+2019-11-25 22:59:39.137 +02:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsChangedPassword], [u].[IsOnline], [u].[LastLogIn], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:bd7a4213-f394-4f0f-8866-71396d15e485
+Error Number:207,State:1,Class:16
+2019-11-25 22:59:39.204 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TBIApp.Data.TBIAppDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:bd7a4213-f394-4f0f-8866-71396d15e485
+Error Number:207,State:1,Class:16
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:bd7a4213-f394-4f0f-8866-71396d15e485
+Error Number:207,State:1,Class:16
+2019-11-25 22:59:39.231 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'TBIApp.Data.TBIAppDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:bd7a4213-f394-4f0f-8866-71396d15e485
+Error Number:207,State:1,Class:16
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:bd7a4213-f394-4f0f-8866-71396d15e485
+Error Number:207,State:1,Class:16
+2019-11-25 22:59:39.304 +02:00 [FTL] Application startup exception
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IsOnline'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 144
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByEmailAsync(String email)
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.<>c__DisplayClass0_0.<<UpdateDatabase>b__0>d.MoveNext() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at TBIBankApp.Infrastructure.Extensions.ApplicationBuilderExtensions.UpdateDatabase(IApplicationBuilder app) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Extensions\ApplicationBuilderExtensions.cs:line 27
+   at TBIBankApp.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Startup.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Internal.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+ClientConnectionId:bd7a4213-f394-4f0f-8866-71396d15e485
+Error Number:207,State:1,Class:16
+2019-11-25 23:01:22.809 +02:00 [INF] Application starting up!
+2019-11-25 23:01:39.692 +02:00 [INF] HTTP GET / responded 200 in 545.2003 ms
+2019-11-25 23:01:48.721 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 864.0964 ms
+2019-11-25 23:05:34.360 +02:00 [INF] Application starting up!
+2019-11-25 23:05:58.970 +02:00 [INF] HTTP GET / responded 200 in 1753.3876 ms
+2019-11-25 23:06:11.606 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 926.6629 ms
+2019-11-25 23:10:34.119 +02:00 [INF] Application starting up!
+2019-11-25 23:10:39.440 +02:00 [INF] HTTP GET / responded 200 in 505.8872 ms
+2019-11-25 23:10:46.506 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 217.0212 ms
+2019-11-25 23:10:52.550 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 272.918 ms
+2019-11-25 23:10:53.212 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 629.0028 ms
+2019-11-25 23:10:53.276 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3446 ms
+2019-11-25 23:10:53.276 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.7049 ms
+2019-11-25 23:10:53.276 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.4878 ms
+2019-11-25 23:10:53.279 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.522 ms
+2019-11-25 23:10:53.280 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4492 ms
+2019-11-25 23:10:53.290 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5853 ms
+2019-11-25 23:10:53.292 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.1067 ms
+2019-11-25 23:10:53.297 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.566 ms
+2019-11-25 23:10:53.363 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 34.3562 ms
+2019-11-25 23:10:53.366 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1392 ms
+2019-11-25 23:10:53.369 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8532 ms
+2019-11-25 23:10:53.374 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.282 ms
+2019-11-25 23:10:53.375 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5606 ms
+2019-11-25 23:10:53.375 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8594 ms
+2019-11-25 23:10:53.376 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.381 ms
+2019-11-25 23:10:53.386 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0124 ms
+2019-11-25 23:10:53.971 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 31.2032 ms
+2019-11-25 23:10:54.006 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6651 ms
+2019-11-25 23:10:54.016 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2122 ms
+2019-11-25 23:10:54.034 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5955 ms
+2019-11-25 23:10:54.041 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2561 ms
+2019-11-25 23:10:57.821 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 435.4043 ms
+2019-11-25 23:10:57.887 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 6.3128 ms
+2019-11-25 23:10:57.887 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 2.5604 ms
+2019-11-25 23:10:57.892 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.8576 ms
+2019-11-25 23:10:57.893 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 2.1766 ms
+2019-11-25 23:10:57.896 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.5512 ms
+2019-11-25 23:10:57.898 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.8871 ms
+2019-11-25 23:10:57.907 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.7285 ms
+2019-11-25 23:10:57.933 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.7004 ms
+2019-11-25 23:10:57.935 +02:00 [INF] HTTP GET /notification?id=xHSJL20x4ImQ4hoFB99tnA responded 101 in 3929.2137 ms
+2019-11-25 23:10:57.950 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1856 ms
+2019-11-25 23:10:57.956 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4661 ms
+2019-11-25 23:10:57.962 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7567 ms
+2019-11-25 23:10:57.963 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.4795 ms
+2019-11-25 23:10:57.968 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3386 ms
+2019-11-25 23:10:57.971 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.092 ms
+2019-11-25 23:10:57.983 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.5147 ms
+2019-11-25 23:10:57.997 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.0383 ms
+2019-11-25 23:10:58.099 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.0838 ms
+2019-11-25 23:10:58.241 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5365 ms
+2019-11-25 23:10:58.251 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4553 ms
+2019-11-25 23:10:58.266 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5854 ms
+2019-11-25 23:10:58.279 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3056 ms
+2019-11-25 23:10:58.841 +02:00 [INF] HTTP GET / responded 302 in 1.8518 ms
+2019-11-25 23:10:58.867 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 15.3789 ms
+2019-11-25 23:10:58.881 +02:00 [INF] HTTP GET /notification?id=zJ-eKsFTnLhbkuC86wLhrA responded 101 in 734.3156 ms
+2019-11-25 23:10:58.916 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4761 ms
+2019-11-25 23:10:58.916 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.4747 ms
+2019-11-25 23:10:58.917 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.3985 ms
+2019-11-25 23:10:58.917 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.9823 ms
+2019-11-25 23:10:58.918 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5264 ms
+2019-11-25 23:10:58.921 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5958 ms
+2019-11-25 23:10:58.923 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5028 ms
+2019-11-25 23:10:58.927 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.8174 ms
+2019-11-25 23:10:58.930 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5048 ms
+2019-11-25 23:10:58.937 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.379 ms
+2019-11-25 23:10:58.941 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7475 ms
+2019-11-25 23:10:58.949 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4781 ms
+2019-11-25 23:10:58.956 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0327 ms
+2019-11-25 23:10:58.965 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.8153 ms
+2019-11-25 23:10:58.970 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5951 ms
+2019-11-25 23:10:58.977 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.637 ms
+2019-11-25 23:10:59.094 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 6.2058 ms
+2019-11-25 23:10:59.118 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.0535 ms
+2019-11-25 23:10:59.139 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2929 ms
+2019-11-25 23:10:59.151 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4072 ms
+2019-11-25 23:10:59.158 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8922 ms
+2019-11-25 23:12:48.866 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6408 ms
+2019-11-25 23:12:48.897 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6389 ms
+2019-11-25 23:12:48.916 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.4495 ms
+2019-11-25 23:12:48.930 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 3.6441 ms
+2019-11-25 23:12:48.941 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2167 ms
+2019-11-25 23:13:16.012 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 75.0428 ms
+2019-11-25 23:13:16.031 +02:00 [INF] HTTP GET /notification?id=UJcajkSEcCpO-GMYifetUQ responded 101 in 27135.3533 ms
+2019-11-25 23:13:16.098 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 3.1478 ms
+2019-11-25 23:13:16.101 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 2.7728 ms
+2019-11-25 23:13:16.106 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5776 ms
+2019-11-25 23:13:16.107 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 0.4778 ms
+2019-11-25 23:13:16.331 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.9992 ms
+2019-11-25 23:13:16.335 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5074 ms
+2019-11-25 23:13:16.350 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 1.4577 ms
+2019-11-25 23:13:16.350 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5372 ms
+2019-11-25 23:13:16.365 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4907 ms
+2019-11-25 23:13:16.379 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2423 ms
+2019-11-25 23:13:16.382 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8282 ms
+2019-11-25 23:13:16.385 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1069 ms
+2019-11-25 23:13:16.385 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4245 ms
+2019-11-25 23:13:16.390 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.6782 ms
+2019-11-25 23:13:16.394 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8359 ms
+2019-11-25 23:13:16.400 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.29 ms
+2019-11-25 23:13:16.696 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.6156 ms
+2019-11-25 23:13:16.714 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6459 ms
+2019-11-25 23:13:16.766 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.5483 ms
+2019-11-25 23:13:16.785 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.329 ms
+2019-11-25 23:13:17.180 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 68.0679 ms
+2019-11-25 23:13:17.243 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 2.1119 ms
+2019-11-25 23:13:17.248 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.0548 ms
+2019-11-25 23:13:17.249 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.36 ms
+2019-11-25 23:13:17.249 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.3474 ms
+2019-11-25 23:13:17.249 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3284 ms
+2019-11-25 23:13:17.250 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4071 ms
+2019-11-25 23:13:17.272 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6766 ms
+2019-11-25 23:13:17.283 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 5.3486 ms
+2019-11-25 23:13:17.289 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.52 ms
+2019-11-25 23:13:17.298 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1709 ms
+2019-11-25 23:13:17.305 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3651 ms
+2019-11-25 23:13:17.306 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.4827 ms
+2019-11-25 23:13:17.319 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8343 ms
+2019-11-25 23:13:17.321 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.975 ms
+2019-11-25 23:13:17.341 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.2776 ms
+2019-11-25 23:13:17.348 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9327 ms
+2019-11-25 23:13:17.399 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.977 ms
+2019-11-25 23:13:17.548 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.741 ms
+2019-11-25 23:13:17.566 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.831 ms
+2019-11-25 23:13:17.580 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.3699 ms
+2019-11-25 23:13:17.593 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.3996 ms
+2019-11-25 23:13:18.113 +02:00 [INF] HTTP GET / responded 302 in 1.1281 ms
+2019-11-25 23:13:18.164 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 40.0989 ms
+2019-11-25 23:13:18.177 +02:00 [INF] HTTP GET /notification?id=HtgwHF5YVAuyyCwcAieYzg responded 101 in 708.8056 ms
+2019-11-25 23:13:18.210 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 3.0312 ms
+2019-11-25 23:13:18.213 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 4.4481 ms
+2019-11-25 23:13:18.213 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.8471 ms
+2019-11-25 23:13:18.214 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4372 ms
+2019-11-25 23:13:18.215 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.7356 ms
+2019-11-25 23:13:18.216 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 1.3175 ms
+2019-11-25 23:13:18.225 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5491 ms
+2019-11-25 23:13:18.228 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.7126 ms
+2019-11-25 23:13:18.237 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7264 ms
+2019-11-25 23:13:18.241 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8368 ms
+2019-11-25 23:13:18.247 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3692 ms
+2019-11-25 23:13:18.250 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1185 ms
+2019-11-25 23:13:18.260 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2736 ms
+2019-11-25 23:13:18.264 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5939 ms
+2019-11-25 23:13:18.268 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2562 ms
+2019-11-25 23:13:18.294 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8138 ms
+2019-11-25 23:13:18.435 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.0609 ms
+2019-11-25 23:13:18.467 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1819 ms
+2019-11-25 23:13:18.490 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2076 ms
+2019-11-25 23:13:18.501 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5341 ms
+2019-11-25 23:13:18.514 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5665 ms
+2019-11-25 23:22:26.616 +02:00 [INF] Application starting up!
+2019-11-25 23:22:44.776 +02:00 [INF] HTTP GET / responded 200 in 698.1059 ms
+2019-11-25 23:22:58.321 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 1484.8808 ms
+2019-11-25 23:24:05.452 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 382.2354 ms
+2019-11-25 23:24:30.229 +02:00 [INF] Application starting up!
+2019-11-25 23:24:35.592 +02:00 [INF] HTTP GET / responded 302 in 258.9217 ms
+2019-11-25 23:24:36.704 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1028.1361 ms
+2019-11-25 23:24:36.798 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 12.3953 ms
+2019-11-25 23:24:36.803 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5028 ms
+2019-11-25 23:24:36.808 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4421 ms
+2019-11-25 23:24:36.812 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5012 ms
+2019-11-25 23:24:36.812 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5012 ms
+2019-11-25 23:24:36.817 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4783 ms
+2019-11-25 23:24:36.838 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5184 ms
+2019-11-25 23:24:36.854 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.4945 ms
+2019-11-25 23:24:36.908 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 64.595 ms
+2019-11-25 23:24:36.937 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2864 ms
+2019-11-25 23:24:36.950 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9144 ms
+2019-11-25 23:24:36.950 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0473 ms
+2019-11-25 23:24:36.985 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7615 ms
+2019-11-25 23:24:36.988 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0286 ms
+2019-11-25 23:24:37.002 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.461 ms
+2019-11-25 23:24:37.004 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.0957 ms
+2019-11-25 23:24:37.799 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 4.4687 ms
+2019-11-25 23:24:37.800 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 77.0155 ms
+2019-11-25 23:24:37.871 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.076 ms
+2019-11-25 23:24:37.886 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4835 ms
+2019-11-25 23:24:37.899 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.7758 ms
+2019-11-25 23:26:02.968 +02:00 [INF] HTTP GET /notification?id=9d6CHlryQuYDynr-f6ac2A responded 101 in 85097.8735 ms
+2019-11-25 23:26:20.665 +02:00 [INF] Application starting up!
+2019-11-25 23:26:24.820 +02:00 [INF] HTTP GET / responded 302 in 400.0674 ms
+2019-11-25 23:26:25.775 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 914.0308 ms
+2019-11-25 23:26:25.873 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 10.4756 ms
+2019-11-25 23:26:25.873 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 35.759 ms
+2019-11-25 23:26:25.873 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.6022 ms
+2019-11-25 23:26:25.873 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 4.5492 ms
+2019-11-25 23:26:25.873 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 11.0237 ms
+2019-11-25 23:26:25.877 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4664 ms
+2019-11-25 23:26:25.886 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 2.1197 ms
+2019-11-25 23:26:25.888 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5582 ms
+2019-11-25 23:26:25.927 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 34.645 ms
+2019-11-25 23:26:25.930 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3855 ms
+2019-11-25 23:26:25.938 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3139 ms
+2019-11-25 23:26:25.938 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4514 ms
+2019-11-25 23:26:25.939 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0552 ms
+2019-11-25 23:26:25.945 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6223 ms
+2019-11-25 23:26:25.947 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.0679 ms
+2019-11-25 23:26:25.947 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.9905 ms
+2019-11-25 23:26:26.608 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 60.0762 ms
+2019-11-25 23:26:26.684 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 3.6769 ms
+2019-11-25 23:26:26.709 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8098 ms
+2019-11-25 23:26:26.721 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.4751 ms
+2019-11-25 23:26:26.728 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2896 ms
+2019-11-25 23:27:51.339 +02:00 [INF] Application starting up!
+2019-11-25 23:27:56.349 +02:00 [INF] HTTP GET / responded 302 in 433.8004 ms
+2019-11-25 23:27:57.189 +02:00 [ERR] HTTP GET /Home/Privacy responded 500 in 777.1516 ms
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at AspNetCore.Views_Home_Privacy.<ExecuteAsync>b__15_1() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Views\Home\Privacy.cshtml:line 80
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Home_Privacy.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-25 23:27:57.397 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   at AspNetCore.Views_Home_Privacy.<ExecuteAsync>b__15_1() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Views\Home\Privacy.cshtml:line 80
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Home_Privacy.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-25 23:28:18.737 +02:00 [INF] Application starting up!
+2019-11-25 23:28:22.503 +02:00 [INF] HTTP GET / responded 302 in 233.4386 ms
+2019-11-25 23:28:23.289 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 748.2369 ms
+2019-11-25 23:28:23.356 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 15.9905 ms
+2019-11-25 23:28:23.356 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 15.9301 ms
+2019-11-25 23:28:23.366 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5237 ms
+2019-11-25 23:28:23.365 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5693 ms
+2019-11-25 23:28:23.371 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.9477 ms
+2019-11-25 23:28:23.377 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.5176 ms
+2019-11-25 23:28:23.394 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.0758 ms
+2019-11-25 23:28:23.394 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.9804 ms
+2019-11-25 23:28:23.437 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 26.666 ms
+2019-11-25 23:28:23.441 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6164 ms
+2019-11-25 23:28:23.465 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 22.8466 ms
+2019-11-25 23:28:23.466 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 22.1342 ms
+2019-11-25 23:28:23.466 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 22.3079 ms
+2019-11-25 23:28:23.468 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 25.6805 ms
+2019-11-25 23:28:23.468 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 24.3763 ms
+2019-11-25 23:28:23.473 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3649 ms
+2019-11-25 23:28:24.132 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 4.1819 ms
+2019-11-25 23:28:24.160 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 68.7443 ms
+2019-11-25 23:28:24.174 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8034 ms
+2019-11-25 23:28:24.189 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4787 ms
+2019-11-25 23:28:24.195 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.7108 ms
+2019-11-25 23:28:49.244 +02:00 [INF] HTTP GET /notification?id=GQY7ZZ81F03qRyNLznHiOA responded 101 in 25071.6716 ms
+2019-11-25 23:29:45.347 +02:00 [INF] Application starting up!
+2019-11-25 23:29:50.334 +02:00 [INF] HTTP GET / responded 302 in 420.1963 ms
+2019-11-25 23:29:50.628 +02:00 [ERR] HTTP GET /Home/Privacy responded 500 in 231.3481 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-25 23:29:50.781 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-25 23:31:00.230 +02:00 [INF] Application starting up!
+2019-11-25 23:31:15.432 +02:00 [INF] HTTP GET / responded 200 in 582.8872 ms
+2019-11-25 23:31:21.191 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 517.0888 ms
+2019-11-25 23:31:25.138 +02:00 [INF] HTTP GET /Home/Privacy responded 302 in 227.7635 ms
+2019-11-25 23:31:25.196 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy responded 200 in 40.2696 ms
+2019-11-25 23:31:44.607 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 7636.7948 ms
+2019-11-25 23:31:44.607 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 3850.878 ms
+2019-11-25 23:31:44.607 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 834.0698 ms
+2019-11-25 23:33:27.350 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 581.6538 ms
+2019-11-25 23:33:27.438 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5919 ms
+2019-11-25 23:33:27.454 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5638 ms
+2019-11-25 23:33:27.454 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.3809 ms
+2019-11-25 23:33:29.800 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 105120.3638 ms
+2019-11-25 23:33:29.941 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.0479 ms
+2019-11-25 23:33:30.035 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 5.9424 ms
+2019-11-25 23:33:30.039 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 9.4036 ms
+2019-11-25 23:33:31.042 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5408 ms
+2019-11-25 23:33:31.083 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 282.7126 ms
+2019-11-25 23:33:31.083 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 16.6096 ms
+2019-11-25 23:33:31.083 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 38.5384 ms
+2019-11-25 23:33:31.083 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 41.2853 ms
+2019-11-25 23:33:31.086 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 208.8365 ms
+2019-11-25 23:33:31.124 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0232 ms
+2019-11-25 23:33:31.125 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.4346 ms
+2019-11-25 23:33:31.151 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 14.533 ms
+2019-11-25 23:33:34.585 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4383 ms
+2019-11-25 23:33:35.745 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1161.2116 ms
+2019-11-25 23:33:38.453 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3395.4367 ms
+2019-11-25 23:33:38.486 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5964 ms
+2019-11-25 23:33:38.517 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.124 ms

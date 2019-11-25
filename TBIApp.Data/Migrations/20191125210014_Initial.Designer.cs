@@ -10,7 +10,7 @@ using TBIApp.Data;
 namespace TBIApp.Data.Migrations
 {
     [DbContext(typeof(TBIAppDbContext))]
-    [Migration("20191125202013_Initial")]
+    [Migration("20191125210014_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -231,6 +231,8 @@ namespace TBIApp.Data.Migrations
                     b.Property<string>("FirstName");
 
                     b.Property<bool>("IsChangedPassword");
+
+                    b.Property<bool>("IsOnline");
 
                     b.Property<DateTime>("LastLogIn");
 

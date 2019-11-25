@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TBIApp.Data.Models;
 
 namespace TBIBankApp.Models
 {
@@ -21,7 +22,7 @@ namespace TBIBankApp.Models
         public double PercentRejected { get; set; }
         public int AcceptedCount { get; set; }
         public double PercentAccepted { get; set; }
+        public ICollection<UserViewModel> OnlineUsers { get; set; }
 
-        public List<string> UserNames { get; set; }
     }
 }

@@ -1,0 +1,949 @@
+2019-11-26 00:02:40.701 +02:00 [INF] Application starting up!
+2019-11-26 00:02:51.679 +02:00 [INF] HTTP GET / responded 200 in 1490.697 ms
+2019-11-26 00:03:04.446 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 1345.8731 ms
+2019-11-26 00:03:05.224 +02:00 [ERR] HTTP GET /Home/Privacy responded 500 in 678.6717 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:03:05.506 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 00:05:23.321 +02:00 [INF] Application starting up!
+2019-11-26 00:05:49.978 +02:00 [INF] HTTP GET / responded 200 in 858.0564 ms
+2019-11-26 00:06:07.737 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 2617.8857 ms
+2019-11-26 00:07:05.224 +02:00 [ERR] HTTP GET /Home/Privacy responded 500 in 57388.0889 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:07:05.543 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 00:08:16.845 +02:00 [INF] Application starting up!
+2019-11-26 00:08:24.836 +02:00 [INF] HTTP GET / responded 302 in 739.6764 ms
+2019-11-26 00:08:27.082 +02:00 [ERR] HTTP GET /Home/Privacy responded 500 in 1160.1983 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:08:28.505 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 00:09:35.726 +02:00 [INF] Application starting up!
+2019-11-26 00:10:25.251 +02:00 [INF] Application starting up!
+2019-11-26 00:10:49.400 +02:00 [INF] HTTP GET / responded 200 in 606.8429 ms
+2019-11-26 00:11:05.501 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 1541.3433 ms
+2019-11-26 00:11:15.184 +02:00 [ERR] HTTP GET /Home/Privacy responded 500 in 9554.3344 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2019-11-26 00:11:15.664 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(User entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 28
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TBIApp.Services.Mappers.UserDTOMapper.MapFrom(ICollection`1 entities) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\UserDTOMapper.cs:line 44
+   at TBIApp.Services.Mappers.ReportDiagramDTOMapper.MapFrom(ReportDiagram entity) in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Mappers\ReportDiagramDTOMapper.cs:line 45
+   at TBIApp.Services.Services.StatisticsService.GetStatisticsAsync() in C:\Users\imkat\Desktop\TBI Fina\TBIApp.Services\Services\StatisticsService.cs:line 45
+   at TBIBankApp.Controllers.HomeController.Privacy() in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Controllers\HomeController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at TBIBankApp.Infrastructure.Middleware.BadRequestMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\BadRequestMiddleware.cs:line 19
+   at TBIBankApp.Infrastructure.Middleware.PageNotFoundMiddleware.Invoke(HttpContext httpContext) in C:\Users\imkat\Desktop\TBI Fina\TBIBankApp\Infrastructure\Middleware\PageNotFoundMiddleware.cs:line 19
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26 00:18:23.781 +02:00 [INF] Application starting up!
+2019-11-26 00:18:33.496 +02:00 [INF] HTTP GET / responded 302 in 721.3534 ms
+2019-11-26 00:18:35.416 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1749.2075 ms
+2019-11-26 00:18:35.591 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.6202 ms
+2019-11-26 00:18:35.591 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 25.0652 ms
+2019-11-26 00:18:35.593 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5062 ms
+2019-11-26 00:18:35.594 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.491 ms
+2019-11-26 00:18:35.611 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 2.8401 ms
+2019-11-26 00:18:35.648 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6852 ms
+2019-11-26 00:18:35.651 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.9011 ms
+2019-11-26 00:18:35.660 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5765 ms
+2019-11-26 00:18:35.797 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 110.8778 ms
+2019-11-26 00:18:35.819 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4827 ms
+2019-11-26 00:18:35.830 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3122 ms
+2019-11-26 00:18:35.830 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9927 ms
+2019-11-26 00:18:35.831 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2464 ms
+2019-11-26 00:18:35.882 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2382 ms
+2019-11-26 00:18:35.896 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7859 ms
+2019-11-26 00:18:35.903 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.8823 ms
+2019-11-26 00:18:37.135 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.1072 ms
+2019-11-26 00:18:37.136 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 209.3527 ms
+2019-11-26 00:18:37.376 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.2534 ms
+2019-11-26 00:18:37.676 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5428 ms
+2019-11-26 00:18:37.708 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.256 ms
+2019-11-26 00:19:49.663 +02:00 [INF] Application starting up!
+2019-11-26 00:19:55.830 +02:00 [INF] HTTP GET / responded 302 in 664.3854 ms
+2019-11-26 00:19:57.207 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1181.8857 ms
+2019-11-26 00:19:57.323 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 16.1811 ms
+2019-11-26 00:19:57.323 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 6.9444 ms
+2019-11-26 00:19:57.323 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 13.4541 ms
+2019-11-26 00:19:57.323 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 19.0943 ms
+2019-11-26 00:19:57.323 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 12.7276 ms
+2019-11-26 00:19:57.328 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5038 ms
+2019-11-26 00:19:57.348 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5004 ms
+2019-11-26 00:19:57.367 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 3.6565 ms
+2019-11-26 00:19:57.528 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 164.5272 ms
+2019-11-26 00:19:57.572 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.5059 ms
+2019-11-26 00:19:57.582 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2739 ms
+2019-11-26 00:19:57.589 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.1341 ms
+2019-11-26 00:19:57.609 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3593 ms
+2019-11-26 00:19:57.611 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 14.4263 ms
+2019-11-26 00:19:57.612 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.7956 ms
+2019-11-26 00:19:57.725 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2405 ms
+2019-11-26 00:19:58.276 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 62.1485 ms
+2019-11-26 00:19:58.365 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7691 ms
+2019-11-26 00:19:58.379 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.225 ms
+2019-11-26 00:19:58.392 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5054 ms
+2019-11-26 00:19:58.404 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0755 ms
+2019-11-26 00:20:47.240 +02:00 [INF] Application starting up!
+2019-11-26 00:20:52.983 +02:00 [INF] HTTP GET / responded 302 in 409.775 ms
+2019-11-26 00:20:54.239 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1193.2738 ms
+2019-11-26 00:20:54.324 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 14.9001 ms
+2019-11-26 00:20:54.326 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.864 ms
+2019-11-26 00:20:54.329 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5728 ms
+2019-11-26 00:20:54.346 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.497 ms
+2019-11-26 00:20:54.363 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4679 ms
+2019-11-26 00:20:54.365 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.8908 ms
+2019-11-26 00:20:54.375 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5092 ms
+2019-11-26 00:20:54.376 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.9682 ms
+2019-11-26 00:20:54.451 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 60.2596 ms
+2019-11-26 00:20:54.466 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7257 ms
+2019-11-26 00:20:54.477 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8455 ms
+2019-11-26 00:20:54.480 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4692 ms
+2019-11-26 00:20:54.480 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5933 ms
+2019-11-26 00:20:54.480 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8596 ms
+2019-11-26 00:20:54.480 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6879 ms
+2019-11-26 00:20:54.498 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.3879 ms
+2019-11-26 00:20:55.546 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1643 ms
+2019-11-26 00:20:55.575 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6502 ms
+2019-11-26 00:20:55.587 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 75.6114 ms
+2019-11-26 00:20:55.597 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.3938 ms
+2019-11-26 00:20:55.611 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8422 ms
+2019-11-26 00:21:00.999 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 1162.7243 ms
+2019-11-26 00:21:01.078 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.8645 ms
+2019-11-26 00:21:01.078 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.2577 ms
+2019-11-26 00:21:01.078 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 8.9452 ms
+2019-11-26 00:21:01.079 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.4774 ms
+2019-11-26 00:21:01.081 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5305 ms
+2019-11-26 00:21:01.113 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 4.866 ms
+2019-11-26 00:21:01.125 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.4822 ms
+2019-11-26 00:21:01.127 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1697 ms
+2019-11-26 00:21:01.128 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 6.589 ms
+2019-11-26 00:21:01.142 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.7701 ms
+2019-11-26 00:21:01.146 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0351 ms
+2019-11-26 00:21:01.157 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2217 ms
+2019-11-26 00:21:01.168 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.3608 ms
+2019-11-26 00:21:01.173 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1531 ms
+2019-11-26 00:21:01.178 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2068 ms
+2019-11-26 00:21:01.184 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.0048 ms
+2019-11-26 00:21:01.272 +02:00 [INF] HTTP GET /notification?id=E7pdTL4CllfmYYn2pjIwXA responded 101 in 5676.5711 ms
+2019-11-26 00:21:01.335 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.9477 ms
+2019-11-26 00:21:01.624 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5718 ms
+2019-11-26 00:21:01.644 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6573 ms
+2019-11-26 00:21:01.663 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.523 ms
+2019-11-26 00:21:01.679 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7568 ms
+2019-11-26 00:21:04.390 +02:00 [INF] HTTP GET /notification?id=bOP9NFyw_cRG863r3kGmbQ responded 101 in 2923.0909 ms
+2019-11-26 00:21:04.424 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 654.2944 ms
+2019-11-26 00:21:04.426 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.477 ms
+2019-11-26 00:21:04.426 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.3981 ms
+2019-11-26 00:21:04.427 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.7439 ms
+2019-11-26 00:21:04.427 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3771 ms
+2019-11-26 00:21:04.429 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 1.0525 ms
+2019-11-26 00:21:04.473 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 1.4434 ms
+2019-11-26 00:21:04.516 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 6.7226 ms
+2019-11-26 00:21:04.521 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.0585 ms
+2019-11-26 00:21:04.531 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1167 ms
+2019-11-26 00:21:04.538 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.134 ms
+2019-11-26 00:21:04.541 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4586 ms
+2019-11-26 00:21:04.546 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.703 ms
+2019-11-26 00:21:04.554 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6811 ms
+2019-11-26 00:21:04.560 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2674 ms
+2019-11-26 00:21:04.578 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.4188 ms
+2019-11-26 00:21:04.609 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2928 ms
+2019-11-26 00:21:05.199 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.809 ms
+2019-11-26 00:21:06.886 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=05ef48f3-6ed5-4f70-8824-5b40bd57fb0e responded 200 in 619.3063 ms
+2019-11-26 00:21:08.805 +02:00 [INF] Status of email with id 05ef48f3-6ed5-4f70-8824-5b40bd57fb0e has been updated by 49faf797-ad6b-4485-868b-1be23ba61c9a at 11/26/2019 12:21:08 AM. From status: NotReviewed to status: New.
+2019-11-26 00:21:09.750 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=05ef48f3-6ed5-4f70-8824-5b40bd57fb0e&status=New responded 200 in 1121.5174 ms
+2019-11-26 00:21:09.812 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 42.1416 ms
+2019-11-26 00:21:09.843 +02:00 [INF] HTTP GET / responded 302 in 1.492 ms
+2019-11-26 00:21:09.865 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 13.8323 ms
+2019-11-26 00:21:09.882 +02:00 [INF] HTTP GET /notification?id=fWf5dtm4Wf3UBZYpy6mjDA responded 101 in 4673.6388 ms
+2019-11-26 00:21:09.921 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.1029 ms
+2019-11-26 00:21:09.923 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.0855 ms
+2019-11-26 00:21:09.936 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.3195 ms
+2019-11-26 00:21:09.936 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3008 ms
+2019-11-26 00:21:09.936 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.7598 ms
+2019-11-26 00:21:09.937 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.3838 ms
+2019-11-26 00:21:09.943 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5298 ms
+2019-11-26 00:21:09.978 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.5747 ms
+2019-11-26 00:21:09.993 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2846 ms
+2019-11-26 00:21:10.013 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.2766 ms
+2019-11-26 00:21:10.017 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5531 ms
+2019-11-26 00:21:10.020 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3796 ms
+2019-11-26 00:21:10.023 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0969 ms
+2019-11-26 00:21:10.035 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.6787 ms
+2019-11-26 00:21:10.043 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.407 ms
+2019-11-26 00:21:10.073 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 13.7778 ms
+2019-11-26 00:21:10.288 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7655 ms
+2019-11-26 00:21:10.374 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5109 ms
+2019-11-26 00:21:10.390 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1174 ms
+2019-11-26 00:21:10.410 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.0216 ms
+2019-11-26 00:21:10.428 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4369 ms
+2019-11-26 00:21:27.053 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 22.6765 ms
+2019-11-26 00:21:27.073 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 60.8079 ms
+2019-11-26 00:21:27.078 +02:00 [INF] HTTP GET /notification?id=-4poDWwwacw8GtpojuU29Q responded 101 in 16711.694 ms
+2019-11-26 00:21:27.121 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.5301 ms
+2019-11-26 00:21:27.135 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.2327 ms
+2019-11-26 00:21:27.136 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4651 ms
+2019-11-26 00:21:27.136 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.296 ms
+2019-11-26 00:21:27.136 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.2658 ms
+2019-11-26 00:21:27.136 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3309 ms
+2019-11-26 00:21:27.151 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.3324 ms
+2019-11-26 00:21:27.157 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.7594 ms
+2019-11-26 00:21:27.164 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9129 ms
+2019-11-26 00:21:27.170 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6129 ms
+2019-11-26 00:21:27.178 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.1663 ms
+2019-11-26 00:21:27.183 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.0789 ms
+2019-11-26 00:21:27.187 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3102 ms
+2019-11-26 00:21:27.197 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.1904 ms
+2019-11-26 00:21:27.200 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2892 ms
+2019-11-26 00:21:27.210 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.6152 ms
+2019-11-26 00:21:27.522 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.9778 ms
+2019-11-26 00:21:27.583 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.6695 ms
+2019-11-26 00:21:27.596 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.4788 ms
+2019-11-26 00:21:27.611 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6983 ms
+2019-11-26 00:21:27.622 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7809 ms
+2019-11-26 00:21:31.734 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 1.046 ms
+2019-11-26 00:21:31.778 +02:00 [INF] HTTP GET /Home/Privacy? responded 302 in 30.2304 ms
+2019-11-26 00:21:31.778 +02:00 [INF] HTTP GET /Home/Privacy? responded 302 in 11.3055 ms
+2019-11-26 00:21:31.934 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy%3F responded 200 in 134.9815 ms
+2019-11-26 00:21:31.952 +02:00 [INF] HTTP GET /notification?id=UkLH388Ku215gRKLGWPEoA responded 101 in 4372.1594 ms
+2019-11-26 00:21:41.686 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 486.4581 ms
+2019-11-26 00:21:41.799 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 82.3312 ms
+2019-11-26 00:21:41.865 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.6362 ms
+2019-11-26 00:21:41.867 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 1.3043 ms
+2019-11-26 00:21:41.886 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.0996 ms
+2019-11-26 00:21:41.902 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3783 ms
+2019-11-26 00:21:41.909 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 4.3756 ms
+2019-11-26 00:21:41.915 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 3.6006 ms
+2019-11-26 00:21:41.934 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.4908 ms
+2019-11-26 00:21:41.934 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.3581 ms
+2019-11-26 00:21:41.965 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8724 ms
+2019-11-26 00:21:41.976 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.8204 ms
+2019-11-26 00:21:41.981 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1135 ms
+2019-11-26 00:21:41.984 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9983 ms
+2019-11-26 00:21:41.985 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9671 ms
+2019-11-26 00:21:41.985 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8815 ms
+2019-11-26 00:21:41.996 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 13.3894 ms
+2019-11-26 00:21:42.001 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3622 ms
+2019-11-26 00:21:42.305 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.3737 ms
+2019-11-26 00:21:42.328 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 4.7325 ms
+2019-11-26 00:21:42.345 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0555 ms
+2019-11-26 00:21:42.357 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5412 ms
+2019-11-26 00:21:42.364 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2166 ms
+2019-11-26 00:21:57.965 +02:00 [INF] HTTP GET /notification?id=Bn5IRCXwL85K0Kz18nfL4g responded 101 in 15634.5578 ms
+2019-11-26 00:21:58.010 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.7489 ms
+2019-11-26 00:21:58.052 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 2.4509 ms
+2019-11-26 00:21:58.054 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.4723 ms
+2019-11-26 00:21:58.056 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.9256 ms
+2019-11-26 00:21:58.074 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 13.4478 ms
+2019-11-26 00:21:58.116 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 1.2221 ms
+2019-11-26 00:21:58.121 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.8759 ms
+2019-11-26 00:21:58.123 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 1361.7507 ms
+2019-11-26 00:21:58.125 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5845 ms
+2019-11-26 00:21:58.127 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1291 ms
+2019-11-26 00:21:58.141 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.9836 ms
+2019-11-26 00:21:58.147 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.1792 ms
+2019-11-26 00:21:58.162 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.6792 ms
+2019-11-26 00:21:58.162 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 14.5842 ms
+2019-11-26 00:21:58.178 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.466 ms
+2019-11-26 00:21:58.192 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9232 ms
+2019-11-26 00:21:58.207 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.0943 ms
+2019-11-26 00:21:58.492 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 3.8183 ms
+2019-11-26 00:21:58.879 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.2539 ms
+2019-11-26 00:21:58.891 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0175 ms
+2019-11-26 00:21:58.912 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.5987 ms
+2019-11-26 00:21:58.924 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0719 ms
+2019-11-26 00:22:00.201 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=08ab658a-de26-46b3-ac99-ce8051904608 responded 200 in 20.7273 ms
+2019-11-26 00:22:01.559 +02:00 [INF] Status of email with id 08ab658a-de26-46b3-ac99-ce8051904608 has been updated by 49faf797-ad6b-4485-868b-1be23ba61c9a at 11/26/2019 12:22:01 AM. From status: NotReviewed to status: New.
+2019-11-26 00:22:01.602 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=08ab658a-de26-46b3-ac99-ce8051904608&status=New responded 200 in 61.4648 ms
+2019-11-26 00:22:01.700 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 77.0413 ms
+2019-11-26 00:22:01.716 +02:00 [INF] HTTP GET /notification?id=73r5HngqVU7At6NOGdRUMA responded 101 in 2870.2532 ms
+2019-11-26 00:22:01.760 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4457 ms
+2019-11-26 00:22:01.760 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.6211 ms
+2019-11-26 00:22:01.760 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.425 ms
+2019-11-26 00:22:01.761 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.3712 ms
+2019-11-26 00:22:01.761 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.499 ms
+2019-11-26 00:22:01.762 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.4291 ms
+2019-11-26 00:22:01.777 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 4.5426 ms
+2019-11-26 00:22:01.779 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 1.2077 ms
+2019-11-26 00:22:01.788 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7074 ms
+2019-11-26 00:22:01.795 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.711 ms
+2019-11-26 00:22:01.801 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.3346 ms
+2019-11-26 00:22:01.805 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0429 ms
+2019-11-26 00:22:01.809 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2489 ms
+2019-11-26 00:22:01.816 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4132 ms
+2019-11-26 00:22:01.826 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2134 ms
+2019-11-26 00:22:01.830 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4248 ms
+2019-11-26 00:22:01.975 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.0598 ms
+2019-11-26 00:22:02.087 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.4443 ms
+2019-11-26 00:22:02.097 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2347 ms
+2019-11-26 00:22:02.117 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 2.8775 ms
+2019-11-26 00:22:02.124 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.925 ms
+2019-11-26 00:22:03.862 +02:00 [INF] HTTP GET / responded 302 in 0.5942 ms
+2019-11-26 00:22:03.923 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 47.7705 ms
+2019-11-26 00:22:03.943 +02:00 [INF] HTTP GET /notification?id=VjdS-mX-EcOa1OsXYQnROw responded 101 in 1923.4319 ms
+2019-11-26 00:22:04.006 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 2.0009 ms
+2019-11-26 00:22:04.007 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5769 ms
+2019-11-26 00:22:04.007 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.333 ms
+2019-11-26 00:22:04.007 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3648 ms
+2019-11-26 00:22:04.008 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.2477 ms
+2019-11-26 00:22:04.010 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 2.0614 ms
+2019-11-26 00:22:04.026 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.4947 ms
+2019-11-26 00:22:04.029 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.8459 ms
+2019-11-26 00:22:04.040 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5733 ms
+2019-11-26 00:22:04.055 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.0117 ms
+2019-11-26 00:22:04.072 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 14.9405 ms
+2019-11-26 00:22:04.077 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9025 ms
+2019-11-26 00:22:04.087 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.1383 ms
+2019-11-26 00:22:04.102 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.848 ms
+2019-11-26 00:22:04.123 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.951 ms
+2019-11-26 00:22:04.142 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.032 ms
+2019-11-26 00:22:04.373 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.8019 ms
+2019-11-26 00:22:04.423 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5938 ms
+2019-11-26 00:22:04.468 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.9433 ms
+2019-11-26 00:22:04.479 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7448 ms
+2019-11-26 00:22:04.495 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9968 ms
+2019-11-26 00:22:07.218 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 0.6301 ms
+2019-11-26 00:22:07.235 +02:00 [INF] HTTP GET /Home/Privacy? responded 302 in 0.3207 ms
+2019-11-26 00:22:07.250 +02:00 [INF] HTTP GET /Home/Privacy responded 302 in 0.4927 ms
+2019-11-26 00:22:07.276 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy responded 200 in 3.3254 ms
+2019-11-26 00:22:07.292 +02:00 [INF] HTTP GET /notification?id=HPLOHum4LRLud7KxZKdvUw responded 101 in 2869.5516 ms
+2019-11-26 00:22:12.183 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 65.5678 ms
+2019-11-26 00:22:12.280 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 56.6927 ms
+2019-11-26 00:22:12.358 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.591 ms
+2019-11-26 00:22:12.358 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 1.0452 ms
+2019-11-26 00:22:12.380 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5734 ms
+2019-11-26 00:22:12.380 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4537 ms
+2019-11-26 00:22:12.380 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4591 ms
+2019-11-26 00:22:12.384 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6931 ms
+2019-11-26 00:22:12.393 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.74 ms
+2019-11-26 00:22:12.393 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.7484 ms
+2019-11-26 00:22:12.425 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0077 ms
+2019-11-26 00:22:12.436 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.0052 ms
+2019-11-26 00:22:12.440 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.044 ms
+2019-11-26 00:22:12.443 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0467 ms
+2019-11-26 00:22:12.443 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.5473 ms
+2019-11-26 00:22:12.443 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8099 ms
+2019-11-26 00:22:12.443 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.549 ms
+2019-11-26 00:22:12.455 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.697 ms
+2019-11-26 00:22:12.730 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.5326 ms
+2019-11-26 00:22:12.769 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.6659 ms
+2019-11-26 00:22:12.788 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7636 ms
+2019-11-26 00:22:12.802 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.8947 ms
+2019-11-26 00:22:12.813 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8054 ms
+2019-11-26 00:24:18.250 +02:00 [INF] Application starting up!
+2019-11-26 00:24:24.215 +02:00 [INF] HTTP GET / responded 302 in 558.459 ms
+2019-11-26 00:24:26.116 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1801.7861 ms
+2019-11-26 00:24:26.199 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 12.7869 ms
+2019-11-26 00:24:26.199 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 12.0636 ms
+2019-11-26 00:24:26.199 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 12.9466 ms
+2019-11-26 00:24:26.199 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 12.2648 ms
+2019-11-26 00:24:26.199 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 10.9694 ms
+2019-11-26 00:24:26.254 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5301 ms
+2019-11-26 00:24:26.257 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.6063 ms
+2019-11-26 00:24:26.261 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5579 ms
+2019-11-26 00:24:26.317 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 51.4733 ms
+2019-11-26 00:24:26.323 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5441 ms
+2019-11-26 00:24:26.333 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2483 ms
+2019-11-26 00:24:26.334 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0813 ms
+2019-11-26 00:24:26.334 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8164 ms
+2019-11-26 00:24:26.337 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5882 ms
+2019-11-26 00:24:26.352 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8862 ms
+2019-11-26 00:24:26.356 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.4235 ms
+2019-11-26 00:24:27.160 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 76.1396 ms
+2019-11-26 00:24:27.272 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4932 ms
+2019-11-26 00:24:27.289 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9658 ms
+2019-11-26 00:24:27.304 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4801 ms
+2019-11-26 00:24:27.316 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9954 ms
+2019-11-26 00:24:37.202 +02:00 [INF] HTTP GET /Manager/Register responded 200 in 190.2085 ms
+2019-11-26 00:24:37.305 +02:00 [INF] HTTP GET /Manager/vendor/bootstrap/css/bootstrap.min.css responded 302 in 21.6995 ms
+2019-11-26 00:24:37.305 +02:00 [INF] HTTP GET /Manager/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.7927 ms
+2019-11-26 00:24:37.314 +02:00 [INF] HTTP GET /Manager/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.9239 ms
+2019-11-26 00:24:37.318 +02:00 [INF] HTTP GET /Manager/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5678 ms
+2019-11-26 00:24:37.326 +02:00 [INF] HTTP GET /Manager/vendor/animate/animate.css responded 302 in 10.5982 ms
+2019-11-26 00:24:37.326 +02:00 [INF] HTTP GET /Manager/vendor/animsition/css/animsition.min.css responded 302 in 0.9388 ms
+2019-11-26 00:24:37.335 +02:00 [INF] HTTP GET /Manager/vendor/select2/select2.min.css responded 302 in 0.736 ms
+2019-11-26 00:24:37.366 +02:00 [INF] HTTP GET /Manager/vendor/daterangepicker/daterangepicker.css responded 302 in 20.1712 ms
+2019-11-26 00:24:37.445 +02:00 [INF] HTTP GET /notification?id=USzyC-xxbKcwCXEdJZDojQ responded 101 in 10239.386 ms
+2019-11-26 00:24:37.533 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1772 ms
+2019-11-26 00:24:37.578 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1771 ms
+2019-11-26 00:24:37.583 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6394 ms
+2019-11-26 00:24:37.585 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8871 ms
+2019-11-26 00:24:37.586 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8707 ms
+2019-11-26 00:24:37.604 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6235 ms
+2019-11-26 00:24:37.614 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2713 ms
+2019-11-26 00:24:37.630 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.6371 ms
+2019-11-26 00:24:38.054 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.696 ms
+2019-11-26 00:24:38.067 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1654 ms
+2019-11-26 00:24:38.082 +02:00 [INF] HTTP GET /Manager/images/icons/favicon.ico responded 302 in 0.5445 ms
+2019-11-26 00:24:38.095 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3251 ms
+2019-11-26 00:24:57.547 +02:00 [INF] HTTP POST /Manager/CheckForUserAndEmailAsync responded 200 in 165.5251 ms
+2019-11-26 00:24:58.130 +02:00 [INF] HTTP POST /Manager/RegisterUserAsync responded 200 in 572.8457 ms
+2019-11-26 00:25:06.265 +02:00 [INF] HTTP GET /Manager/Register responded 302 in 25.1541 ms
+2019-11-26 00:25:06.376 +02:00 [INF] HTTP GET /?ReturnUrl=%2FManager%2FRegister responded 200 in 74.5306 ms
+2019-11-26 00:25:15.816 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 83.4513 ms
+2019-11-26 00:25:22.879 +02:00 [INF] HTTP POST /Home/SetNewPasswordAsync responded 200 in 486.2333 ms
+2019-11-26 00:25:22.998 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 96.9707 ms
+2019-11-26 00:25:23.069 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.9481 ms
+2019-11-26 00:25:23.072 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.4777 ms
+2019-11-26 00:25:23.072 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.3575 ms
+2019-11-26 00:25:23.073 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4469 ms
+2019-11-26 00:25:23.073 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4051 ms
+2019-11-26 00:25:23.088 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.9096 ms
+2019-11-26 00:25:23.112 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 4.6843 ms
+2019-11-26 00:25:23.106 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.4984 ms
+2019-11-26 00:25:23.155 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4772 ms
+2019-11-26 00:25:23.168 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.0566 ms
+2019-11-26 00:25:23.176 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9858 ms
+2019-11-26 00:25:23.182 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1601 ms
+2019-11-26 00:25:23.185 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9443 ms
+2019-11-26 00:25:23.188 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2521 ms
+2019-11-26 00:25:23.197 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.2462 ms
+2019-11-26 00:25:23.234 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5562 ms
+2019-11-26 00:25:24.148 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.4199 ms
+2019-11-26 00:25:24.204 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.699 ms
+2019-11-26 00:25:24.220 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6452 ms
+2019-11-26 00:25:24.249 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1366 ms
+2019-11-26 00:25:24.268 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5897 ms
+2019-11-26 00:25:37.548 +02:00 [INF] HTTP GET /notification?id=MgQ02wLGcCa5IgkZNT36gg responded 101 in 13344.7194 ms
+2019-11-26 00:25:37.576 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 8.7507 ms
+2019-11-26 00:25:37.577 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 9.4429 ms
+2019-11-26 00:25:37.577 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 8.8457 ms
+2019-11-26 00:25:37.579 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.502 ms
+2019-11-26 00:25:37.580 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.505 ms
+2019-11-26 00:25:37.633 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=NotReviewed responded 200 in 878.2156 ms
+2019-11-26 00:25:37.669 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 2.6332 ms
+2019-11-26 00:25:37.696 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.7316 ms
+2019-11-26 00:25:37.707 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 3.8073 ms
+2019-11-26 00:25:37.708 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3101 ms
+2019-11-26 00:25:37.716 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7713 ms
+2019-11-26 00:25:37.729 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.4116 ms
+2019-11-26 00:25:37.735 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5316 ms
+2019-11-26 00:25:37.747 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.986 ms
+2019-11-26 00:25:37.759 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.774 ms
+2019-11-26 00:25:37.767 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4127 ms
+2019-11-26 00:25:37.784 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.8553 ms
+2019-11-26 00:25:38.213 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.0072 ms
+2019-11-26 00:25:38.565 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 1.813 ms
+2019-11-26 00:25:38.578 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8206 ms
+2019-11-26 00:25:38.597 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.8833 ms
+2019-11-26 00:25:38.608 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7829 ms
+2019-11-26 00:25:39.864 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=0b755803-9517-4233-b4c0-14162c2adea9 responded 200 in 99.1106 ms
+2019-11-26 00:25:41.146 +02:00 [INF] Status of email with id 0b755803-9517-4233-b4c0-14162c2adea9 has been updated by a0474452-423c-4ec8-a00d-05a1dea4b3a0 at 11/26/2019 12:25:41 AM. From status: NotReviewed to status: New.
+2019-11-26 00:25:41.213 +02:00 [INF] HTTP GET /Email/ChangeStatusAsync?id=0b755803-9517-4233-b4c0-14162c2adea9&status=New responded 200 in 136.9032 ms
+2019-11-26 00:25:41.310 +02:00 [INF] HTTP GET /Email/ListEmailsAsync?emailStatus=New responded 200 in 83.204 ms
+2019-11-26 00:25:41.325 +02:00 [INF] HTTP GET /notification?id=UVzIQfmFrh3fOmPIzS6-4g responded 101 in 2799.0634 ms
+2019-11-26 00:25:41.362 +02:00 [INF] HTTP GET /Email/vendor/bootstrap/css/bootstrap.min.css responded 302 in 4.9655 ms
+2019-11-26 00:25:41.377 +02:00 [INF] HTTP GET /Email/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.3285 ms
+2019-11-26 00:25:41.380 +02:00 [INF] HTTP GET /Email/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.5896 ms
+2019-11-26 00:25:41.382 +02:00 [INF] HTTP GET /Email/vendor/animate/animate.css responded 302 in 0.799 ms
+2019-11-26 00:25:41.384 +02:00 [INF] HTTP GET /Email/vendor/animsition/css/animsition.min.css responded 302 in 0.868 ms
+2019-11-26 00:25:41.384 +02:00 [INF] HTTP GET /Email/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6659 ms
+2019-11-26 00:25:41.393 +02:00 [INF] HTTP GET /Email/vendor/select2/select2.min.css responded 302 in 0.6458 ms
+2019-11-26 00:25:41.396 +02:00 [INF] HTTP GET /Email/vendor/daterangepicker/daterangepicker.css responded 302 in 0.5629 ms
+2019-11-26 00:25:41.437 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.8587 ms
+2019-11-26 00:25:41.445 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9996 ms
+2019-11-26 00:25:41.451 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2934 ms
+2019-11-26 00:25:41.459 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.2095 ms
+2019-11-26 00:25:41.464 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0805 ms
+2019-11-26 00:25:41.467 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2027 ms
+2019-11-26 00:25:41.472 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9973 ms
+2019-11-26 00:25:41.478 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3744 ms
+2019-11-26 00:25:41.651 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7508 ms
+2019-11-26 00:25:41.766 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 3.4217 ms
+2019-11-26 00:25:41.782 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.6774 ms
+2019-11-26 00:25:41.799 +02:00 [INF] HTTP GET /Email/images/icons/favicon.ico responded 302 in 0.8235 ms
+2019-11-26 00:25:41.826 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5912 ms
+2019-11-26 00:25:43.182 +02:00 [INF] HTTP GET /Email/IsItOpenAsync?id=08ab658a-de26-46b3-ac99-ce8051904608 responded 200 in 4.6708 ms
+2019-11-26 00:25:44.612 +02:00 [INF] HTTP GET /Email/SetToEnableAsync?id=08ab658a-de26-46b3-ac99-ce8051904608 responded 200 in 25.5651 ms
+2019-11-26 00:25:45.845 +02:00 [INF] HTTP GET / responded 302 in 0.9149 ms
+2019-11-26 00:25:45.884 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 27.3519 ms
+2019-11-26 00:25:45.905 +02:00 [INF] HTTP GET /notification?id=LdFTI1aXhkAa67A6IFBQPQ responded 101 in 4216.9612 ms
+2019-11-26 00:25:45.943 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5427 ms
+2019-11-26 00:25:45.943 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.632 ms
+2019-11-26 00:25:45.944 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.854 ms
+2019-11-26 00:25:45.945 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4137 ms
+2019-11-26 00:25:45.945 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4585 ms
+2019-11-26 00:25:45.947 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.508 ms
+2019-11-26 00:25:45.960 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 2.109 ms
+2019-11-26 00:25:45.967 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.4176 ms
+2019-11-26 00:25:45.993 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.7703 ms
+2019-11-26 00:25:46.011 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 11.7449 ms
+2019-11-26 00:25:46.016 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2749 ms
+2019-11-26 00:25:46.026 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.6877 ms
+2019-11-26 00:25:46.030 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7081 ms
+2019-11-26 00:25:46.035 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1081 ms
+2019-11-26 00:25:46.045 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4348 ms
+2019-11-26 00:25:46.066 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.4145 ms
+2019-11-26 00:25:46.264 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 5.4958 ms
+2019-11-26 00:25:46.317 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.917 ms
+2019-11-26 00:25:46.336 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.049 ms
+2019-11-26 00:25:46.355 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 4.6712 ms
+2019-11-26 00:25:46.375 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.7845 ms
+2019-11-26 00:26:08.813 +02:00 [INF] HTTP GET / responded 302 in 2.2065 ms
+2019-11-26 00:26:08.850 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 21.7944 ms
+2019-11-26 00:26:08.903 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.6356 ms
+2019-11-26 00:26:08.922 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.3407 ms
+2019-11-26 00:26:08.922 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 6.9273 ms
+2019-11-26 00:26:08.939 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.2187 ms
+2019-11-26 00:26:08.939 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.2045 ms
+2019-11-26 00:26:08.944 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6322 ms
+2019-11-26 00:26:08.955 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.6916 ms
+2019-11-26 00:26:08.961 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.1986 ms
+2019-11-26 00:26:08.973 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.9386 ms
+2019-11-26 00:26:08.987 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4616 ms
+2019-11-26 00:26:08.991 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5347 ms
+2019-11-26 00:26:08.992 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.4762 ms
+2019-11-26 00:26:09.004 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9358 ms
+2019-11-26 00:26:09.019 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 13.1309 ms
+2019-11-26 00:26:09.027 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.7062 ms
+2019-11-26 00:26:09.053 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.538 ms
+2019-11-26 00:26:09.376 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7917 ms
+2019-11-26 00:26:09.439 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.0278 ms
+2019-11-26 00:26:09.470 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8817 ms
+2019-11-26 00:26:09.494 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.8502 ms
+2019-11-26 00:26:09.516 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3193 ms
+2019-11-26 00:26:12.388 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 21.5073 ms
+2019-11-26 00:26:12.391 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 36.8814 ms
+2019-11-26 00:26:12.408 +02:00 [INF] HTTP GET /notification?id=svtrHWfz7KTueRhK1yM69w responded 101 in 2971.215 ms
+2019-11-26 00:26:12.451 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.9675 ms
+2019-11-26 00:26:12.453 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4453 ms
+2019-11-26 00:26:12.453 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5519 ms
+2019-11-26 00:26:12.453 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.3222 ms
+2019-11-26 00:26:12.454 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.4725 ms
+2019-11-26 00:26:12.455 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4339 ms
+2019-11-26 00:26:12.464 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 5.3074 ms
+2019-11-26 00:26:12.469 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.7305 ms
+2019-11-26 00:26:12.476 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7571 ms
+2019-11-26 00:26:12.486 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.7421 ms
+2019-11-26 00:26:12.491 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1707 ms
+2019-11-26 00:26:12.495 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.7843 ms
+2019-11-26 00:26:12.507 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.533 ms
+2019-11-26 00:26:12.523 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.5411 ms
+2019-11-26 00:26:12.525 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9198 ms
+2019-11-26 00:26:12.529 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1332 ms
+2019-11-26 00:26:12.743 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.6324 ms
+2019-11-26 00:26:12.809 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.8507 ms
+2019-11-26 00:26:12.827 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3103 ms
+2019-11-26 00:26:12.843 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.9686 ms
+2019-11-26 00:26:12.859 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0604 ms
+2019-11-26 00:26:16.338 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 0.8421 ms
+2019-11-26 00:26:16.355 +02:00 [INF] HTTP GET /Home/Privacy? responded 302 in 0.6226 ms
+2019-11-26 00:26:16.384 +02:00 [INF] HTTP GET /Home/Privacy? responded 302 in 0.6015 ms
+2019-11-26 00:26:16.414 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy%3F responded 200 in 7.9456 ms
+2019-11-26 00:26:16.432 +02:00 [INF] HTTP GET /notification?id=3X9pIdnGtAJ0KN0fhBH2pw responded 101 in 3632.0494 ms
+2019-11-26 00:26:25.302 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 54.0947 ms
+2019-11-26 00:26:25.321 +02:00 [INF] HTTP GET /notification?id=MZVun1tiJnM-AU1imOcGQA responded 101 in 39000.435 ms
+2019-11-26 00:26:25.369 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 12.5758 ms
+2019-11-26 00:26:25.384 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.5565 ms
+2019-11-26 00:26:25.385 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.1697 ms
+2019-11-26 00:26:25.386 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.6344 ms
+2019-11-26 00:26:25.386 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.775 ms
+2019-11-26 00:26:25.387 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6316 ms
+2019-11-26 00:26:25.402 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.5676 ms
+2019-11-26 00:26:25.406 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6188 ms
+2019-11-26 00:26:25.425 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5244 ms
+2019-11-26 00:26:25.436 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.2996 ms
+2019-11-26 00:26:25.439 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2726 ms
+2019-11-26 00:26:25.455 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3102 ms
+2019-11-26 00:26:25.472 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.5235 ms
+2019-11-26 00:26:25.485 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.6121 ms
+2019-11-26 00:26:25.488 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4009 ms
+2019-11-26 00:26:25.498 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.249 ms
+2019-11-26 00:26:25.905 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 1.0151 ms
+2019-11-26 00:26:25.964 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1408 ms
+2019-11-26 00:26:25.987 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3116 ms
+2019-11-26 00:26:26.015 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 5.2069 ms
+2019-11-26 00:26:26.032 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.8154 ms
+2019-11-26 00:26:40.900 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 101.9074 ms
+2019-11-26 00:26:40.948 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 20.575 ms
+2019-11-26 00:26:41.032 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 5.8811 ms
+2019-11-26 00:26:41.033 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 1.1031 ms
+2019-11-26 00:26:41.043 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 8.4569 ms
+2019-11-26 00:26:41.048 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.3923 ms
+2019-11-26 00:26:41.067 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.5175 ms
+2019-11-26 00:26:41.067 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4076 ms
+2019-11-26 00:26:41.094 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.8031 ms
+2019-11-26 00:26:41.109 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 4.2464 ms
+2019-11-26 00:26:41.154 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9213 ms
+2019-11-26 00:26:41.167 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6267 ms
+2019-11-26 00:26:41.178 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9251 ms
+2019-11-26 00:26:41.178 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.5489 ms
+2019-11-26 00:26:41.182 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.1846 ms
+2019-11-26 00:26:41.188 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 8.6564 ms
+2019-11-26 00:26:41.188 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.1969 ms
+2019-11-26 00:26:41.188 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4525 ms
+2019-11-26 00:26:41.532 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.634 ms
+2019-11-26 00:26:41.563 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.653 ms
+2019-11-26 00:26:41.582 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2238 ms
+2019-11-26 00:26:41.597 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.591 ms
+2019-11-26 00:26:41.609 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4013 ms
+2019-11-26 00:28:26.574 +02:00 [INF] Application starting up!
+2019-11-26 00:28:32.854 +02:00 [INF] HTTP GET / responded 302 in 459.821 ms
+2019-11-26 00:28:34.850 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 1932.3532 ms
+2019-11-26 00:28:34.942 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 22.5313 ms
+2019-11-26 00:28:34.942 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 9.4238 ms
+2019-11-26 00:28:34.949 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.4346 ms
+2019-11-26 00:28:34.949 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.4607 ms
+2019-11-26 00:28:34.953 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 2.558 ms
+2019-11-26 00:28:34.970 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.5197 ms
+2019-11-26 00:28:34.980 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.4821 ms
+2019-11-26 00:28:34.984 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.53 ms
+2019-11-26 00:28:35.044 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 49.68 ms
+2019-11-26 00:28:35.047 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3081 ms
+2019-11-26 00:28:35.050 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.256 ms
+2019-11-26 00:28:35.051 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.818 ms
+2019-11-26 00:28:35.051 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8196 ms
+2019-11-26 00:28:35.066 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 13.737 ms
+2019-11-26 00:28:35.068 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2285 ms
+2019-11-26 00:28:35.079 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 10.1789 ms
+2019-11-26 00:28:35.364 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5113 ms
+2019-11-26 00:28:35.386 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.9507 ms
+2019-11-26 00:28:35.389 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 52.8969 ms
+2019-11-26 00:28:35.413 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5134 ms
+2019-11-26 00:28:35.425 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.2857 ms
+2019-11-26 00:28:41.376 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 73.887 ms
+2019-11-26 00:28:41.441 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 3.172 ms
+2019-11-26 00:28:41.446 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.5902 ms
+2019-11-26 00:28:41.447 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4716 ms
+2019-11-26 00:28:41.447 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.3113 ms
+2019-11-26 00:28:41.455 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 7.1539 ms
+2019-11-26 00:28:41.473 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 6.1554 ms
+2019-11-26 00:28:41.479 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 2.8372 ms
+2019-11-26 00:28:41.480 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.0289 ms
+2019-11-26 00:28:41.483 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5708 ms
+2019-11-26 00:28:41.500 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.92 ms
+2019-11-26 00:28:41.518 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.9992 ms
+2019-11-26 00:28:41.538 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6155 ms
+2019-11-26 00:28:41.544 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6564 ms
+2019-11-26 00:28:41.548 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.3222 ms
+2019-11-26 00:28:41.559 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.724 ms
+2019-11-26 00:28:41.567 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8067 ms
+2019-11-26 00:28:41.816 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.3651 ms
+2019-11-26 00:28:41.891 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7962 ms
+2019-11-26 00:28:41.908 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8707 ms
+2019-11-26 00:28:41.926 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.4992 ms
+2019-11-26 00:28:41.940 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.7684 ms
+2019-11-26 00:28:41.968 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 684.1689 ms
+2019-11-26 00:28:43.193 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 7.1887 ms
+2019-11-26 00:28:43.243 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 44.7997 ms
+2019-11-26 00:28:43.257 +02:00 [INF] HTTP GET /Home/Privacy? responded 302 in 41.8513 ms
+2019-11-26 00:28:43.422 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy%3F responded 200 in 155.7596 ms
+2019-11-26 00:28:43.531 +02:00 [INF] HTTP GET /notification?id=44TUwMFm3Z9RReA4yDW4qQ responded 101 in 1667.3149 ms
+2019-11-26 00:28:46.695 +02:00 [INF] HTTP GET / responded 302 in 1.5689 ms
+2019-11-26 00:28:46.790 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 81.5397 ms
+2019-11-26 00:28:46.807 +02:00 [INF] HTTP GET /notification?id=c0lSljsgMhrE9hmZwJtHIw responded 101 in 11405.7687 ms
+2019-11-26 00:28:46.856 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 3.566 ms
+2019-11-26 00:28:46.857 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7017 ms
+2019-11-26 00:28:46.866 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 3.0914 ms
+2019-11-26 00:28:46.868 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.6477 ms
+2019-11-26 00:28:46.868 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.6856 ms
+2019-11-26 00:28:46.870 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 2.0636 ms
+2019-11-26 00:28:46.878 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 2.2419 ms
+2019-11-26 00:28:46.878 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.519 ms
+2019-11-26 00:28:46.889 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.5318 ms
+2019-11-26 00:28:46.896 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1979 ms
+2019-11-26 00:28:46.900 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.0468 ms
+2019-11-26 00:28:46.913 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4759 ms
+2019-11-26 00:28:46.925 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 5.3806 ms
+2019-11-26 00:28:46.942 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 12.1366 ms
+2019-11-26 00:28:46.950 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 7.7221 ms
+2019-11-26 00:28:46.966 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 22.7548 ms
+2019-11-26 00:28:47.179 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 2.5568 ms
+2019-11-26 00:28:47.244 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.613 ms
+2019-11-26 00:28:47.258 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 0.8797 ms
+2019-11-26 00:28:47.271 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 2.8545 ms
+2019-11-26 00:28:47.279 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.3767 ms
+2019-11-26 00:28:54.633 +02:00 [INF] HTTP POST /Home/LogOutAsync responded 200 in 39.1348 ms
+2019-11-26 00:28:54.674 +02:00 [INF] HTTP GET /Home/Privacy responded 302 in 0.8653 ms
+2019-11-26 00:28:54.692 +02:00 [INF] HTTP GET /?ReturnUrl=%2FHome%2FPrivacy responded 200 in 2.0114 ms
+2019-11-26 00:28:54.709 +02:00 [INF] HTTP GET /notification?id=zPc9ccEFyimIDw7d3JkQZg responded 101 in 7481.9815 ms
+2019-11-26 00:28:54.725 +02:00 [INF] HTTP GET /Home/Privacy? responded 200 in 120.8785 ms
+2019-11-26 00:29:03.228 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 113.674 ms
+2019-11-26 00:29:05.803 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 316.816 ms
+2019-11-26 00:29:05.902 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 74.9764 ms
+2019-11-26 00:29:05.944 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.5749 ms
+2019-11-26 00:29:05.985 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 8.6551 ms
+2019-11-26 00:29:05.989 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.528 ms
+2019-11-26 00:29:05.990 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.6778 ms
+2019-11-26 00:29:05.994 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 0.6813 ms
+2019-11-26 00:29:06.001 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 0.9785 ms
+2019-11-26 00:29:06.007 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.6436 ms
+2019-11-26 00:29:06.008 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 0.6649 ms
+2019-11-26 00:29:06.043 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.059 ms
+2019-11-26 00:29:06.055 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6219 ms
+2019-11-26 00:29:06.059 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1776 ms
+2019-11-26 00:29:06.065 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0473 ms
+2019-11-26 00:29:06.070 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.467 ms
+2019-11-26 00:29:06.077 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6535 ms
+2019-11-26 00:29:06.086 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1867 ms
+2019-11-26 00:29:06.093 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.0296 ms
+2019-11-26 00:29:06.406 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7837 ms
+2019-11-26 00:29:06.499 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.6841 ms
+2019-11-26 00:29:06.515 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.9535 ms
+2019-11-26 00:29:06.533 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.5298 ms
+2019-11-26 00:29:06.540 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1118 ms
+2019-11-26 00:29:24.280 +02:00 [INF] HTTP POST /Home/CheckForUserNameAndPassowrdAsync responded 200 in 50.3869 ms
+2019-11-26 00:29:24.373 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 55.6629 ms
+2019-11-26 00:29:24.437 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7967 ms
+2019-11-26 00:29:24.447 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 1.6877 ms
+2019-11-26 00:29:24.452 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 4.192 ms
+2019-11-26 00:29:24.451 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.4555 ms
+2019-11-26 00:29:24.454 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.0126 ms
+2019-11-26 00:29:24.456 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 0.8684 ms
+2019-11-26 00:29:24.479 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 1.192 ms
+2019-11-26 00:29:24.479 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 1.2978 ms
+2019-11-26 00:29:24.505 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.7403 ms
+2019-11-26 00:29:24.520 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 9.3575 ms
+2019-11-26 00:29:24.530 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 6.5265 ms
+2019-11-26 00:29:24.535 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.4361 ms
+2019-11-26 00:29:24.539 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.777 ms
+2019-11-26 00:29:24.543 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.1735 ms
+2019-11-26 00:29:24.548 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.8685 ms
+2019-11-26 00:29:24.562 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 16.5359 ms
+2019-11-26 00:29:24.767 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7242 ms
+2019-11-26 00:29:24.854 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.8762 ms
+2019-11-26 00:29:24.878 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 4.165 ms
+2019-11-26 00:29:24.893 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 3.7514 ms
+2019-11-26 00:29:24.907 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5303 ms
+2019-11-26 00:29:26.700 +02:00 [INF] HTTP GET /Home/Privacy responded 200 in 16.1563 ms
+2019-11-26 00:29:26.718 +02:00 [INF] HTTP GET /notification?id=aOIV_jQywB2lNoSrxaTmCQ responded 101 in 20218.1994 ms
+2019-11-26 00:29:26.751 +02:00 [INF] HTTP GET /Home/vendor/bootstrap/css/bootstrap.min.css responded 302 in 3.3885 ms
+2019-11-26 00:29:26.766 +02:00 [INF] HTTP GET /Home/fonts/font-awesome-4.7.0/css/font-awesome.min.css responded 302 in 0.7946 ms
+2019-11-26 00:29:26.767 +02:00 [INF] HTTP GET /Home/fonts/iconic/css/material-design-iconic-font.min.css responded 302 in 0.4024 ms
+2019-11-26 00:29:26.768 +02:00 [INF] HTTP GET /Home/vendor/animate/animate.css responded 302 in 0.7719 ms
+2019-11-26 00:29:26.770 +02:00 [INF] HTTP GET /Home/vendor/css-hamburgers/hamburgers.min.css responded 302 in 1.4 ms
+2019-11-26 00:29:26.776 +02:00 [INF] HTTP GET /Home/vendor/animsition/css/animsition.min.css responded 302 in 3.8314 ms
+2019-11-26 00:29:26.786 +02:00 [INF] HTTP GET /Home/vendor/select2/select2.min.css responded 302 in 1.6457 ms
+2019-11-26 00:29:26.788 +02:00 [INF] HTTP GET /Home/vendor/daterangepicker/daterangepicker.css responded 302 in 0.7278 ms
+2019-11-26 00:29:26.801 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.7665 ms
+2019-11-26 00:29:26.806 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6667 ms
+2019-11-26 00:29:26.851 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6901 ms
+2019-11-26 00:29:26.855 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.4731 ms
+2019-11-26 00:29:26.862 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.765 ms
+2019-11-26 00:29:26.865 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.8216 ms
+2019-11-26 00:29:26.868 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.2794 ms
+2019-11-26 00:29:26.875 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 3.5041 ms
+2019-11-26 00:29:27.198 +02:00 [INF] HTTP POST /notification/negotiate responded 200 in 0.7893 ms
+2019-11-26 00:29:27.247 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 1.1876 ms
+2019-11-26 00:29:27.265 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 1.6129 ms
+2019-11-26 00:29:27.280 +02:00 [INF] HTTP GET /Home/images/icons/favicon.ico responded 302 in 0.7091 ms
+2019-11-26 00:29:27.295 +02:00 [INF] HTTP GET /Home/PageNotFound responded 200 in 2.9835 ms

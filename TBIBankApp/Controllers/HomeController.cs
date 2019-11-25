@@ -61,16 +61,21 @@ namespace TBIBankApp.Controllers
         [Authorize]
         public async Task<IActionResult> Privacy()
         {
-            var modelDTO = await statisticsService.GetStatisticsAsync();
-            var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
-            var list = new List<string>();
-            list.Add("iwaka");
-            list.Add("ivka");
-            list.Add("achkata");
-            list.Add("achkata");
-            list.Add("achkata");
-            vm.UserNames = list;
-            return View(vm);
+            try
+            {
+                var modelDTO = await statisticsService.GetStatisticsAsync();
+
+                var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
+
+                return View(vm);
+
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError("Unable to get statistics");
+            }
+
+            return BadRequest();
         }
 
         [HttpPost]
@@ -89,12 +94,14 @@ namespace TBIBankApp.Controllers
 
                 if (user.IsChangedPassword && passValidation)
                 {
-                    if(logedInUsersCount>=30)
+                    if (logedInUsersCount >= 30)
                     {
                         return new JsonResult("maxlogedusers");
                     }
                     logedInUsersCount += 1;
                     await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+                    await this.userService.SetOnlineStatusOn(user.Id);
 
                     return new JsonResult("true");
                 }
@@ -121,6 +128,9 @@ namespace TBIBankApp.Controllers
                 await userManager.ChangePasswordAsync(user, currPassword, newPassword);
 
                 await signInManager.PasswordSignInAsync(UserName, newPassword, false, lockoutOnFailure: false);
+
+                await this.userService.SetOnlineStatusOn(user.Id);
+
                 logedInUsersCount += 1;
             }
             catch (Exception ex)
@@ -138,8 +148,13 @@ namespace TBIBankApp.Controllers
 
         public async Task LogOutAsync()
         {
-           logedInUsersCount -= 1;
-           await signInManager.SignOutAsync();
+            var user = await this.userManager.GetUserAsync(User);
+
+            logedInUsersCount -= 1;
+
+            await this.userService.SetOnlineStatusOff(user.Id);
+
+            await signInManager.SignOutAsync();
         }
     }
 }
