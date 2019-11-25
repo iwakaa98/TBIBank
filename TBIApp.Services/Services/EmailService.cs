@@ -51,7 +51,7 @@ namespace TBIApp.Services.Services
 
             return emailDTO;
         }
-
+        
 
         public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail, User user)
         {

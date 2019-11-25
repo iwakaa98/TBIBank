@@ -14,7 +14,6 @@ using TBIBankApp.Models.Emails;
 namespace TBIBankApp.Controllers
 {
     [Authorize]
-    [AutoValidateAntiforgeryToken]
     public class EmailController : Controller
     {
         private readonly IEmailService emailService;
@@ -39,7 +38,6 @@ namespace TBIBankApp.Controllers
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ListEmailsAsync(int id, string emailStatus)
         {
 
@@ -64,7 +62,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> ChangeStatusAsync(string id, string status)
         {
 
@@ -121,7 +118,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IsItOpenAsync(string id)
         {
             if (await emailService.IsOpenAsync(id))
@@ -137,7 +133,6 @@ namespace TBIBankApp.Controllers
         }
 
         [HttpGet]
-        [AutoValidateAntiforgeryToken]
         public async Task SetToEnableAsync(string id)
         {
             await this.emailService.UnLockButtonAsync(id);
