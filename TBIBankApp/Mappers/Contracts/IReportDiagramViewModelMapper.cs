@@ -6,8 +6,8 @@ namespace TBIBankApp.Mappers.Contracts
 {
     public interface IReportDiagramViewModelMapper
     {
-        IList<ReportDiagramViewModel> MapFrom(ICollection<ReportDiagramDTO> entities);
-        IList<ReportDiagramDTO> MapFrom(ICollection<ReportDiagramViewModel> entities);
+        ICollection<ReportDiagramViewModel> MapFrom(ICollection<ReportDiagramDTO> entities);
+        ICollection<ReportDiagramDTO> MapFrom(ICollection<ReportDiagramViewModel> entities);
         ReportDiagramViewModel MapFrom(ReportDiagramDTO entity);
         ReportDiagramDTO MapFrom(ReportDiagramViewModel entity);
     }

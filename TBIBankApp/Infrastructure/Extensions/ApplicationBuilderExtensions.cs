@@ -47,6 +47,8 @@ namespace TBIBankApp.Infrastructure.Extensions
                         {
                             UserName = "admin",
                             Email = "admin@admin.com",
+                            FirstName = "Mihail",
+                            LastName = "Katsarov",
                             IsChangedPassword = true
 
                         };

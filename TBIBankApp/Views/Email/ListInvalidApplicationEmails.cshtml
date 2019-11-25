@@ -28,92 +28,66 @@
 
         @foreach (var item in Model.EmailViewModels)
         {
-            @if(item.IsOpne)
+            @if (item.IsOpne)
             {
 
-            <tr id="@item.Id+classID" class="hoverCustom">
-                <th>@item.ReferenceNumber</th>
-                <td>@item.RegisteredInDataBase</td>
-                <td>@item.Sender</td>
-                <td>@item.Subject</td>
-                <td>@item.Status</td>
-                <td>@item.LastStatusUpdate</td>
-                <td>@item.User.UserName</td>
-                <td>
+                <tr id="@item.Id+classID" class="hoverCustom" style="background-color:#999593">
+                    <th>@item.ReferenceNumber</th>
+                    <td>@item.RegisteredInDataBase</td>
+                    <td>@item.Sender</td>
+                    <td>@item.Subject</td>
+                    <td>@item.Status</td>
+                    <td>@item.LastStatusUpdate</td>
+                    <td>@item.User.UserName</td>
+                    <td>
 
-                    <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
-                        Preview
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 align="center" class="modal-title text-center" id="exampleModalLabel"></h5>
-                                    <div id="@item.Id+timerId"></div>
-                                    
-                                    <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="divWrapper">@Html.Raw(item.Body)</div>
-                                </div>
-                                @if (User.IsInRole("Manager"))
-                                {
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary buttonsTest4" data-dismiss="modal" value="@item.Id" onclick="SetNotReviewed(this.value)" style="background-color:red">Set to NotReviewed</button>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+                        <button type="button" class="btn btn-primary" disabled id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
+                            Preview
+                        </button>
+                    </td>
+                </tr>
             }
             else
             {
-    <tr id="@item.Id+classID" class="hoverCustom">
-        <th>@item.ReferenceNumber</th>
-        <td>@item.RegisteredInDataBase</td>
-        <td>@item.Sender</td>
-        <td>@item.Subject</td>
-        <td>@item.Status</td>
-        <td>@item.LastStatusUpdate</td>
-        <td>@item.User.UserName</td>
-        <td>
+                <tr id="@item.Id+classID" class="hoverCustom">
+                    <th>@item.ReferenceNumber</th>
+                    <td>@item.RegisteredInDataBase</td>
+                    <td>@item.Sender</td>
+                    <td>@item.Subject</td>
+                    <td>@item.Status</td>
+                    <td>@item.LastStatusUpdate</td>
+                    <td>@item.User.UserName</td>
+                    <td>
 
-            <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
-                Preview
-            </button>
+                        <button type="button" class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
+                            Preview
+                        </button>
 
-            <!-- Modal -->
-            <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 align="center" class="modal-title text-center" id="exampleModalLabel"></h5>
-                            <div id="@item.Id+timerId"></div>
+                        <div class="modal fade @item.Id" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 align="center" class="modal-title text-center" id="exampleModalLabel"></h5>
+                                        <div id="@item.Id+timerId"></div>
 
-                            <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="divWrapper">@Html.Raw(item.Body)</div>
-                        </div>
-                        @if (User.IsInRole("Manager"))
-                        {
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary buttonsTest4" data-dismiss="modal" value="@item.Id" onclick="SetNotReviewed(this.value)" style="background-color:red">Set to NotReviewed</button>
+                                        <button type="button" value="@item.Id" class="close" data-dismiss="modal" onclick="SetButtonToEnable(this.value)" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="divWrapper">@Html.Raw(item.Body)</div>
+                                    </div>
+                                    @if (User.IsInRole("Manager"))
+                                    {
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary buttonsTest4" data-dismiss="modal" value="@item.Id" onclick="SetNotReviewed(this.value)" style="background-color:red">Set to NotReviewed</button>
+                                        </div>
+                                    }
+                                </div>
                             </div>
-                        }
-                    </div>
-                </div>
-            </div>
-        </td>
-    </tr>
+                        </div>
+                    </td>
+                </tr>
             }
         }
     <tfoot>

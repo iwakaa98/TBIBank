@@ -25,8 +25,8 @@ function updateChart() {
                 toolTipContent: "<b>{label}:</b> {y} (#percent%)",
     
                 dataPoints: [
-                    { label: `Not Reviewed`, y: Number(notreviewedcount) },
-                    { label: `Invalid`, y: Number(invalidcount) },
+                    { label: `Not Reviewed`, y: Number(notreviewedcount), color: "orange" },
+                    { label: `Invalid`, y: Number(invalidcount), color: "red" },
                     { label: `New`, y: Number(newcount) },
                     { label: `Open`, y: Number(opencount) },
                     { label: `Closed`, y: Number(closedcount) }

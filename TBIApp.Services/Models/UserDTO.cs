@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace TBIBankApp.Models
+namespace TBIApp.Services.Models
 {
-    public class UserViewModel
+    public class UserDTO
     {
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -15,6 +14,6 @@ namespace TBIBankApp.Models
         public bool IsOnline { get; set; }
         public bool IsChangedPassword { get; set; }
         public DateTime LastLogIn { get; set; }
-        public int UserEmailsCount { get; set; }
+        public int  UserEmailsCount { get; set; }
     }
 }

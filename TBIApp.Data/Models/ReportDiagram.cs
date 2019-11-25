@@ -20,5 +20,6 @@ namespace TBIApp.Data.Models
         public double PercentRejected { get; set; }
         public int AcceptedCount { get; set; }
         public double PercentAccepted { get; set; }
+        public ICollection<User> OnlineUsers { get; set; }
     }
 }

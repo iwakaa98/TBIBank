@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TBIApp.Data.Models;
 
 namespace TBIApp.Services.Models
 {
@@ -20,6 +21,8 @@ namespace TBIApp.Services.Models
         public double PercentRejected { get; set; }
         public int AcceptedCount { get; set; }
         public double PercentAccepted { get; set; }
+        public ICollection<UserDTO> OnlineUsers { get; set; }
+
     }
 
 }
