@@ -22,7 +22,6 @@ namespace TBIBankApp.Mappers
                 CardId = entity.CardId,
                 PhoneNumber = entity.PhoneNumber,
                 EmailId = entity.EmailId,
-                //Email = entity.Email
             };
         }
         public LoanApplicationViewModel MapFrom(LoanApplicationDTO entity)
@@ -37,7 +36,6 @@ namespace TBIBankApp.Mappers
                 CardId = entity.Id,
                 PhoneNumber = entity.PhoneNumber,
                 EmailId = entity.EmailId,
-                //Email = entity.Email
 
             };
         }

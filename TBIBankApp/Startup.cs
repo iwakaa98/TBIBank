@@ -1,15 +1,14 @@
 ﻿using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Serilog;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using TBIBankApp.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TBIApp.Data;
+using TBIBankApp.Infrastructure.Extensions;
 using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
 using TBIApp.Services.Mappers.Contracts;
@@ -26,6 +25,7 @@ using TBIApp.MailClient.Mappers.Contracts;
 using TBIBankApp.Infrastructure.HostedServices;
 using TBIBankApp.Infrastructure.Middleware;
 using TBIBankApp.Hubs;
+using Serilog;
 
 namespace TBIBankApp
 {

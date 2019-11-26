@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TBIApp.Data.Models;
+﻿using System.Collections.Generic;
 
 namespace TBIApp.Services.Models
 {

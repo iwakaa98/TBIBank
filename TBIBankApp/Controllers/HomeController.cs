@@ -8,7 +8,6 @@ using TBIApp.Data.Models;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models;
 using TBIApp.Services.Services.Contracts;
-using System.Collections.Generic;
 
 namespace TBIBankApp.Controllers
 {
@@ -67,9 +66,6 @@ namespace TBIBankApp.Controllers
                 var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
 
                 return View(vm);
-
-           
-          
         }
 
         [HttpPost]
@@ -108,7 +104,6 @@ namespace TBIBankApp.Controllers
             return View("ChangePassword", Input);
 
         }
-
 
         [HttpPost]
         public async Task SetNewPasswordAsync(string UserName, string currPassword, string newPassword)

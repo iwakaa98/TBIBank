@@ -14,7 +14,7 @@ namespace TBIBankApp.Mappers
 
         public ReportDiagramViewModelMapper(IUserViewModelMapper userViewModelMapper)
         {
-            this.userViewModelMapper = userViewModelMapper;
+            this.userViewModelMapper = userViewModelMapper ?? throw new ArgumentNullException(nameof(userViewModelMapper));
         }
 
         public ReportDiagramViewModel MapFrom(ReportDiagramDTO entity)

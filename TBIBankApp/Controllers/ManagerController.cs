@@ -19,7 +19,11 @@ namespace TBIBankApp.Controllers
         private readonly ILogger<ManagerController> logger;
         private readonly IRegisterViewModelMapper registerViewModelMapper;
 
-        public ManagerController(UserManager<User> userManager, SignInManager<User> signInManager, IUserService userService, ILogger<ManagerController> logger, IRegisterViewModelMapper registerViewModelMapper)
+        public ManagerController(UserManager<User> userManager, 
+                                 SignInManager<User> signInManager, 
+                                 IUserService userService, 
+                                 ILogger<ManagerController> logger, 
+                                 IRegisterViewModelMapper registerViewModelMapper)
         {
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
@@ -33,6 +37,7 @@ namespace TBIBankApp.Controllers
         {
             return View();
         }
+
         [HttpPost]
         //[AutoValidateAntiforgeryToken]
         public async Task<IActionResult> RegisterUserAsync(RegisterViewModel Input)
@@ -55,6 +60,7 @@ namespace TBIBankApp.Controllers
 
             return Ok();
         }
+
         [HttpPost]
         //[AutoValidateAntiforgeryToken]
         public async Task<IActionResult> CheckForUserAndEmailAsync(UserViewModel user)
@@ -80,5 +86,4 @@ namespace TBIBankApp.Controllers
             return new JsonResult("false");
         }
     }
-
 }

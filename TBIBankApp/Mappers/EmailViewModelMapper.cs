@@ -14,7 +14,7 @@ namespace TBIBankApp.Mappers
 
         public EmailViewModelMapper(IAttachmentViewModelMapper attachmentMapper)
         {
-            this.attachmentMapper = attachmentMapper;
+            this.attachmentMapper = attachmentMapper ?? throw new ArgumentNullException(nameof(attachmentMapper));
         }
 
         public EmailViewModel MapFrom(EmailDTO entity)

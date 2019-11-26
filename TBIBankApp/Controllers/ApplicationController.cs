@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TBIApp.Data.Models;
-using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Mappers.Contracts;
-using TBIBankApp.Models.Emails;
 using TBIBankApp.Models.LoanApplication;
 
 namespace TBIBankApp.Controllers
@@ -25,7 +20,14 @@ namespace TBIBankApp.Controllers
         private readonly ICheckPhoneNumberService checkPhoneNumberService;
         private readonly IEncryptService encryptService;
 
-        public ApplicationController(UserManager<User> userManager,IEmailService emailService,IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IcheckCardIdService icheckCardId, ICheckPhoneNumberService checkPhoneNumber, IEncryptService encryptService)
+        public ApplicationController(UserManager<User> userManager,
+                                     IEmailService emailService,
+                                     IApplicationService applicationService, 
+                                     IApplicationViewModelMapper applicationViewModelMapper, 
+                                     ICheckEgnService checkEgnService, 
+                                     IcheckCardIdService icheckCardId, 
+                                     ICheckPhoneNumberService checkPhoneNumber, 
+                                     IEncryptService encryptService)
         {
             this.userManager = userManager;
             this.emailService = emailService;
