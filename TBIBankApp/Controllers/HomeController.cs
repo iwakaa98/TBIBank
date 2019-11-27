@@ -118,7 +118,6 @@ namespace TBIBankApp.Controllers
 
         }
 
-
         [HttpPost]
         public async Task SetNewPasswordAsync(string UserName, string currPassword, string newPassword)
         {

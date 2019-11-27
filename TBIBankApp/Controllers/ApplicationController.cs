@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using TBIApp.Data.Models;
-using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
 using TBIBankApp.Hubs;
 using TBIBankApp.Mappers.Contracts;
-using TBIBankApp.Models.Emails;
 using TBIBankApp.Models.LoanApplication;
 
 namespace TBIBankApp.Controllers
