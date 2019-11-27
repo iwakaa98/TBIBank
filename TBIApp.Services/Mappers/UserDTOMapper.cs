@@ -19,14 +19,15 @@ namespace TBIApp.Services.Mappers
                 LastName = entity.LastName,
                 IsOnline = entity.IsOnline,
                 IsChangedPassword = entity.IsChangedPassword,
-                LastLogIn = entity.LastLogIn
+                LastLogIn = entity.LastLogIn,
+                
 
             };
         }
         public UserDTO MapFrom(User entity)
         {
             return new UserDTO()
-            {
+            {   
                 UserName = entity.UserName,
                 Password = entity.PasswordHash,
                 Email = entity.Email,
@@ -35,7 +36,8 @@ namespace TBIApp.Services.Mappers
                 IsOnline = entity.IsOnline,
                 IsChangedPassword = entity.IsChangedPassword,
                 LastLogIn = entity.LastLogIn,
-                UserEmailsCount = entity.UserEmails != null ? entity.UserEmails.Count : 0
+                UserEmailsCount = entity.UserEmails != null ? entity.UserEmails.Count : 0,
+               
                 //condition ? consequent : alternative
 
             };

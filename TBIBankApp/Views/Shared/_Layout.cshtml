@@ -36,13 +36,6 @@
 <body>
 
     <header class="header">
-        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light ">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/logo-tbi.png" />
-                </a>
-                <ul class="navbar-nav flex-grow-1">*@
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                 <img src="~/images/logo-tbi.png" />
@@ -53,13 +46,15 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    @if (User.IsInRole("Manager"))
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Manager" asp-action="Register">Register</a>
-                        </li>
-
-                    }
+                    <li class="nav-item">
+                        <a class="nav-link"  asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">Invalid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">Not Reviewed</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" id="listinvalid" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="New">New</a>
                     </li>
@@ -67,14 +62,15 @@
                         <a class="nav-link" id="listopen" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Open">Opened</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="listnotreviewd" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="NotReviewed">Not Reviewed</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">Invalid</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">Closed</a>
                     </li>
+                    @if (User.IsInRole("Manager"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Manager" asp-action="Register">Register</a>
+                        </li>
+
+                    }
 
                 </ul>
                 <partial name="_LoginPartial" />
@@ -120,14 +116,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/autologout.js"></script>
-    @*<script src="~/js/listEmails.js" asp-append-version="true"></script>*@
-    @*<script>
-            $("#registerOperator").click(function () {
-                console.log(15);
-                $('#form-register').show();
-                return false;
-            });
-        </script>*@
 
     @RenderSection("Scripts", required: false)
 </body>

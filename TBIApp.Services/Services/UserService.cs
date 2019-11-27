@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -107,6 +108,11 @@ namespace TBIApp.Services.Services
         public Task<bool> CheckForUserNameAsync(string userName)
         {
             return this.dbcontext.Users.AnyAsync(x => x.UserName == userName);
+        }
+
+        public async Task<int> UpdatedEmailsCountAsync(User user)
+        {
+            return await this.dbcontext.Emails.Where(x => x.UserId == user.Id).CountAsync();
         }
     }
 }

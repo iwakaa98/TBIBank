@@ -8,6 +8,7 @@ connection.on("LockButton", function (id) {
     butTestDisable.setAttribute("disabled", true);
     $(butTestDisable).css('background-color', '#FF0000');
     $(butTestDisable).text('Denied');
+    
 });
 
 connection.on("UnlockButton", function (id) {

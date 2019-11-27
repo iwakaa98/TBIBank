@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using TBIApp.Data.Models;
 using TBIApp.Services.Services;
 using TBIApp.Services.Services.Contracts;
+using TBIBankApp.Hubs;
 using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models.Emails;
 using TBIBankApp.Models.LoanApplication;
@@ -24,9 +26,12 @@ namespace TBIBankApp.Controllers
         private readonly IcheckCardIdService checkCardIdService;
         private readonly ICheckPhoneNumberService checkPhoneNumberService;
         private readonly IEncryptService encryptService;
+        private readonly IHubContext<NotificationHub> hubContext;
 
-        public ApplicationController(UserManager<User> userManager,IEmailService emailService,IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IcheckCardIdService icheckCardId, ICheckPhoneNumberService checkPhoneNumber, IEncryptService encryptService)
+
+        public ApplicationController(UserManager<User> userManager, IHubContext<NotificationHub> hubContext,IEmailService emailService,IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IcheckCardIdService icheckCardId, ICheckPhoneNumberService checkPhoneNumber, IEncryptService encryptService)
         {
+            this.hubContext = hubContext;
             this.userManager = userManager;
             this.emailService = emailService;
             this.applicationService = applicationService;
@@ -86,6 +91,8 @@ namespace TBIBankApp.Controllers
 
                 await applicationService.ChangeStatusAsync(id, appStatus);
                 await emailService.ChangeStatusAsync(id, EmailStatusesEnum.Closed, currentUser);
+                await this.hubContext.Clients.All.SendAsync("UpdateChart", "Closed","Open");
+
             }
             catch
             {

@@ -6,9 +6,7 @@
     {
 
         <li class="nav-item">
-            <form class="form-inline">
-                <button type="submit" id="logoutbutton" class="nav-link btn btn-link btn-warning text-light">Log out</button>
-            </form>
+            <button type="submit" id="logoutbutton" class="nav-link btn btn-link btn-warning text-light">Log out</button>
         </li>
     }
 
@@ -18,10 +16,9 @@
 <script>
     $('#logoutbutton').on('click', function () {
         $.ajax({
-            type: "Post",
+            type: "Get",
             url: "/Home/LogOutAsync",
             success: function () {
-                console.log(225);
                 window.location.replace("");
             }
         })

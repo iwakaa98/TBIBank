@@ -9,6 +9,8 @@ using TBIBankApp.Mappers.Contracts;
 using TBIBankApp.Models;
 using TBIApp.Services.Services.Contracts;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.SignalR;
+using TBIBankApp.Hubs;
 
 namespace TBIBankApp.Controllers
 {
@@ -22,6 +24,8 @@ namespace TBIBankApp.Controllers
         private readonly IStatisticsService statisticsService;
         private readonly IReportDiagramViewModelMapper reportDiagramViewModelMapper;
         private readonly ILogger<HomeController> logger;
+        private readonly IHubContext<NotificationHub> hubContext;
+
 
 
         public HomeController(
@@ -30,8 +34,10 @@ namespace TBIBankApp.Controllers
             ILogger<HomeController> logger,
             IUserService userService,
             IStatisticsService statisticsService,
-            IReportDiagramViewModelMapper reportDiagramViewModelMapper)
+            IReportDiagramViewModelMapper reportDiagramViewModelMapper,
+            IHubContext<NotificationHub> hubContext)
         {
+            this.hubContext = hubContext ?? throw new ArgumentNullException(nameof(hubContext));
             this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.userService = userService ?? throw new ArgumentNullException(nameof(userService));
@@ -42,11 +48,12 @@ namespace TBIBankApp.Controllers
 
         public async Task<IActionResult> Index()
         {
+            await Task.Delay(0);
             try
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    return RedirectToAction("Privacy");
+                    return RedirectToAction("Dashboard");
                 }
 
             }
@@ -59,17 +66,17 @@ namespace TBIBankApp.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> Privacy()
+        public async Task<IActionResult> Dashboard()
         {
-         
-                var modelDTO = await statisticsService.GetStatisticsAsync();
 
-                var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
+            var modelDTO = await statisticsService.GetStatisticsAsync();
 
-                return View(vm);
+            var vm = this.reportDiagramViewModelMapper.MapFrom(modelDTO);
 
-           
-          
+            return View(vm);
+
+
+
         }
 
         [HttpPost]
@@ -96,6 +103,8 @@ namespace TBIBankApp.Controllers
                     await signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
 
                     await this.userService.SetOnlineStatusOn(user.Id);
+                    var count = await this.userService.UpdatedEmailsCountAsync(user);
+                    await this.hubContext.Clients.All.SendAsync("UpdateOnline", user,count);
 
                     return new JsonResult("true");
                 }
@@ -137,9 +146,11 @@ namespace TBIBankApp.Controllers
 
         public async Task<IActionResult> PageNotFound()
         {
+            await Task.Delay(0);
             return View();
         }
 
+        [HttpGet]
         public async Task LogOutAsync()
         {
             var user = await this.userManager.GetUserAsync(User);
@@ -147,6 +158,8 @@ namespace TBIBankApp.Controllers
             logedInUsersCount -= 1;
 
             await this.userService.SetOnlineStatusOff(user.Id);
+
+            await this.hubContext.Clients.All.SendAsync("LogOut", user.UserName);
 
             await signInManager.SignOutAsync();
         }

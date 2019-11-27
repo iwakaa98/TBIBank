@@ -38,10 +38,9 @@ function changePassword(currPasword, userName) {
                     'newPassword': newPassword
                 },
                 success: function () {
-                    console.log(225);
                     console.log(isEverythingFine);
                     if (isEverythingFine) {
-                        window.location.replace("/Home/Privacy");
+                        window.location.replace("/Home/Dashboard");
                     }
                     //else {
 

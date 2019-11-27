@@ -14,9 +14,8 @@ $(document).ready(function () {
 function timerIncrement() {
     idleTime = idleTime + 1;
     if (idleTime > 14) { // 15 minutes
-        console.log(idleTime);
         $.ajax({
-            type: "Post",
+            type: "Get",
             url: "/Home/LogOutAsync",
             success: function () {
                 window.location.replace("");

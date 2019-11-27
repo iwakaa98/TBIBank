@@ -15,5 +15,6 @@ namespace TBIApp.Services.Models
         public bool IsChangedPassword { get; set; }
         public DateTime LastLogIn { get; set; }
         public int  UserEmailsCount { get; set; }
+        public string Role { get; set; }
     }
 }

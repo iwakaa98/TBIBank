@@ -51,7 +51,7 @@ function login(e) {
                     else if (returndata === "true") {
                         console.log(returndata);
                         $('#focus-Password').text('');
-                        window.location.replace("/Home/Privacy");
+                        window.location.replace("/Home/Dashboard");
                     }
                     else if (returndata === "maxlogedusers") {
                         $('#focus-Password').text('There are already the limit of logged users in the site!');

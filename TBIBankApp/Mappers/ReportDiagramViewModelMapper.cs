@@ -37,6 +37,7 @@ namespace TBIBankApp.Mappers
                 PercentRejected = entity.PercentRejected,
                 OnlineUsers = this.userViewModelMapper.MapFrom(entity.OnlineUsers)
 
+
             };
         }
         public ReportDiagramDTO MapFrom(ReportDiagramViewModel entity)

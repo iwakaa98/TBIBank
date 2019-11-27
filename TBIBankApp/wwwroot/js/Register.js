@@ -1,11 +1,13 @@
-﻿document.onkeyup = function (e) {
-    if (e.which == 13) {
-        register(e);
+﻿document.onkeyup = function (ev) {
+    if (ev.which == 13) {
+        register(ev);
     }
 }
 
 $('#RegisterButton').click(
+    
     function (e) {
+        console.log(225);
         register(e);
     });
 

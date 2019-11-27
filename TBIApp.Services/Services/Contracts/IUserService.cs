@@ -17,5 +17,6 @@ namespace TBIApp.Services.Services.Contracts
         Task<bool> ValidateCredentialAsync(string username, string password);
         Task<bool> SetOnlineStatusOff(string userId);
         Task<bool> SetOnlineStatusOn(string userId);
+        Task<int> UpdatedEmailsCountAsync(User user);
     }
 }
