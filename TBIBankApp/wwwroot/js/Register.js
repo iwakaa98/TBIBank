@@ -129,7 +129,7 @@ function register(e) {
                         success: function (response) {
                             //window.location.replace("/Manager/Register")
                             document.getElementById("reg-form").reset();
-                            toastr.success("Successfully registration!");
+                            toastr.success("Successfuly registration!");
                         }
                     })
                 }

@@ -37,6 +37,7 @@ namespace TBIApp.Services.Mappers
                 IsChangedPassword = entity.IsChangedPassword,
                 LastLogIn = entity.LastLogIn,
                 UserEmailsCount = entity.UserEmails != null ? entity.UserEmails.Count : 0,
+                
                
                 //condition ? consequent : alternative
 

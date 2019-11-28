@@ -1,3 +1,3 @@
 ﻿$('#BackToDashboard').on('click', () => {
-    window.location.replace('/Home/Privacy');
+    window.location.replace('/Home/Dashboard');
 })

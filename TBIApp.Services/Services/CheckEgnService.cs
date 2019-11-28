@@ -8,7 +8,7 @@ namespace TBIApp.Services.Services
         public async Task<bool> IsRealAsync(string egn)
         {
             await Task.Delay(0);
-
+            Task.Run(() => { });
             int[] egnArray = new int[10];
 
             if(egn.Length!=10)

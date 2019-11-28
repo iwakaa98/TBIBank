@@ -33,7 +33,7 @@ namespace TBIApp.Services.Services
             this.emailDTOMapper = emailDTOMapper ?? throw new ArgumentNullException(nameof(emailDTOMapper));
             this.decodeService = decodeService ?? throw new ArgumentNullException(nameof(decodeService));
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            this.userManager = userManager;
             this.encryptService = encryptService ?? throw new ArgumentNullException(nameof(encryptService));
         }
 
@@ -41,12 +41,14 @@ namespace TBIApp.Services.Services
         {
             var email = this.emailDTOMapper.MapFrom(emailDTO);
 
-            if (email == null) throw new ArgumentNullException();
+            if (email == null)
+            {
+                throw new ArgumentNullException();
+            }
 
             email.RegisteredInDataBase = DateTime.Now;
 
             this.dbcontext.Emails.Add(email);
-
             await this.dbcontext.SaveChangesAsync();
 
             return emailDTO;
@@ -63,8 +65,6 @@ namespace TBIApp.Services.Services
             if (emails == null) throw new ArgumentNullException("No emails found!");
 
             return this.emailDTOMapper.MapFrom(emails);
-
-
         }
 
         public async Task<ICollection<EmailDTO>> GetCurrentPageEmailsAsync(int page, EmailStatusesEnum typeOfEmail, User user)
@@ -106,7 +106,10 @@ namespace TBIApp.Services.Services
         {
             var email = await this.dbcontext.Emails.FirstOrDefaultAsync(e => e.Id == emailId);
 
-            if (email == null) throw new ArgumentNullException("Email not found!");
+            if (email == null)
+            {
+                throw new ArgumentNullException("Email not found!");
+            }
 
             logger.LogInformation($"Status of email with id {emailId} has been updated by {currentUser.Id} at {DateTime.Now}. From status: {email.Status} to status: {newEmaiLStatus}.");
 
@@ -119,7 +122,6 @@ namespace TBIApp.Services.Services
             email.IsOpne = false;
 
             this.dbcontext.Emails.Update(email);
-
             await this.dbcontext.SaveChangesAsync();
         }
 
@@ -181,8 +183,6 @@ namespace TBIApp.Services.Services
 
             await this.dbcontext.SaveChangesAsync();
         }
-
-        //public async Task<>
 
         public async Task<Email> GetEmailAsync(string id)
         {
