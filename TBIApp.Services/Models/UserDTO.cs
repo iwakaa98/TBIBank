@@ -14,5 +14,6 @@ namespace TBIApp.Services.Models
         public DateTime LastLogIn { get; set; }
         public int  UserEmailsCount { get; set; }
         public string Role { get; set; }
+        public bool IsBanned { get; set; }
     }
 }

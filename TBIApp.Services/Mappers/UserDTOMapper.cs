@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 using System.Linq;
 using TBIApp.Data.Models;
 using TBIApp.Services.Mappers.Contracts;
@@ -20,14 +21,13 @@ namespace TBIApp.Services.Mappers
                 IsOnline = entity.IsOnline,
                 IsChangedPassword = entity.IsChangedPassword,
                 LastLogIn = entity.LastLogIn,
-                
-
+                IsBanned = entity.IsBanned
             };
         }
         public UserDTO MapFrom(User entity)
         {
             return new UserDTO()
-            {   
+            {
                 UserName = entity.UserName,
                 Password = entity.PasswordHash,
                 Email = entity.Email,
@@ -37,10 +37,7 @@ namespace TBIApp.Services.Mappers
                 IsChangedPassword = entity.IsChangedPassword,
                 LastLogIn = entity.LastLogIn,
                 UserEmailsCount = entity.UserEmails != null ? entity.UserEmails.Count : 0,
-                
-               
-                //condition ? consequent : alternative
-
+                IsBanned = entity.IsBanned
             };
         }
         public ICollection<UserDTO> MapFrom(ICollection<User> entities)

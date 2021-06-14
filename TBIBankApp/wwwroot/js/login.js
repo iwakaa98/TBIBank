@@ -18,7 +18,6 @@ function login(e) {
     let data = {
         'username': username,
         'password': password,
-        'rememberme': false
     }
     if (!username) {
         $('#focus-UserName').text('Please enter username!');
@@ -38,7 +37,7 @@ function login(e) {
         $.ajax(
             {
                 type: "POST",
-                url: "/Home/CheckForUserNameAndPassowrdAsync",
+                url: "/Home/Login",
 
                 data: data,
                 dataType: 'JSON',
@@ -53,15 +52,13 @@ function login(e) {
                         $('#focus-Password').text('');
                         window.location.replace("/Home/Dashboard");
                     }
-                    else if (returndata === "maxlogedusers") {
-                        $('#focus-Password').text('There are already the limit of logged users in the site!');
-                        //window.location.replace("/Home/ChangePassword")
+                    else if (returndata === "banned") {
+                        $('#focus-Password').text('Your account is banned. Please contact administrator!');
                     }
                 },
                 error: function (response) {
                     console.log(response);
                     $("div:first").replaceWith(response.responseText);
-
                 }
             })
     }

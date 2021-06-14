@@ -41,7 +41,6 @@ namespace TBIBankApp.Infrastructure.HostedServices
                 if (count != 0)
                 {
                     await this.hubContext.Clients.All.SendAsync("RecieveNewEmails",count);
-
                 }
             }
         }

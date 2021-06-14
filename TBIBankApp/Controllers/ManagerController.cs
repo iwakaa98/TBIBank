@@ -32,7 +32,7 @@ namespace TBIBankApp.Controllers
             this.registerViewModelMapper = registerViewModelMapper ?? throw new ArgumentNullException(nameof(registerViewModelMapper));
         }
 
-        [Authorize(Roles = "Manager")]
+        [Authorize(Roles = "Manager,Administrator")]
         public IActionResult Register()
         {
             return View();

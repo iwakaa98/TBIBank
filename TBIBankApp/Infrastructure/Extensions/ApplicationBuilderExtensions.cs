@@ -28,16 +28,19 @@ namespace TBIBankApp.Infrastructure.Extensions
                 {
                     var managerRole = "Manager";
                     var operatorRole = "Operator";
+                    var administratorRole = "Administrator"; 
 
                     var exists = await roleManager.RoleExistsAsync(managerRole);
                     var exists2 = await roleManager.RoleExistsAsync(operatorRole);
+                    var exists3 = await roleManager.RoleExistsAsync(administratorRole);
 
                     if (!exists){ await roleManager.CreateAsync(new IdentityRole {Name = managerRole});}
                     if (!exists2){ await roleManager.CreateAsync(new IdentityRole{Name = operatorRole});}
+                    if (!exists3){ await roleManager.CreateAsync(new IdentityRole{Name = administratorRole});}
 
 
 
-                    var managerName = "admin@admin.com";
+                    var managerName = "wutow@admin.com";
 
                     var managerUser = await userManager.FindByEmailAsync(managerName);
 
@@ -45,18 +48,17 @@ namespace TBIBankApp.Infrastructure.Extensions
                     {
                         managerUser = new User
                         {
-                            UserName = "admin",
-                            Email = "admin@admin.com",
-                            FirstName = "Mihail",
-                            LastName = "Katsarov",
+                            UserName = "wutow",
+                            Email = "wutow@admin.com",
+                            FirstName = "Ivaylo",
+                            LastName = "Wutow",
                             IsChangedPassword = true
 
                         };
 
-                        await userManager.CreateAsync(managerUser, "admin");
-                        await userManager.AddToRoleAsync(managerUser, managerRole);
+                        await userManager.CreateAsync(managerUser, "password");
+                        await userManager.AddToRoleAsync(managerUser, administratorRole);
                     }
-
                 })
                 .GetAwaiter()
                 .GetResult();

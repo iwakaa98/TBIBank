@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link"  asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="listnew" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="InvalidApplication">Invalid</a>
@@ -64,12 +64,18 @@
                     <li class="nav-item">
                         <a class="nav-link" id="listclosed" asp-controller="Email" asp-action="ListEmailsAsync" asp-route-emailStatus="Closed">Closed</a>
                     </li>
-                    @if (User.IsInRole("Manager"))
+                    @if (User.IsInRole("Manager") || User.IsInRole("Administrator"))
                     {
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Manager" asp-action="Register">Register</a>
                         </li>
 
+                    }
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Administrator" asp-action="Index">Administrator Panel</a>
+                        </li>
                     }
 
                 </ul>

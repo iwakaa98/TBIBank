@@ -12,5 +12,6 @@ namespace TBIApp.Data.Models
         public bool IsChangedPassword { get; set; }
         public DateTime LastLogIn { get; set; }  
         public ICollection<Email> UserEmails { get; set; }
+        public bool IsBanned { get; set; }
     }
 }

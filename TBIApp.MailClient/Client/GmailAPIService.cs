@@ -21,7 +21,7 @@ namespace TBIApp.MailClient.Client
 
         static string[] Scopes = { GmailService.Scope.GmailModify };
         static string ApplicationName = "Gmail API .NET Quickstart";
-        static string gmailAccountName = "ivomishotelerik@gmail.com";
+        static string gmailAccountName = "ivovutovTU@gmail.com";
 
         private readonly IEmailService emailService;
         private readonly IMessageToEmailDTOMapper messageToEmailDTOPmapper;

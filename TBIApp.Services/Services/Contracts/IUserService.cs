@@ -9,6 +9,7 @@ namespace TBIApp.Services.Services.Contracts
 {
     public interface IUserService
     {
+        ICollection<UserDTO> GetAllUsers();
         Task ChangeLastLoginAsync(User user);
         Task<RegisterDTO> CreateAsync(RegisterDTO registerDTO);
         Task<bool> CheckForEmailAsync(string email);
@@ -18,5 +19,6 @@ namespace TBIApp.Services.Services.Contracts
         Task<bool> SetOnlineStatusOff(string userId);
         Task<bool> SetOnlineStatusOn(string userId);
         Task<int> UpdatedEmailsCountAsync(User user);
+        Task BanUnBanUser(string email);
     }
 }

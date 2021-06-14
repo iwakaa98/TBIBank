@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TBIApp.Data;
 using TBIApp.Data.Models;
+using TBIApp.Services.Mappers.Contracts;
 using TBIApp.Services.Models;
 using TBIApp.Services.Services.Contracts;
 
@@ -16,14 +18,17 @@ namespace TBIApp.Services.Services
         private readonly TBIAppDbContext dbcontext;
         private readonly ILogger<UserService> logger;
         private readonly UserManager<User> userManager;
+        private readonly IUserDTOMapper userDTOMapper;
 
         public UserService(TBIAppDbContext dbcontext, 
                            ILogger<UserService> logger, 
-                           UserManager<User> userManager)
+                           UserManager<User> userManager,
+                           IUserDTOMapper userDTOMapper)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            this.userDTOMapper = userDTOMapper ?? throw new ArgumentNullException(nameof(userDTOMapper));
         }
 
         public async Task ChangeLastLoginAsync(User user)
@@ -33,6 +38,13 @@ namespace TBIApp.Services.Services
             logger.LogInformation($"User {user.Id} LoggedOn at {DateTime.Now}.");
 
             await dbcontext.SaveChangesAsync();
+        }
+
+        public ICollection<UserDTO> GetAllUsers()
+        {
+            var users = this.dbcontext.Users;
+
+            return userDTOMapper.MapFrom(users.ToList());
         }
 
         public async Task<RegisterDTO> CreateAsync(RegisterDTO registerDTO)
@@ -113,6 +125,14 @@ namespace TBIApp.Services.Services
         public async Task<int> UpdatedEmailsCountAsync(User user)
         {
             return await this.dbcontext.Emails.Where(x => x.UserId == user.Id).CountAsync();
+        }
+
+        public async Task BanUnBanUser(string email)
+        {
+            var user = this.dbcontext.Users.FirstOrDefault(x => x.Email == email);
+            user.IsBanned = !user.IsBanned;
+
+            await dbcontext.SaveChangesAsync();
         }
     }
 }

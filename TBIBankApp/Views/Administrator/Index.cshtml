@@ -1,0 +1,52 @@
+﻿@model AdministratorPanelViewModel
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Current Status</th>
+            <th>Ban/Unban</th>
+        </tr>
+        @foreach (var user in Model.Users)
+        {
+            var status = user.IsOnline ? "Online" : "Offline";
+            var banId = "banUser" + user.Email;
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@status</td>
+                @if (user.IsBanned)
+                {
+                    <td>
+                        <button id="@banId" onclick="BanUser('@user.Email')" style="background-color:green">Unban</button>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <button id="@banId"  onclick="BanUser('@user.Email')" style="background-color:red">Ban</button>
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+
+<script src="~/js/Administrator.js"></script>
