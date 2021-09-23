@@ -18,7 +18,6 @@
             <th>Subject</th>
             <th>Status</th>
             <th>Body</th>
-            <th>Attachments</th>
         </tr>
     </thead>
     <tbody>
@@ -38,18 +37,6 @@
                         <button type="button" disabled class="btn btn-primary" id="@item.Id" data-toggle="modal" data-target="#exampleModal" onclick="ChekForDisable(this.id)">
                             Denied
                         </button>
-                    </td>
-                    <td>
-                        @if (item.AttachmentCount == 0)
-                        {
-                            <p>No attachments</p>
-                        }
-                        else
-                        {
-                            <p>
-                                @item.AttachmentCount attachments <span class="glyphicon glyphicon-tags"></span>
-                            </p>
-                        }
                     </td>
                 </tr>
             }
@@ -84,27 +71,16 @@
                                         <div class="divWrapper">@Html.Raw(item.Body)</div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:red" onclick="SetInvalid(this.value)">Set to Invalid</button>
-                                        <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:green" onclick="SetNew(this.value)">Set to New</button>
+                                        <button type="button" class="btn btn-secondary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:red"
+                                                onclick="SetInvalid(this.value)">Set to Invalid</button>
+                                        <button type="button" class="btn btn-primary buttonsTest2" value="@item.Id" data-dismiss="modal" style="background-color:green"
+                                                onclick="SetNew(this.value)">Set to New</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </td>
-                    <td>
-                        @if (item.AttachmentCount == 0)
-                        {
-                            <p>No attachments</p>
-                        }
-                        else
-                        {
-                            <p>
-                                @item.AttachmentCount attachments <span class="glyphicon glyphicon-tags"></span>
-                            </p>
-                        }
-                    </td>
-
-
+                    
                 </tr>
             }
         }
@@ -116,8 +92,6 @@
             <th>Subject</th>
             <th>Status</th>
             <th>Body</th>
-            <th>Attachments</th>
-
         </tr>
     </tfoot>
 </table>

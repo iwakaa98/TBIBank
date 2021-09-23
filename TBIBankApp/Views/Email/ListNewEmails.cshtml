@@ -18,7 +18,6 @@
             <th>Subject</th>
             <th>Status</th>
             <th>Body</th>
-            <th>Attachments</th>
 
         </tr>
     </thead>
@@ -41,18 +40,7 @@
                             Preview
                         </button>
                     </td>
-                    <td>
-                        @if (item.AttachmentCount == 0)
-                        {
-                            <p>No Attachments</p>
-                        }
-                        else
-                        {
-                            <p>
-                                @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
-                            </p>
-                        }
-                    </td>
+                   
 
                 </tr>
             }
@@ -124,18 +112,7 @@
                             </div>
                         </div>
                     </td>
-                    <td>
-                        @if (item.AttachmentCount == 0)
-                        {
-                            <p>No Attachments</p>
-                        }
-                        else
-                        {
-                            <p>
-                                @item.AttachmentCount Attachments <span class="glyphicon glyphicon-tags"></span>
-                            </p>
-                        }
-                    </td>
+                    
 
                 </tr>
             }
@@ -148,7 +125,6 @@
             <th>Subject</th>
             <th>Status</th>
             <th>Body</th>
-            <th>Attachments</th>
 
         </tr>
     </tfoot>

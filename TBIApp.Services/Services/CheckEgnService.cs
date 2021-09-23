@@ -5,10 +5,8 @@ namespace TBIApp.Services.Services
 {
     public class CheckEgnService : ICheckEgnService
     {
-        public async Task<bool> IsRealAsync(string egn)
+        public bool IsValidEgn(string egn)
         {
-            await Task.Delay(0);
-            Task.Run(() => { });
             int[] egnArray = new int[10];
 
             if(egn.Length!=10)
@@ -68,8 +66,8 @@ namespace TBIApp.Services.Services
         public int EGNCount(int[] egnArray)
         {
             return 2 * egnArray[0] + 4 * egnArray[1] + 8 * egnArray[2] + 5 * egnArray[3] +
-                10 * egnArray[4] + 9 * egnArray[5] + 7 * egnArray[6]
-                + 3 * egnArray[7] + 6 * egnArray[8];
+                10 * egnArray[4] + 9 * egnArray[5] + 7 * egnArray[6] +
+                3 * egnArray[7] + 6 * egnArray[8];
         }
     }
 }

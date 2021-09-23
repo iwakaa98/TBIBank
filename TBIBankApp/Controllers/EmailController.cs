@@ -66,16 +66,12 @@ namespace TBIBankApp.Controllers
         [HttpGet]
         public async Task<IActionResult> ChangeStatusAsync(string id, string status)
         {
-
-
-            //Can we replace id&status with ViewModel
             if (!ModelState.IsValid) return BadRequest();
 
             var email = await this.emailService.GetEmailAsync(id);
             var oldstatus = email.Status;
             try
             {
-                //Ca we use ChangeStatusViewModel and map it to DTO => Entity
                 var newEmailStatus = (EmailStatusesEnum)Enum.Parse(typeof(EmailStatusesEnum), status, true);
                 if ((oldstatus == EmailStatusesEnum.Open||oldstatus==EmailStatusesEnum.Closed) && status.ToLower() == "new")
                 {

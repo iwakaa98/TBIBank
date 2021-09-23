@@ -8,8 +8,8 @@ namespace TBIApp.Services.Services
         public async Task<bool> IsRealAsync(string cardId)
         {
             await Task.Delay(0);
-            int[] cardIdArray = new int[10];
-            if (cardId.Length != 10)
+            int[] cardIdArray = new int[9];
+            if (cardId.Length != 9)
             {
                 return false;
             }

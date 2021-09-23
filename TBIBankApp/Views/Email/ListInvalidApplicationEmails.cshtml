@@ -77,7 +77,7 @@
                                     <div class="modal-body">
                                         <div class="divWrapper">@Html.Raw(item.Body)</div>
                                     </div>
-                                    @if (User.IsInRole("Manager"))
+                                    @if (User.IsInRole("Manager") || User.IsInRole("Administrator"))
                                     {
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary buttonsTest4" data-dismiss="modal" value="@item.Id" onclick="SetNotReviewed(this.value)" style="background-color:red">Set to NotReviewed</button>

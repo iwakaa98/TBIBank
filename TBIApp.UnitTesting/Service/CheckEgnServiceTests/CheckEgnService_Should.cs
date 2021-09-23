@@ -21,7 +21,7 @@ namespace TBIApp.UnitTesting.Service.CheckEgnServiceTests
 
             var checkEgnService = new CheckEgnService();
 
-            var sut = await checkEgnService.IsRealAsync(testEgn);
+            var sut = checkEgnService.IsValidEgn(testEgn);
 
             var expectedResult = true;
 
@@ -36,11 +36,10 @@ namespace TBIApp.UnitTesting.Service.CheckEgnServiceTests
             var testResult = true;
 
             var checkEgnService = new Mock<ICheckEgnService>();
-            checkEgnService.Setup(x => x.IsRealAsync(testEgn)).ReturnsAsync(testResult);
+            
+            checkEgnService.Object.IsValidEgn(testEgn);
 
-            await checkEgnService.Object.IsRealAsync(testEgn);
-
-            checkEgnService.Verify(x=>x.IsRealAsync(testEgn),Times.Once);
+            checkEgnService.Verify(x=>x.IsValidEgn(testEgn),Times.Once);
 
         }
 
@@ -51,7 +50,7 @@ namespace TBIApp.UnitTesting.Service.CheckEgnServiceTests
 
             var checkEgnService = new CheckEgnService();
 
-            var sut = await checkEgnService.IsRealAsync(testEgn);
+            var sut = checkEgnService.IsValidEgn(testEgn);
 
             Assert.IsInstanceOfType(sut, typeof(bool));
         }
@@ -63,7 +62,7 @@ namespace TBIApp.UnitTesting.Service.CheckEgnServiceTests
 
             var checkEgnService = new CheckEgnService();
 
-            var sut = await checkEgnService.IsRealAsync(testEgn);
+            var sut = checkEgnService.IsValidEgn(testEgn);
 
             var expectedResult = false;
 

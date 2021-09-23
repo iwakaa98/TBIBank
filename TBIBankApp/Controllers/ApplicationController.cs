@@ -23,7 +23,6 @@ namespace TBIBankApp.Controllers
         private readonly IEncryptService encryptService;
         private readonly IHubContext<NotificationHub> hubContext;
 
-
         public ApplicationController(UserManager<User> userManager, IHubContext<NotificationHub> hubContext,IEmailService emailService,IApplicationService applicationService, IApplicationViewModelMapper applicationViewModelMapper, ICheckEgnService checkEgnService, IcheckCardIdService icheckCardId, ICheckPhoneNumberService checkPhoneNumber, IEncryptService encryptService)
         {
             this.hubContext = hubContext;
@@ -41,8 +40,8 @@ namespace TBIBankApp.Controllers
         {
             return View();
         }
+
         [HttpPost] 
-        //[ValidateAntiForgeryToken]
         public async Task<string> CreateAsync(LoanApplicationViewModel vm)
         {
             if (!ModelState.IsValid)
@@ -52,7 +51,7 @@ namespace TBIBankApp.Controllers
             }
             //logger logsmth
 
-            var isRealEgn = await checkEgnService.IsRealAsync(vm.EGN);
+            var isRealEgn = checkEgnService.IsValidEgn(vm.EGN);
             if(!isRealEgn)
             {
                 return "false egn";
@@ -74,7 +73,6 @@ namespace TBIBankApp.Controllers
             await this.applicationService.CreateAsync(application);
 
 
-            //Redirect to smth
             return "true";
         }
         [HttpGet]
@@ -86,6 +84,8 @@ namespace TBIBankApp.Controllers
 
                 await applicationService.ChangeStatusAsync(id, appStatus);
                 await emailService.ChangeStatusAsync(id, EmailStatusesEnum.Closed, currentUser);
+
+
                 await this.hubContext.Clients.All.SendAsync("UpdateChart", "Closed","Open");
 
             }

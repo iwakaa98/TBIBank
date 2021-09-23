@@ -49,7 +49,7 @@ namespace TBIApp.MailClient.ParseManagers
             }
             else
             {
-                return encryptService.EncryptString(email.Payload.Parts[0].Parts[1].Body.Data);
+                return encryptService.EncryptString(email.Payload.Parts[0].Parts[1].Body.Data); //parts[0].parts[1];
             }
 
         }

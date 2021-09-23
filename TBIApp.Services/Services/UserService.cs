@@ -19,16 +19,19 @@ namespace TBIApp.Services.Services
         private readonly ILogger<UserService> logger;
         private readonly UserManager<User> userManager;
         private readonly IUserDTOMapper userDTOMapper;
+        private readonly SignInManager<User> signInManager;
 
-        public UserService(TBIAppDbContext dbcontext, 
-                           ILogger<UserService> logger, 
+        public UserService(TBIAppDbContext dbcontext,
+                           ILogger<UserService> logger,
                            UserManager<User> userManager,
-                           IUserDTOMapper userDTOMapper)
+                           IUserDTOMapper userDTOMapper,
+                           SignInManager<User> signInManager)
         {
             this.dbcontext = dbcontext ?? throw new ArgumentNullException(nameof(dbcontext));
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
             this.userDTOMapper = userDTOMapper ?? throw new ArgumentNullException(nameof(userDTOMapper));
+            this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
         }
 
         public async Task ChangeLastLoginAsync(User user)
@@ -110,16 +113,15 @@ namespace TBIApp.Services.Services
             return this.dbcontext.Users.AnyAsync(x => x.Email == email);
 
         }
+        public Task<bool> CheckForUserNameAsync(string userName)
+        {
+            return this.dbcontext.Users.AnyAsync(x => x.UserName == userName);
+        }
 
         public Task<bool> CheckForPasswordAsync(string password)
         {
             return this.dbcontext.Users.AnyAsync(x => x.PasswordHash == password);
 
-        }
-
-        public Task<bool> CheckForUserNameAsync(string userName)
-        {
-            return this.dbcontext.Users.AnyAsync(x => x.UserName == userName);
         }
 
         public async Task<int> UpdatedEmailsCountAsync(User user)
@@ -130,9 +132,13 @@ namespace TBIApp.Services.Services
         public async Task BanUnBanUser(string email)
         {
             var user = this.dbcontext.Users.FirstOrDefault(x => x.Email == email);
-            user.IsBanned = !user.IsBanned;
+            if (user != null)
+            {
+                user.IsBanned = !user.IsBanned;
 
-            await dbcontext.SaveChangesAsync();
+                await dbcontext.SaveChangesAsync();
+
+            }
         }
     }
 }

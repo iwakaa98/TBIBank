@@ -5,6 +5,7 @@ let opencount = document.getElementById('opencount').getAttribute('data-value');
 let closedcount = document.getElementById('closedcount').getAttribute('data-value');
 let acceptedcount = document.getElementById('acceptedcount').getAttribute('data-value');
 let rejectedcount = document.getElementById('rejectedcount').getAttribute('data-value');
+
 updateChart();
 function updateChart() {
     var chart = new CanvasJS.Chart("chartContainer", {
@@ -45,8 +46,7 @@ let connection = new signalR.HubConnectionBuilder().withUrl("/notification").bui
 
 
 connection.on("UpdateChart", function (status, oldstatus) {
-    console.log(status);
-    console.log(oldstatus);
+   
     if (status.toLowerCase() === "invalidapplication") {
         notreviewedcount = Number(notreviewedcount) - Number(1);
         invalidcount = Number(invalidcount) + Number(1);
